@@ -1278,6 +1278,16 @@ body {
 
 .dept-overview-card {
   padding: 32px;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.advisory-cards-grid {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .leader-profile-card {
@@ -1428,11 +1438,35 @@ body {
   box-sizing: border-box;
 }
 
+.toggle-text-short {
+  display: none;
+}
+.toggle-text-full {
+  display: inline;
+}
+
 @media (max-width: 768px) {
   .advisor-role-badge {
     display: block !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .toggle-text-short {
+    display: inline !important;
+  }
+  .toggle-text-full {
+    display: none !important;
+  }
+  .view-mode-toggle {
+    width: 100% !important;
+    max-width: 330px !important;
+  }
+  .advisory-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 }
 

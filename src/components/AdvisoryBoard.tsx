@@ -178,6 +178,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
 
           {/* View Mode Toggle: Wide Cards vs Executive Directory Rows */}
           <div
+            className="view-mode-toggle"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -187,45 +188,57 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               padding: '4px',
               gap: '4px',
               boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+              boxSizing: 'border-box',
+              maxWidth: '100%',
             }}
           >
             <button
               onClick={() => setViewMode('cards')}
               style={{
-                padding: '6px 16px',
+                padding: '6px 14px',
                 borderRadius: '6px',
                 border: 'none',
                 backgroundColor: viewMode === 'cards' ? '#0F172A' : 'transparent',
                 color: viewMode === 'cards' ? '#FFFFFF' : '#475569',
-                fontSize: '0.82rem',
+                fontSize: '0.8rem',
                 fontWeight: 700,
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '6px',
                 transition: 'all 0.2s ease',
+                flex: 1,
+                whiteSpace: 'nowrap',
               }}
             >
-              <span>▦</span> Wide Editorial Cards
+              <span>▦</span>
+              <span className="toggle-text-full">Wide Editorial Cards</span>
+              <span className="toggle-text-short">Cards</span>
             </button>
             <button
               onClick={() => setViewMode('list')}
               style={{
-                padding: '6px 16px',
+                padding: '6px 14px',
                 borderRadius: '6px',
                 border: 'none',
                 backgroundColor: viewMode === 'list' ? '#0F172A' : 'transparent',
                 color: viewMode === 'list' ? '#FFFFFF' : '#475569',
-                fontSize: '0.82rem',
+                fontSize: '0.8rem',
                 fontWeight: 700,
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '6px',
                 transition: 'all 0.2s ease',
+                flex: 1,
+                whiteSpace: 'nowrap',
               }}
             >
-              <span>☰</span> Executive Directory Rows
+              <span>☰</span>
+              <span className="toggle-text-full">Executive Directory Rows</span>
+              <span className="toggle-text-short">Directory</span>
             </button>
           </div>
         </div>
@@ -242,51 +255,66 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '16px',
+                    justifyContent: 'space-between',
+                    gap: '12px',
                     marginBottom: '28px',
+                    flexWrap: 'wrap',
+                    width: '100%',
+                    boxSizing: 'border-box',
                   }}
                 >
-                  <div
-                    style={{
-                      width: '6px',
-                      height: '32px',
-                      backgroundColor: '#DC2626',
-                      borderRadius: '3px',
-                    }}
-                  />
-                  <TextReveal
-                    as="h3"
-                    style={{
-                      fontSize: '1.45rem',
-                      fontWeight: 900,
-                      color: '#0F172A',
-                      letterSpacing: '-0.02em',
-                    }}
-                    text={group.category}
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1, minWidth: 0 }}>
+                    <div
+                      style={{
+                        width: '6px',
+                        height: '28px',
+                        backgroundColor: '#DC2626',
+                        borderRadius: '3px',
+                        flexShrink: 0,
+                      }}
+                    />
+                    <TextReveal
+                      as="h3"
+                      style={{
+                        fontSize: '1.35rem',
+                        fontWeight: 900,
+                        color: '#0F172A',
+                        letterSpacing: '-0.02em',
+                        lineHeight: 1.25,
+                        wordBreak: 'break-word',
+                      }}
+                      text={group.category}
+                    />
+                  </div>
                   <span
                     style={{
-                      fontSize: '0.8rem',
+                      fontSize: '0.78rem',
                       fontWeight: 700,
                       backgroundColor: '#E2E8F0',
                       color: '#475569',
-                      padding: '3px 10px',
+                      padding: '4px 12px',
                       borderRadius: '9999px',
+                      whiteSpace: 'nowrap',
+                      flexShrink: 0,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      lineHeight: 1,
                     }}
                   >
                     {group.members.length} Members
                   </span>
-                  <div style={{ flex: 1, height: '1px', backgroundColor: '#E2E8F0' }} />
                 </div>
 
-                {/* Wide Cards Grid (min 480px width so titles NEVER get squeezed) */}
+                {/* Wide Cards Grid */}
                 <div
                   className="advisory-cards-grid"
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(480px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))',
                     gap: '24px',
                     alignItems: 'stretch',
+                    width: '100%',
+                    boxSizing: 'border-box',
                   }}
                 >
                   {group.members.map((member, idx) => {
@@ -317,13 +345,13 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                           <div
                             style={{
                               display: 'flex',
-                              alignItems: 'center',
+                              alignItems: 'flex-start',
                               justifyContent: 'space-between',
-                              gap: '16px',
+                              gap: '12px',
                               marginBottom: '14px',
                             }}
                           >
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: 0, flex: 1 }}>
                               <div
                                 style={{
                                   width: '46px',
@@ -345,11 +373,13 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                               <TextReveal
                                 as="h4"
                                 style={{
-                                  fontSize: '1.35rem',
+                                  fontSize: '1.25rem',
                                   fontWeight: 800,
                                   color: '#0F172A',
-                                  lineHeight: 1.2,
+                                  lineHeight: 1.25,
                                   letterSpacing: '-0.02em',
+                                  minWidth: 0,
+                                  wordBreak: 'break-word',
                                 }}
                                 text={member.name}
                               />
@@ -476,36 +506,53 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '14px',
+                    justifyContent: 'space-between',
+                    gap: '12px',
                     marginBottom: '20px',
+                    flexWrap: 'wrap',
+                    width: '100%',
+                    boxSizing: 'border-box',
                   }}
                 >
-                  <div
-                    style={{
-                      width: '6px',
-                      height: '28px',
-                      backgroundColor: '#DC2626',
-                      borderRadius: '3px',
-                    }}
-                  />
-                  <TextReveal
-                    as="h3"
-                    style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0F172A' }}
-                    text={group.category}
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1, minWidth: 0 }}>
+                    <div
+                      style={{
+                        width: '6px',
+                        height: '26px',
+                        backgroundColor: '#DC2626',
+                        borderRadius: '3px',
+                        flexShrink: 0,
+                      }}
+                    />
+                    <TextReveal
+                      as="h3"
+                      style={{
+                        fontSize: '1.25rem',
+                        fontWeight: 800,
+                        color: '#0F172A',
+                        lineHeight: 1.25,
+                        wordBreak: 'break-word',
+                      }}
+                      text={group.category}
+                    />
+                  </div>
                   <span
                     style={{
-                      fontSize: '0.8rem',
+                      fontSize: '0.75rem',
                       fontWeight: 700,
                       backgroundColor: '#E2E8F0',
                       color: '#475569',
-                      padding: '2px 10px',
+                      padding: '4px 12px',
                       borderRadius: '9999px',
+                      whiteSpace: 'nowrap',
+                      flexShrink: 0,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      lineHeight: 1,
                     }}
                   >
                     {group.members.length} Members
                   </span>
-                  <div style={{ flex: 1, height: '1px', backgroundColor: '#E2E8F0' }} />
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -678,6 +725,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
             onClick={() => setActiveModalMember(null)}
           >
             <div
+              role="dialog"
+              aria-modal="true"
               style={{
                 backgroundColor: '#FFFFFF',
                 borderRadius: '18px',
