@@ -49,7 +49,7 @@ body {
 .site-backdrop {
   position: fixed;
   inset: 0px;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   background-image: linear-gradient(rgba(11, 14, 20, 0.4), rgba(11, 14, 20, 0.6)), url("/backdrop.webp");
   background-size: cover;
@@ -57,10 +57,15 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Backdrop version: allow the authentic texture to show subtly behind sections with frosted glass while preserving text contrast */
-main {
+/* Backdrop version: ensure all main content and footer sit cleanly above the backdrop */
+main,
+footer {
   position: relative;
   z-index: 1;
+}
+
+footer {
+  background-color: #FFFFFF !important;
 }
 
 .past-future-section,
