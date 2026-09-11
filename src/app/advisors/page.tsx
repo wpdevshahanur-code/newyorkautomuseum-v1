@@ -4,13 +4,18 @@ import PageHeader from '@/components/PageHeader';
 import AdvisoryBoard from '@/components/AdvisoryBoard';
 import Accreditations from '@/components/Accreditations';
 import Footer from '@/components/Footer';
+import { getAdvisors } from '@/lib/wordpress';
 
 export const metadata: Metadata = {
   title: 'The Board & Advisors | New York Auto Museum',
   description: 'Executive leadership, curators, OEM relations, and legal advisors for the New York Auto Museum.',
 };
 
-export default function AdvisorsPage() {
+export const revalidate = 60;
+
+export default async function AdvisorsPage() {
+  const advisors = await getAdvisors();
+
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar />
@@ -24,7 +29,7 @@ export default function AdvisorsPage() {
           imagePosition="right 30%"
           imageOpacity={0.70}
         />
-        <AdvisoryBoard />
+        <AdvisoryBoard initialCategories={advisors} />
         <Accreditations />
       </main>
       <Footer />

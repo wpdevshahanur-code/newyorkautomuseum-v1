@@ -25,12 +25,18 @@ function getInitials(name: string): string {
   return (parts[0] ? parts[0].slice(0, 2) : 'NY').toUpperCase();
 }
 
-export default function AdvisoryBoard() {
+interface AdvisoryBoardProps {
+  initialCategories?: CategoryGroup[];
+}
+
+export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps = {}) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'cards' | 'list'>('cards');
   const [expandedBioKey, setExpandedBioKey] = useState<string | null>(null);
 
-  const categories = advisorsData as CategoryGroup[];
+  const categories = initialCategories && initialCategories.length > 0
+    ? initialCategories
+    : (advisorsData as CategoryGroup[]);
 
   const toggleBio = (uniqueKey: string) => {
     setExpandedBioKey((prev) => (prev === uniqueKey ? null : uniqueKey));
