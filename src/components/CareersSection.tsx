@@ -34,10 +34,10 @@ export default function CareersSection() {
   return (
     <section
       id="careers"
+      className="careers-section"
       style={{
         padding: '110px 0',
-        backgroundColor: '#F8FAFC',
-        borderBottom: '1px solid #E2E8F0',
+        backgroundColor: 'transparent',
         position: 'relative',
       }}
     >

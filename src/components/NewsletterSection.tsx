@@ -21,8 +21,7 @@ export default function NewsletterSection() {
       id="newsletter-frame"
       className="newsletter-section"
       style={{
-        backgroundColor: '#F8FAFC',
-        borderBottom: '1px solid #E2E8F0',
+        backgroundColor: 'transparent',
         textAlign: 'center',
       }}
     >
@@ -32,7 +31,7 @@ export default function NewsletterSection() {
           style={{
             fontSize: '2rem',
             fontWeight: 800,
-            color: '#0F172A',
+            color: '#FFFFFF',
             marginBottom: '12px',
           }}
           text="Newsletter:"
@@ -40,7 +39,7 @@ export default function NewsletterSection() {
         <TextReveal
           as="p"
           style={{
-            color: '#475569',
+            color: '#CBD5E1',
             fontSize: '1.05rem',
             marginBottom: '28px',
           }}

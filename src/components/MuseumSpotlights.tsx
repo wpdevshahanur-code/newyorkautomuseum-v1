@@ -7,10 +7,10 @@ export default function MuseumSpotlights() {
   return (
     <section
       id="spotlights"
+      className="museum-spotlights-section"
       style={{
-        backgroundColor: '#F8FAFC',
+        backgroundColor: 'transparent',
         padding: '110px 0 160px 0',
-        borderBottom: '1px solid #E2E8F0',
         position: 'relative',
       }}
     >

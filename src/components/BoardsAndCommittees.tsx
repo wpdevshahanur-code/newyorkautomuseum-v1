@@ -27,10 +27,10 @@ export default function BoardsAndCommittees() {
   return (
     <section
       id="boards"
+      className="committees-section"
       style={{
         padding: '110px 0',
-        backgroundColor: '#FFFFFF',
-        borderBottom: '1px solid #E2E8F0',
+        backgroundColor: 'transparent',
         position: 'relative',
       }}
     >

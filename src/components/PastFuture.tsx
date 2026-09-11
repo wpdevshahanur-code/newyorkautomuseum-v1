@@ -53,7 +53,7 @@ export default function PastFuture() {
                 fontWeight: 900,
                 letterSpacing: '-0.04em',
                 lineHeight: 1.05,
-                color: '#0F172A',
+                color: '#FFFFFF',
                 marginBottom: '24px',
               }}
               coloredWords={{ '|': '#DC2626' }}
@@ -73,7 +73,7 @@ export default function PastFuture() {
               as="p"
               style={{
                 fontSize: '0.95rem',
-                color: '#64748B',
+                color: '#CBD5E1',
                 fontWeight: 600,
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',

@@ -86,14 +86,19 @@ section,
 .section-title,
 .section-title *,
 .accreditations-title,
-.accreditations-title * {
+.accreditations-title *,
+.past-future-section h2,
+.newsletter-section h3,
+.newsletter-section h3 * {
   color: #FFFFFF !important;
 }
 
 .section-subtitle,
 .section-subtitle *,
 .accreditations-subtitle,
-.accreditations-subtitle * {
+.accreditations-subtitle *,
+.newsletter-section p,
+.newsletter-section p * {
   color: #CBD5E1 !important;
 }
 

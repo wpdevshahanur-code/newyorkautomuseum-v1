@@ -9,8 +9,7 @@ export default function NyaeSynergy() {
       id="nyae-synergy"
       className="synergy-section"
       style={{
-        backgroundColor: '#FFFFFF',
-        borderBottom: '1px solid #E2E8F0',
+        backgroundColor: 'transparent',
         position: 'relative',
       }}
     >

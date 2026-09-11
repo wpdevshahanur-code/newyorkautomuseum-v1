@@ -21,10 +21,6 @@ export default function HomePage() {
         {/* Multi-Page Department Exploration Gateway */}
         <section
           className="gateway-section"
-          style={{
-            backgroundColor: '#FFFFFF',
-            borderBottom: '1px solid #E2E8F0',
-          }}
         >
           <div className="container">
             <div className="text-center" style={{ marginBottom: '56px' }}>
