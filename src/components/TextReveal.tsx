@@ -93,12 +93,25 @@ export default function TextReveal({
             start: threshold,
             toggleActions:
               toggleActions || (reverse ? 'play none none reverse' : 'play none none none'),
+            invalidateOnRefresh: true,
           },
         }
       );
     }, containerRef);
 
-    return () => ctx.revert();
+    // Refresh ScrollTrigger once DOM layout and images settle
+    const refreshTimer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 150);
+
+    const handleLoad = () => ScrollTrigger.refresh();
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(refreshTimer);
+      ctx.revert();
+    };
   }, [rawText, effectiveStagger, effectiveDuration, delay, threshold, reverse, toggleActions, triggerElement]);
 
   const words = rawText.trim().split(/\s+/).filter(Boolean);

@@ -82,8 +82,7 @@ export default function MuseumSpotlights() {
               <TextReveal
                 as="h3"
                 text="The Museum"
-                triggerElement="#the-museum"
-                threshold="top 85%"
+                threshold="top 90%"
                 style={{
                   fontSize: 'clamp(1.8rem, 2.6vw, 2.3rem)',
                   fontWeight: 900,
@@ -96,9 +95,8 @@ export default function MuseumSpotlights() {
 
               <TextReveal
                 as="p"
-                triggerElement="#the-museum"
-                threshold="top 85%"
-                delay={0.12}
+                threshold="top 90%"
+                delay={0.08}
                 style={{
                   fontSize: '1rem',
                   lineHeight: 1.7,
@@ -111,9 +109,8 @@ export default function MuseumSpotlights() {
 
               <TextReveal
                 as="p"
-                triggerElement="#the-museum"
-                threshold="top 85%"
-                delay={0.24}
+                threshold="top 90%"
+                delay={0.16}
                 style={{
                   fontSize: '0.95rem',
                   lineHeight: 1.6,
@@ -175,8 +172,7 @@ export default function MuseumSpotlights() {
               <TextReveal
                 as="h3"
                 text="Partners"
-                triggerElement="#partners"
-                threshold="top 85%"
+                threshold="top 90%"
                 style={{
                   fontSize: 'clamp(1.8rem, 2.6vw, 2.3rem)',
                   fontWeight: 900,
@@ -189,9 +185,8 @@ export default function MuseumSpotlights() {
 
               <TextReveal
                 as="p"
-                triggerElement="#partners"
-                threshold="top 85%"
-                delay={0.12}
+                threshold="top 90%"
+                delay={0.08}
                 style={{
                   fontSize: '1.02rem',
                   lineHeight: 1.75,
@@ -243,8 +238,7 @@ export default function MuseumSpotlights() {
               <TextReveal
                 as="h3"
                 text="About Us"
-                triggerElement="#about"
-                threshold="top 85%"
+                threshold="top 90%"
                 style={{
                   fontSize: '1.35rem',
                   fontWeight: 800,
@@ -257,9 +251,8 @@ export default function MuseumSpotlights() {
 
               <TextReveal
                 as="p"
-                triggerElement="#about"
-                threshold="top 85%"
-                delay={0.12}
+                threshold="top 90%"
+                delay={0.08}
                 style={{
                   fontSize: '1.05rem',
                   lineHeight: 1.8,
