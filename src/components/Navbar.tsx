@@ -25,10 +25,11 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 1000,
-        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+        backgroundColor: 'rgba(8, 10, 15, 0.85)',
         backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid #E2E8F0',
-        boxShadow: '0 2px 12px rgba(15, 23, 42, 0.04)',
+        WebkitBackdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
+        boxShadow: '0 4px 24px rgba(0, 0, 0, 0.4)',
         transition: 'all 0.3s ease',
       }}
     >
@@ -77,7 +78,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 style={{
-                  color: isActive ? '#EF4444' : '#CBD5E1',
+                  color: isActive ? '#FFFFFF' : '#94A3B8',
                   textDecoration: 'none',
                   fontSize: '0.9rem',
                   fontWeight: isActive ? 700 : 500,
@@ -95,7 +96,7 @@ export default function Navbar() {
                       left: 0,
                       right: 0,
                       height: '2px',
-                      backgroundColor: '#EF4444',
+                      backgroundColor: '#E11D48',
                       borderRadius: '1px',
                     }}
                   />
@@ -161,7 +162,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div
           style={{
-            backgroundColor: 'rgba(7, 11, 20, 0.96)',
+            backgroundColor: 'rgba(8, 10, 15, 0.96)',
             backdropFilter: 'blur(24px)',
             WebkitBackdropFilter: 'blur(24px)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
@@ -180,12 +181,12 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
-                  color: isActive ? '#EF4444' : '#CBD5E1',
+                  color: isActive ? '#E11D48' : '#94A3B8',
                   fontSize: '1.05rem',
                   fontWeight: isActive ? 800 : 600,
                   textDecoration: 'none',
                   padding: '8px 0',
-                  borderBottom: '1px solid #F1F5F9',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
                 }}
               >
                 {link.label}

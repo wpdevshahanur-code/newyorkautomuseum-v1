@@ -1,22 +1,28 @@
 :root {
   --bg-main: #080A0F;
-  --bg-surface: rgba(15, 23, 42, 0.72);
-  --bg-surface-alt: rgba(15, 23, 42, 0.85);
-  --bg-card: rgba(15, 23, 42, 0.72);
-  --bg-card-hover: rgba(15, 23, 42, 0.88);
+  --bg-surface: rgba(18, 24, 36, 0.88);
+  --bg-surface-alt: rgba(25, 34, 51, 0.95);
+  --bg-card: rgba(18, 24, 36, 0.88);
+  --bg-card-hover: rgba(25, 34, 51, 0.95);
+  --bg-subtle: rgba(11, 14, 20, 0.60);
   
-  --color-primary: #DC2626;
-  --color-primary-hover: #EF4444;
+  --color-primary: #E11D48;
+  --color-primary-hover: #BE123C;
+  --color-secondary: #2563EB;
+  --color-secondary-hover: #1D4ED8;
+  --color-accent-amber: #D97706;
   --color-accent-gold: #F59E0B;
-  --color-accent-blue: #38BDF8;
+  --color-accent-blue: #2563EB;
+  --color-success: #10B981;
   
   --text-primary: #FFFFFF;
-  --text-secondary: #CBD5E1;
+  --text-secondary: #94A3B8;
   --text-muted: #94A3B8;
   --text-dim: #64748B;
   
   --border-subtle: rgba(255, 255, 255, 0.12);
-  --border-card: rgba(255, 255, 255, 0.14);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --border-bright: rgba(255, 255, 255, 0.22);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-card: 0 12px 36px rgba(0, 0, 0, 0.45);
   --shadow-hover: 0 18px 48px rgba(0, 0, 0, 0.6);
@@ -99,15 +105,15 @@ section,
 .accreditations-subtitle *,
 .newsletter-section p,
 .newsletter-section p * {
-  color: #CBD5E1 !important;
+  color: #94A3B8 !important;
 }
 
 /* ==========================================================================
-   LUXURY DARK GLASSMORPHISM DESIGN SYSTEM (Option 1)
-   Frosted obsidian glass cards, platinum typography, chrome borders & ambient depth
+   AUTHENTIC .ORG AUTOMOTIVE MUSEUM DESIGN SYSTEM
+   Slate Charcoal translucent surfaces, solid motorsport crimson accents, zero gradients
    ========================================================================== */
 
-/* 1. All Cards & Content Modules: Translucent Frosted Glass */
+/* 1. All Cards & Content Modules: Translucent Frosted Slate Glass */
 .past-future-card,
 .spotlight-card,
 .spotlight-content,
@@ -127,10 +133,10 @@ section,
 .marquee-card,
 .advisor-modal-card,
 div[role="dialog"] {
-  background: rgba(15, 23, 42, 0.72) !important;
-  background-color: rgba(15, 23, 42, 0.72) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+  background: rgba(18, 24, 36, 0.88) !important;
+  background-color: rgba(18, 24, 36, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -145,7 +151,9 @@ div[role="dialog"] {
 .career-job-card:hover,
 .partner-card:hover,
 .marquee-card:hover {
-  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: rgba(25, 34, 51, 0.95) !important;
+  background-color: rgba(25, 34, 51, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -156,7 +164,7 @@ div[role="dialog"] {
   transform: translateY(-4px) !important;
 }
 
-/* 2. Card Typography: Crisp Pure White Headings & Silver Platinum Body Text */
+/* 2. Card Typography: Crisp Pure White Headings & Slate 400 Body Text */
 .past-future-card h2,
 .past-future-card h3,
 .past-future-card h4,
@@ -208,7 +216,7 @@ div[role="dialog"] h3 * {
 .footer-address-card div,
 div[role="dialog"] p,
 div[role="dialog"] p * {
-  color: #CBD5E1 !important;
+  color: #94A3B8 !important;
 }
 
 /* 3. Card Meta Tags, Role Badges, and Accent Dividers */
@@ -222,27 +230,28 @@ div[role="dialog"] p * {
 }
 
 .advisor-role-badge {
-  background: rgba(220, 38, 38, 0.12) !important;
-  border: 1px solid rgba(220, 38, 38, 0.3) !important;
-  color: #F87171 !important;
+  background: rgba(225, 29, 72, 0.12) !important;
+  border: 1px solid rgba(225, 29, 72, 0.3) !important;
+  color: #E11D48 !important;
 }
 
 /* 4. Filter Buttons across Advisors and Careers */
-#advisors button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]),
-#careers button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]) {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  color: #CBD5E1 !important;
+#advisors button:not(.btn-primary):not([style*="background-color: rgb(225, 29, 72)"]):not([style*="backgroundColor: #E11D48"]):not([style*="backgroundColor: rgb(225, 29, 72)"]):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]),
+#careers button:not(.btn-primary):not([style*="background-color: rgb(225, 29, 72)"]):not([style*="backgroundColor: #E11D48"]):not([style*="backgroundColor: rgb(225, 29, 72)"]):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]) {
+  background: rgba(18, 24, 36, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #94A3B8 !important;
 }
 
-#advisors button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]):hover,
-#careers button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]):hover {
-  background: rgba(255, 255, 255, 0.16) !important;
+#advisors button:not(.btn-primary):not([style*="background-color: rgb(225, 29, 72)"]):not([style*="backgroundColor: #E11D48"]):not([style*="backgroundColor: rgb(225, 29, 72)"]):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]):hover,
+#careers button:not(.btn-primary):not([style*="background-color: rgb(225, 29, 72)"]):not([style*="backgroundColor: #E11D48"]):not([style*="backgroundColor: rgb(225, 29, 72)"]):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]):hover {
+  background: rgba(25, 34, 51, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
   color: #FFFFFF !important;
 }
 
 .view-mode-toggle {
-  background: rgba(15, 23, 42, 0.72) !important;
+  background: rgba(18, 24, 36, 0.88) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
@@ -253,7 +262,9 @@ div[role="dialog"] p * {
 }
 
 .view-mode-toggle button[style*="backgroundColor: rgb(15, 23, 42)"],
-.view-mode-toggle button[style*="backgroundColor: #0F172A"] {
+.view-mode-toggle button[style*="backgroundColor: #0F172A"],
+.view-mode-toggle button[style*="backgroundColor: rgb(18, 24, 36)"],
+.view-mode-toggle button[style*="backgroundColor: #121824"] {
   background: rgba(255, 255, 255, 0.14) !important;
   color: #FFFFFF !important;
 }
@@ -262,7 +273,7 @@ div[role="dialog"] p * {
 .committee-stat-card button,
 .dept-overview-card button,
 .leader-profile-card button {
-  color: #38BDF8 !important; /* Luminous sky cyan */
+  color: #2563EB !important; /* Solid High-Tech Royal Blue from .org */
 }
 .committee-stat-card button:hover,
 .dept-overview-card button:hover,
@@ -271,16 +282,18 @@ div[role="dialog"] p * {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(18, 24, 36, 0.88) !important;
+  background-color: rgba(18, 24, 36, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
   color: #FFFFFF !important;
-  backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(12px) !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.18) !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(25, 34, 51, 0.95) !important;
+  background-color: rgba(25, 34, 51, 0.95) !important;
+  border-color: #94A3B8 !important;
   color: #FFFFFF !important;
   box-shadow: 0 6px 22px rgba(255, 255, 255, 0.1) !important;
 }
@@ -298,7 +311,8 @@ div[role="dialog"] p * {
 
 /* 7. Newsletter Form */
 .newsletter-input {
-  background: rgba(15, 23, 42, 0.72) !important;
+  background: rgba(18, 24, 36, 0.88) !important;
+  background-color: rgba(18, 24, 36, 0.88) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   color: #FFFFFF !important;
@@ -307,23 +321,25 @@ div[role="dialog"] p * {
   color: #94A3B8 !important;
 }
 .newsletter-input:focus {
-  border-color: #EF4444 !important;
-  box-shadow: 0 0 15px rgba(239, 68, 68, 0.25) !important;
+  border-color: #E11D48 !important;
+  box-shadow: 0 0 15px rgba(225, 29, 72, 0.25) !important;
 }
 
 /* 8. Luxury Navbar & Header */
 .navbar-header,
+header,
 header[style*="backgroundColor: #FFFFFF"],
 header[style*="backgroundColor: rgb(255, 255, 255)"] {
-  background-color: rgba(7, 11, 20, 0.82) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(8, 10, 15, 0.85) !important;
+  background: rgba(8, 10, 15, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
 }
 
 .desktop-nav a {
-  color: #CBD5E1 !important;
+  color: #94A3B8 !important;
   transition: color 0.2s ease !important;
 }
 .desktop-nav a:hover {
@@ -332,18 +348,19 @@ header[style*="backgroundColor: rgb(255, 255, 255)"] {
 
 /* 9. Luxury Footer */
 footer,
+.site-footer,
 footer[style*="backgroundColor: #FFFFFF"],
 footer[style*="background-color: #FFFFFF"],
 footer[style*="background-color: rgb(255, 255, 255)"] {
-  background-color: rgba(7, 11, 20, 0.88) !important;
-  background: rgba(7, 11, 20, 0.88) !important;
+  background-color: rgba(11, 14, 20, 0.75) !important;
+  background: rgba(11, 14, 20, 0.75) !important;
   backdrop-filter: blur(24px) !important;
   -webkit-backdrop-filter: blur(24px) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 footer * {
-  color: #CBD5E1 !important;
+  color: #94A3B8 !important;
 }
 
 footer h4,
@@ -353,14 +370,15 @@ footer a {
 }
 
 footer a:hover {
-  color: #38BDF8 !important;
+  color: #E11D48 !important;
 }
 
 /* 10. Dialog Modal */
 div[role="dialog"] {
-  background: rgba(15, 23, 42, 0.94) !important;
-  backdrop-filter: blur(24px) !important;
-  -webkit-backdrop-filter: blur(24px) !important;
+  background: rgba(18, 24, 36, 0.96) !important;
+  background-color: rgba(18, 24, 36, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8) !important;
 }
@@ -385,9 +403,9 @@ div[role="dialog"] > div:first-child {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #EF4444;
-  background: rgba(220, 38, 38, 0.15);
-  border: 1px solid rgba(220, 38, 38, 0.35);
+  color: #E11D48;
+  background: rgba(225, 29, 72, 0.12);
+  border: 1px solid rgba(225, 29, 72, 0.3);
   padding: 6px 14px;
   border-radius: 9999px;
   margin-bottom: 16px;
@@ -404,7 +422,7 @@ div[role="dialog"] > div:first-child {
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: #CBD5E1 !important;
+  color: #94A3B8 !important;
   max-width: 720px;
   margin: 0 auto;
   line-height: 1.7;
@@ -414,7 +432,7 @@ div[role="dialog"] > div:first-child {
   text-align: center;
 }
 
-/* Buttons */
+/* Buttons (100% Solid Colors, Zero Gradients as per .org) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -427,33 +445,39 @@ div[role="dialog"] > div:first-child {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   text-decoration: none;
-  border: none;
+  border: 1px solid transparent;
   letter-spacing: 0.01em;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  background: #E11D48 !important;
+  background-color: #E11D48 !important;
+  border: 1px solid #E11D48 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.3) !important;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
-  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.45);
+  background: #BE123C !important;
+  background-color: #BE123C !important;
+  border-color: #BE123C !important;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45) !important;
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(18, 24, 36, 0.88) !important;
+  background-color: rgba(18, 24, 36, 0.88) !important;
   color: #FFFFFF !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(12px) !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.18) !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(25, 34, 51, 0.95) !important;
+  background-color: rgba(25, 34, 51, 0.95) !important;
+  border-color: #94A3B8 !important;
   color: #FFFFFF !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 22px rgba(255, 255, 255, 0.1) !important;
@@ -712,8 +736,8 @@ div[role="dialog"] > div:first-child {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #EF4444;
-  box-shadow: 0 0 10px #EF4444;
+  background-color: #E11D48;
+  box-shadow: 0 0 10px #E11D48;
 }
 
 /* Floating Navigation Arrows */
@@ -727,7 +751,7 @@ div[role="dialog"] > div:first-child {
   border-radius: 50%;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background: rgba(15, 23, 42, 0.55);
+  background: rgba(18, 24, 36, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
   display: flex;
@@ -747,10 +771,10 @@ div[role="dialog"] > div:first-child {
 }
 
 .hero-nav-arrow:hover {
-  background: #DC2626;
-  border-color: #DC2626;
+  background: #E11D48;
+  border-color: #E11D48;
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.5);
+  box-shadow: 0 8px 30px rgba(225, 29, 72, 0.5);
 }
 
 /* Content Card */
@@ -759,55 +783,23 @@ div[role="dialog"] > div:first-child {
   z-index: 10;
   text-align: center;
   max-width: 960px;
-  padding: 0 24px 70px 24px;
-  margin-top: 0;
-}
-
-.hero-badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 18px;
-  border-radius: 9999px;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  margin-bottom: 14px;
-  transition: border-color 0.4s ease;
-}
-
-.hero-badge-accent-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  transition: background-color 0.4s ease;
-}
-
-.hero-badge-text {
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #F1F5F9;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .hero-main-title {
-  font-size: clamp(2.2rem, 5.2vw, 4.4rem);
-  font-weight: 850;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  line-height: 1.1;
+  font-size: clamp(2.4rem, 6.2vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
   color: #FFFFFF;
+  text-transform: uppercase;
   margin-bottom: 20px;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95);
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
 .hero-original-subtext {
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  font-weight: 500;
-  color: #E2E8F0;
-  letter-spacing: 0.05em;
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -818,14 +810,14 @@ div[role="dialog"] > div:first-child {
 }
 
 .hero-original-label {
-  color: #CBD5E1;
+  color: #94A3B8;
   font-weight: 500;
 }
 
 .hero-original-wing {
   color: #FFFFFF;
   font-weight: 800;
-  border-bottom: 2px solid #DC2626;
+  border-bottom: 2px solid #E11D48;
   padding-bottom: 2px;
   letter-spacing: 0.03em;
 }
@@ -844,7 +836,7 @@ div[role="dialog"] > div:first-child {
   font-weight: 700;
   letter-spacing: 0.04em;
   border-radius: 9999px;
-  box-shadow: 0 6px 25px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 6px 25px rgba(225, 29, 72, 0.4);
 }
 
 .hero-btn-glass {
@@ -1022,8 +1014,8 @@ div[role="dialog"] > div:first-child {
 }
 
 .hero-deck-playpause-btn:hover {
-  background: #DC2626;
-  border-color: #DC2626;
+  background: #E11D48;
+  border-color: #E11D48;
   transform: scale(1.08);
 }
 
@@ -1130,9 +1122,9 @@ div[role="dialog"] > div:first-child {
   gap: 8px;
   padding: 6px 16px;
   border-radius: 9999px;
-  background: rgba(220, 38, 38, 0.06);
-  border: 1px solid rgba(220, 38, 38, 0.18);
-  color: #DC2626;
+  background: rgba(225, 29, 72, 0.08);
+  border: 1px solid rgba(225, 29, 72, 0.22);
+  color: #E11D48;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1144,23 +1136,23 @@ div[role="dialog"] > div:first-child {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #DC2626;
-  box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  background-color: #E11D48;
+  box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
   animation: badgePulse 2s infinite;
 }
 
 @keyframes badgePulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+    box-shadow: 0 0 0 6px rgba(225, 29, 72, 0);
   }
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
   }
 }
 
@@ -1238,9 +1230,9 @@ div[role="dialog"] > div:first-child {
 }
 
 .carousel-nav-arrow:hover {
-  background: #DC2626;
+  background: #E11D48;
   color: #FFFFFF;
-  border-color: #DC2626;
+  border-color: #E11D48;
 }
 
 .drag-hint-badge {
@@ -1321,11 +1313,11 @@ div[role="dialog"] > div:first-child {
 }
 
 .marquee-floating-btn:hover {
-  background: #DC2626;
-  border-color: #DC2626;
+  background: #E11D48;
+  border-color: #E11D48;
   color: #FFFFFF;
   transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.25);
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.25);
 }
 
 .marquee-floating-btn:active {
@@ -1360,14 +1352,14 @@ div[role="dialog"] > div:first-child {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent 0%, #DC2626 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, #E11D48 50%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .marquee-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.08), 0 6px 16px -4px rgba(220, 38, 38, 0.05);
+  box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.08), 0 6px 16px -4px rgba(225, 29, 72, 0.05);
   border-color: #CBD5E1;
 }
 
@@ -1396,9 +1388,9 @@ div[role="dialog"] > div:first-child {
 }
 
 .marquee-card:hover .card-category-tag {
-  color: #DC2626;
-  background: rgba(220, 38, 38, 0.05);
-  border-color: rgba(220, 38, 38, 0.2);
+  color: #E11D48;
+  background: rgba(225, 29, 72, 0.05);
+  border-color: rgba(225, 29, 72, 0.2);
 }
 
 .card-arrow-badge {
@@ -1415,8 +1407,8 @@ div[role="dialog"] > div:first-child {
 }
 
 .marquee-card:hover .card-arrow-badge {
-  background: #DC2626;
-  border-color: #DC2626;
+  background: #E11D48;
+  border-color: #E11D48;
   color: #FFFFFF;
   transform: translate(2px, -2px);
 }

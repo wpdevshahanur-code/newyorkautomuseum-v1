@@ -39,7 +39,7 @@ export default function NewsletterSection() {
         <TextReveal
           as="p"
           style={{
-            color: '#CBD5E1',
+            color: '#94A3B8',
             fontSize: '1.05rem',
             marginBottom: '28px',
           }}
@@ -51,9 +51,9 @@ export default function NewsletterSection() {
             style={{
               padding: '16px 24px',
               borderRadius: '8px',
-              background: 'rgba(22, 163, 74, 0.1)',
-              border: '1px solid rgba(22, 163, 74, 0.3)',
-              color: '#15803D',
+              background: 'rgba(16, 185, 129, 0.1)',
+              border: '1px solid rgba(16, 185, 129, 0.3)',
+              color: '#10B981',
               fontWeight: 700,
             }}
           >
@@ -79,8 +79,8 @@ export default function NewsletterSection() {
               style={{
                 flex: 1,
                 borderRadius: '8px',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                background: 'rgba(15, 23, 42, 0.72)',
+                border: '1px solid rgba(255, 255, 255, 0.18)',
+                background: 'rgba(18, 24, 36, 0.88)',
                 backdropFilter: 'blur(12px)',
                 WebkitBackdropFilter: 'blur(12px)',
                 color: '#FFFFFF',

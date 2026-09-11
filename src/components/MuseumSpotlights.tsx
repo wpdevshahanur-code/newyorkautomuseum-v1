@@ -44,7 +44,7 @@ export default function MuseumSpotlights() {
                   position: 'absolute',
                   bottom: '24px',
                   left: '24px',
-                  backgroundColor: 'rgba(15, 23, 42, 0.85)',
+                  backgroundColor: 'rgba(18, 24, 36, 0.88)',
                   backdropFilter: 'blur(12px)',
                   border: '1px solid rgba(255, 255, 255, 0.15)',
                   padding: '10px 18px',
@@ -57,7 +57,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                 }}
               >
-                <span style={{ color: '#DC2626' }}>●</span> Proposed Manhattan Landmark • Glass Floors
+                <span style={{ color: '#E11D48' }}>●</span> Proposed Manhattan Landmark • Glass Floors
               </div>
             </div>
 
@@ -65,9 +65,9 @@ export default function MuseumSpotlights() {
             <div
               className="spotlight-content"
               style={{
-                backgroundColor: 'rgba(15, 23, 42, 0.72)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
               }}
             >
               <div
@@ -77,7 +77,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: '#EF4444',
+                  color: '#E11D48',
                   textTransform: 'uppercase',
                   letterSpacing: '0.15em',
                   marginBottom: '12px',
@@ -107,7 +107,7 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: '1rem',
                   lineHeight: 1.7,
-                  color: '#CBD5E1',
+                  color: '#94A3B8',
                   fontWeight: 500,
                   marginBottom: '12px',
                 }}
@@ -143,7 +143,7 @@ export default function MuseumSpotlights() {
                   position: 'absolute',
                   top: '20px',
                   left: '20px',
-                  backgroundColor: 'rgba(15, 23, 42, 0.85)',
+                  backgroundColor: 'rgba(18, 24, 36, 0.88)',
                   backdropFilter: 'blur(12px)',
                   WebkitBackdropFilter: 'blur(12px)',
                   border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -165,9 +165,9 @@ export default function MuseumSpotlights() {
             <div
               className="spotlight-content"
               style={{
-                backgroundColor: 'rgba(15, 23, 42, 0.72)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
               }}
             >
               <div
@@ -177,7 +177,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: '#EF4444',
+                  color: '#E11D48',
                   textTransform: 'uppercase',
                   letterSpacing: '0.12em',
                   marginBottom: '12px',
@@ -207,7 +207,7 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: '1.02rem',
                   lineHeight: 1.75,
-                  color: '#CBD5E1',
+                  color: '#94A3B8',
                 }}
                 text="NYA is continuously working to forge partnerships with OEMs, media conglomerates, automotive aficionados, race car drivers, race car team owners, Fortune 500 companies, automotive journalists, the public, VIPs, the State of New York, New York City, and NY Grant Company."
               />
@@ -220,7 +220,7 @@ export default function MuseumSpotlights() {
             <div
               className="spotlight-media"
               style={{
-                backgroundColor: 'rgba(15, 23, 42, 0.65)',
+                backgroundColor: 'rgba(11, 14, 20, 0.65)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -258,9 +258,9 @@ export default function MuseumSpotlights() {
             <div
               className="spotlight-content"
               style={{
-                backgroundColor: 'rgba(15, 23, 42, 0.72)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
                 padding: 'clamp(32px, 4.5vw, 56px)',
               }}
             >
@@ -285,7 +285,7 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: '1.05rem',
                   lineHeight: 1.8,
-                  color: '#CBD5E1',
+                  color: '#94A3B8',
                   fontWeight: 400,
                 }}
                 text="NYA is led by a seasoned board of advisors, directors, and executive management. Anticipated financial partners include major banks, OEMs, advertising agencies, publicity firms, investment funds, private equity firms, players in heavy industry, and entities from the broader private sector."

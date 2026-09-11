@@ -136,10 +136,10 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                 borderRadius: '9999px',
                 border:
                   selectedCategory === 'all'
-                    ? '1px solid #DC2626'
+                    ? '1px solid #E11D48'
                     : '1px solid #CBD5E1',
                 backgroundColor:
-                  selectedCategory === 'all' ? '#DC2626' : '#FFFFFF',
+                  selectedCategory === 'all' ? '#E11D48' : '#FFFFFF',
                 color: selectedCategory === 'all' ? '#FFFFFF' : '#1E293B',
                 fontSize: '0.85rem',
                 fontWeight: 700,
@@ -159,10 +159,10 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   borderRadius: '9999px',
                   border:
                     selectedCategory === cat.category
-                      ? '1px solid #DC2626'
+                      ? '1px solid #E11D48'
                       : '1px solid #CBD5E1',
                   backgroundColor:
-                    selectedCategory === cat.category ? '#DC2626' : '#FFFFFF',
+                    selectedCategory === cat.category ? '#E11D48' : '#FFFFFF',
                   color: selectedCategory === cat.category ? '#FFFFFF' : '#1E293B',
                   fontSize: '0.85rem',
                   fontWeight: 700,
@@ -268,7 +268,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       style={{
                         width: '6px',
                         height: '28px',
-                        backgroundColor: '#DC2626',
+                        backgroundColor: '#E11D48',
                         borderRadius: '3px',
                         flexShrink: 0,
                       }}
@@ -429,9 +429,9 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                                 style={{
                                   padding: '6px 14px',
                                   borderRadius: '6px',
-                                  backgroundColor: 'rgba(220, 38, 38, 0.06)',
-                                  border: '1px solid rgba(220, 38, 38, 0.2)',
-                                  color: '#DC2626',
+                                  backgroundColor: 'rgba(225, 29, 72, 0.08)',
+                                  border: '1px solid rgba(225, 29, 72, 0.22)',
+                                  color: '#E11D48',
                                   fontSize: '0.88rem',
                                   fontWeight: 700,
                                   letterSpacing: '0.01em',
@@ -520,7 +520,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       style={{
                         width: '6px',
                         height: '26px',
-                        backgroundColor: '#DC2626',
+                        backgroundColor: '#E11D48',
                         borderRadius: '3px',
                         flexShrink: 0,
                       }}
@@ -613,9 +613,9 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                                 style={{
                                   padding: '4px 12px',
                                   borderRadius: '6px',
-                                  backgroundColor: 'rgba(220, 38, 38, 0.06)',
-                                  border: '1px solid rgba(220, 38, 38, 0.2)',
-                                  color: '#DC2626',
+                                  backgroundColor: 'rgba(225, 29, 72, 0.08)',
+                                  border: '1px solid rgba(225, 29, 72, 0.22)',
+                                  color: '#E11D48',
                                   fontSize: '0.85rem',
                                   fontWeight: 700,
                                 }}
@@ -854,9 +854,9 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       display: 'inline-block',
                       padding: '4px 10px',
                       borderRadius: '6px',
-                      backgroundColor: 'rgba(220, 38, 38, 0.06)',
-                      border: '1px solid rgba(220, 38, 38, 0.2)',
-                      color: '#DC2626',
+                      backgroundColor: 'rgba(225, 29, 72, 0.08)',
+                      border: '1px solid rgba(225, 29, 72, 0.22)',
+                      color: '#E11D48',
                       fontSize: '0.82rem',
                       fontWeight: 700,
                       lineHeight: 1.35,

@@ -29,7 +29,7 @@ export default function PastFuture() {
                 fontSize: '0.75rem',
                 fontWeight: 800,
                 letterSpacing: '0.18em',
-                color: '#DC2626',
+                color: '#E11D48',
                 textTransform: 'uppercase',
                 marginBottom: '16px',
               }}
@@ -38,7 +38,7 @@ export default function PastFuture() {
                 style={{
                   width: '24px',
                   height: '2px',
-                  backgroundColor: '#DC2626',
+                  backgroundColor: '#E11D48',
                   display: 'inline-block',
                 }}
               />
@@ -56,14 +56,14 @@ export default function PastFuture() {
                 color: '#FFFFFF',
                 marginBottom: '24px',
               }}
-              coloredWords={{ '|': '#DC2626' }}
+              coloredWords={{ '|': '#E11D48' }}
             />
 
             <div
               style={{
                 width: '60px',
                 height: '4px',
-                backgroundColor: '#DC2626',
+                backgroundColor: '#E11D48',
                 borderRadius: '2px',
                 marginBottom: '24px',
               }}
@@ -73,7 +73,7 @@ export default function PastFuture() {
               as="p"
               style={{
                 fontSize: '0.95rem',
-                color: '#CBD5E1',
+                color: '#94A3B8',
                 fontWeight: 600,
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
@@ -86,9 +86,9 @@ export default function PastFuture() {
           <div
             className="past-future-card"
             style={{
-              backgroundColor: 'rgba(15, 23, 42, 0.72)',
-              backdropFilter: 'blur(16px)',
-              WebkitBackdropFilter: 'blur(16px)',
+              backgroundColor: 'rgba(18, 24, 36, 0.88)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
               border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: '20px',
               position: 'relative',
@@ -104,7 +104,7 @@ export default function PastFuture() {
                 right: '28px',
                 fontSize: '5rem',
                 lineHeight: 1,
-                color: 'rgba(239, 68, 68, 0.18)',
+                color: 'rgba(225, 29, 72, 0.18)',
                 fontFamily: 'serif',
                 userSelect: 'none',
               }}
@@ -130,7 +130,7 @@ export default function PastFuture() {
               style={{
                 fontSize: '1.05rem',
                 lineHeight: 1.8,
-                color: '#CBD5E1',
+                color: '#94A3B8',
                 marginBottom: '28px',
               }}
               text="The NYAM — New York Auto Museum and the World Motorsport Hall of Fame is set to become one of the world's leading Museum attractions."
@@ -150,7 +150,7 @@ export default function PastFuture() {
                   width: '8px',
                   height: '8px',
                   borderRadius: '50%',
-                  backgroundColor: '#EF4444',
+                  backgroundColor: '#E11D48',
                 }}
               />
               <span

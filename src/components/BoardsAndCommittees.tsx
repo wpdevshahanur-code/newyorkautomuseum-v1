@@ -62,7 +62,7 @@ export default function BoardsAndCommittees() {
               style={{
                 width: '6px',
                 height: '32px',
-                backgroundColor: '#DC2626',
+                backgroundColor: '#E11D48',
                 borderRadius: '3px',
               }}
             />
@@ -79,7 +79,7 @@ export default function BoardsAndCommittees() {
               />
               <TextReveal
                 as="p"
-                style={{ fontSize: '0.9rem', color: '#CBD5E1', marginTop: '2px' }}
+                style={{ fontSize: '0.9rem', color: '#94A3B8', marginTop: '2px' }}
                 text="Curatorial and technical advisory committees for the permanent exhibition wings"
               />
             </div>
@@ -101,10 +101,10 @@ export default function BoardsAndCommittees() {
                   className="committee-stat-card"
                   style={{
                     backgroundColor: isOpen ? '#FFFFFF' : '#F8FAFC',
-                    border: isOpen ? '1px solid #DC2626' : '1px solid #E2E8F0',
+                    border: isOpen ? '1px solid #E11D48' : '1px solid #E2E8F0',
                     borderRadius: '14px',
                     boxShadow: isOpen
-                      ? '0 10px 30px rgba(220, 38, 38, 0.08)'
+                      ? '0 10px 30px rgba(225, 29, 72, 0.08)'
                       : '0 2px 10px rgba(15, 23, 42, 0.03)',
                     transition: 'all 0.25s ease',
                     display: 'flex',
@@ -125,8 +125,8 @@ export default function BoardsAndCommittees() {
                         style={{
                           fontSize: '0.75rem',
                           fontWeight: 800,
-                          color: '#DC2626',
-                          backgroundColor: 'rgba(220, 38, 38, 0.08)',
+                          color: '#E11D48',
+                          backgroundColor: 'rgba(225, 29, 72, 0.08)',
                           padding: '3px 10px',
                           borderRadius: '9999px',
                           textTransform: 'uppercase',
@@ -171,7 +171,7 @@ export default function BoardsAndCommittees() {
                       style={{
                         background: 'transparent',
                         border: 'none',
-                        color: isOpen ? '#DC2626' : '#0284C7',
+                        color: isOpen ? '#E11D48' : '#2563EB',
                         fontSize: '0.85rem',
                         fontWeight: 700,
                         cursor: 'pointer',
@@ -223,7 +223,7 @@ export default function BoardsAndCommittees() {
               />
               <TextReveal
                 as="p"
-                style={{ fontSize: '0.9rem', color: '#CBD5E1', marginTop: '2px' }}
+                style={{ fontSize: '0.9rem', color: '#94A3B8', marginTop: '2px' }}
                 text="Fiduciary, governance, and specialized steering committees supported through tax-deductible donor tiers"
               />
             </div>

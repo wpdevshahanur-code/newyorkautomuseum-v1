@@ -17,9 +17,9 @@ export default function NyaeSynergy() {
         <div
           className="synergy-card"
           style={{
-            background: 'rgba(15, 23, 42, 0.72)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
+            background: 'rgba(18, 24, 36, 0.88)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
             border: '1px solid rgba(255, 255, 255, 0.12)',
             borderRadius: '24px',
             boxShadow: '0 14px 40px rgba(0, 0, 0, 0.45)',
@@ -49,7 +49,7 @@ export default function NyaeSynergy() {
               as="p"
               style={{
                 fontSize: '1.05rem',
-                color: '#CBD5E1',
+                color: '#94A3B8',
                 lineHeight: 1.7,
                 marginBottom: '28px',
               }}
@@ -87,7 +87,7 @@ export default function NyaeSynergy() {
             <div
               className="synergy-badge-card"
               style={{
-                background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                backgroundColor: 'rgba(11, 14, 20, 0.85)',
                 border: '1px solid rgba(255, 255, 255, 0.12)',
                 borderRadius: '20px',
                 display: 'flex',
@@ -121,10 +121,10 @@ export default function NyaeSynergy() {
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                 }}
               >
-                <span style={{ color: '#E63946', fontSize: '0.8rem' }}>●</span>
+                <span style={{ color: '#E11D48', fontSize: '0.8rem' }}>●</span>
                 <span
                   style={{
-                    color: '#CBD5E1',
+                    color: '#94A3B8',
                     fontSize: '0.78rem',
                     fontWeight: 700,
                     letterSpacing: '0.06em',

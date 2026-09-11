@@ -55,7 +55,7 @@ export default function CareersSection() {
             Send all inquiries and applications directly to:{' '}
             <a
               href="mailto:hr@newyorkautomuseum.com"
-              style={{ color: '#DC2626', fontWeight: 800, textDecoration: 'underline' }}
+              style={{ color: '#E11D48', fontWeight: 800, textDecoration: 'underline' }}
             >
               hr@newyorkautomuseum.com
             </a>
@@ -79,9 +79,9 @@ export default function CareersSection() {
               borderRadius: '9999px',
               border:
                 selectedDept === 'all'
-                  ? '1px solid #DC2626'
+                  ? '1px solid #E11D48'
                   : '1px solid #CBD5E1',
-              backgroundColor: selectedDept === 'all' ? '#DC2626' : '#FFFFFF',
+              backgroundColor: selectedDept === 'all' ? '#E11D48' : '#FFFFFF',
               color: selectedDept === 'all' ? '#FFFFFF' : '#334155',
               fontSize: '0.85rem',
               fontWeight: 700,
@@ -101,10 +101,10 @@ export default function CareersSection() {
                 borderRadius: '9999px',
                 border:
                   selectedDept === dept.department
-                    ? '1px solid #DC2626'
+                    ? '1px solid #E11D48'
                     : '1px solid #CBD5E1',
                 backgroundColor:
-                  selectedDept === dept.department ? '#DC2626' : '#FFFFFF',
+                  selectedDept === dept.department ? '#E11D48' : '#FFFFFF',
                 color: selectedDept === dept.department ? '#FFFFFF' : '#334155',
                 fontSize: '0.85rem',
                 fontWeight: 700,
@@ -135,7 +135,7 @@ export default function CareersSection() {
                   style={{
                     width: '4px',
                     height: '24px',
-                    backgroundColor: '#DC2626',
+                    backgroundColor: '#E11D48',
                     borderRadius: '2px',
                   }}
                 />
@@ -181,10 +181,10 @@ export default function CareersSection() {
                       className="career-job-card"
                       style={{
                         backgroundColor: '#FFFFFF',
-                        border: isJobOpen ? '1px solid #DC2626' : '1px solid #E2E8F0',
+                        border: isJobOpen ? '1px solid #E11D48' : '1px solid #E2E8F0',
                         borderRadius: '14px',
                         boxShadow: isJobOpen
-                          ? '0 10px 30px rgba(220, 38, 38, 0.08)'
+                          ? '0 10px 30px rgba(225, 29, 72, 0.08)'
                           : '0 2px 10px rgba(15, 23, 42, 0.03)',
                         display: 'flex',
                         flexDirection: 'column',

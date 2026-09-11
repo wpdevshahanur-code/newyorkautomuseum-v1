@@ -9,11 +9,11 @@ export default function Footer() {
     <footer
       id="footer"
       style={{
-        backgroundColor: 'rgba(7, 11, 20, 0.88)',
+        backgroundColor: 'rgba(11, 14, 20, 0.75)',
         backdropFilter: 'blur(24px)',
         WebkitBackdropFilter: 'blur(24px)',
-        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-        color: '#CBD5E1',
+        borderTop: '1px solid rgba(255, 255, 255, 0.12)',
+        color: '#94A3B8',
         fontSize: '0.92rem',
         paddingTop: '70px',
         paddingBottom: '40px',
@@ -56,9 +56,9 @@ export default function Footer() {
             <div
               className="footer-sponsor-badge"
               style={{
-                backgroundColor: 'rgba(15, 23, 42, 0.72)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
                 border: '1px solid rgba(255, 255, 255, 0.12)',
                 borderRadius: '12px',
                 display: 'inline-block',
@@ -120,7 +120,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  style={{ color: '#CBD5E1', textDecoration: 'none', fontWeight: 500 }}
+                  style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}
                 >
                   The Museum &amp; Vision
                 </Link>
@@ -128,7 +128,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/advisors"
-                  style={{ color: '#CBD5E1', textDecoration: 'none', fontWeight: 500 }}
+                  style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}
                 >
                   The Board &amp; Advisors
                 </Link>
@@ -136,7 +136,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/committees"
-                  style={{ color: '#CBD5E1', textDecoration: 'none', fontWeight: 500 }}
+                  style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}
                 >
                   Boards &amp; Committees
                 </Link>
@@ -144,7 +144,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/careers"
-                  style={{ color: '#CBD5E1', textDecoration: 'none', fontWeight: 500 }}
+                  style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}
                 >
                   Career Opportunities
                 </Link>
@@ -154,7 +154,7 @@ export default function Footer() {
                   href="https://newyorkautoexperience.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#38BDF8', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                  style={{ color: '#2563EB', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                 >
                   NYAE 501(c)(3) Portal &rarr;
                 </a>
@@ -189,7 +189,7 @@ export default function Footer() {
               <a
                 href="mailto:david.senater@newyorkautomuseum.com"
                 style={{
-                  color: '#EF4444',
+                  color: '#E11D48',
                   textDecoration: 'none',
                   fontWeight: 700,
                   fontSize: '0.88rem',
@@ -234,9 +234,9 @@ export default function Footer() {
             <div
               className="footer-address-card"
               style={{
-                backgroundColor: 'rgba(15, 23, 42, 0.72)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
+                backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
                 border: '1px solid rgba(255, 255, 255, 0.12)',
                 borderRadius: '12px',
                 padding: '20px',
@@ -246,8 +246,8 @@ export default function Footer() {
               <div style={{ fontWeight: 800, color: '#FFFFFF', marginBottom: '6px' }}>
                 New York Auto Museum Experience Center Inc
               </div>
-              <div style={{ color: '#CBD5E1' }}>767 Broadway #1671</div>
-              <div style={{ color: '#94A3B8' }}>
+              <div style={{ color: '#94A3B8' }}>767 Broadway #1671</div>
+              <div style={{ color: '#64748B' }}>
                 New York, New York, Manhattan 10003 USA
               </div>
             </div>
