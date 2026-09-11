@@ -28,15 +28,12 @@ function getInitials(name: string): string {
 export default function AdvisoryBoard() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'cards' | 'list'>('cards');
-  const [expandedBios, setExpandedBios] = useState<{ [key: string]: boolean }>({});
+  const [expandedBioKey, setExpandedBioKey] = useState<string | null>(null);
 
   const categories = advisorsData as CategoryGroup[];
 
   const toggleBio = (uniqueKey: string) => {
-    setExpandedBios((prev) => ({
-      ...prev,
-      [uniqueKey]: !prev[uniqueKey],
-    }));
+    setExpandedBioKey((prev) => (prev === uniqueKey ? null : uniqueKey));
   };
 
   const displayedCategories =
@@ -239,15 +236,17 @@ export default function AdvisoryBoard() {
 
                 {/* Wide Cards Grid (min 480px width so titles NEVER get squeezed) */}
                 <div
+                  className="advisory-cards-grid"
                   style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(480px, 1fr))',
                     gap: '24px',
+                    alignItems: 'start',
                   }}
                 >
                   {group.members.map((member, idx) => {
                     const uniqueKey = `${group.category}-${member.name}-${idx}`;
-                    const isExpanded = !!expandedBios[uniqueKey];
+                    const isExpanded = expandedBioKey === uniqueKey;
                     const hasLongBio = member.bio.length > 280;
                     const displayBio =
                       !hasLongBio || isExpanded
@@ -265,7 +264,6 @@ export default function AdvisoryBoard() {
                           boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
                           display: 'flex',
                           flexDirection: 'column',
-                          justifyContent: 'space-between',
                           transition: 'transform 0.25s ease, box-shadow 0.25s ease',
                         }}
                       >
@@ -465,7 +463,7 @@ export default function AdvisoryBoard() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {group.members.map((member, idx) => {
                     const uniqueKey = `list-${group.category}-${member.name}-${idx}`;
-                    const isExpanded = !!expandedBios[uniqueKey];
+                    const isExpanded = expandedBioKey === uniqueKey;
 
                     return (
                       <div

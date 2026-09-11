@@ -1269,6 +1269,13 @@ body {
   padding: 20px;
 }
 
+.advisory-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
 .dept-overview-card {
   padding: 32px;
 }
@@ -1374,6 +1381,11 @@ body {
 
   .footer-address-card {
     padding: 16px 15px !important;
+  }
+
+  .advisory-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 
   .dept-overview-card {
