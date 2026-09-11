@@ -85,7 +85,7 @@ export default function BoardsAndCommittees() {
             </div>
           </div>
 
-          {/* 11 Wings Interactive Cards Grid */}
+          {/* 12 Wings Interactive Cards Grid */}
           <div
             style={{
               display: 'grid',
@@ -181,7 +181,7 @@ export default function BoardsAndCommittees() {
                         gap: '6px',
                       }}
                     >
-                      {isOpen ? 'Close Scope ↑' : 'Explore Wing Scope &rarr;'}
+                      {isOpen ? 'Close Scope ↑' : 'Explore Wing Scope →'}
                     </button>
                   </div>
                 </div>

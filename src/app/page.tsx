@@ -115,7 +115,7 @@ export default function HomePage() {
                       letterSpacing: '0.1em',
                     }}
                   >
-                    11 Wings • 32 Donation Tiers
+                    12 Wings • 32 Donation Tiers
                   </span>
                   <TextReveal
                     as="h3"
@@ -131,7 +131,7 @@ export default function HomePage() {
                   <TextReveal
                     as="p"
                     style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
-                    text="Detailed working scopes for all 11 permanent museum wings alongside 32 tax-deductible donor committees guiding governance and operations."
+                    text="Detailed working scopes for all 12 permanent museum wings alongside 32 tax-deductible donor committees guiding governance and operations."
                   />
                 </div>
                 <Link
