@@ -321,12 +321,9 @@ export default function HeroSlideshow() {
         </div>
 
         {/* Slide Description */}
-        <TextReveal
-          key={currentSlide}
-          as="p"
-          className="hero-description"
-          text={activeSlideData.description}
-        />
+        <p key={currentSlide} className="hero-description">
+          {activeSlideData.description}
+        </p>
 
         {/* Action Buttons */}
         <div className="hero-actions">

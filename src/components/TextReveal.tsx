@@ -2,12 +2,6 @@
 
 import React, { useRef, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// Register ScrollTrigger once on client
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
@@ -33,20 +27,14 @@ export default function TextReveal({
   as: Component = 'h2',
   className = '',
   style = {},
-  stagger,
-  duration,
+  stagger = 0.035,
+  duration = 0.6,
   delay = 0,
-  threshold = 'top 88%',
-  reverse = true,
-  toggleActions,
   coloredWords,
-  triggerElement,
 }: TextRevealProps) {
   const containerRef = useRef<HTMLElement | null>(null);
 
   const isParagraph = Component === 'p';
-  const effectiveStagger = stagger ?? (isParagraph ? 0.04 : 0.075);
-  const effectiveDuration = duration ?? 1.0;
 
   // Extract raw text from text prop or children
   let rawText = text || '';
@@ -62,57 +50,43 @@ export default function TextReveal({
   }
 
   useIsomorphicLayoutEffect(() => {
-    if (!containerRef.current) return;
+    // If it's a paragraph, skip animation completely for fast, instant reading
+    if (isParagraph || !containerRef.current) return;
 
     const ctx = gsap.context(() => {
       const words = containerRef.current?.querySelectorAll('.gsap-reveal-word');
       if (!words || words.length === 0) return;
 
-      const triggerTarget =
-        (typeof triggerElement === 'string'
-          ? document.querySelector(triggerElement)
-          : triggerElement) || containerRef.current;
-
       gsap.fromTo(
         words,
         {
-          y: '110%',
+          y: '100%',
           opacity: 0,
-          rotateX: -15,
         },
         {
           y: '0%',
           opacity: 1,
-          rotateX: 0,
-          duration: effectiveDuration,
-          stagger: effectiveStagger,
+          duration,
+          stagger,
           delay,
           ease: 'power3.out',
-          scrollTrigger: {
-            trigger: triggerTarget,
-            start: threshold,
-            toggleActions:
-              toggleActions || (reverse ? 'play none none reverse' : 'play none none none'),
-            invalidateOnRefresh: true,
-          },
         }
       );
     }, containerRef);
 
-    // Refresh ScrollTrigger once DOM layout and images settle
-    const refreshTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 150);
-
-    const handleLoad = () => ScrollTrigger.refresh();
-    window.addEventListener('load', handleLoad);
-
     return () => {
-      window.removeEventListener('load', handleLoad);
-      clearTimeout(refreshTimer);
       ctx.revert();
     };
-  }, [rawText, effectiveStagger, effectiveDuration, delay, threshold, reverse, toggleActions, triggerElement]);
+  }, [isParagraph, rawText, duration, stagger, delay]);
+
+  // If paragraph, render immediately as clean, standard <p> without any reveal animation delay
+  if (isParagraph) {
+    return (
+      <p className={className} style={style}>
+        {rawText || children}
+      </p>
+    );
+  }
 
   const words = rawText.trim().split(/\s+/).filter(Boolean);
 
@@ -130,7 +104,6 @@ export default function TextReveal({
       className={`text-reveal-container ${className}`}
       style={{
         ...style,
-        perspective: '800px',
       }}
     >
       {words.map((word, index) => {
