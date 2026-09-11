@@ -352,24 +352,26 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                           </div>
 
                           {/* Full-Width Role Badge (Has 100% of card width, never squeezed!) */}
-                          <div style={{ marginBottom: '18px' }}>
-                            <span
-                              style={{
-                                display: 'inline-block',
-                                padding: '6px 14px',
-                                borderRadius: '6px',
-                                backgroundColor: 'rgba(220, 38, 38, 0.06)',
-                                border: '1px solid rgba(220, 38, 38, 0.2)',
-                                color: '#DC2626',
-                                fontSize: '0.88rem',
-                                fontWeight: 700,
-                                letterSpacing: '0.01em',
-                                lineHeight: 1.4,
-                              }}
-                            >
-                              {member.position}
-                            </span>
-                          </div>
+                          {member.position && member.position.trim() && (
+                            <div style={{ marginBottom: '18px' }}>
+                              <span
+                                style={{
+                                  display: 'inline-block',
+                                  padding: '6px 14px',
+                                  borderRadius: '6px',
+                                  backgroundColor: 'rgba(220, 38, 38, 0.06)',
+                                  border: '1px solid rgba(220, 38, 38, 0.2)',
+                                  color: '#DC2626',
+                                  fontSize: '0.88rem',
+                                  fontWeight: 700,
+                                  letterSpacing: '0.01em',
+                                  lineHeight: 1.4,
+                                }}
+                              >
+                                {member.position}
+                              </span>
+                            </div>
+                          )}
 
                           {/* Bio Content */}
                           {member.bio && (
@@ -517,19 +519,21 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                                 text={member.name}
                               />
                             </div>
-                            <span
-                              style={{
-                                padding: '4px 12px',
-                                borderRadius: '6px',
-                                backgroundColor: 'rgba(220, 38, 38, 0.06)',
-                                border: '1px solid rgba(220, 38, 38, 0.2)',
-                                color: '#DC2626',
-                                fontSize: '0.85rem',
-                                fontWeight: 700,
-                              }}
-                            >
-                              {member.position}
-                            </span>
+                            {member.position && member.position.trim() && (
+                              <span
+                                style={{
+                                  padding: '4px 12px',
+                                  borderRadius: '6px',
+                                  backgroundColor: 'rgba(220, 38, 38, 0.06)',
+                                  border: '1px solid rgba(220, 38, 38, 0.2)',
+                                  color: '#DC2626',
+                                  fontSize: '0.85rem',
+                                  fontWeight: 700,
+                                }}
+                              >
+                                {member.position}
+                              </span>
+                            )}
                           </div>
 
                           {/* Actions: LinkedIn & Expand Bio */}
