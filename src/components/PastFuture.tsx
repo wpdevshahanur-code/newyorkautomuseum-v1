@@ -8,28 +8,10 @@ export default function PastFuture() {
       id="past-future"
       className="past-future-section"
       style={{
-        backgroundColor: '#FFFFFF',
-        borderBottom: '1px solid #E2E8F0',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Subtle architectural background grid line */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '100%',
-          maxWidth: '1280px',
-          height: '100%',
-          borderLeft: '1px dashed #F1F5F9',
-          borderRight: '1px dashed #F1F5F9',
-          pointerEvents: 'none',
-        }}
-      />
-
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div
           className="past-future-grid"
