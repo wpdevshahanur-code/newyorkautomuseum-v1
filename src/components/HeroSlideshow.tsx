@@ -15,6 +15,14 @@ interface HeroSlide {
 
 const heroSlides: HeroSlide[] = [
   {
+    image: 'banner.jpg',
+    wing: 'Wheels & Rims Wing',
+    badge: 'Iconic Mercedes-Benz 300SL Gullwing',
+    headline: 'NEW YORK AUTO MUSEUM',
+    description: 'Permanent Exhibitions & Wings: Wheels & Rims Wing',
+    accentColor: '#22C55E',
+  },
+  {
     image: 'IMG_0000.jpg',
     wing: 'Art, Film and Television',
     badge: 'Iconic Concept Prototype',
@@ -230,6 +238,16 @@ export default function HeroSlideshow() {
 
   const activeSlideData = heroSlides[currentSlide];
 
+  const [introFaded, setIntroFaded] = useState(false);
+
+  useEffect(() => {
+    // Cinematic initial fade-in: starts dark and smoothly reveals the classic car
+    const timer = setTimeout(() => {
+      setIntroFaded(true);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section
       id="banner"
@@ -238,7 +256,7 @@ export default function HeroSlideshow() {
       onTouchEnd={handleTouchEnd}
       aria-label="New York Auto Museum Hero Carousel"
     >
-      {/* Background Slides with Ken Burns Smooth Zoom (All 19 Client Photos) */}
+      {/* Background Slides with Ken Burns Smooth Zoom */}
       <div className="hero-slides-layer">
         {heroSlides.map((slide, index) => {
           const isActive = currentSlide === index;
@@ -263,6 +281,12 @@ export default function HeroSlideshow() {
 
       {/* Cinematic Multi-Layer Gradients for Contrast & Theme Transition */}
       <div className="hero-gradient-overlay" />
+
+      {/* Cinematic Intro Veil: starts in deep darkness and fades in smoothly (drops visitor into an experience) */}
+      <div
+        className={`hero-intro-veil ${introFaded ? 'is-faded' : ''}`}
+        aria-hidden="true"
+      />
 
       {/* Floating Top-Right Institutional Badge */}
       <div className="hero-top-badge" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -295,35 +319,23 @@ export default function HeroSlideshow() {
         </svg>
       </button>
 
-      {/* Hero Center Content Card */}
+      {/* Hero Center Content Card: Exact Original Signature Center Presentation */}
       <div className="container hero-content-wrapper">
-        {/* Dynamic Slide Badge */}
-        <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40` }}>
-          <span
-            className="hero-badge-accent-dot"
-            style={{ backgroundColor: activeSlideData.accentColor }}
-          />
-          <span className="hero-badge-text">{activeSlideData.badge}</span>
-        </div>
+        {/* Main Institutional Headline: Exact Original Bold Words */}
+        <h1 className="hero-main-title">
+          NEW YORK AUTO MUSEUM
+        </h1>
 
-        {/* Main Institutional Headline */}
-        <TextReveal as="h1" className="hero-main-title" text="New York Auto Museum" />
-
-        {/* Dynamic Exhibition Wing & Tagline */}
-        <div className="hero-wing-showcase">
-          <span className="hero-wing-label">Exhibition Wing:</span>
+        {/* Original Dynamic Subtitle: Permanent Exhibitions & Wings */}
+        <div className="hero-original-subtext">
+          <span className="hero-original-label">Permanent Exhibitions &amp; Wings:</span>
           <span
-            className="hero-wing-name"
-            style={{ color: activeSlideData.accentColor }}
+            key={currentSlide}
+            className="hero-original-wing"
           >
             {activeSlideData.wing}
           </span>
         </div>
-
-        {/* Slide Description */}
-        <p key={currentSlide} className="hero-description">
-          {activeSlideData.description}
-        </p>
 
         {/* Action Buttons */}
         <div className="hero-actions">
