@@ -464,13 +464,51 @@ body {
   color: #F1F5F9;
 }
 
+/* Hero Headline Expanding Frame Lines (Exact .com animation: top left->right, bottom right->left) */
+.hero-headline-frame {
+  position: relative;
+  display: inline-block;
+  padding: 0.35em 0.8em;
+  margin-bottom: 14px;
+}
+
+.hero-headline-frame::before,
+.hero-headline-frame::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #FFFFFF;
+  width: 0;
+  pointer-events: none;
+  transition: width 0.85s ease;
+  transition-delay: 0.25s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Top Line: expands from LEFT to RIGHT */
+.hero-headline-frame::before {
+  top: 0;
+  left: 0;
+}
+
+/* Bottom Line: expands from RIGHT to LEFT */
+.hero-headline-frame::after {
+  bottom: 0;
+  right: 0;
+}
+
+.hero-headline-frame.is-revealed::before,
+.hero-headline-frame.is-revealed::after {
+  width: 100%;
+}
+
 .hero-main-title {
   font-size: clamp(2.4rem, 5vw, 4.4rem);
   font-weight: 950;
   letter-spacing: -0.035em;
   line-height: 1.05;
   color: #FFFFFF;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .hero-main-title .gsap-reveal-word {
@@ -743,9 +781,13 @@ body {
     font-size: 0.7rem;
     letter-spacing: 0.08em;
   }
+  .hero-headline-frame {
+    padding: 0.25em 0.5em;
+    margin-bottom: 10px;
+  }
   .hero-main-title {
     font-size: clamp(1.9rem, 7.5vw, 2.4rem);
-    margin-bottom: 8px;
+    margin-bottom: 0;
     line-height: 1.1;
   }
   .hero-wing-showcase {

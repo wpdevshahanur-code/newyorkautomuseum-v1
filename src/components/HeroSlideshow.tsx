@@ -319,8 +319,10 @@ export default function HeroSlideshow() {
           <span className="hero-badge-text">{activeSlideData.badge}</span>
         </div>
 
-        {/* Main Institutional Headline */}
-        <TextReveal as="h1" className="hero-main-title" text="New York Auto Museum" />
+        {/* Main Institutional Headline with Animated Architectural Frame Lines */}
+        <div className={`hero-headline-frame ${introFaded ? 'is-revealed' : ''}`}>
+          <TextReveal as="h1" className="hero-main-title" text="New York Auto Museum" />
+        </div>
 
         {/* Dynamic Exhibition Wing & Tagline */}
         <div className="hero-wing-showcase">
