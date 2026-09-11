@@ -72,14 +72,14 @@ export default function BoardsAndCommittees() {
                 style={{
                   fontSize: '1.6rem',
                   fontWeight: 900,
-                  color: '#0F172A',
+                  color: '#FFFFFF',
                   letterSpacing: '-0.02em',
                 }}
                 text="Museum Wing Development Committees"
               />
               <TextReveal
                 as="p"
-                style={{ fontSize: '0.9rem', color: '#64748B', marginTop: '2px' }}
+                style={{ fontSize: '0.9rem', color: '#CBD5E1', marginTop: '2px' }}
                 text="Curatorial and technical advisory committees for the permanent exhibition wings"
               />
             </div>
@@ -216,14 +216,14 @@ export default function BoardsAndCommittees() {
                 style={{
                   fontSize: '1.6rem',
                   fontWeight: 900,
-                  color: '#0F172A',
+                  color: '#FFFFFF',
                   letterSpacing: '-0.02em',
                 }}
                 text="Committees (Suggested Tax-Deductible Donations)"
               />
               <TextReveal
                 as="p"
-                style={{ fontSize: '0.9rem', color: '#64748B', marginTop: '2px' }}
+                style={{ fontSize: '0.9rem', color: '#CBD5E1', marginTop: '2px' }}
                 text="Fiduciary, governance, and specialized steering committees supported through tax-deductible donor tiers"
               />
             </div>

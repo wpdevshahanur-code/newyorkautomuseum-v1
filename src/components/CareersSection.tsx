@@ -144,7 +144,7 @@ export default function CareersSection() {
                   style={{
                     fontSize: '1.35rem',
                     fontWeight: 800,
-                    color: '#0F172A',
+                    color: '#FFFFFF',
                     letterSpacing: '-0.02em',
                   }}
                   text={dept.department}
@@ -153,8 +153,9 @@ export default function CareersSection() {
                   style={{
                     fontSize: '0.8rem',
                     fontWeight: 700,
-                    color: '#64748B',
-                    backgroundColor: '#E2E8F0',
+                    color: '#FFFFFF',
+                    backgroundColor: 'rgba(255, 255, 255, 0.14)',
+                    border: '1px solid rgba(255, 255, 255, 0.25)',
                     padding: '2px 8px',
                     borderRadius: '6px',
                   }}

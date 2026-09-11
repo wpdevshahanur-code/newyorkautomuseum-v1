@@ -82,24 +82,18 @@ section,
   border-bottom: none !important;
 }
 
-/* Ensure section titles and subtitles contrast beautifully against the backdrop */
-.past-future-section h2,
-.past-future-section [class*="section-title"],
-.past-future-section div > h2,
-.gateway-section .section-title,
-.accreditations-section .section-title,
+/* Ensure section titles, subtitles, and category headings contrast beautifully against the backdrop */
+.section-title,
+.section-title *,
 .accreditations-title,
-.accreditations-title span,
-.museum-spotlights-section .section-title,
-#advisors .section-title {
+.accreditations-title * {
   color: #FFFFFF !important;
 }
 
-.gateway-section .section-subtitle,
-.accreditations-section .section-subtitle,
+.section-subtitle,
+.section-subtitle *,
 .accreditations-subtitle,
-.museum-spotlights-section .section-subtitle,
-#advisors .section-subtitle {
+.accreditations-subtitle * {
   color: #CBD5E1 !important;
 }
 
@@ -119,9 +113,9 @@ section,
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--color-primary);
-  background: rgba(220, 38, 38, 0.08);
-  border: 1px solid rgba(220, 38, 38, 0.2);
+  color: #EF4444;
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.35);
   padding: 6px 14px;
   border-radius: 9999px;
   margin-bottom: 16px;
@@ -133,12 +127,12 @@ section,
   letter-spacing: -0.03em;
   line-height: 1.15;
   margin-bottom: 16px;
-  color: var(--text-primary);
+  color: #FFFFFF !important;
 }
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: #CBD5E1 !important;
   max-width: 720px;
   margin: 0 auto;
   line-height: 1.7;

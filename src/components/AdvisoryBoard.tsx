@@ -278,7 +278,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       style={{
                         fontSize: '1.35rem',
                         fontWeight: 900,
-                        color: '#0F172A',
+                        color: '#FFFFFF',
                         letterSpacing: '-0.02em',
                         lineHeight: 1.25,
                         wordBreak: 'break-word',
@@ -290,8 +290,9 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                     style={{
                       fontSize: '0.78rem',
                       fontWeight: 700,
-                      backgroundColor: '#E2E8F0',
-                      color: '#475569',
+                      backgroundColor: 'rgba(255, 255, 255, 0.14)',
+                      color: '#FFFFFF',
+                      border: '1px solid rgba(255, 255, 255, 0.25)',
                       padding: '4px 12px',
                       borderRadius: '9999px',
                       whiteSpace: 'nowrap',
@@ -529,7 +530,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       style={{
                         fontSize: '1.25rem',
                         fontWeight: 800,
-                        color: '#0F172A',
+                        color: '#FFFFFF',
                         lineHeight: 1.25,
                         wordBreak: 'break-word',
                       }}
@@ -540,8 +541,9 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                     style={{
                       fontSize: '0.75rem',
                       fontWeight: 700,
-                      backgroundColor: '#E2E8F0',
-                      color: '#475569',
+                      backgroundColor: 'rgba(255, 255, 255, 0.14)',
+                      color: '#FFFFFF',
+                      border: '1px solid rgba(255, 255, 255, 0.25)',
                       padding: '4px 12px',
                       borderRadius: '9999px',
                       whiteSpace: 'nowrap',
