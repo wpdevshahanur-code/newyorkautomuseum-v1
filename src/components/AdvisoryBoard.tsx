@@ -44,16 +44,33 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
         setActiveModalMember(null);
       }
     };
+
     if (activeModalMember) {
+      const scrollY = window.scrollY;
+      const originalBodyOverflow = document.body.style.overflow;
+      const originalBodyPosition = document.body.style.position;
+      const originalBodyTop = document.body.style.top;
+      const originalBodyWidth = document.body.style.width;
+      const originalHtmlOverflow = document.documentElement.style.overflow;
+
+      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+
       window.addEventListener('keydown', handleKeyDown);
-    } else {
-      document.body.style.overflow = 'unset';
+
+      return () => {
+        document.documentElement.style.overflow = originalHtmlOverflow;
+        document.body.style.overflow = originalBodyOverflow;
+        document.body.style.position = originalBodyPosition;
+        document.body.style.top = originalBodyTop;
+        document.body.style.width = originalBodyWidth;
+        window.scrollTo(0, scrollY);
+        window.removeEventListener('keydown', handleKeyDown);
+      };
     }
-    return () => {
-      document.body.style.overflow = 'unset';
-      window.removeEventListener('keydown', handleKeyDown);
-    };
   }, [activeModalMember]);
 
   const categories = initialCategories && initialCategories.length > 0
@@ -639,54 +656,68 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
           <div
             style={{
               position: 'fixed',
-              inset: 0,
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              width: '100%',
+              height: '100dvh',
+              maxHeight: '100vh',
               zIndex: 99999,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: 'rgba(15, 23, 42, 0.75)',
               backdropFilter: 'blur(6px)',
-              padding: '20px',
+              WebkitBackdropFilter: 'blur(6px)',
+              padding: '16px',
+              boxSizing: 'border-box',
+              overflow: 'hidden',
+              touchAction: 'none',
             }}
             onClick={() => setActiveModalMember(null)}
           >
             <div
               style={{
                 backgroundColor: '#FFFFFF',
-                borderRadius: '20px',
-                maxWidth: '640px',
+                borderRadius: '18px',
+                maxWidth: '600px',
                 width: '100%',
-                maxHeight: '85vh',
+                maxHeight: 'min(86vh, 640px)',
                 display: 'flex',
                 flexDirection: 'column',
-                boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.25)',
+                boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.35)',
                 overflow: 'hidden',
                 position: 'relative',
+                boxSizing: 'border-box',
+                margin: 'auto',
+                touchAction: 'auto',
               }}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
               <div
                 style={{
-                  padding: '24px 28px',
+                  padding: '16px 20px',
                   borderBottom: '1px solid #E2E8F0',
                   display: 'flex',
                   alignItems: 'flex-start',
                   justifyContent: 'space-between',
-                  gap: '16px',
+                  gap: '12px',
                   backgroundColor: '#F8FAFC',
+                  boxSizing: 'border-box',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', minWidth: 0, flex: 1 }}>
                   <div
                     style={{
-                      width: '52px',
-                      height: '52px',
-                      borderRadius: '12px',
+                      width: '46px',
+                      height: '46px',
+                      borderRadius: '10px',
                       background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
                       color: '#FFFFFF',
                       fontWeight: 800,
-                      fontSize: '1.1rem',
+                      fontSize: '1rem',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -696,27 +727,31 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   >
                     {getInitials(activeModalMember.member.name)}
                   </div>
-                  <div>
+                  <div style={{ minWidth: 0, flex: 1 }}>
                     <span
                       style={{
                         display: 'block',
-                        fontSize: '0.75rem',
+                        fontSize: '0.72rem',
                         fontWeight: 700,
                         color: '#64748B',
                         textTransform: 'uppercase',
-                        letterSpacing: '0.05em',
-                        marginBottom: '4px',
+                        letterSpacing: '0.04em',
+                        marginBottom: '3px',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
                       }}
                     >
                       {activeModalMember.category}
                     </span>
                     <h3
                       style={{
-                        fontSize: '1.35rem',
+                        fontSize: '1.25rem',
                         fontWeight: 800,
                         color: '#0F172A',
-                        lineHeight: 1.2,
+                        lineHeight: 1.25,
                         margin: 0,
+                        wordBreak: 'break-word',
                       }}
                     >
                       {activeModalMember.member.name}
@@ -730,8 +765,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                     background: '#E2E8F0',
                     border: 'none',
                     borderRadius: '50%',
-                    width: '36px',
-                    height: '36px',
+                    width: '34px',
+                    height: '34px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -740,6 +775,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
                     flexShrink: 0,
+                    lineHeight: 1,
                   }}
                   aria-label="Close modal"
                 >
@@ -750,27 +786,33 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               {/* Sub-header with Role Badge & LinkedIn */}
               <div
                 style={{
-                  padding: '14px 28px',
+                  padding: '12px 20px',
                   backgroundColor: '#FFFFFF',
                   borderBottom: '1px solid #F1F5F9',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   flexWrap: 'wrap',
-                  gap: '12px',
+                  gap: '10px',
+                  boxSizing: 'border-box',
                 }}
               >
                 {activeModalMember.member.position && activeModalMember.member.position.trim() && (
                   <span
                     style={{
                       display: 'inline-block',
-                      padding: '5px 12px',
+                      padding: '4px 10px',
                       borderRadius: '6px',
                       backgroundColor: 'rgba(220, 38, 38, 0.06)',
                       border: '1px solid rgba(220, 38, 38, 0.2)',
                       color: '#DC2626',
-                      fontSize: '0.85rem',
+                      fontSize: '0.82rem',
                       fontWeight: 700,
+                      lineHeight: 1.35,
+                      maxWidth: '100%',
+                      wordBreak: 'break-word',
+                      whiteSpace: 'normal',
+                      boxSizing: 'border-box',
                     }}
                   >
                     {activeModalMember.member.position}
@@ -786,20 +828,22 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '6px',
-                      padding: '6px 14px',
+                      padding: '5px 12px',
                       borderRadius: '6px',
                       backgroundColor: '#0A66C2',
                       color: '#FFFFFF',
-                      fontSize: '0.8rem',
+                      fontSize: '0.78rem',
                       fontWeight: 700,
                       textDecoration: 'none',
+                      flexShrink: 0,
+                      boxSizing: 'border-box',
                     }}
                   >
                     <Image
                       src="/images/social-linkedin.svg"
                       alt="LinkedIn"
-                      width={14}
-                      height={14}
+                      width={13}
+                      height={13}
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                     <span>LinkedIn Profile</span>
@@ -810,13 +854,18 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               {/* Modal Body: Full Bio */}
               <div
                 style={{
-                  padding: '24px 28px',
+                  padding: '18px 20px',
                   overflowY: 'auto',
+                  overflowX: 'hidden',
+                  WebkitOverflowScrolling: 'touch',
                   flex: 1,
                   color: '#334155',
-                  fontSize: '0.95rem',
-                  lineHeight: 1.8,
+                  fontSize: '0.92rem',
+                  lineHeight: 1.75,
                   whiteSpace: 'pre-line',
+                  wordBreak: 'break-word',
+                  boxSizing: 'border-box',
+                  overscrollBehavior: 'contain',
                 }}
               >
                 {activeModalMember.member.bio}
@@ -825,17 +874,18 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               {/* Modal Footer */}
               <div
                 style={{
-                  padding: '16px 28px',
+                  padding: '12px 20px',
                   borderTop: '1px solid #E2E8F0',
                   backgroundColor: '#F8FAFC',
                   display: 'flex',
                   justifyContent: 'flex-end',
+                  boxSizing: 'border-box',
                 }}
               >
                 <button
                   onClick={() => setActiveModalMember(null)}
                   style={{
-                    padding: '8px 20px',
+                    padding: '8px 22px',
                     borderRadius: '8px',
                     backgroundColor: '#0F172A',
                     color: '#FFFFFF',
