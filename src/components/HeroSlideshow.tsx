@@ -96,10 +96,10 @@ const heroSlides: HeroSlide[] = [
   },
   {
     image: 'IMG_2267.jpg',
-    wing: 'Interactive STEM Driving Labs',
-    badge: 'Hands-On Discovery',
-    headline: 'Experience Science in Motion',
-    description: 'Interactive STEM simulation labs, aerodynamic wind tunnels, and tactile mechanical learning for all ages.',
+    wing: 'Innovation & Technology',
+    badge: 'Pioneering Research',
+    headline: 'Engineering Breakthroughs',
+    description: 'Breakthrough patents, carbon architectures, telematics, and cross-industry innovations transforming global mobility.',
     accentColor: '#22C55E',
   },
   {

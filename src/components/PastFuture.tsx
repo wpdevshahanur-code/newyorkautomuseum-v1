@@ -86,11 +86,13 @@ export default function PastFuture() {
           <div
             className="past-future-card"
             style={{
-              backgroundColor: '#F8FAFC',
-              border: '1px solid #E2E8F0',
+              backgroundColor: 'rgba(15, 23, 42, 0.72)',
+              backdropFilter: 'blur(16px)',
+              WebkitBackdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: '20px',
               position: 'relative',
-              boxShadow: '0 10px 35px rgba(15, 23, 42, 0.04)',
+              boxShadow: '0 14px 40px rgba(0, 0, 0, 0.45)',
             }}
           >
             {/* Decorative quotation mark */}
@@ -102,7 +104,7 @@ export default function PastFuture() {
                 right: '28px',
                 fontSize: '5rem',
                 lineHeight: 1,
-                color: 'rgba(220, 38, 38, 0.08)',
+                color: 'rgba(239, 68, 68, 0.18)',
                 fontFamily: 'serif',
                 userSelect: 'none',
               }}
@@ -116,7 +118,7 @@ export default function PastFuture() {
               style={{
                 fontSize: '1.25rem',
                 lineHeight: 1.75,
-                color: '#0F172A',
+                color: '#FFFFFF',
                 fontWeight: 600,
                 marginBottom: '20px',
                 letterSpacing: '-0.01em',
@@ -128,7 +130,7 @@ export default function PastFuture() {
               style={{
                 fontSize: '1.05rem',
                 lineHeight: 1.8,
-                color: '#475569',
+                color: '#CBD5E1',
                 marginBottom: '28px',
               }}
               text="The NYAM — New York Auto Museum and the World Motorsport Hall of Fame is set to become one of the world's leading Museum attractions."
@@ -140,7 +142,7 @@ export default function PastFuture() {
                 alignItems: 'center',
                 gap: '12px',
                 paddingTop: '20px',
-                borderTop: '1px solid #E2E8F0',
+                borderTop: '1px solid rgba(255, 255, 255, 0.1)',
               }}
             >
               <div
@@ -148,14 +150,14 @@ export default function PastFuture() {
                   width: '8px',
                   height: '8px',
                   borderRadius: '50%',
-                  backgroundColor: '#DC2626',
+                  backgroundColor: '#EF4444',
                 }}
               />
               <span
                 style={{
                   fontSize: '0.85rem',
                   fontWeight: 700,
-                  color: '#0F172A',
+                  color: '#FFFFFF',
                   letterSpacing: '0.04em',
                 }}
               >

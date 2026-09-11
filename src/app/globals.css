@@ -1,25 +1,25 @@
 :root {
-  --bg-main: #F8FAFC;
-  --bg-surface: #FFFFFF;
-  --bg-surface-alt: #F1F5F9;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #FFFFFF;
+  --bg-main: #080A0F;
+  --bg-surface: rgba(15, 23, 42, 0.72);
+  --bg-surface-alt: rgba(15, 23, 42, 0.85);
+  --bg-card: rgba(15, 23, 42, 0.72);
+  --bg-card-hover: rgba(15, 23, 42, 0.88);
   
   --color-primary: #DC2626;
-  --color-primary-hover: #B91C1C;
-  --color-accent-gold: #D97706;
-  --color-accent-blue: #0284C7;
+  --color-primary-hover: #EF4444;
+  --color-accent-gold: #F59E0B;
+  --color-accent-blue: #38BDF8;
   
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #64748B;
-  --text-dim: #94A3B8;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
   
-  --border-subtle: #E2E8F0;
-  --border-card: #E2E8F0;
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.06);
-  --shadow-hover: 0 10px 30px rgba(15, 23, 42, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-card: rgba(255, 255, 255, 0.14);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 12px 36px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 18px 48px rgba(0, 0, 0, 0.6);
   
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --container-width: 1280px;
@@ -33,7 +33,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 body {
@@ -100,6 +100,273 @@ section,
 .newsletter-section p,
 .newsletter-section p * {
   color: #CBD5E1 !important;
+}
+
+/* ==========================================================================
+   LUXURY DARK GLASSMORPHISM DESIGN SYSTEM (Option 1)
+   Frosted obsidian glass cards, platinum typography, chrome borders & ambient depth
+   ========================================================================== */
+
+/* 1. All Cards & Content Modules: Translucent Frosted Glass */
+.past-future-card,
+.spotlight-card,
+.spotlight-content,
+.gateway-card,
+.committee-stat-card,
+.donation-committee-row,
+.dept-overview-card,
+.leader-profile-card,
+.executive-directory-row,
+.career-job-card,
+.career-card,
+.partner-card,
+.synergy-card,
+.synergy-badge-card,
+.footer-address-card,
+.footer-sponsor-badge,
+.marquee-card,
+.advisor-modal-card,
+div[role="dialog"] {
+  background: rgba(15, 23, 42, 0.72) !important;
+  background-color: rgba(15, 23, 42, 0.72) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.past-future-card:hover,
+.gateway-card:hover,
+.committee-stat-card:hover,
+.donation-committee-row:hover,
+.dept-overview-card:hover,
+.leader-profile-card:hover,
+.career-job-card:hover,
+.partner-card:hover,
+.marquee-card:hover {
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.05) !important;
+}
+
+.gateway-card:hover,
+.committee-stat-card:hover,
+.dept-overview-card:hover,
+.career-job-card:hover {
+  transform: translateY(-4px) !important;
+}
+
+/* 2. Card Typography: Crisp Pure White Headings & Silver Platinum Body Text */
+.past-future-card h2,
+.past-future-card h3,
+.past-future-card h4,
+.spotlight-card h3,
+.spotlight-card h3 *,
+.gateway-card h3,
+.gateway-card h3 *,
+.committee-stat-card h4,
+.committee-stat-card h4 *,
+.donation-committee-row button span,
+.dept-overview-card h3,
+.dept-overview-card h3 *,
+.dept-overview-card h4,
+.dept-overview-card h4 *,
+.leader-profile-card h4,
+.leader-profile-card h4 *,
+.career-job-card h4,
+.career-job-card h4 *,
+.synergy-card h2,
+.synergy-card h2 *,
+.synergy-card h3,
+.synergy-card h3 *,
+.synergy-badge-card h4,
+.synergy-badge-card h4 *,
+.card-partner-name,
+.footer-address-card div:first-child,
+div[role="dialog"] h3,
+div[role="dialog"] h3 * {
+  color: #FFFFFF !important;
+}
+
+.past-future-card p,
+.past-future-card p *,
+.spotlight-card p,
+.spotlight-card p *,
+.gateway-card p,
+.gateway-card p *,
+.committee-stat-card p,
+.committee-stat-card p *,
+.committee-accordion-body,
+.dept-overview-card p,
+.dept-overview-card p *,
+.leader-profile-card p,
+.leader-profile-card p *,
+.career-job-card p,
+.career-job-card p *,
+.synergy-card p,
+.synergy-card p *,
+.footer-address-card div,
+div[role="dialog"] p,
+div[role="dialog"] p * {
+  color: #CBD5E1 !important;
+}
+
+/* 3. Card Meta Tags, Role Badges, and Accent Dividers */
+.card-category-tag,
+.dept-role-pill,
+.career-meta-pill,
+.accreditations-count {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  color: #F8FAFC !important;
+}
+
+.advisor-role-badge {
+  background: rgba(220, 38, 38, 0.12) !important;
+  border: 1px solid rgba(220, 38, 38, 0.3) !important;
+  color: #F87171 !important;
+}
+
+/* 4. Filter Buttons across Advisors and Careers */
+#advisors button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]),
+#careers button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]) {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  color: #CBD5E1 !important;
+}
+
+#advisors button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]):hover,
+#careers button:not(.btn-primary):not([style*="background-color: rgb(220, 38, 38)"]):not([style*="backgroundColor: #DC2626"]):not([style*="backgroundColor: rgb(220, 38, 38)"]):hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #FFFFFF !important;
+}
+
+.view-mode-toggle {
+  background: rgba(15, 23, 42, 0.72) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.view-mode-toggle button {
+  background: transparent !important;
+  color: #94A3B8 !important;
+}
+
+.view-mode-toggle button[style*="backgroundColor: rgb(15, 23, 42)"],
+.view-mode-toggle button[style*="backgroundColor: #0F172A"] {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #FFFFFF !important;
+}
+
+/* 5. Interactive Buttons & Triggers */
+.committee-stat-card button,
+.dept-overview-card button,
+.leader-profile-card button {
+  color: #38BDF8 !important; /* Luminous sky cyan */
+}
+.committee-stat-card button:hover,
+.dept-overview-card button:hover,
+.leader-profile-card button:hover {
+  color: #FFFFFF !important;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 6. Partner Carousel Cards & Logo Container */
+.marquee-card {
+  color: #FFFFFF !important;
+}
+.card-logo-container {
+  background: #FFFFFF !important;
+  border-radius: 12px !important;
+  padding: 8px 14px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 7. Newsletter Form */
+.newsletter-input {
+  background: rgba(15, 23, 42, 0.72) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+}
+.newsletter-input::placeholder {
+  color: #94A3B8 !important;
+}
+.newsletter-input:focus {
+  border-color: #EF4444 !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.25) !important;
+}
+
+/* 8. Luxury Navbar & Header */
+.navbar-header,
+header[style*="backgroundColor: #FFFFFF"],
+header[style*="backgroundColor: rgb(255, 255, 255)"] {
+  background-color: rgba(7, 11, 20, 0.82) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.desktop-nav a {
+  color: #CBD5E1 !important;
+  transition: color 0.2s ease !important;
+}
+.desktop-nav a:hover {
+  color: #FFFFFF !important;
+}
+
+/* 9. Luxury Footer */
+footer,
+footer[style*="backgroundColor: #FFFFFF"],
+footer[style*="background-color: #FFFFFF"],
+footer[style*="background-color: rgb(255, 255, 255)"] {
+  background-color: rgba(7, 11, 20, 0.88) !important;
+  background: rgba(7, 11, 20, 0.88) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+footer * {
+  color: #CBD5E1 !important;
+}
+
+footer h4,
+footer h4 *,
+footer a {
+  color: #FFFFFF !important;
+}
+
+footer a:hover {
+  color: #38BDF8 !important;
+}
+
+/* 10. Dialog Modal */
+div[role="dialog"] {
+  background: rgba(15, 23, 42, 0.94) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8) !important;
+}
+div[role="dialog"] > div:first-child {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .container {
@@ -177,16 +444,19 @@ section,
 }
 
 .btn-secondary {
-  background: #FFFFFF;
-  color: var(--text-primary);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
 }
 
 .btn-secondary:hover {
-  background: #F8FAFC;
-  border-color: #CBD5E1;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.1) !important;
 }
 
 .btn-sm {
@@ -244,11 +514,13 @@ section,
 
 /* Spotlight Feature Cards - Unified Equal Height (440px desktop) */
 .spotlight-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background-color: rgba(15, 23, 42, 0.72) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5) !important;
   display: grid;
   grid-template-columns: 42% 58%;
   height: 440px;
@@ -257,7 +529,8 @@ section,
 }
 
 .spotlight-card:hover {
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.65) !important;
 }
 
 .spotlight-media {

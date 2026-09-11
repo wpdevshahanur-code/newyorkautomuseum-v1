@@ -17,10 +17,12 @@ export default function NyaeSynergy() {
         <div
           className="synergy-card"
           style={{
-            background: 'linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)',
-            border: '1px solid #E2E8F0',
+            background: 'rgba(15, 23, 42, 0.72)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            border: '1px solid rgba(255, 255, 255, 0.12)',
             borderRadius: '24px',
-            boxShadow: '0 8px 30px rgba(15, 23, 42, 0.04)',
+            boxShadow: '0 14px 40px rgba(0, 0, 0, 0.45)',
             alignItems: 'center',
           }}
         >
@@ -36,7 +38,7 @@ export default function NyaeSynergy() {
               style={{
                 fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)',
                 fontWeight: 900,
-                color: '#0F172A',
+                color: '#FFFFFF',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.2,
                 marginBottom: '16px',
@@ -47,7 +49,7 @@ export default function NyaeSynergy() {
               as="p"
               style={{
                 fontSize: '1.05rem',
-                color: '#475569',
+                color: '#CBD5E1',
                 lineHeight: 1.7,
                 marginBottom: '28px',
               }}

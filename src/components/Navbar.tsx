@@ -51,7 +51,7 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/images/logo-dark.png"
+            src="/images/logo-white.png"
             alt="New York Auto Museum"
             width={210}
             height={42}
@@ -77,14 +77,13 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 style={{
-                  color: isActive ? '#DC2626' : '#334155',
-                  fontSize: '0.9rem',
-                  fontWeight: isActive ? 800 : 600,
+                  color: isActive ? '#EF4444' : '#CBD5E1',
                   textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: isActive ? 700 : 500,
                   transition: 'color 0.2s ease',
-                  letterSpacing: '0.01em',
-                  position: 'relative',
                   padding: '6px 0',
+                  position: 'relative',
                 }}
               >
                 {link.label}
@@ -96,7 +95,7 @@ export default function Navbar() {
                       left: 0,
                       right: 0,
                       height: '2px',
-                      backgroundColor: '#DC2626',
+                      backgroundColor: '#EF4444',
                       borderRadius: '1px',
                     }}
                   />
@@ -121,12 +120,12 @@ export default function Navbar() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: '#F1F5F9',
-            border: '1px solid #E2E8F0',
-            borderRadius: '6px',
+            background: 'rgba(255, 255, 255, 0.08)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            borderRadius: '8px',
             width: '42px',
             height: '42px',
-            color: '#0F172A',
+            color: '#FFFFFF',
             cursor: 'pointer',
           }}
           className="mobile-btn"
@@ -162,13 +161,15 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div
           style={{
-            backgroundColor: '#FFFFFF',
-            borderBottom: '1px solid #E2E8F0',
+            backgroundColor: 'rgba(7, 11, 20, 0.96)',
+            backdropFilter: 'blur(24px)',
+            WebkitBackdropFilter: 'blur(24px)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
             padding: '24px',
             display: 'flex',
             flexDirection: 'column',
             gap: '16px',
-            boxShadow: '0 10px 25px rgba(15, 23, 42, 0.08)',
+            boxShadow: '0 16px 40px rgba(0, 0, 0, 0.6)',
           }}
         >
           {navLinks.map((link) => {
@@ -179,7 +180,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
-                  color: isActive ? '#DC2626' : '#1E293B',
+                  color: isActive ? '#EF4444' : '#CBD5E1',
                   fontSize: '1.05rem',
                   fontWeight: isActive ? 800 : 600,
                   textDecoration: 'none',

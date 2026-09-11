@@ -62,7 +62,14 @@ export default function MuseumSpotlights() {
             </div>
 
             {/* Content Side */}
-            <div className="spotlight-content" style={{ backgroundColor: '#FFFFFF' }}>
+            <div
+              className="spotlight-content"
+              style={{
+                backgroundColor: 'rgba(15, 23, 42, 0.72)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+              }}
+            >
               <div
                 style={{
                   display: 'inline-flex',
@@ -70,7 +77,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: '#DC2626',
+                  color: '#EF4444',
                   textTransform: 'uppercase',
                   letterSpacing: '0.15em',
                   marginBottom: '12px',
@@ -86,7 +93,7 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: 'clamp(1.8rem, 2.6vw, 2.3rem)',
                   fontWeight: 900,
-                  color: '#0F172A',
+                  color: '#FFFFFF',
                   lineHeight: 1.15,
                   letterSpacing: '-0.03em',
                   marginBottom: '16px',
@@ -100,7 +107,7 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: '1rem',
                   lineHeight: 1.7,
-                  color: '#334155',
+                  color: '#CBD5E1',
                   fontWeight: 500,
                   marginBottom: '12px',
                 }}
@@ -114,7 +121,7 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: '0.95rem',
                   lineHeight: 1.6,
-                  color: '#64748B',
+                  color: '#94A3B8',
                 }}
                 text="The New York Auto Museum is developed to change the way you think about an automotive museum."
               />
@@ -136,15 +143,18 @@ export default function MuseumSpotlights() {
                   position: 'absolute',
                   top: '20px',
                   left: '20px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  backgroundColor: 'rgba(15, 23, 42, 0.85)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
                   padding: '6px 14px',
                   borderRadius: '9999px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: '#DC2626',
+                  color: '#FFFFFF',
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
-                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.3)',
                 }}
               >
                 Global Alliances
@@ -152,7 +162,14 @@ export default function MuseumSpotlights() {
             </div>
 
             {/* Content Side */}
-            <div className="spotlight-content" style={{ backgroundColor: '#FFFFFF' }}>
+            <div
+              className="spotlight-content"
+              style={{
+                backgroundColor: 'rgba(15, 23, 42, 0.72)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+              }}
+            >
               <div
                 style={{
                   display: 'inline-flex',
@@ -160,7 +177,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: '#DC2626',
+                  color: '#EF4444',
                   textTransform: 'uppercase',
                   letterSpacing: '0.12em',
                   marginBottom: '12px',
@@ -176,7 +193,7 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: 'clamp(1.8rem, 2.6vw, 2.3rem)',
                   fontWeight: 900,
-                  color: '#0F172A',
+                  color: '#FFFFFF',
                   lineHeight: 1.15,
                   letterSpacing: '-0.02em',
                   marginBottom: '16px',
@@ -190,24 +207,25 @@ export default function MuseumSpotlights() {
                 style={{
                   fontSize: '1.02rem',
                   lineHeight: 1.75,
-                  color: '#475569',
+                  color: '#CBD5E1',
                 }}
                 text="NYA is continuously working to forge partnerships with OEMs, media conglomerates, automotive aficionados, race car drivers, race car team owners, Fortune 500 companies, automotive journalists, the public, VIPs, the State of New York, New York City, and NY Grant Company."
               />
             </div>
           </div>
 
-          {/* Card 3: About Us (Matching Image 2: Full-width logo on left white col, #242B33 on right col) */}
+          {/* Card 3: About Us */}
           <div id="about" className="spotlight-card stack-card-3">
-            {/* Image Side: Pure White Background, Logo Full Width (Like Image 2) */}
+            {/* Image Side: Inset white branding plaque on obsidian backdrop */}
             <div
               className="spotlight-media"
               style={{
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'rgba(15, 23, 42, 0.65)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '24px clamp(16px, 3vw, 36px)',
+                padding: '28px clamp(16px, 3vw, 36px)',
+                borderRight: '1px solid rgba(255, 255, 255, 0.1)',
               }}
             >
               <div
@@ -215,23 +233,34 @@ export default function MuseumSpotlights() {
                   position: 'relative',
                   width: '100%',
                   height: '100%',
-                  maxWidth: '460px',
+                  maxWidth: '440px',
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: '16px',
+                  padding: '24px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 8px 30px rgba(0, 0, 0, 0.35)',
                 }}
               >
-                <Image
-                  src="/images/world-motorsport.jpg"
-                  alt="World Motorsport Hall of Fame"
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
+                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                  <Image
+                    src="/images/world-motorsport.jpg"
+                    alt="World Motorsport Hall of Fame"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Content Side: Dark Charcoal (#242B33) with crisp white text (Like Image 2) */}
+            {/* Content Side */}
             <div
               className="spotlight-content"
               style={{
-                backgroundColor: '#242B33',
+                backgroundColor: 'rgba(15, 23, 42, 0.72)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
                 padding: 'clamp(32px, 4.5vw, 56px)',
               }}
             >

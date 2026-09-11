@@ -248,6 +248,7 @@ export default function BoardsAndCommittees() {
               return (
                 <div
                   key={idx}
+                  className="donation-committee-row"
                   style={{
                     backgroundColor: isOpen ? '#FFFFFF' : '#F8FAFC',
                     border: isOpen ? '1px solid #D97706' : '1px solid #E2E8F0',

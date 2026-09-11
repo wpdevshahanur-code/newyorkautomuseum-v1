@@ -79,12 +79,14 @@ export default function NewsletterSection() {
               style={{
                 flex: 1,
                 borderRadius: '8px',
-                border: '1px solid #CBD5E1',
-                background: '#FFFFFF',
-                color: '#0F172A',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                background: 'rgba(15, 23, 42, 0.72)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                color: '#FFFFFF',
                 fontSize: '0.95rem',
                 outline: 'none',
-                boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+                boxShadow: '0 4px 14px rgba(0, 0, 0, 0.3)',
               }}
             />
             <button
