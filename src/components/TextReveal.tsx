@@ -24,6 +24,7 @@ export interface TextRevealProps {
   reverse?: boolean;
   toggleActions?: string;
   coloredWords?: Record<string, string>;
+  triggerElement?: string | HTMLElement | null;
 }
 
 export default function TextReveal({
@@ -39,6 +40,7 @@ export default function TextReveal({
   reverse = true,
   toggleActions,
   coloredWords,
+  triggerElement,
 }: TextRevealProps) {
   const containerRef = useRef<HTMLElement | null>(null);
 
@@ -66,6 +68,11 @@ export default function TextReveal({
       const words = containerRef.current?.querySelectorAll('.gsap-reveal-word');
       if (!words || words.length === 0) return;
 
+      const triggerTarget =
+        (typeof triggerElement === 'string'
+          ? document.querySelector(triggerElement)
+          : triggerElement) || containerRef.current;
+
       gsap.fromTo(
         words,
         {
@@ -82,17 +89,17 @@ export default function TextReveal({
           delay,
           ease: 'power3.out',
           scrollTrigger: {
-            trigger: containerRef.current,
+            trigger: triggerTarget,
             start: threshold,
             toggleActions:
-              toggleActions || (reverse ? 'play reverse play reverse' : 'play none none none'),
+              toggleActions || (reverse ? 'play none none reverse' : 'play none none none'),
           },
         }
       );
     }, containerRef);
 
     return () => ctx.revert();
-  }, [rawText, effectiveStagger, effectiveDuration, delay, threshold, reverse, toggleActions]);
+  }, [rawText, effectiveStagger, effectiveDuration, delay, threshold, reverse, toggleActions, triggerElement]);
 
   const words = rawText.trim().split(/\s+/).filter(Boolean);
 
