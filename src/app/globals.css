@@ -1399,6 +1399,15 @@ body {
   .page-header-container {
     padding: 44px 0;
   }
+
+  .page-header-bg img {
+    opacity: 0.52 !important;
+    object-position: right center !important;
+  }
+
+  .page-header-overlay {
+    background: linear-gradient(180deg, rgba(7, 11, 20, 0.90) 0%, rgba(7, 11, 20, 0.78) 50%, rgba(7, 11, 20, 0.94) 100%), linear-gradient(90deg, rgba(7, 11, 20, 0.85) 0%, rgba(7, 11, 20, 0.40) 100%) !important;
+  }
 }
 
 

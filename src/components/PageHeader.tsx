@@ -11,6 +11,7 @@ interface PageHeaderProps {
   breadcrumb: string;
   bgImage?: string;
   imagePosition?: string;
+  imageOpacity?: number;
 }
 
 export default function PageHeader({
@@ -18,8 +19,9 @@ export default function PageHeader({
   title,
   subtitle,
   breadcrumb,
-  bgImage = '/images/banner.jpg',
-  imagePosition = 'center 42%',
+  bgImage = '/images/slideshow/IMG_4959.jpg',
+  imagePosition = 'right center',
+  imageOpacity = 0.72,
 }: PageHeaderProps) {
   return (
     <div
@@ -32,7 +34,7 @@ export default function PageHeader({
         borderBottom: '1px solid #1E293B',
       }}
     >
-      {/* Background Image Layer with Opacity & Gradient Mask */}
+      {/* Background Image Layer with Vivid Visibility & Asymmetric Gradient Mask */}
       <div
         className="page-header-bg"
         style={{
@@ -51,17 +53,18 @@ export default function PageHeader({
           style={{
             objectFit: 'cover',
             objectPosition: imagePosition,
-            opacity: 0.28,
-            filter: 'contrast(1.15) brightness(0.95)',
+            opacity: imageOpacity,
+            filter: 'contrast(1.1) brightness(1.02)',
           }}
         />
-        {/* Deep luxury linear gradient overlay for contrast & readability */}
+        {/* Asymmetric directional gradient: deep dark on left for text legibility, clear & transparent on right for car visibility */}
         <div
+          className="page-header-overlay"
           style={{
             position: 'absolute',
             inset: 0,
             background:
-              'linear-gradient(90deg, rgba(7, 11, 20, 0.94) 0%, rgba(7, 11, 20, 0.76) 50%, rgba(7, 11, 20, 0.88) 100%), linear-gradient(180deg, rgba(7, 11, 20, 0.35) 0%, rgba(7, 11, 20, 0.92) 100%)',
+              'linear-gradient(90deg, #070B14 0%, rgba(7, 11, 20, 0.95) 28%, rgba(7, 11, 20, 0.72) 50%, rgba(7, 11, 20, 0.22) 75%, rgba(7, 11, 20, 0.08) 100%), linear-gradient(180deg, rgba(7, 11, 20, 0.35) 0%, rgba(7, 11, 20, 0) 35%, rgba(7, 11, 20, 0.85) 100%)',
           }}
         />
       </div>
@@ -122,6 +125,7 @@ export default function PageHeader({
             lineHeight: 1.15,
             letterSpacing: '-0.03em',
             marginBottom: '16px',
+            textShadow: '0 2px 14px rgba(0, 0, 0, 0.85)',
           }}
           text={title}
         />
@@ -130,9 +134,10 @@ export default function PageHeader({
           as="p"
           style={{
             fontSize: '1.15rem',
-            color: '#CBD5E1',
-            maxWidth: '750px',
+            color: '#E2E8F0',
+            maxWidth: '720px',
             lineHeight: 1.7,
+            textShadow: '0 1px 8px rgba(0, 0, 0, 0.75)',
           }}
           text={subtitle}
         />
