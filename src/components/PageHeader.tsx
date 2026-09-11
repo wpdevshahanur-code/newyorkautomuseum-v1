@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import TextReveal from './TextReveal';
 
@@ -8,31 +9,76 @@ interface PageHeaderProps {
   title: string;
   subtitle: string;
   breadcrumb: string;
+  bgImage?: string;
+  imagePosition?: string;
 }
 
-export default function PageHeader({ tag, title, subtitle, breadcrumb }: PageHeaderProps) {
+export default function PageHeader({
+  tag,
+  title,
+  subtitle,
+  breadcrumb,
+  bgImage = '/images/banner.jpg',
+  imagePosition = 'center 42%',
+}: PageHeaderProps) {
   return (
     <div
+      className="page-header-container"
       style={{
-        backgroundColor: '#0F172A',
+        backgroundColor: '#070B14',
         color: '#FFFFFF',
-        padding: '70px 0',
         position: 'relative',
         overflow: 'hidden',
         borderBottom: '1px solid #1E293B',
       }}
     >
+      {/* Background Image Layer with Opacity & Gradient Mask */}
+      <div
+        className="page-header-bg"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      >
+        <Image
+          src={bgImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+            objectPosition: imagePosition,
+            opacity: 0.28,
+            filter: 'contrast(1.15) brightness(0.95)',
+          }}
+        />
+        {/* Deep luxury linear gradient overlay for contrast & readability */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'linear-gradient(90deg, rgba(7, 11, 20, 0.94) 0%, rgba(7, 11, 20, 0.76) 50%, rgba(7, 11, 20, 0.88) 100%), linear-gradient(180deg, rgba(7, 11, 20, 0.35) 0%, rgba(7, 11, 20, 0.92) 100%)',
+          }}
+        />
+      </div>
+
       {/* Decorative accent glow */}
       <div
         style={{
           position: 'absolute',
-          top: '-50%',
-          right: '-10%',
-          width: '500px',
-          height: '500px',
+          top: '-40%',
+          right: '-5%',
+          width: '560px',
+          height: '560px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(220, 38, 38, 0.15) 0%, rgba(15, 23, 42, 0) 70%)',
+          background:
+            'radial-gradient(circle, rgba(220, 38, 38, 0.18) 0%, rgba(15, 23, 42, 0) 70%)',
           pointerEvents: 'none',
+          zIndex: 1,
         }}
       />
 

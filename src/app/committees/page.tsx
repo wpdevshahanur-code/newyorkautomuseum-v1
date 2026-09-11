@@ -20,6 +20,8 @@ export default function CommitteesPage() {
           tag="Governance &amp; Oversight"
           title="Boards &amp; Committees"
           subtitle="Explore the 11 Museum Wing Development working groups and 32 specialized fiduciary committees available through tax-deductible contributions."
+          bgImage="/images/slideshow/IMG_1659.jpg"
+          imagePosition="center 50%"
         />
         <BoardsAndCommittees />
         <Accreditations />

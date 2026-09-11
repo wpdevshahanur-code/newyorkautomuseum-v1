@@ -20,6 +20,8 @@ export default function CareersPage() {
           tag="Join The Team"
           title="Career Opportunities"
           subtitle="Explore 29 open positions across leadership, operations, curation, marketing, technology, and community development."
+          bgImage="/images/slideshow/IMG_2065.jpg"
+          imagePosition="center 40%"
         />
         <CareersSection />
         <Accreditations />

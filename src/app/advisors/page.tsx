@@ -20,6 +20,8 @@ export default function AdvisorsPage() {
           tag="Governance &amp; Leadership"
           title="The Board &amp; Advisors"
           subtitle="Meet the international leaders, former Volkswagen AG/Autostadt executives, legal counsel, and curators guiding the New York Auto Museum."
+          bgImage="/images/slideshow/IMG_2071.jpg"
+          imagePosition="center 35%"
         />
         <AdvisoryBoard />
         <Accreditations />

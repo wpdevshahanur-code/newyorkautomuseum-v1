@@ -22,6 +22,8 @@ export default function AboutPage() {
           tag="Destination &amp; Vision"
           title="The Proposed Manhattan Landmark"
           subtitle="Explore the vision, architecture, and international partnerships behind the New York Auto Museum and World Motorsport Hall of Fame."
+          bgImage="/images/banner.jpg"
+          imagePosition="center 42%"
         />
         <PastFuture />
         <MuseumSpotlights />
