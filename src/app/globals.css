@@ -344,6 +344,22 @@ body {
   pointer-events: none;
 }
 
+/* Hero Cinematic Intro Dark-to-Light Fade-In Veil */
+.hero-intro-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  background-color: #070B14;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 2.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.hero-intro-veil.is-faded {
+  opacity: 0;
+}
+
 .hero-top-badge {
   position: absolute;
   top: 24px;

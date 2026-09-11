@@ -174,7 +174,16 @@ export default function HeroSlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [introFaded, setIntroFaded] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Cinematic intro dark-to-light fade-in on mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIntroFaded(true);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -264,6 +273,9 @@ export default function HeroSlideshow() {
       {/* Cinematic Multi-Layer Gradients for Contrast & Theme Transition */}
       <div className="hero-gradient-overlay" />
 
+      {/* Cinematic Dark-to-Light Intro Fade-in Veil */}
+      <div className={`hero-intro-veil ${introFaded ? 'is-faded' : ''}`} aria-hidden="true" />
+
       {/* Floating Top-Right Institutional Badge */}
       <div className="hero-top-badge" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <span className="hero-badge-dot" />
@@ -336,7 +348,7 @@ export default function HeroSlideshow() {
           </a>
 
           <a href="#spotlights" className="btn hero-btn-glass">
-            <span>View 11 Curated Wings</span>
+            <span>View 12 Exhibition Wings</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />

@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'New York Auto Museum | Proposed 200,000+ Sq Ft Manhattan Facility',
-  description: 'The New York Auto Museum proposed 200,000+ square-foot Manhattan location features world-first glassed floors, a panoramic rooftop patio, 11 dedicated exhibition wings, and an unprecedented experience allowing visitors to sit in up to 100 extravagant vehicles.',
+  description: 'The New York Auto Museum proposed 200,000+ square-foot Manhattan location features world-first glassed floors, a panoramic rooftop patio, 12 dedicated exhibition wings, and an unprecedented experience allowing visitors to sit in up to 100 extravagant vehicles.',
   keywords: 'New York Auto Museum, automotive museum NYC, Manhattan car museum, exotic cars, hypercars, EV innovation, sit in cars, automotive engineering',
   icons: {
     icon: '/images/logo-dark.png',

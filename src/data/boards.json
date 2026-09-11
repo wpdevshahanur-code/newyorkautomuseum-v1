@@ -43,6 +43,10 @@
     {
       "title": "Restoration",
       "description": "The Restoration wing celebrates the art and science of restoring vintage cars to their former glory. Exhibits include before-and-after displays of famous automotive restorations, demonstrating the skill and expertise required to bring old vehicles back to life. Visitors can learn about the tools, techniques, and research involved in the restoration process, including sourcing original parts, preserving historical accuracy, and modern updates. The wing also offers insight into the dedication of car enthusiasts and collectors who ensure that rare and classic vehicles are preserved for future generations. Special events may feature live restorations or workshops where experts share their craft."
+    },
+    {
+      "title": "Interactive STEM & Driving Simulation Labs",
+      "description": "The Interactive STEM & Driving Simulation Labs wing invites visitors of all ages into an experiential, hands-on learning environment exploring the science, technology, engineering, and mathematics of modern mobility. Featuring state-of-the-art virtual reality driving simulators, aerodynamic wind tunnel experiments, tactile powertrain workbenches, and interactive physics exhibits, this wing bridges classroom STEM education with real-world automotive innovation. Students, families, and aspiring engineers can test autonomous navigation algorithms, design sustainable aerodynamic vehicle profiles, and explore electric propulsion physics in an immersive, high-tech educational laboratory."
     }
   ],
   "donationCommittees": [

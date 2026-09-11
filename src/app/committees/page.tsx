@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Boards & Committees | New York Auto Museum',
-  description: '11 Museum Wing Development Committees and 32 Suggested Tax-Deductible Donation Committees.',
+  description: '12 Museum Wing Development Committees and 32 Suggested Tax-Deductible Donation Committees.',
 };
 
 export default function CommitteesPage() {
@@ -19,7 +19,7 @@ export default function CommitteesPage() {
           breadcrumb="Committees"
           tag="Governance &amp; Oversight"
           title="Boards &amp; Committees"
-          subtitle="Explore the 11 Museum Wing Development working groups and 32 specialized fiduciary committees available through tax-deductible contributions."
+          subtitle="Explore the 12 Museum Wing Development working groups and 32 specialized fiduciary committees available through tax-deductible contributions."
           bgImage="/images/slideshow/IMG_1659.jpg"
           imagePosition="right 48%"
           imageOpacity={0.80}
