@@ -1,4 +1,8 @@
-﻿export default function PastFuture() {
+'use client';
+
+import TextReveal from './TextReveal';
+
+export default function PastFuture() {
   return (
     <section
       id="past-future"
@@ -61,7 +65,9 @@
               Vision &amp; Heritage
             </div>
 
-            <h2
+            <TextReveal
+              as="h2"
+              text="PAST | FUTURE"
               style={{
                 fontSize: 'clamp(3rem, 5.5vw, 4.4rem)',
                 fontWeight: 900,
@@ -70,9 +76,8 @@
                 color: '#0F172A',
                 marginBottom: '24px',
               }}
-            >
-              PAST <span style={{ color: '#DC2626', fontWeight: 300 }}>|</span> FUTURE
-            </h2>
+              coloredWords={{ '|': '#DC2626' }}
+            />
 
             <div
               style={{
@@ -124,7 +129,9 @@
               “
             </div>
 
-            <p
+            <TextReveal
+              as="p"
+              text="We are an interdisciplinary multinational team of automotive aficionados, who together are pooling resources to help build the New York Auto Museum Experience Center."
               style={{
                 fontSize: '1.25rem',
                 lineHeight: 1.75,
@@ -133,10 +140,9 @@
                 marginBottom: '20px',
                 letterSpacing: '-0.01em',
               }}
-            >
-              We are an interdisciplinary multinational team of automotive aficionados,
-              who together are pooling resources to help build the New York Auto Museum Experience Center.
-            </p>
+              stagger={0.02}
+              duration={0.6}
+            />
 
             <p
               style={{

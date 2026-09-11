@@ -7,6 +7,7 @@ import NyaeSynergy from '@/components/NyaeSynergy';
 import Accreditations from '@/components/Accreditations';
 import NewsletterSection from '@/components/NewsletterSection';
 import Footer from '@/components/Footer';
+import TextReveal from '@/components/TextReveal';
 
 export default function HomePage() {
   return (
@@ -28,7 +29,7 @@ export default function HomePage() {
           <div className="container">
             <div className="text-center" style={{ marginBottom: '56px' }}>
               <span className="section-tag">Explore The Institution</span>
-              <h2 className="section-title">Institutional Portals</h2>
+              <TextReveal as="h2" className="section-title" text="Institutional Portals" />
               <p className="section-subtitle">
                 Access dedicated institutional directories, curatorial committees, and career opportunities.
               </p>

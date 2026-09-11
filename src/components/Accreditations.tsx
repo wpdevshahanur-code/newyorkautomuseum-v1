@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import TextReveal from './TextReveal';
 
 interface PartnerItem {
   name: string;
@@ -57,9 +58,11 @@ export default function Accreditations() {
             Official Affiliations &amp; Recognition
           </div>
 
-          <h2 className="accreditations-title">
-            Official Memberships &amp; Sponsorship
-          </h2>
+          <TextReveal
+            as="h2"
+            className="accreditations-title"
+            text="Official Memberships &amp; Sponsorship"
+          />
 
           <p className="accreditations-subtitle">
             Proudly accredited and affiliated with premier national museum alliances, historic automotive associations, and nonprofit foundations.

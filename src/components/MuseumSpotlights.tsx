@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import TextReveal from './TextReveal';
 
 export default function MuseumSpotlights() {
   return (
@@ -15,7 +18,7 @@ export default function MuseumSpotlights() {
         {/* Section Header */}
         <div style={{ marginBottom: '60px', textAlign: 'center' }}>
           <span className="section-tag">Destination &amp; Institution</span>
-          <h2 className="section-title">The Museum &amp; Partners</h2>
+          <TextReveal as="h2" className="section-title" text="The Museum &amp; Partners" />
           <p className="section-subtitle">
             An unprecedented landmark proposed for Manhattan, uniting automotive science, historical collections, and global OEM alliances.
           </p>
@@ -74,7 +77,9 @@ export default function MuseumSpotlights() {
                 Flagship Facility
               </div>
 
-              <h3
+              <TextReveal
+                as="h3"
+                text="The Museum"
                 style={{
                   fontSize: 'clamp(1.8rem, 2.6vw, 2.3rem)',
                   fontWeight: 900,
@@ -83,9 +88,7 @@ export default function MuseumSpotlights() {
                   letterSpacing: '-0.03em',
                   marginBottom: '16px',
                 }}
-              >
-                The Museum
-              </h3>
+              />
 
               <p
                 style={{
@@ -159,7 +162,9 @@ export default function MuseumSpotlights() {
                 Strategic Collaborations
               </div>
 
-              <h3
+              <TextReveal
+                as="h3"
+                text="Partners"
                 style={{
                   fontSize: 'clamp(1.8rem, 2.6vw, 2.3rem)',
                   fontWeight: 900,
@@ -168,9 +173,7 @@ export default function MuseumSpotlights() {
                   letterSpacing: '-0.02em',
                   marginBottom: '16px',
                 }}
-              >
-                Partners
-              </h3>
+              />
 
               <p
                 style={{
@@ -222,7 +225,9 @@ export default function MuseumSpotlights() {
                 padding: 'clamp(32px, 4.5vw, 56px)',
               }}
             >
-              <h3
+              <TextReveal
+                as="h3"
+                text="About Us"
                 style={{
                   fontSize: '1.35rem',
                   fontWeight: 800,
@@ -231,9 +236,7 @@ export default function MuseumSpotlights() {
                   textTransform: 'uppercase',
                   marginBottom: '20px',
                 }}
-              >
-                About Us
-              </h3>
+              />
 
               <p
                 style={{

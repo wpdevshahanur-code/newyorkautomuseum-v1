@@ -1,4 +1,7 @@
-﻿import Image from 'next/image';
+'use client';
+
+import Image from 'next/image';
+import TextReveal from './TextReveal';
 
 export default function NyaeSynergy() {
   return (
@@ -31,7 +34,9 @@ export default function NyaeSynergy() {
               Dual Charter Synergy
             </span>
 
-            <h2
+            <TextReveal
+              as="h2"
+              text="Check out the New York Auto Experience At:"
               style={{
                 fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)',
                 fontWeight: 900,
@@ -40,9 +45,7 @@ export default function NyaeSynergy() {
                 lineHeight: 1.2,
                 marginBottom: '16px',
               }}
-            >
-              Check out the New York Auto Experience At:
-            </h2>
+            />
 
             <p
               style={{
