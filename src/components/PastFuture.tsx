@@ -140,8 +140,6 @@ export default function PastFuture() {
                 marginBottom: '20px',
                 letterSpacing: '-0.01em',
               }}
-              stagger={0.02}
-              duration={0.6}
             />
 
             <TextReveal
