@@ -716,7 +716,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: 'rgba(15, 23, 42, 0.75)',
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
               backdropFilter: 'blur(6px)',
               WebkitBackdropFilter: 'blur(6px)',
               padding: '16px',

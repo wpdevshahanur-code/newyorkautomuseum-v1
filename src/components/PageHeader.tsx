@@ -31,7 +31,7 @@ export default function PageHeader({
         color: '#FFFFFF',
         position: 'relative',
         overflow: 'hidden',
-        borderBottom: '1px solid #1E293B',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
       }}
     >
       {/* Background Image Layer with Vivid Visibility & Asymmetric Gradient Mask */}

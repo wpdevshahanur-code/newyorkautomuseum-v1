@@ -71,21 +71,22 @@ footer {
   z-index: 1;
 }
 
-/* Allow authentic backdrop to show across all sections and remove section dividing borders */
-section,
+/* Section Architecture: .org subtle alternating translucent tones with 1px border dividers */
 .past-future-section,
 .gateway-section,
-.synergy-section,
-.accreditations-section,
+.accreditations-section {
+  background-color: rgba(11, 14, 20, 0.60) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
 .museum-spotlights-section,
+.synergy-section,
+.newsletter-section,
 #advisors,
 .committees-section,
 .careers-section {
   background-color: transparent !important;
-  background: transparent !important;
-  border: none !important;
-  border-top: none !important;
-  border-bottom: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 /* Ensure section titles, subtitles, and category headings contrast beautifully against the backdrop */
@@ -538,9 +539,9 @@ div[role="dialog"] > div:first-child {
 
 /* Spotlight Feature Cards - Unified Equal Height (440px desktop) */
 .spotlight-card {
-  background-color: rgba(15, 23, 42, 0.72) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+  background-color: rgba(18, 24, 36, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 24px;
   overflow: hidden;
@@ -651,6 +652,7 @@ div[role="dialog"] > div:first-child {
   justify-content: center;
   overflow: hidden;
   background-color: #070B14;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .hero-slides-layer {
@@ -718,9 +720,9 @@ div[role="dialog"] > div:first-child {
   top: 24px;
   right: 28px;
   z-index: 12;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(18, 24, 36, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 8px 18px;
   border-radius: 9999px;
@@ -958,7 +960,7 @@ div[role="dialog"] > div:first-child {
 .hero-progress-segment.is-active .hero-progress-bar-fill {
   display: block;
   height: 100%;
-  background: #22C55E;
+  background: #E11D48;
   border-radius: 9999px;
   animation: progressBarFill linear forwards;
 }
