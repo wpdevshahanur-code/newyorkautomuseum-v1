@@ -452,8 +452,11 @@ body {
   letter-spacing: -0.035em;
   line-height: 1.05;
   color: #FFFFFF;
-  text-shadow: 0 6px 40px rgba(0, 0, 0, 0.85);
   margin-bottom: 12px;
+}
+
+.hero-main-title .gsap-reveal-word {
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.85);
 }
 
 .hero-wing-showcase {
@@ -705,19 +708,60 @@ body {
 
 @media (max-width: 768px) {
   .hero-carousel-section {
-    min-height: 640px;
+    height: calc(100svh - 80px);
+    min-height: 560px;
   }
   .hero-top-badge {
-    top: 80px;
-    right: 16px;
-    font-size: 0.68rem;
-    padding: 6px 12px;
+    display: none !important;
+  }
+  .hero-content-wrapper {
+    padding: 16px 16px 85px 16px;
+  }
+  .hero-badge-pill {
+    padding: 5px 14px;
+    margin-bottom: 10px;
+  }
+  .hero-badge-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+  }
+  .hero-main-title {
+    font-size: clamp(1.9rem, 7.5vw, 2.4rem);
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+  .hero-wing-showcase {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  .hero-description {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    max-width: 92%;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .hero-btn-main,
+  .hero-btn-glass {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.88rem;
+    justify-content: center;
   }
   .hero-nav-arrow {
     display: none;
   }
   .hero-deck-left {
     min-width: auto;
+  }
+  .hero-bottom-control-deck {
+    padding: 12px 0 16px 0;
   }
 }
 
