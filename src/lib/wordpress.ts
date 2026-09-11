@@ -1,4 +1,4 @@
-import fallbackAdvisors from '@/data/advisors.json';
+import fallbackAdvisors from '@/data/advisors';
 
 export interface AdvisorMember {
   name: string;
@@ -15,6 +15,34 @@ export interface AdvisorCategoryGroup {
 const WP_API_URL =
   process.env.NEXT_PUBLIC_WORDPRESS_URL ||
   'https://cms.newyorkautomuseum.com/wp-json/wp/v2';
+
+// Whitelist of 24 active Board & Advisory members (matching live server index.html)
+const ACTIVE_ADVISOR_NAMES = [
+  'Otto Ferdinand Wachs',
+  'Ray Battaglini',
+  'David Senater',
+  'Blake Greenstein',
+  'Ivan Francis',
+  'David Selby',
+  'Archor Wright',
+  'Eric-Mark Huitema',
+  'Terrence Johnson',
+  'Bernd Luz',
+  'James Toomey',
+  'Alex Teplish',
+  'James Barnard',
+  'Christian Ginet',
+  'Shawn Cuffie',
+  'Dr David Langguth PhD IIDA',
+  'Gabriel Smith',
+  'Russel A. Brown',
+  'Lawrence Yee',
+  'Pardhu Mattupalli',
+  'Jay Soneri',
+  'Arvind Motivaras',
+  'Vivek Malamdi',
+  'Narendra Jungi',
+];
 
 function decodeHtmlEntities(str: string): string {
   if (!str) return '';
@@ -83,6 +111,12 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
     }
 
     advs.forEach((a: any) => {
+      const name = decodeHtmlEntities(a.title?.rendered || '').trim();
+      const isWhitelisted = ACTIVE_ADVISOR_NAMES.some(
+        (active) => name.toLowerCase().includes(active.toLowerCase()) || active.toLowerCase().includes(name.toLowerCase())
+      );
+      if (!isWhitelisted) return;
+
       const deptTerm = a._embedded?.['wp:term']?.[0]?.[0];
       const deptName = deptTerm
         ? decodeHtmlEntities(deptTerm.name)
@@ -96,7 +130,7 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
       }
 
       groupsMap.get(groupName)!.push({
-        name: decodeHtmlEntities(a.title?.rendered || ''),
+        name,
         position: a.acf?.position || '',
         bio: a.acf?.bio || (a.content?.rendered ? a.content.rendered.replace(/<[^>]+>/g, '') : ''),
         linkedin: a.acf?.linkedin || '',

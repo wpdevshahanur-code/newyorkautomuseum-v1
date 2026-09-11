@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import advisorsData from '@/data/advisors.json';
+import advisorsData from '@/data/advisors';
 import TextReveal from './TextReveal';
 
 interface Member {

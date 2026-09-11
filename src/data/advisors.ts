@@ -1,4 +1,20 @@
-[
+export interface AdvisorMember {
+  name: string;
+  position: string;
+  bio: string;
+  linkedin: string;
+}
+
+export interface AdvisorCategoryGroup {
+  category: string;
+  members: AdvisorMember[];
+}
+
+/**
+ * 24 Active Board & Advisory Members
+ * (Verified directly from live production server index.html Section #three)
+ */
+export const advisorsData: AdvisorCategoryGroup[] = [
   {
     "category": "Executive Leadership & Curatorial Strategy",
     "members": [
@@ -188,4 +204,98 @@
       }
     ]
   }
-]
+];
+
+export default advisorsData;
+
+/* ==============================================================================
+   COMMENTED OUT ADVISORS (15 members hidden in HTML comments on live server)
+   Preserved here for future reference or reactivation:
+   ==============================================================================
+
+   CATEGORY: Executive Leadership & Curatorial Strategy (6 members)
+   ----------------------------------------------------------------------
+   Name:     Frank Carofano
+   Position: COO
+   LinkedIn: https://www.linkedin.com/in/frank-carofano-68bb614/
+   Bio:      Frank Carofano is an accomplished executive with over 24 years of leadership experience driving operational excellence, enterprise efficiency, and sustainable growth. A trusted strategic partner to CE...
+   ----------------------------------------------------------------------
+   Name:     Christina Asbee
+   Position: Pro Bono Senior Counsel
+   LinkedIn: https://www.linkedin.com/in/christina-asbee-7aa35b47/
+   Bio:      Christina Asbee is a New York attorney who, for over a decade, has practiced in the civil rights space. She is committed to advancing the rights of people with disabilities and works to ensure that th...
+   ----------------------------------------------------------------------
+   Name:     Joshua Sherer
+   Position: General Counsel
+   LinkedIn: https://www.linkedin.com/in/joshua-sherer-a50ab045
+   Bio:      Josh Sherer is a New York–based attorney and compliance leader with deep expertise in the automotive, OEM, and consumer electronics industries. As Deputy General Counsel of VOXX International Corporat...
+   ----------------------------------------------------------------------
+   Name:     Jeff Scott
+   Position: Board Member New York Auto Experience Inc.
+   LinkedIn: https://www.linkedin.com/in/jeff-scott-85b2a467/
+   Bio:      Jeff Scott is the President and founder of Scott & McCauley Insurance Agency. Under his leadership, the firm has been recognized as one of the fastest-growing specialized commercial P&C agencies for a...
+   ----------------------------------------------------------------------
+   Name:     Joseph S Folz II
+   Position: Legal Advisor
+   LinkedIn: https://www.linkedin.com/in/joseph-folz-a159019/
+   Bio:      Joe Folz is an attorney licensed in Michigan and Georgia. He began his career at General Motors, followed by 40 years as Vice President, General Counsel and Secretary of, first, Volkswagen of America,...
+   ----------------------------------------------------------------------
+   Name:     Leonard A. “Len” Bellavia
+   Position: Senior Legal Counsel
+   LinkedIn: https://www.linkedin.com/in/lbellavia/
+   Bio:      Leonard A. “Len” Bellavia is the founding partner of Bellavia Blatt, PC, and a nationally recognized authority on automotive law. A lifelong New Yorker with deep roots in automotive retail, Len’s fami...
+
+   CATEGORY: OEM, Industry & Mobility Strategy (1 members)
+   ----------------------------------------------------------------------
+   Name:     Dean Brauchli
+   Position: Independent Board Director
+   LinkedIn: https://www.linkedin.com/in/dean-brauchli-7ba283206
+   Bio:      Dean Brauchli has had a professional automotive career since 1984, specializing in VW-Porsche-Audi retail sales and management. Attained U.S National sales champion for Audi 1995, 1996, 1997. He has a...
+
+   CATEGORY: Design, Preservation & Institutional Development (1 members)
+   ----------------------------------------------------------------------
+   Name:     Bruce Wasserman
+   Position: Director of Design & Board of Directors New York Auto Museum
+   LinkedIn: https://www.linkedin.com/in/bruce-wasserman-64296610/
+   Bio:      Bruce Wasserman is an accomplished graphic designer, having done his Masters work in Industrial Design at the prestigious Pratt Institute and a BFA in Advertising/Graphic Design from the New York Inst...
+
+   CATEGORY: Licensing, Media & Brand Strategy (1 members)
+   ----------------------------------------------------------------------
+   Name:     Arin Kairam
+   Position: Senior Public Relations Advisor
+   LinkedIn: http://linkedin.com/in/russell-brown-3579393
+   Bio:      Arin Kairam is a communications professional and writer with experience in public relations, media relations, and content development. He combines a strong foundation ... in strategic communications w...
+
+   CATEGORY: Strategy, Technology & Security (6 members)
+   ----------------------------------------------------------------------
+   Name:     Kenneth “Bridger” Roy
+   Position: Board of Advisors
+   LinkedIn: http://linkedin.com/in/bridgerroy
+   Bio:      Bridger Roy is a Lead Associate (Intelligence & Technology Expert) for Booz Allen Hamilton supporting the U.S. Department of Defense (DOD) and various Intelligence Community (IC) agencies/departments....
+   ----------------------------------------------------------------------
+   Name:     Keti Mehta
+   Position: Board of Advisors
+   LinkedIn: https://www.linkedin.com/in/keti-mehta-pcc-61541313/
+   Bio:      Keti leads by example and is a highly skilled, certified sales activator, leadership development coach, talent enthusiast and evangelist of the Customer Experience. Mehta has also held senior executiv...
+   ----------------------------------------------------------------------
+   Name:     Corey Lancaster
+   Position: Board of Directors New York Auto Experience
+   LinkedIn: https://www.linkedin.com/in/coreylancaster/
+   Bio:      Please welcome Corey S. Lancaster—a cybersecurity executive, AI-certified strategist, and U.S. Air Force veteran with over 25 years of experience in defense, government, finance, critical infrastructi...
+   ----------------------------------------------------------------------
+   Name:     Kyle Beagle
+   Position: President, New York Auto Experience Inc. Board of Directors
+   LinkedIn: https://www.linkedin.com/in/kylejb2456/
+   Bio:      Kyle Beagle is a seasoned federal acquisition and procurement leader with over 17 years of experience supporting defense, small business, and innovation initiatives across the U.S. government. He curr...
+   ----------------------------------------------------------------------
+   Name:     George Panagiotakopoulos
+   Position: Independent, Board Members New York Auto Experience Inc
+   LinkedIn: https://www.linkedin.com/in/gpanagiotakopoulos/
+   Bio:      George Panagiotakopoulos is a seasoned professional with extensive experience in innovation, entrepreneurship, and business strategy. He currently serves as the Head of Global Expansion at the Univers...
+   ----------------------------------------------------------------------
+   Name:     Steven Schwartz
+   Position: Board Member New York Auto Museum
+   LinkedIn: https://www.linkedin.com/in/stevenschwartzcyber/
+   Bio:      Steven is a seasoned leader in cyber risk and insurance innovation, with over a decade of experience bridging technology, risk, and finance. He leads strategy and partnerships ... for a global cyber r...
+
+============================================================================== */
