@@ -177,11 +177,11 @@ export default function CareersSection() {
                   return (
                     <div
                       key={jobKey}
+                      className="career-job-card"
                       style={{
                         backgroundColor: '#FFFFFF',
                         border: isJobOpen ? '1px solid #DC2626' : '1px solid #E2E8F0',
                         borderRadius: '14px',
-                        padding: '24px',
                         boxShadow: isJobOpen
                           ? '0 10px 30px rgba(220, 38, 38, 0.08)'
                           : '0 2px 10px rgba(15, 23, 42, 0.03)',

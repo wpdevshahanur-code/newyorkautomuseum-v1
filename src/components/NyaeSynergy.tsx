@@ -6,9 +6,9 @@ import TextReveal from './TextReveal';
 export default function NyaeSynergy() {
   return (
     <section
-      id="nyae"
+      id="nyae-synergy"
+      className="synergy-section"
       style={{
-        padding: '90px 0',
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #E2E8F0',
         position: 'relative',
@@ -16,15 +16,12 @@ export default function NyaeSynergy() {
     >
       <div className="container">
         <div
+          className="synergy-card"
           style={{
             background: 'linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)',
             border: '1px solid #E2E8F0',
             borderRadius: '24px',
-            padding: 'clamp(36px, 5vw, 60px)',
             boxShadow: '0 8px 30px rgba(15, 23, 42, 0.04)',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '48px',
             alignItems: 'center',
           }}
         >
@@ -87,11 +84,11 @@ export default function NyaeSynergy() {
             }}
           >
             <div
+              className="synergy-badge-card"
               style={{
                 background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
                 border: '1px solid rgba(255, 255, 255, 0.12)',
                 borderRadius: '20px',
-                padding: '44px 36px',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',

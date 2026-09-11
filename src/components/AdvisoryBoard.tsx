@@ -257,11 +257,11 @@ export default function AdvisoryBoard() {
                     return (
                       <div
                         key={uniqueKey}
+                        className="dept-overview-card"
                         style={{
                           backgroundColor: '#FFFFFF',
                           border: '1px solid #E2E8F0',
                           borderRadius: '16px',
-                          padding: '32px',
                           boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
                           display: 'flex',
                           flexDirection: 'column',
@@ -470,11 +470,11 @@ export default function AdvisoryBoard() {
                     return (
                       <div
                         key={uniqueKey}
+                        className="leader-profile-card"
                         style={{
                           backgroundColor: '#FFFFFF',
                           border: '1px solid #E2E8F0',
                           borderRadius: '12px',
-                          padding: '24px 28px',
                           boxShadow: '0 2px 10px rgba(15, 23, 42, 0.03)',
                         }}
                       >

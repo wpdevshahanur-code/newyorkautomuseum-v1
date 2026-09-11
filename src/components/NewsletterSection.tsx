@@ -19,8 +19,8 @@ export default function NewsletterSection() {
   return (
     <section
       id="newsletter-frame"
+      className="newsletter-section"
       style={{
-        padding: '80px 0',
         backgroundColor: '#F8FAFC',
         borderBottom: '1px solid #E2E8F0',
         textAlign: 'center',
@@ -63,8 +63,8 @@ export default function NewsletterSection() {
         ) : (
           <form
             onSubmit={handleSubmit}
+            className="newsletter-form"
             style={{
-              display: 'flex',
               gap: '12px',
               maxWidth: '480px',
               margin: '0 auto',
@@ -76,9 +76,9 @@ export default function NewsletterSection() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
+              className="newsletter-input"
               style={{
                 flex: 1,
-                padding: '14px 18px',
                 borderRadius: '8px',
                 border: '1px solid #CBD5E1',
                 background: '#FFFFFF',
@@ -91,8 +91,8 @@ export default function NewsletterSection() {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="btn btn-primary"
-              style={{ padding: '14px 28px', whiteSpace: 'nowrap' }}
+              className="btn btn-primary newsletter-submit-btn"
+              style={{ whiteSpace: 'nowrap' }}
             >
               {status === 'submitting' ? 'Signing up...' : 'Sign Up'}
             </button>

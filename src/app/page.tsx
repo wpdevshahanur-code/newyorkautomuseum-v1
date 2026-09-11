@@ -20,8 +20,8 @@ export default function HomePage() {
 
         {/* Multi-Page Department Exploration Gateway */}
         <section
+          className="gateway-section"
           style={{
-            padding: '100px 0',
             backgroundColor: '#FFFFFF',
             borderBottom: '1px solid #E2E8F0',
           }}
@@ -38,19 +38,15 @@ export default function HomePage() {
             </div>
 
             <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-                gap: '28px',
-              }}
+              className="gateway-grid"
             >
               {/* Gateway 1: Leadership */}
               <div
+                className="gateway-card"
                 style={{
                   backgroundColor: '#F8FAFC',
                   border: '1px solid #E2E8F0',
                   borderRadius: '16px',
-                  padding: '36px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
@@ -102,11 +98,11 @@ export default function HomePage() {
 
               {/* Gateway 2: Committees */}
               <div
+                className="gateway-card"
                 style={{
                   backgroundColor: '#F8FAFC',
                   border: '1px solid #E2E8F0',
                   borderRadius: '16px',
-                  padding: '36px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
@@ -158,11 +154,11 @@ export default function HomePage() {
 
               {/* Gateway 3: Careers */}
               <div
+                className="gateway-card"
                 style={{
                   backgroundColor: '#F8FAFC',
                   border: '1px solid #E2E8F0',
                   borderRadius: '16px',
-                  padding: '36px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',

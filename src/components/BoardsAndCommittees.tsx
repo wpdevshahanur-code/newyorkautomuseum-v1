@@ -98,11 +98,11 @@ export default function BoardsAndCommittees() {
               return (
                 <div
                   key={idx}
+                  className="committee-stat-card"
                   style={{
                     backgroundColor: isOpen ? '#FFFFFF' : '#F8FAFC',
                     border: isOpen ? '1px solid #DC2626' : '1px solid #E2E8F0',
                     borderRadius: '14px',
-                    padding: '24px',
                     boxShadow: isOpen
                       ? '0 10px 30px rgba(220, 38, 38, 0.08)'
                       : '0 2px 10px rgba(15, 23, 42, 0.03)',
@@ -328,8 +328,8 @@ export default function BoardsAndCommittees() {
 
                   {isOpen && item.description && (
                     <div
+                      className="committee-accordion-body"
                       style={{
-                        padding: '0 24px 22px 56px',
                         color: '#475569',
                         fontSize: '0.94rem',
                         lineHeight: 1.75,

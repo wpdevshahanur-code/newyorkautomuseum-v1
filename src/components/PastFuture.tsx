@@ -6,8 +6,8 @@ export default function PastFuture() {
   return (
     <section
       id="past-future"
+      className="past-future-section"
       style={{
-        padding: '120px 0',
         backgroundColor: '#FFFFFF',
         borderBottom: '1px solid #E2E8F0',
         position: 'relative',
@@ -32,10 +32,8 @@ export default function PastFuture() {
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div
+          className="past-future-grid"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-            gap: '64px',
             alignItems: 'center',
           }}
         >
@@ -104,17 +102,18 @@ export default function PastFuture() {
 
           {/* Right Column: Editorial Card */}
           <div
+            className="past-future-card"
             style={{
               backgroundColor: '#F8FAFC',
               border: '1px solid #E2E8F0',
               borderRadius: '20px',
-              padding: '44px',
               position: 'relative',
               boxShadow: '0 10px 35px rgba(15, 23, 42, 0.04)',
             }}
           >
             {/* Decorative quotation mark */}
             <div
+              className="past-future-quote-mark"
               style={{
                 position: 'absolute',
                 top: '20px',

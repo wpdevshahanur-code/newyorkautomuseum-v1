@@ -52,11 +52,11 @@ export default function Footer() {
 
             {/* D&B Sponsor Plaque */}
             <div
+              className="footer-sponsor-badge"
               style={{
                 backgroundColor: '#F8FAFC',
                 border: '1px solid #E2E8F0',
                 borderRadius: '12px',
-                padding: '14px 18px',
                 display: 'inline-block',
                 maxWidth: '220px',
               }}
@@ -208,11 +208,11 @@ export default function Footer() {
               text="Mailing Address"
             />
             <div
+              className="footer-address-card"
               style={{
                 backgroundColor: '#F8FAFC',
                 border: '1px solid #E2E8F0',
                 borderRadius: '12px',
-                padding: '20px',
                 lineHeight: 1.6,
               }}
             >
