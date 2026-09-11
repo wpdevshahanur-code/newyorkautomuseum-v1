@@ -19,7 +19,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Iconic Concept Prototype',
     headline: 'Where Vision Meets Velocity',
     description: 'Futuristic turbine canopy concepts and legendary screen icons that redefined 20th-century popular culture.',
-    accentColor: '#EF4444',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_5097.jpg',
@@ -27,7 +27,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Championship Endurance',
     headline: 'The Golden Age of Speed',
     description: 'Pioneering Grand Prix machines, endurance titans, and historic racing liveries preserved in pristine mechanical glory.',
-    accentColor: '#F59E0B',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_4959.jpg',
@@ -35,7 +35,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Detroit Power',
     headline: 'Raw Horsepower & American Steel',
     description: 'The golden decade of tire-smoking V8s, historic dragstrip icons, and bold American road presence.',
-    accentColor: '#F97316',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_1514.jpg',
@@ -43,7 +43,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Preserved Cultural Icons',
     headline: 'Centuries of Human Ingenuity',
     description: 'From hand-hammered coachbuilt coachwork to the milestone industrial eras that put the modern world on wheels.',
-    accentColor: '#10B981',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_1659.jpg',
@@ -51,7 +51,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Bespoke Craftsmanship',
     headline: 'The Art of Haute Automobilia',
     description: 'Rare one-off coachbuilt masterpieces sculpted by legendary design houses and master metalworkers.',
-    accentColor: '#A855F7',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_1756.jpg',
@@ -59,7 +59,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Authentic Preservation',
     headline: 'Resurrecting Rolling Landmarks',
     description: 'Master technicians preserving period authenticity, factory blueprints, and time-honored mechanical crafts.',
-    accentColor: '#14B8A6',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_1815.jpg',
@@ -67,7 +67,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Sculptural Foundations',
     headline: 'Form, Function & Traction',
     description: 'Historic wire spokes, cast magnesium racing alloys, and cutting-edge forged carbon wheel innovations.',
-    accentColor: '#EAB308',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2065.jpg',
@@ -75,7 +75,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Precision Engineering',
     headline: 'The Anatomy of Motion',
     description: 'Unveiling complex internal combustion marvels, multi-valve valvetrains, and intricate transmission works.',
-    accentColor: '#6366F1',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2071.jpg',
@@ -83,7 +83,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Next-Gen Propulsion',
     headline: 'Designing Tomorrow Today',
     description: 'Aerodynamic architecture, sustainable high-performance powertrains, and cutting-edge concept engineering.',
-    accentColor: '#38BDF8',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2267.jpg',
@@ -91,7 +91,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Hands-On Discovery',
     headline: 'Experience Science in Motion',
     description: 'Interactive STEM simulation labs, aerodynamic wind tunnels, and tactile mechanical learning for all ages.',
-    accentColor: '#8B5CF6',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2298.jpg',
@@ -99,7 +99,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Clean Horizons',
     headline: 'Electrified Velocity',
     description: 'Early 20th-century electric pioneers to revolutionary multi-megawatt solid-state hypercar architectures.',
-    accentColor: '#06B6D4',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2327.jpg',
@@ -115,7 +115,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Cinematic Legends',
     headline: 'Screen Icons That Drove History',
     description: 'Famous hero vehicles, television chase legends, and unforgettable cinematic concept designs.',
-    accentColor: '#EC4899',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2728.jpg',
@@ -123,7 +123,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Paddock Legends',
     headline: 'Built for the Winner’s Circle',
     description: 'Trophies, timing sheets, and the unyielding machines that triumphed at Le Mans, Daytona, and Monza.',
-    accentColor: '#F59E0B',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2882.jpg',
@@ -131,7 +131,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Trans-Am & Drag Classics',
     headline: 'Thunder in the Paddock',
     description: 'High-compression big blocks and homologation specials engineered to conquer the quarter-mile.',
-    accentColor: '#F43F5E',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2895.jpg',
@@ -139,7 +139,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Peak Engineering',
     headline: 'The Outer Limits of Performance',
     description: 'Ultra-exclusive homologation icons, lightweight carbon-composite structures, and boundary-pushing engineering.',
-    accentColor: '#D946EF',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_2931.jpg',
@@ -147,7 +147,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Mechanical Artistry',
     headline: 'Purity of the Machine',
     description: 'Intricate carburetors, turbocharger manifolds, and hand-tuned mechanical harmony in motion.',
-    accentColor: '#3B82F6',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_3069.jpg',
@@ -155,7 +155,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Sculpted Silhouette',
     headline: 'Lines Drawn Without Compromise',
     description: 'Bespoke hand-formed aluminum panels, teardrop fenders, and timeless automotive styling.',
-    accentColor: '#A855F7',
+    accentColor: '#22C55E',
   },
   {
     image: 'IMG_3092.jpg',
@@ -163,7 +163,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Autonomous & Connected',
     headline: 'Pioneering the Next Century',
     description: 'Advanced sensor suites, carbon architectures, and the limitless horizon of 21st-century mobility.',
-    accentColor: '#0EA5E9',
+    accentColor: '#22C55E',
   },
 ];
 
