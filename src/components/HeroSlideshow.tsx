@@ -177,11 +177,11 @@ export default function HeroSlideshow() {
   const [introFaded, setIntroFaded] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Cinematic intro dark-to-light fade-in on mount
+  // Cinematic intro dark-to-light fade-in on mount (matching original 100ms load trigger)
   useEffect(() => {
     const timer = setTimeout(() => {
       setIntroFaded(true);
-    }, 150);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -197,16 +197,17 @@ export default function HeroSlideshow() {
     setCurrentSlide(idx);
   };
 
-  // Autoplay interval
+  // Autoplay interval (giving first slide 7s for full cinematic reveal)
   useEffect(() => {
     if (!isPlaying) {
       if (timerRef.current) clearInterval(timerRef.current);
       return;
     }
 
+    const duration = currentSlide === 0 ? 7000 : SLIDE_DURATION;
     timerRef.current = setInterval(() => {
       nextSlide();
-    }, SLIDE_DURATION);
+    }, duration);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);

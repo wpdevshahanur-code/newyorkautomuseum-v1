@@ -344,7 +344,7 @@ body {
   pointer-events: none;
 }
 
-/* Hero Cinematic Intro Dark-to-Light Fade-In Veil */
+/* Hero Cinematic Intro Dark-to-Light Fade-In Veil (Exact .com timing: 1.25s delay + 3s ease-in-out) */
 .hero-intro-veil {
   position: absolute;
   inset: 0;
@@ -352,7 +352,8 @@ body {
   background-color: #070B14;
   opacity: 1;
   pointer-events: none;
-  transition: opacity 2.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 3s ease-in-out;
+  transition-delay: 1.25s;
   will-change: opacity;
 }
 
