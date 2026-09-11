@@ -46,7 +46,7 @@ export default function TextReveal({
 
   const isParagraph = Component === 'p';
   const effectiveStagger = stagger ?? (isParagraph ? 0.04 : 0.075);
-  const effectiveDuration = duration ?? (isParagraph ? 0.85 : 1.0);
+  const effectiveDuration = duration ?? 1.0;
 
   // Extract raw text from text prop or children
   let rawText = text || '';
