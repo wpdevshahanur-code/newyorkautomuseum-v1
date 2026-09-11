@@ -19,9 +19,11 @@ export default function MuseumSpotlights() {
         <div style={{ marginBottom: '60px', textAlign: 'center' }}>
           <span className="section-tag">Destination &amp; Institution</span>
           <TextReveal as="h2" className="section-title" text="The Museum &amp; Partners" />
-          <p className="section-subtitle">
-            An unprecedented landmark proposed for Manhattan, uniting automotive science, historical collections, and global OEM alliances.
-          </p>
+          <TextReveal
+            as="p"
+            className="section-subtitle"
+            text="An unprecedented landmark proposed for Manhattan, uniting automotive science, historical collections, and global OEM alliances."
+          />
         </div>
 
         {/* All 3 Spotlights: Sticky Scroll-Stacking Deck Cards */}
@@ -90,7 +92,8 @@ export default function MuseumSpotlights() {
                 }}
               />
 
-              <p
+              <TextReveal
+                as="p"
                 style={{
                   fontSize: '1rem',
                   lineHeight: 1.7,
@@ -98,19 +101,18 @@ export default function MuseumSpotlights() {
                   fontWeight: 500,
                   marginBottom: '12px',
                 }}
-              >
-                Our proposed 200,000+- square-foot Manhattan location is set to impress. With a planned rooftop patio and partially glass floors, NYAM visitors will get to see above and beneath many of the extravagant vehicles on display. Also another original exclusive world-first; allows visitors to sit in up to 100 vehicles at any given time.
-              </p>
+                text="Our proposed 200,000+- square-foot Manhattan location is set to impress. With a planned rooftop patio and partially glass floors, NYAM visitors will get to see above and beneath many of the extravagant vehicles on display. Also another original exclusive world-first; allows visitors to sit in up to 100 vehicles at any given time."
+              />
 
-              <p
+              <TextReveal
+                as="p"
                 style={{
                   fontSize: '0.95rem',
                   lineHeight: 1.6,
                   color: '#64748B',
                 }}
-              >
-                The New York Auto Museum is developed to change the way you think about an automotive museum.
-              </p>
+                text="The New York Auto Museum is developed to change the way you think about an automotive museum."
+              />
             </div>
           </div>
 
@@ -175,15 +177,15 @@ export default function MuseumSpotlights() {
                 }}
               />
 
-              <p
+              <TextReveal
+                as="p"
                 style={{
                   fontSize: '1.02rem',
                   lineHeight: 1.75,
                   color: '#475569',
                 }}
-              >
-                NYA is continuously working to forge partnerships with OEMs, media conglomerates, automotive aficionados, race car drivers, race car team owners, Fortune 500 companies, automotive journalists, the public, VIPs, the State of New York, New York City, and NY Grant Company.
-              </p>
+                text="NYA is continuously working to forge partnerships with OEMs, media conglomerates, automotive aficionados, race car drivers, race car team owners, Fortune 500 companies, automotive journalists, the public, VIPs, the State of New York, New York City, and NY Grant Company."
+              />
             </div>
           </div>
 
@@ -238,16 +240,16 @@ export default function MuseumSpotlights() {
                 }}
               />
 
-              <p
+              <TextReveal
+                as="p"
                 style={{
                   fontSize: '1.05rem',
                   lineHeight: 1.8,
                   color: '#CBD5E1',
                   fontWeight: 400,
                 }}
-              >
-                NYA is led by a seasoned board of advisors, directors, and executive management. Anticipated financial partners include major banks, OEMs, advertising agencies, publicity firms, investment funds, private equity firms, players in heavy industry, and entities from the broader private sector.
-              </p>
+                text="NYA is led by a seasoned board of advisors, directors, and executive management. Anticipated financial partners include major banks, OEMs, advertising agencies, publicity firms, investment funds, private equity firms, players in heavy industry, and entities from the broader private sector."
+              />
             </div>
           </div>
         </div>

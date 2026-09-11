@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import TextReveal from './TextReveal';
 
 export default function Footer() {
   return (
@@ -36,16 +39,16 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p
+            <TextReveal
+              as="p"
               style={{
                 fontSize: '0.9rem',
                 lineHeight: 1.7,
                 color: '#64748B',
                 marginBottom: '24px',
               }}
-            >
-              Proposed 200,000+ sq ft Manhattan landmark uniting automotive science, historical heritage, and world-first interactive exhibition wings.
-            </p>
+              text="Proposed 200,000+ sq ft Manhattan landmark uniting automotive science, historical heritage, and world-first interactive exhibition wings."
+            />
 
             {/* D&B Sponsor Plaque */}
             <div
@@ -90,7 +93,8 @@ export default function Footer() {
 
           {/* Column 2: Museum Directory */}
           <div>
-            <h4
+            <TextReveal
+              as="h4"
               style={{
                 fontSize: '0.82rem',
                 fontWeight: 800,
@@ -99,9 +103,8 @@ export default function Footer() {
                 letterSpacing: '0.12em',
                 marginBottom: '20px',
               }}
-            >
-              Museum Directory
-            </h4>
+              text="Museum Directory"
+            />
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <li>
                 <Link
@@ -150,7 +153,8 @@ export default function Footer() {
 
           {/* Column 3: Executive Inquiries */}
           <div>
-            <h4
+            <TextReveal
+              as="h4"
               style={{
                 fontSize: '0.82rem',
                 fontWeight: 800,
@@ -159,12 +163,13 @@ export default function Footer() {
                 letterSpacing: '0.12em',
                 marginBottom: '20px',
               }}
-            >
-              General Inquiries
-            </h4>
-            <p style={{ color: '#64748B', lineHeight: 1.6, marginBottom: '14px' }}>
-              For general inquiries, contact Museum&apos;s Executive Director:
-            </p>
+              text="General Inquiries"
+            />
+            <TextReveal
+              as="p"
+              style={{ color: '#64748B', lineHeight: 1.6, marginBottom: '14px' }}
+              text="For general inquiries, contact Museum's Executive Director:"
+            />
             <div style={{ marginBottom: '14px' }}>
               <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '1rem' }}>David Senater</div>
               <div style={{ fontSize: '0.82rem', color: '#64748B' }}>Executive Director</div>
@@ -190,7 +195,8 @@ export default function Footer() {
 
           {/* Column 4: Headquarters & Mail */}
           <div>
-            <h4
+            <TextReveal
+              as="h4"
               style={{
                 fontSize: '0.82rem',
                 fontWeight: 800,
@@ -199,9 +205,8 @@ export default function Footer() {
                 letterSpacing: '0.12em',
                 marginBottom: '20px',
               }}
-            >
-              Mailing Address
-            </h4>
+              text="Mailing Address"
+            />
             <div
               style={{
                 backgroundColor: '#F8FAFC',

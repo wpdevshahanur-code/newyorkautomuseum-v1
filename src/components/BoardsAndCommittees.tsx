@@ -1,7 +1,8 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import boardsData from '@/data/boards.json';
+import TextReveal from './TextReveal';
 
 interface CommitteeItem {
   title: string;
@@ -37,10 +38,12 @@ export default function BoardsAndCommittees() {
         {/* Section Header */}
         <div className="text-center" style={{ marginBottom: '64px' }}>
           <span className="section-tag">Governance &amp; Oversight</span>
-          <h2 className="section-title">Boards &amp; Committees</h2>
-          <p className="section-subtitle">
-            Curatorial development working groups and tax-deductible committee leadership opportunities guiding the Manhattan landmark.
-          </p>
+          <TextReveal as="h2" className="section-title" text="Boards &amp; Committees" />
+          <TextReveal
+            as="p"
+            className="section-subtitle"
+            text="Curatorial development working groups and tax-deductible committee leadership opportunities guiding the Manhattan landmark."
+          />
         </div>
 
         {/* ============================================================ */}
@@ -64,19 +67,21 @@ export default function BoardsAndCommittees() {
               }}
             />
             <div>
-              <h3
+              <TextReveal
+                as="h3"
                 style={{
                   fontSize: '1.6rem',
                   fontWeight: 900,
                   color: '#0F172A',
                   letterSpacing: '-0.02em',
                 }}
-              >
-                Museum Wing Development Committees
-              </h3>
-              <p style={{ fontSize: '0.9rem', color: '#64748B', marginTop: '2px' }}>
-                Curatorial and technical advisory committees for the permanent exhibition wings
-              </p>
+                text="Museum Wing Development Committees"
+              />
+              <TextReveal
+                as="p"
+                style={{ fontSize: '0.9rem', color: '#64748B', marginTop: '2px' }}
+                text="Curatorial and technical advisory committees for the permanent exhibition wings"
+              />
             </div>
           </div>
 
@@ -132,7 +137,8 @@ export default function BoardsAndCommittees() {
                       </span>
                     </div>
 
-                    <h4
+                    <TextReveal
+                      as="h4"
                       style={{
                         fontSize: '1.2rem',
                         fontWeight: 800,
@@ -140,12 +146,12 @@ export default function BoardsAndCommittees() {
                         lineHeight: 1.3,
                         marginBottom: '12px',
                       }}
-                    >
-                      {item.title}
-                    </h4>
+                      text={item.title}
+                    />
 
                     {isOpen && item.description && (
-                      <p
+                      <TextReveal
+                        as="p"
                         style={{
                           fontSize: '0.94rem',
                           color: '#475569',
@@ -154,9 +160,8 @@ export default function BoardsAndCommittees() {
                           paddingTop: '12px',
                           borderTop: '1px solid #F1F5F9',
                         }}
-                      >
-                        {item.description}
-                      </p>
+                        text={item.description}
+                      />
                     )}
                   </div>
 
@@ -206,19 +211,21 @@ export default function BoardsAndCommittees() {
               }}
             />
             <div>
-              <h3
+              <TextReveal
+                as="h3"
                 style={{
                   fontSize: '1.6rem',
                   fontWeight: 900,
                   color: '#0F172A',
                   letterSpacing: '-0.02em',
                 }}
-              >
-                Committees (Suggested Tax-Deductible Donations)
-              </h3>
-              <p style={{ fontSize: '0.9rem', color: '#64748B', marginTop: '2px' }}>
-                Fiduciary, governance, and specialized steering committees supported through tax-deductible donor tiers
-              </p>
+                text="Committees (Suggested Tax-Deductible Donations)"
+              />
+              <TextReveal
+                as="p"
+                style={{ fontSize: '0.9rem', color: '#64748B', marginTop: '2px' }}
+                text="Fiduciary, governance, and specialized steering committees supported through tax-deductible donor tiers"
+              />
             </div>
           </div>
 

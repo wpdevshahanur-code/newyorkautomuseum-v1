@@ -89,7 +89,8 @@ export default function PastFuture() {
               }}
             />
 
-            <p
+            <TextReveal
+              as="p"
               style={{
                 fontSize: '0.95rem',
                 color: '#64748B',
@@ -97,9 +98,8 @@ export default function PastFuture() {
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
               }}
-            >
-              New York Auto Museum &amp; World Motorsport Hall of Fame
-            </p>
+              text="New York Auto Museum & World Motorsport Hall of Fame"
+            />
           </div>
 
           {/* Right Column: Editorial Card */}
@@ -144,17 +144,16 @@ export default function PastFuture() {
               duration={0.6}
             />
 
-            <p
+            <TextReveal
+              as="p"
               style={{
                 fontSize: '1.05rem',
                 lineHeight: 1.8,
                 color: '#475569',
                 marginBottom: '28px',
               }}
-            >
-              The NYAM — New York Auto Museum and the World Motorsport Hall of Fame
-              is set to become one of the world&apos;s leading Museum attractions.
-            </p>
+              text="The NYAM — New York Auto Museum and the World Motorsport Hall of Fame is set to become one of the world's leading Museum attractions."
+            />
 
             <div
               style={{

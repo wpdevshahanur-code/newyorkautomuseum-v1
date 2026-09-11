@@ -64,9 +64,11 @@ export default function Accreditations() {
             text="Official Memberships &amp; Sponsorship"
           />
 
-          <p className="accreditations-subtitle">
-            Proudly accredited and affiliated with premier national museum alliances, historic automotive associations, and nonprofit foundations.
-          </p>
+          <TextReveal
+            as="p"
+            className="accreditations-subtitle"
+            text="Proudly accredited and affiliated with premier national museum alliances, historic automotive associations, and nonprofit foundations."
+          />
 
           <div className="accreditations-controls">
             <span className="accreditations-count">

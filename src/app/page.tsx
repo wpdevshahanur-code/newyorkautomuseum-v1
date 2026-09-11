@@ -30,9 +30,11 @@ export default function HomePage() {
             <div className="text-center" style={{ marginBottom: '56px' }}>
               <span className="section-tag">Explore The Institution</span>
               <TextReveal as="h2" className="section-title" text="Institutional Portals" />
-              <p className="section-subtitle">
-                Access dedicated institutional directories, curatorial committees, and career opportunities.
-              </p>
+              <TextReveal
+                as="p"
+                className="section-subtitle"
+                text="Access dedicated institutional directories, curatorial committees, and career opportunities."
+              />
             </div>
 
             <div
@@ -67,7 +69,8 @@ export default function HomePage() {
                   >
                     10 Departments • 39 Leaders
                   </span>
-                  <h3
+                  <TextReveal
+                    as="h3"
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
@@ -75,12 +78,13 @@ export default function HomePage() {
                       marginTop: '8px',
                       marginBottom: '14px',
                     }}
-                  >
-                    The Board &amp; Advisors
-                  </h3>
-                  <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}>
-                    Led by Chairman Otto Ferdinand Wachs (former CEO of Autostadt) and seasoned global executives across OEM, motorsport, CGI storytelling, and legal strategy.
-                  </p>
+                    text="The Board &amp; Advisors"
+                  />
+                  <TextReveal
+                    as="p"
+                    style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
+                    text="Led by Chairman Otto Ferdinand Wachs (former CEO of Autostadt) and seasoned global executives across OEM, motorsport, CGI storytelling, and legal strategy."
+                  />
                 </div>
                 <Link
                   href="/advisors"
@@ -121,7 +125,8 @@ export default function HomePage() {
                   >
                     11 Wings • 32 Donation Tiers
                   </span>
-                  <h3
+                  <TextReveal
+                    as="h3"
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
@@ -129,12 +134,13 @@ export default function HomePage() {
                       marginTop: '8px',
                       marginBottom: '14px',
                     }}
-                  >
-                    Boards &amp; Committees
-                  </h3>
-                  <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}>
-                    Detailed working scopes for all 11 permanent museum wings alongside 32 tax-deductible donor committees guiding governance and operations.
-                  </p>
+                    text="Boards &amp; Committees"
+                  />
+                  <TextReveal
+                    as="p"
+                    style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
+                    text="Detailed working scopes for all 11 permanent museum wings alongside 32 tax-deductible donor committees guiding governance and operations."
+                  />
                 </div>
                 <Link
                   href="/committees"
@@ -175,7 +181,8 @@ export default function HomePage() {
                   >
                     6 Departments • 29 Roles
                   </span>
-                  <h3
+                  <TextReveal
+                    as="h3"
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
@@ -183,12 +190,13 @@ export default function HomePage() {
                       marginTop: '8px',
                       marginBottom: '14px',
                     }}
-                  >
-                    Careers at NYAM
-                  </h3>
-                  <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}>
-                    Join the multidisciplinary team building one of the world&apos;s leading automotive landmarks. Curatorial, engineering, marketing, and leadership positions open.
-                  </p>
+                    text="Careers at NYAM"
+                  />
+                  <TextReveal
+                    as="p"
+                    style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
+                    text="Join the multidisciplinary team building one of the world's leading automotive landmarks. Curatorial, engineering, marketing, and leadership positions open."
+                  />
                 </div>
                 <Link
                   href="/careers"

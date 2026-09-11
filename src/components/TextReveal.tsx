@@ -12,7 +12,8 @@ if (typeof window !== 'undefined') {
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 export interface TextRevealProps {
-  text: string;
+  text?: string;
+  children?: React.ReactNode;
   as?: React.ElementType;
   className?: string;
   style?: React.CSSProperties;
@@ -27,11 +28,12 @@ export interface TextRevealProps {
 
 export default function TextReveal({
   text,
+  children,
   as: Component = 'h2',
   className = '',
   style = {},
-  stagger = 0.035,
-  duration = 0.7,
+  stagger,
+  duration,
   delay = 0,
   threshold = 'top 88%',
   reverse = true,
@@ -39,6 +41,23 @@ export default function TextReveal({
   coloredWords,
 }: TextRevealProps) {
   const containerRef = useRef<HTMLElement | null>(null);
+
+  const isParagraph = Component === 'p';
+  const effectiveStagger = stagger ?? (isParagraph ? 0.018 : 0.035);
+  const effectiveDuration = duration ?? (isParagraph ? 0.55 : 0.7);
+
+  // Extract raw text from text prop or children
+  let rawText = text || '';
+  if (!rawText && children) {
+    if (typeof children === 'string') {
+      rawText = children;
+    } else if (Array.isArray(children)) {
+      rawText = children
+        .map((child) => (typeof child === 'string' ? child : ''))
+        .filter(Boolean)
+        .join(' ');
+    }
+  }
 
   useIsomorphicLayoutEffect(() => {
     if (!containerRef.current) return;
@@ -58,8 +77,8 @@ export default function TextReveal({
           y: '0%',
           opacity: 1,
           rotateX: 0,
-          duration,
-          stagger,
+          duration: effectiveDuration,
+          stagger: effectiveStagger,
           delay,
           ease: 'power3.out',
           scrollTrigger: {
@@ -73,9 +92,17 @@ export default function TextReveal({
     }, containerRef);
 
     return () => ctx.revert();
-  }, [text, stagger, duration, delay, threshold, reverse, toggleActions]);
+  }, [rawText, effectiveStagger, effectiveDuration, delay, threshold, reverse, toggleActions]);
 
-  const words = text.trim().split(/\s+/).filter(Boolean);
+  const words = rawText.trim().split(/\s+/).filter(Boolean);
+
+  if (words.length === 0) {
+    return (
+      <Component ref={containerRef} className={className} style={style}>
+        {children}
+      </Component>
+    );
+  }
 
   return (
     <Component

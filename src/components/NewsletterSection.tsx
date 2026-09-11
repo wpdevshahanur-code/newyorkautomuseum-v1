@@ -1,6 +1,7 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
+import TextReveal from './TextReveal';
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState('');
@@ -26,25 +27,25 @@ export default function NewsletterSection() {
       }}
     >
       <div className="container" style={{ maxWidth: '650px' }}>
-        <h3
+        <TextReveal
+          as="h3"
           style={{
             fontSize: '2rem',
             fontWeight: 800,
             color: '#0F172A',
             marginBottom: '12px',
           }}
-        >
-          Newsletter:
-        </h3>
-        <p
+          text="Newsletter:"
+        />
+        <TextReveal
+          as="p"
           style={{
             color: '#475569',
             fontSize: '1.05rem',
             marginBottom: '28px',
           }}
-        >
-          Sign up for our newsletter to stay update with latest news, updates and more.
-        </p>
+          text="Sign up for our newsletter to stay update with latest news, updates and more."
+        />
 
         {status === 'success' ? (
           <div

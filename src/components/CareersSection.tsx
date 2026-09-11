@@ -1,7 +1,8 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import careersData from '@/data/careers.json';
+import TextReveal from './TextReveal';
 
 interface Job {
   title: string;
@@ -44,10 +45,13 @@ export default function CareersSection() {
         {/* Section Header */}
         <div className="text-center" style={{ marginBottom: '56px' }}>
           <span className="section-tag">Talent &amp; Opportunity</span>
-          <h2 className="section-title">Careers</h2>
-          <p className="section-subtitle">
-            Join the team building one of the world&apos;s leading museum attractions.
-            <br />
+          <TextReveal as="h2" className="section-title" text="Careers" />
+          <TextReveal
+            as="p"
+            className="section-subtitle"
+            text="Join the team building one of the world's leading museum attractions."
+          />
+          <p className="section-subtitle" style={{ marginTop: '8px' }}>
             Send all inquiries and applications directly to:{' '}
             <a
               href="mailto:hr@newyorkautomuseum.com"
@@ -135,16 +139,16 @@ export default function CareersSection() {
                     borderRadius: '2px',
                   }}
                 />
-                <h3
+                <TextReveal
+                  as="h3"
                   style={{
                     fontSize: '1.35rem',
                     fontWeight: 800,
                     color: '#0F172A',
                     letterSpacing: '-0.02em',
                   }}
-                >
-                  {dept.department}
-                </h3>
+                  text={dept.department}
+                />
                 <span
                   style={{
                     fontSize: '0.8rem',
@@ -197,28 +201,28 @@ export default function CareersSection() {
                             marginBottom: '10px',
                           }}
                         >
-                          <h4
+                          <TextReveal
+                            as="h4"
                             style={{
                               fontSize: '1.15rem',
                               fontWeight: 800,
                               color: '#0F172A',
                               lineHeight: 1.3,
                             }}
-                          >
-                            {job.title}
-                          </h4>
+                            text={job.title}
+                          />
                         </div>
 
-                        <p
+                        <TextReveal
+                          as="p"
                           style={{
                             fontSize: '0.92rem',
                             color: '#475569',
                             lineHeight: 1.7,
                             marginBottom: '16px',
                           }}
-                        >
-                          {job.description}
-                        </p>
+                          text={job.description}
+                        />
                       </div>
 
                       <div

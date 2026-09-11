@@ -1,4 +1,7 @@
-﻿import Link from 'next/link';
+'use client';
+
+import Link from 'next/link';
+import TextReveal from './TextReveal';
 
 interface PageHeaderProps {
   tag: string;
@@ -64,7 +67,8 @@ export default function PageHeader({ tag, title, subtitle, breadcrumb }: PageHea
           {tag}
         </span>
 
-        <h1
+        <TextReveal
+          as="h1"
           style={{
             fontSize: 'clamp(2.5rem, 4.5vw, 3.6rem)',
             fontWeight: 900,
@@ -73,20 +77,19 @@ export default function PageHeader({ tag, title, subtitle, breadcrumb }: PageHea
             letterSpacing: '-0.03em',
             marginBottom: '16px',
           }}
-        >
-          {title}
-        </h1>
+          text={title}
+        />
 
-        <p
+        <TextReveal
+          as="p"
           style={{
             fontSize: '1.15rem',
             color: '#CBD5E1',
             maxWidth: '750px',
             lineHeight: 1.7,
           }}
-        >
-          {subtitle}
-        </p>
+          text={subtitle}
+        />
       </div>
     </div>
   );

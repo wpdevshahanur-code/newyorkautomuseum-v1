@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
+import TextReveal from './TextReveal';
 
 interface HeroSlide {
   image: string;
@@ -306,9 +307,7 @@ export default function HeroSlideshow() {
         </div>
 
         {/* Main Institutional Headline */}
-        <h1 className="hero-main-title">
-          New York Auto Museum
-        </h1>
+        <TextReveal as="h1" className="hero-main-title" text="New York Auto Museum" />
 
         {/* Dynamic Exhibition Wing & Tagline */}
         <div className="hero-wing-showcase">
@@ -322,9 +321,12 @@ export default function HeroSlideshow() {
         </div>
 
         {/* Slide Description */}
-        <p className="hero-description">
-          {activeSlideData.description}
-        </p>
+        <TextReveal
+          key={currentSlide}
+          as="p"
+          className="hero-description"
+          text={activeSlideData.description}
+        />
 
         {/* Action Buttons */}
         <div className="hero-actions">

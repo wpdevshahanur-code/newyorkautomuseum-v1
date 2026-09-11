@@ -1,8 +1,9 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
 import advisorsData from '@/data/advisors.json';
+import TextReveal from './TextReveal';
 
 interface Member {
   name: string;
@@ -58,10 +59,12 @@ export default function AdvisoryBoard() {
         {/* Section Header */}
         <div className="text-center" style={{ marginBottom: '48px' }}>
           <span className="section-tag">Governance &amp; Leadership</span>
-          <h2 className="section-title">The Board &amp; Advisors</h2>
-          <p className="section-subtitle">
-            An extraordinary assembly of former automotive OEM executives, curatorial directors, legal scholars, cultural storytellers, and motorsports icons.
-          </p>
+          <TextReveal as="h2" className="section-title" text="The Board &amp; Advisors" />
+          <TextReveal
+            as="p"
+            className="section-subtitle"
+            text="An extraordinary assembly of former automotive OEM executives, curatorial directors, legal scholars, cultural storytellers, and motorsports icons."
+          />
         </div>
 
         {/* Controls Toolbar: Categories + View Switcher */}
@@ -209,16 +212,16 @@ export default function AdvisoryBoard() {
                       borderRadius: '3px',
                     }}
                   />
-                  <h3
+                  <TextReveal
+                    as="h3"
                     style={{
                       fontSize: '1.45rem',
                       fontWeight: 900,
                       color: '#0F172A',
                       letterSpacing: '-0.02em',
                     }}
-                  >
-                    {group.category}
-                  </h3>
+                    text={group.category}
+                  />
                   <span
                     style={{
                       fontSize: '0.8rem',
@@ -296,7 +299,8 @@ export default function AdvisoryBoard() {
                               >
                                 {getInitials(member.name)}
                               </div>
-                              <h4
+                              <TextReveal
+                                as="h4"
                                 style={{
                                   fontSize: '1.35rem',
                                   fontWeight: 800,
@@ -304,9 +308,8 @@ export default function AdvisoryBoard() {
                                   lineHeight: 1.2,
                                   letterSpacing: '-0.02em',
                                 }}
-                              >
-                                {member.name}
-                              </h4>
+                                text={member.name}
+                              />
                             </div>
 
                             {/* Verified LinkedIn Button */}
@@ -366,16 +369,16 @@ export default function AdvisoryBoard() {
 
                           {/* Bio Content */}
                           {member.bio && (
-                            <p
+                            <TextReveal
+                              as="p"
                               style={{
                                 fontSize: '0.95rem',
                                 color: '#475569',
                                 lineHeight: 1.75,
                                 whiteSpace: 'pre-line',
                               }}
-                            >
-                              {displayBio}
-                            </p>
+                              text={displayBio}
+                            />
                           )}
                         </div>
 
@@ -439,9 +442,11 @@ export default function AdvisoryBoard() {
                       borderRadius: '3px',
                     }}
                   />
-                  <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0F172A' }}>
-                    {group.category}
-                  </h3>
+                  <TextReveal
+                    as="h3"
+                    style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0F172A' }}
+                    text={group.category}
+                  />
                   <span
                     style={{
                       fontSize: '0.8rem',
@@ -502,9 +507,11 @@ export default function AdvisoryBoard() {
                               {getInitials(member.name)}
                             </div>
                             <div>
-                              <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F172A' }}>
-                                {member.name}
-                              </h4>
+                              <TextReveal
+                                as="h4"
+                                style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F172A' }}
+                                text={member.name}
+                              />
                             </div>
                             <span
                               style={{

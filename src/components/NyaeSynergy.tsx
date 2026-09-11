@@ -47,16 +47,16 @@ export default function NyaeSynergy() {
               }}
             />
 
-            <p
+            <TextReveal
+              as="p"
               style={{
                 fontSize: '1.05rem',
                 color: '#475569',
                 lineHeight: 1.7,
                 marginBottom: '28px',
               }}
-            >
-              Explore the educational non-profit charter, STEM youth initiatives, and experiential programs powering our mission.
-            </p>
+              text="Explore the educational non-profit charter, STEM youth initiatives, and experiential programs powering our mission."
+            />
 
             <a
               href="https://newyorkautoexperience.org/"
