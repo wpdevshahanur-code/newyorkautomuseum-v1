@@ -33,7 +33,7 @@ export default function Footer() {
               <div style={{ position: 'relative', width: '210px', height: '42px' }}>
                 <Image
                   src="/images/logo-dark.png"
-                  alt="The New York Auto Experience"
+                  alt="New York Auto Museum"
                   fill
                   style={{ objectFit: 'contain', objectPosition: 'left' }}
                 />

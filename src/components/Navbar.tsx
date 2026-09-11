@@ -52,7 +52,7 @@ export default function Navbar() {
         >
           <Image
             src="/images/logo-dark.png"
-            alt="The New York Auto Experience"
+            alt="New York Auto Museum"
             width={210}
             height={42}
             className="navbar-brand-logo"
