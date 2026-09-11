@@ -1422,4 +1422,19 @@ body {
   }
 }
 
+/* Advisor Card Role Badge - Full width on mobile for uniform appearance */
+.advisor-role-badge {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .advisor-role-badge {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+
 

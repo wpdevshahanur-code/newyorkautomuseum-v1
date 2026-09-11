@@ -390,12 +390,12 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                             )}
                           </div>
 
-                          {/* Full-Width Role Badge (Has 100% of card width, never squeezed!) */}
+                          {/* Role Badge (Full width on mobile for consistent, uniform look) */}
                           {member.position && member.position.trim() && (
-                            <div style={{ marginBottom: '18px' }}>
+                            <div style={{ marginBottom: '18px', width: '100%' }}>
                               <span
+                                className="advisor-role-badge"
                                 style={{
-                                  display: 'inline-block',
                                   padding: '6px 14px',
                                   borderRadius: '6px',
                                   backgroundColor: 'rgba(220, 38, 38, 0.06)',
