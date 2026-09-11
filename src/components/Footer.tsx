@@ -188,8 +188,21 @@ export default function Footer() {
                 david.senater@newyorkautomuseum.com
               </a>
             </p>
-            <p style={{ color: '#0F172A', fontWeight: 800, fontSize: '0.95rem' }}>
-              Toll Free: 1-877-896-9269
+            <p style={{ marginTop: '4px' }}>
+              <a
+                href="tel:18778969269"
+                style={{
+                  color: '#0F172A',
+                  textDecoration: 'none',
+                  fontWeight: 800,
+                  fontSize: '0.95rem',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                }}
+              >
+                Toll Free: 1-877-896-9269
+              </a>
             </p>
           </div>
 
@@ -220,11 +233,8 @@ export default function Footer() {
                 New York Auto Museum Experience Center Inc
               </div>
               <div style={{ color: '#475569' }}>767 Broadway #1671</div>
-              <div style={{ color: '#475569', marginBottom: '10px' }}>
+              <div style={{ color: '#475569' }}>
                 New York, New York, Manhattan 10003 USA
-              </div>
-              <div style={{ color: '#DC2626', fontWeight: 800, fontSize: '1rem' }}>
-                1-877-896-9269
               </div>
             </div>
           </div>
