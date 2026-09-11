@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import advisorsData from '@/data/advisors.json';
 import TextReveal from './TextReveal';
@@ -33,6 +33,28 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'cards' | 'list'>('cards');
   const [expandedBioKey, setExpandedBioKey] = useState<string | null>(null);
+  const [activeModalMember, setActiveModalMember] = useState<{
+    member: Member;
+    category: string;
+  } | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveModalMember(null);
+      }
+    };
+    if (activeModalMember) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeModalMember]);
 
   const categories = initialCategories && initialCategories.length > 0
     ? initialCategories
@@ -247,17 +269,15 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(480px, 1fr))',
                     gap: '24px',
-                    alignItems: 'start',
+                    alignItems: 'stretch',
                   }}
                 >
                   {group.members.map((member, idx) => {
                     const uniqueKey = `${group.category}-${member.name}-${idx}`;
-                    const isExpanded = expandedBioKey === uniqueKey;
-                    const hasLongBio = member.bio.length > 280;
-                    const displayBio =
-                      !hasLongBio || isExpanded
-                        ? member.bio
-                        : `${member.bio.slice(0, 280)}...`;
+                    const hasLongBio = member.bio.length > 240;
+                    const previewBio = hasLongBio
+                      ? `${member.bio.slice(0, 240).trim()}...`
+                      : member.bio;
 
                     return (
                       <div
@@ -270,10 +290,12 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                           boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
                           display: 'flex',
                           flexDirection: 'column',
+                          justifyContent: 'space-between',
+                          height: '100%',
                           transition: 'transform 0.25s ease, box-shadow 0.25s ease',
                         }}
                       >
-                        <div>
+                        <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                           {/* Top Row: Avatar + Name on Left, LinkedIn on Right */}
                           <div
                             style={{
@@ -383,22 +405,22 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                                 lineHeight: 1.75,
                                 whiteSpace: 'pre-line',
                               }}
-                              text={displayBio}
+                              text={previewBio}
                             />
                           )}
                         </div>
 
-                        {/* Read More Toggle */}
+                        {/* Read More Trigger -> Opens Museum Bio Modal */}
                         {hasLongBio && (
                           <div
                             style={{
-                              marginTop: '18px',
-                              paddingTop: '14px',
+                              marginTop: 'auto',
+                              paddingTop: '16px',
                               borderTop: '1px solid #F1F5F9',
                             }}
                           >
                             <button
-                              onClick={() => toggleBio(uniqueKey)}
+                              onClick={() => setActiveModalMember({ member, category: group.category })}
                               style={{
                                 background: 'transparent',
                                 border: 'none',
@@ -409,10 +431,11 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                                 padding: 0,
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '4px',
+                                gap: '6px',
                               }}
                             >
-                              {isExpanded ? 'Show less ↑' : 'Read full biography ↓'}
+                              <span>Read full biography</span>
+                              <span style={{ fontSize: '1rem', lineHeight: 1 }}>→</span>
                             </button>
                           </div>
                         )}
@@ -609,6 +632,223 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                 </div>
               </div>
             ))}
+          </div>
+        )}
+        {/* Full Biography Modal */}
+        {activeModalMember && (
+          <div
+            style={{
+              position: 'fixed',
+              inset: 0,
+              zIndex: 99999,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(15, 23, 42, 0.75)',
+              backdropFilter: 'blur(6px)',
+              padding: '20px',
+            }}
+            onClick={() => setActiveModalMember(null)}
+          >
+            <div
+              style={{
+                backgroundColor: '#FFFFFF',
+                borderRadius: '20px',
+                maxWidth: '640px',
+                width: '100%',
+                maxHeight: '85vh',
+                display: 'flex',
+                flexDirection: 'column',
+                boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.25)',
+                overflow: 'hidden',
+                position: 'relative',
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div
+                style={{
+                  padding: '24px 28px',
+                  borderBottom: '1px solid #E2E8F0',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  justifyContent: 'space-between',
+                  gap: '16px',
+                  backgroundColor: '#F8FAFC',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <div
+                    style={{
+                      width: '52px',
+                      height: '52px',
+                      borderRadius: '12px',
+                      background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                      color: '#FFFFFF',
+                      fontWeight: 800,
+                      fontSize: '1.1rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      boxShadow: '0 4px 10px rgba(15, 23, 42, 0.2)',
+                    }}
+                  >
+                    {getInitials(activeModalMember.member.name)}
+                  </div>
+                  <div>
+                    <span
+                      style={{
+                        display: 'block',
+                        fontSize: '0.75rem',
+                        fontWeight: 700,
+                        color: '#64748B',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        marginBottom: '4px',
+                      }}
+                    >
+                      {activeModalMember.category}
+                    </span>
+                    <h3
+                      style={{
+                        fontSize: '1.35rem',
+                        fontWeight: 800,
+                        color: '#0F172A',
+                        lineHeight: 1.2,
+                        margin: 0,
+                      }}
+                    >
+                      {activeModalMember.member.name}
+                    </h3>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setActiveModalMember(null)}
+                  style={{
+                    background: '#E2E8F0',
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: '36px',
+                    height: '36px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.2rem',
+                    color: '#475569',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    flexShrink: 0,
+                  }}
+                  aria-label="Close modal"
+                >
+                  ×
+                </button>
+              </div>
+
+              {/* Sub-header with Role Badge & LinkedIn */}
+              <div
+                style={{
+                  padding: '14px 28px',
+                  backgroundColor: '#FFFFFF',
+                  borderBottom: '1px solid #F1F5F9',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                }}
+              >
+                {activeModalMember.member.position && activeModalMember.member.position.trim() && (
+                  <span
+                    style={{
+                      display: 'inline-block',
+                      padding: '5px 12px',
+                      borderRadius: '6px',
+                      backgroundColor: 'rgba(220, 38, 38, 0.06)',
+                      border: '1px solid rgba(220, 38, 38, 0.2)',
+                      color: '#DC2626',
+                      fontSize: '0.85rem',
+                      fontWeight: 700,
+                    }}
+                  >
+                    {activeModalMember.member.position}
+                  </span>
+                )}
+
+                {activeModalMember.member.linkedin && (
+                  <a
+                    href={activeModalMember.member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      padding: '6px 14px',
+                      borderRadius: '6px',
+                      backgroundColor: '#0A66C2',
+                      color: '#FFFFFF',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <Image
+                      src="/images/social-linkedin.svg"
+                      alt="LinkedIn"
+                      width={14}
+                      height={14}
+                      style={{ filter: 'brightness(0) invert(1)' }}
+                    />
+                    <span>LinkedIn Profile</span>
+                  </a>
+                )}
+              </div>
+
+              {/* Modal Body: Full Bio */}
+              <div
+                style={{
+                  padding: '24px 28px',
+                  overflowY: 'auto',
+                  flex: 1,
+                  color: '#334155',
+                  fontSize: '0.95rem',
+                  lineHeight: 1.8,
+                  whiteSpace: 'pre-line',
+                }}
+              >
+                {activeModalMember.member.bio}
+              </div>
+
+              {/* Modal Footer */}
+              <div
+                style={{
+                  padding: '16px 28px',
+                  borderTop: '1px solid #E2E8F0',
+                  backgroundColor: '#F8FAFC',
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                }}
+              >
+                <button
+                  onClick={() => setActiveModalMember(null)}
+                  style={{
+                    padding: '8px 20px',
+                    borderRadius: '8px',
+                    backgroundColor: '#0F172A',
+                    color: '#FFFFFF',
+                    border: 'none',
+                    fontSize: '0.85rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>
