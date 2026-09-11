@@ -53,9 +53,10 @@ export default function Navbar() {
           <Image
             src="/images/logo-dark.png"
             alt="The New York Auto Experience"
-            width={180}
-            height={52}
-            style={{ objectFit: 'contain', height: '44px', width: 'auto' }}
+            width={210}
+            height={42}
+            className="navbar-brand-logo"
+            style={{ objectFit: 'contain', height: '42px', width: 'auto' }}
             priority
           />
         </Link>

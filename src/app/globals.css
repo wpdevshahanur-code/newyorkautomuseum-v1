@@ -1470,7 +1470,15 @@ body {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
+
+  .navbar-brand-logo {
+    height: 36px !important;
+    width: auto !important;
+  }
 }
 
-
-
+.navbar-brand-logo {
+  height: 42px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}

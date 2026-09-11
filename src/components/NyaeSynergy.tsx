@@ -98,7 +98,7 @@ export default function NyaeSynergy() {
               }}
             >
               {/* Authentic White NYAE Logo (Now razor-sharp on luxury dark background) */}
-              <div style={{ position: 'relative', width: '100%', maxWidth: '320px', height: '90px' }}>
+              <div style={{ position: 'relative', width: '100%', maxWidth: '300px', height: '60px' }}>
                 <Image
                   src="/images/NYAE-logo.png"
                   alt="The New York Auto Experience logo"
