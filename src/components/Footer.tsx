@@ -5,6 +5,9 @@ import Link from 'next/link';
 import TextReveal from './TextReveal';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const yearText = currentYear > 2020 ? `2020–${currentYear}` : '2020';
+
   return (
     <footer
       id="footer"
@@ -268,7 +271,7 @@ export default function Footer() {
             color: '#64748B',
           }}
         >
-          <div>&copy; New York Auto Museum 2020–2025. All rights reserved.</div>
+          <div>&copy; New York Auto Museum {yearText}. All rights reserved.</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
             <span>New York Auto Experience Inc. 501(c)(3)</span>
             <span>•</span>
