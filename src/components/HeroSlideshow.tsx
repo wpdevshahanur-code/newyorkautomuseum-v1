@@ -248,16 +248,6 @@ export default function HeroSlideshow() {
 
   const activeSlideData = heroSlides[currentSlide];
 
-  const [introFaded, setIntroFaded] = useState(false);
-
-  useEffect(() => {
-    // Cinematic initial fade-in: starts dark and smoothly reveals the classic car
-    const timer = setTimeout(() => {
-      setIntroFaded(true);
-    }, 150);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section
       id="banner"
