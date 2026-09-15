@@ -339,12 +339,19 @@ header[style*="backgroundColor: rgb(255, 255, 255)"] {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
 }
 
-.desktop-nav a {
+.desktop-nav a:not(.btn) {
   color: #94A3B8 !important;
   transition: color 0.2s ease !important;
 }
-.desktop-nav a:hover {
+.desktop-nav a:not(.btn):hover {
   color: #FFFFFF !important;
+}
+.desktop-nav a.btn,
+.desktop-nav a.btn-primary,
+.desktop-nav .btn-primary,
+a.btn-primary {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
 }
 
 /* 9. Luxury Footer */

@@ -109,6 +109,11 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary btn-sm"
+            style={{
+              color: '#FFFFFF',
+              fontWeight: 700,
+              letterSpacing: '0.02em',
+            }}
           >
             Visit NYAE (.org)
           </a>
@@ -198,7 +203,13 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
-            style={{ width: '100%', marginTop: '8px' }}
+            style={{
+              width: '100%',
+              marginTop: '8px',
+              color: '#FFFFFF',
+              fontWeight: 700,
+              letterSpacing: '0.02em',
+            }}
           >
             Visit NYAE (.org)
           </a>
