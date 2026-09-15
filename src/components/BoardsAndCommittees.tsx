@@ -100,12 +100,14 @@ export default function BoardsAndCommittees() {
                   key={idx}
                   className="committee-stat-card"
                   style={{
-                    backgroundColor: isOpen ? '#FFFFFF' : '#F8FAFC',
-                    border: isOpen ? '1px solid #E11D48' : '1px solid #E2E8F0',
+                    backgroundColor: isOpen ? 'rgba(25, 34, 51, 0.95)' : 'rgba(18, 24, 36, 0.88)',
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
+                    border: isOpen ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.12)',
                     borderRadius: '14px',
                     boxShadow: isOpen
-                      ? '0 10px 30px rgba(225, 29, 72, 0.08)'
-                      : '0 2px 10px rgba(15, 23, 42, 0.03)',
+                      ? '0 12px 32px rgba(225, 29, 72, 0.2)'
+                      : '0 12px 36px rgba(0, 0, 0, 0.45)',
                     transition: 'all 0.25s ease',
                     display: 'flex',
                     flexDirection: 'column',
@@ -126,7 +128,8 @@ export default function BoardsAndCommittees() {
                           fontSize: '0.75rem',
                           fontWeight: 800,
                           color: '#E11D48',
-                          backgroundColor: 'rgba(225, 29, 72, 0.08)',
+                          backgroundColor: 'rgba(225, 29, 72, 0.12)',
+                          border: '1px solid rgba(225, 29, 72, 0.25)',
                           padding: '3px 10px',
                           borderRadius: '9999px',
                           textTransform: 'uppercase',
@@ -142,7 +145,7 @@ export default function BoardsAndCommittees() {
                       style={{
                         fontSize: '1.2rem',
                         fontWeight: 800,
-                        color: '#0F172A',
+                        color: '#FFFFFF',
                         lineHeight: 1.3,
                         marginBottom: '12px',
                       }}
@@ -154,24 +157,24 @@ export default function BoardsAndCommittees() {
                         as="p"
                         style={{
                           fontSize: '0.94rem',
-                          color: '#475569',
+                          color: '#94A3B8',
                           lineHeight: 1.7,
                           marginTop: '12px',
                           paddingTop: '12px',
-                          borderTop: '1px solid #F1F5F9',
+                          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
                         }}
                         text={item.description}
                       />
                     )}
                   </div>
 
-                  <div style={{ marginTop: '16px', paddingTop: '12px', borderTop: '1px solid #E2E8F0' }}>
+                  <div style={{ marginTop: '16px', paddingTop: '12px', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
                     <button
                       onClick={() => toggleWing(idx)}
                       style={{
                         background: 'transparent',
                         border: 'none',
-                        color: isOpen ? '#E11D48' : '#2563EB',
+                        color: isOpen ? '#E11D48' : '#3B82F6',
                         fontSize: '0.85rem',
                         fontWeight: 700,
                         cursor: 'pointer',
@@ -250,14 +253,16 @@ export default function BoardsAndCommittees() {
                   key={idx}
                   className="donation-committee-row"
                   style={{
-                    backgroundColor: isOpen ? '#FFFFFF' : '#F8FAFC',
-                    border: isOpen ? '1px solid #D97706' : '1px solid #E2E8F0',
+                    backgroundColor: isOpen ? 'rgba(25, 34, 51, 0.95)' : 'rgba(18, 24, 36, 0.88)',
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
+                    border: isOpen ? '1px solid #D97706' : '1px solid rgba(255, 255, 255, 0.12)',
                     borderRadius: '12px',
                     overflow: 'hidden',
                     transition: 'all 0.2s ease',
                     boxShadow: isOpen
-                      ? '0 8px 24px rgba(217, 119, 6, 0.08)'
-                      : 'none',
+                      ? '0 8px 24px rgba(217, 119, 6, 0.15)'
+                      : '0 8px 24px rgba(0, 0, 0, 0.35)',
                   }}
                 >
                   <button
@@ -290,7 +295,7 @@ export default function BoardsAndCommittees() {
                         style={{
                           fontSize: '1.05rem',
                           fontWeight: 700,
-                          color: '#0F172A',
+                          color: '#FFFFFF',
                         }}
                       >
                         {cleanTitleName}
@@ -303,11 +308,11 @@ export default function BoardsAndCommittees() {
                           style={{
                             fontSize: '0.85rem',
                             fontWeight: 800,
-                            backgroundColor: 'rgba(217, 119, 6, 0.1)',
-                            color: '#D97706',
+                            backgroundColor: 'rgba(217, 119, 6, 0.15)',
+                            color: '#F59E0B',
                             padding: '4px 12px',
                             borderRadius: '9999px',
-                            border: '1px solid rgba(217, 119, 6, 0.25)',
+                            border: '1px solid rgba(217, 119, 6, 0.3)',
                           }}
                         >
                           {price} Tier
@@ -315,7 +320,7 @@ export default function BoardsAndCommittees() {
                       )}
                       <span
                         style={{
-                          color: isOpen ? '#D97706' : '#94A3B8',
+                          color: isOpen ? '#F59E0B' : '#94A3B8',
                           fontSize: '0.85rem',
                           transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
                           transition: 'transform 0.2s ease',
@@ -331,11 +336,11 @@ export default function BoardsAndCommittees() {
                     <div
                       className="committee-accordion-body"
                       style={{
-                        color: '#475569',
+                        color: '#94A3B8',
                         fontSize: '0.94rem',
                         lineHeight: 1.75,
-                        borderTop: '1px solid #F1F5F9',
-                        paddingTop: '14px',
+                        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                        padding: '16px 24px',
                       }}
                     >
                       {item.description}

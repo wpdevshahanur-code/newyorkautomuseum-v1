@@ -1104,9 +1104,9 @@ div[role="dialog"] > div:first-child {
    Modern Accreditations & Sponsorships Showcase Carousel
    ========================================================================== */
 .accreditations-section {
-  background: radial-gradient(1200px 450px at 50% 0%, #FFFFFF 0%, #F8FAFC 100%);
-  border-top: 1px solid #E2E8F0;
-  border-bottom: 1px solid #E2E8F0;
+  background: rgba(11, 14, 20, 0.60) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
   padding: 64px 0 72px 0;
   overflow: hidden;
   position: relative;
@@ -1124,8 +1124,8 @@ div[role="dialog"] > div:first-child {
   gap: 8px;
   padding: 6px 16px;
   border-radius: 9999px;
-  background: rgba(225, 29, 72, 0.08);
-  border: 1px solid rgba(225, 29, 72, 0.22);
+  background: rgba(225, 29, 72, 0.12);
+  border: 1px solid rgba(225, 29, 72, 0.3);
   color: #E11D48;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1161,7 +1161,7 @@ div[role="dialog"] > div:first-child {
 .accreditations-title {
   font-size: clamp(1.8rem, 3.2vw, 2.3rem);
   font-weight: 900;
-  color: #0F172A;
+  color: #FFFFFF !important;
   letter-spacing: -0.03em;
   line-height: 1.25;
   margin-bottom: 12px;
@@ -1169,7 +1169,7 @@ div[role="dialog"] > div:first-child {
 
 .accreditations-subtitle {
   font-size: 1rem;
-  color: #64748B;
+  color: #94A3B8 !important;
   line-height: 1.6;
   margin-bottom: 22px;
 }
@@ -1178,11 +1178,13 @@ div[role="dialog"] > div:first-child {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: rgba(18, 24, 36, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 6px 16px;
   border-radius: 9999px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .accreditations-count {
@@ -1191,11 +1193,11 @@ div[role="dialog"] > div:first-child {
   gap: 6px;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #475569;
+  color: #94A3B8;
 }
 
 .controls-divider {
-  color: #CBD5E1;
+  color: rgba(255, 255, 255, 0.2);
   font-size: 0.8rem;
 }
 
@@ -1203,20 +1205,21 @@ div[role="dialog"] > div:first-child {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: #F1F5F9;
-  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 4px 10px;
   border-radius: 9999px;
   font-size: 0.72rem;
   font-weight: 700;
-  color: #334155;
+  color: #FFFFFF;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .carousel-control-btn:hover {
-  background: #E2E8F0;
-  color: #0F172A;
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .carousel-nav-group {
@@ -1295,10 +1298,12 @@ div[role="dialog"] > div:first-child {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  color: #0F172A;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+  background: rgba(18, 24, 36, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1319,7 +1324,7 @@ div[role="dialog"] > div:first-child {
   border-color: #E11D48;
   color: #FFFFFF;
   transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.25);
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.35);
 }
 
 .marquee-floating-btn:active {
@@ -1330,14 +1335,16 @@ div[role="dialog"] > div:first-child {
   flex-shrink: 0;
   width: 380px;
   height: 156px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: rgba(18, 24, 36, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px 22px 14px 22px;
-  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
   position: relative;
@@ -1361,8 +1368,9 @@ div[role="dialog"] > div:first-child {
 
 .marquee-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.08), 0 6px 16px -4px rgba(225, 29, 72, 0.05);
-  border-color: #CBD5E1;
+  background: rgba(25, 34, 51, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.6), 0 0 20px rgba(225, 29, 72, 0.12);
 }
 
 .marquee-card:hover::before {
@@ -1381,9 +1389,9 @@ div[role="dialog"] > div:first-child {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #64748B;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 3px 9px;
   border-radius: 6px;
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -1391,16 +1399,16 @@ div[role="dialog"] > div:first-child {
 
 .marquee-card:hover .card-category-tag {
   color: #E11D48;
-  background: rgba(225, 29, 72, 0.05);
-  border-color: rgba(225, 29, 72, 0.2);
+  background: rgba(225, 29, 72, 0.12);
+  border-color: rgba(225, 29, 72, 0.3);
 }
 
 .card-arrow-badge {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #94A3B8;
   display: flex;
   align-items: center;
@@ -1441,13 +1449,13 @@ div[role="dialog"] > div:first-child {
   justify-content: space-between;
   width: 100%;
   padding-top: 6px;
-  border-top: 1px solid #F1F5F9;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .card-partner-name {
   font-size: 0.76rem;
   font-weight: 600;
-  color: #64748B;
+  color: #FFFFFF !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1456,7 +1464,7 @@ div[role="dialog"] > div:first-child {
 }
 
 .marquee-card:hover .card-partner-name {
-  color: #0F172A;
+  color: #FFFFFF !important;
 }
 
 .card-verified-dot {

@@ -93,7 +93,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
       id="advisors"
       style={{
         padding: '80px 0 120px 0',
-        backgroundColor: '#F8FAFC',
+        backgroundColor: 'transparent',
         position: 'relative',
       }}
     >
@@ -137,15 +137,15 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                 border:
                   selectedCategory === 'all'
                     ? '1px solid #E11D48'
-                    : '1px solid #CBD5E1',
+                    : '1px solid rgba(255, 255, 255, 0.12)',
                 backgroundColor:
-                  selectedCategory === 'all' ? '#E11D48' : '#FFFFFF',
-                color: selectedCategory === 'all' ? '#FFFFFF' : '#1E293B',
+                  selectedCategory === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
+                color: selectedCategory === 'all' ? '#FFFFFF' : '#94A3B8',
                 fontSize: '0.85rem',
                 fontWeight: 700,
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
-                boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
               }}
             >
               All Departments ({totalMembers})
@@ -160,15 +160,15 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   border:
                     selectedCategory === cat.category
                       ? '1px solid #E11D48'
-                      : '1px solid #CBD5E1',
+                      : '1px solid rgba(255, 255, 255, 0.12)',
                   backgroundColor:
-                    selectedCategory === cat.category ? '#E11D48' : '#FFFFFF',
-                  color: selectedCategory === cat.category ? '#FFFFFF' : '#1E293B',
+                    selectedCategory === cat.category ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
+                  color: selectedCategory === cat.category ? '#FFFFFF' : '#94A3B8',
                   fontSize: '0.85rem',
                   fontWeight: 700,
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
-                  boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
                 }}
               >
                 {cat.category} ({cat.members.length})
@@ -182,12 +182,12 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              backgroundColor: '#FFFFFF',
-              border: '1px solid #CBD5E1',
+              backgroundColor: 'rgba(18, 24, 36, 0.88)',
+              border: '1px solid rgba(255, 255, 255, 0.15)',
               borderRadius: '8px',
               padding: '4px',
               gap: '4px',
-              boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.3)',
               boxSizing: 'border-box',
               maxWidth: '100%',
             }}
@@ -198,8 +198,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                 padding: '6px 14px',
                 borderRadius: '6px',
                 border: 'none',
-                backgroundColor: viewMode === 'cards' ? '#0F172A' : 'transparent',
-                color: viewMode === 'cards' ? '#FFFFFF' : '#475569',
+                backgroundColor: viewMode === 'cards' ? 'rgba(255, 255, 255, 0.14)' : 'transparent',
+                color: viewMode === 'cards' ? '#FFFFFF' : '#94A3B8',
                 fontSize: '0.8rem',
                 fontWeight: 700,
                 cursor: 'pointer',
@@ -222,8 +222,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                 padding: '6px 14px',
                 borderRadius: '6px',
                 border: 'none',
-                backgroundColor: viewMode === 'list' ? '#0F172A' : 'transparent',
-                color: viewMode === 'list' ? '#FFFFFF' : '#475569',
+                backgroundColor: viewMode === 'list' ? 'rgba(255, 255, 255, 0.14)' : 'transparent',
+                color: viewMode === 'list' ? '#FFFFFF' : '#94A3B8',
                 fontSize: '0.8rem',
                 fontWeight: 700,
                 cursor: 'pointer',
@@ -330,10 +330,12 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                         key={uniqueKey}
                         className="dept-overview-card"
                         style={{
-                          backgroundColor: '#FFFFFF',
-                          border: '1px solid #E2E8F0',
+                          backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                          backdropFilter: 'blur(12px)',
+                          WebkitBackdropFilter: 'blur(12px)',
+                          border: '1px solid rgba(255, 255, 255, 0.12)',
                           borderRadius: '16px',
-                          boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
+                          boxShadow: '0 12px 36px rgba(0, 0, 0, 0.45)',
                           display: 'flex',
                           flexDirection: 'column',
                           justifyContent: 'space-between',
@@ -376,7 +378,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                                 style={{
                                   fontSize: '1.25rem',
                                   fontWeight: 800,
-                                  color: '#0F172A',
+                                  color: '#FFFFFF',
                                   lineHeight: 1.25,
                                   letterSpacing: '-0.02em',
                                   minWidth: 0,
@@ -449,7 +451,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                               as="p"
                               style={{
                                 fontSize: '0.95rem',
-                                color: '#475569',
+                                color: '#94A3B8',
                                 lineHeight: 1.75,
                                 whiteSpace: 'pre-line',
                               }}
@@ -567,10 +569,12 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                         key={uniqueKey}
                         className="leader-profile-card"
                         style={{
-                          backgroundColor: '#FFFFFF',
-                          border: '1px solid #E2E8F0',
+                          backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                          backdropFilter: 'blur(12px)',
+                          WebkitBackdropFilter: 'blur(12px)',
+                          border: '1px solid rgba(255, 255, 255, 0.12)',
                           borderRadius: '12px',
-                          boxShadow: '0 2px 10px rgba(15, 23, 42, 0.03)',
+                          boxShadow: '0 12px 36px rgba(0, 0, 0, 0.45)',
                         }}
                       >
                         <div
@@ -604,7 +608,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                             <div>
                               <TextReveal
                                 as="h4"
-                                style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F172A' }}
+                                style={{ fontSize: '1.2rem', fontWeight: 800, color: '#FFFFFF' }}
                                 text={member.name}
                               />
                             </div>
@@ -632,16 +636,16 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                                 onClick={() => toggleBio(uniqueKey)}
                                 style={{
                                   background: 'transparent',
-                                  border: '1px solid #CBD5E1',
+                                  border: '1px solid rgba(255, 255, 255, 0.2)',
                                   borderRadius: '6px',
                                   padding: '6px 14px',
-                                  color: '#0284C7',
+                                  color: '#2563EB',
                                   fontSize: '0.8rem',
                                   fontWeight: 700,
                                   cursor: 'pointer',
                                 }}
                               >
-                                {isExpanded ? 'Hide Bio ↑' : 'View Bio ↓'}
+                                {isExpanded ? 'Collapse ▲' : 'Read Scope ▼'}
                               </button>
                             )}
 
@@ -682,8 +686,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                             style={{
                               marginTop: '16px',
                               paddingTop: '16px',
-                              borderTop: '1px solid #F1F5F9',
-                              color: '#475569',
+                              borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                              color: '#94A3B8',
                               fontSize: '0.94rem',
                               lineHeight: 1.75,
                               whiteSpace: 'pre-line',
@@ -730,14 +734,17 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               role="dialog"
               aria-modal="true"
               style={{
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'rgba(18, 24, 36, 0.98)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
                 borderRadius: '18px',
                 maxWidth: '600px',
                 width: '100%',
                 maxHeight: 'min(86vh, 640px)',
                 display: 'flex',
                 flexDirection: 'column',
-                boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.35)',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6)',
                 overflow: 'hidden',
                 position: 'relative',
                 boxSizing: 'border-box',
@@ -750,12 +757,12 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               <div
                 style={{
                   padding: '16px 20px',
-                  borderBottom: '1px solid #E2E8F0',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
                   display: 'flex',
                   alignItems: 'flex-start',
                   justifyContent: 'space-between',
                   gap: '12px',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
                   boxSizing: 'border-box',
                 }}
               >
@@ -799,7 +806,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       style={{
                         fontSize: '1.25rem',
                         fontWeight: 800,
-                        color: '#0F172A',
+                        color: '#FFFFFF',
                         lineHeight: 1.25,
                         margin: 0,
                         wordBreak: 'break-word',
@@ -813,8 +820,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                 <button
                   onClick={() => setActiveModalMember(null)}
                   style={{
-                    background: '#E2E8F0',
-                    border: 'none',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
                     borderRadius: '50%',
                     width: '34px',
                     height: '34px',
@@ -822,7 +829,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontSize: '1.2rem',
-                    color: '#475569',
+                    color: '#FFFFFF',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
                     flexShrink: 0,
@@ -838,8 +845,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               <div
                 style={{
                   padding: '12px 20px',
-                  backgroundColor: '#FFFFFF',
-                  borderBottom: '1px solid #F1F5F9',
+                  backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
@@ -854,8 +861,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                       display: 'inline-block',
                       padding: '4px 10px',
                       borderRadius: '6px',
-                      backgroundColor: 'rgba(225, 29, 72, 0.08)',
-                      border: '1px solid rgba(225, 29, 72, 0.22)',
+                      backgroundColor: 'rgba(225, 29, 72, 0.12)',
+                      border: '1px solid rgba(225, 29, 72, 0.25)',
                       color: '#E11D48',
                       fontSize: '0.82rem',
                       fontWeight: 700,
@@ -910,7 +917,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   overflowX: 'hidden',
                   WebkitOverflowScrolling: 'touch',
                   flex: 1,
-                  color: '#334155',
+                  color: '#CBD5E1',
                   fontSize: '0.92rem',
                   lineHeight: 1.75,
                   whiteSpace: 'pre-line',
@@ -926,8 +933,8 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
               <div
                 style={{
                   padding: '12px 20px',
-                  borderTop: '1px solid #E2E8F0',
-                  backgroundColor: '#F8FAFC',
+                  borderTop: '1px solid rgba(255, 255, 255, 0.12)',
+                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
                   display: 'flex',
                   justifyContent: 'flex-end',
                   boxSizing: 'border-box',
@@ -938,12 +945,13 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   style={{
                     padding: '8px 22px',
                     borderRadius: '8px',
-                    backgroundColor: '#0F172A',
+                    backgroundColor: '#E11D48',
                     color: '#FFFFFF',
                     border: 'none',
                     fontSize: '0.85rem',
                     fontWeight: 700,
                     cursor: 'pointer',
+                    transition: 'background-color 0.2s ease',
                   }}
                 >
                   Close
