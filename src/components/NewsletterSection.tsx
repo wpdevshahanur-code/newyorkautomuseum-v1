@@ -21,8 +21,7 @@ export default function NewsletterSection() {
       id="newsletter-frame"
       className="newsletter-section"
       style={{
-        backgroundColor: '#F8FAFC',
-        borderBottom: '1px solid #E2E8F0',
+        backgroundColor: 'transparent',
         textAlign: 'center',
       }}
     >
@@ -32,7 +31,7 @@ export default function NewsletterSection() {
           style={{
             fontSize: '2rem',
             fontWeight: 800,
-            color: '#0F172A',
+            color: '#FFFFFF',
             marginBottom: '12px',
           }}
           text="Newsletter:"
@@ -40,7 +39,7 @@ export default function NewsletterSection() {
         <TextReveal
           as="p"
           style={{
-            color: '#475569',
+            color: '#94A3B8',
             fontSize: '1.05rem',
             marginBottom: '28px',
           }}
@@ -52,9 +51,9 @@ export default function NewsletterSection() {
             style={{
               padding: '16px 24px',
               borderRadius: '8px',
-              background: 'rgba(22, 163, 74, 0.1)',
-              border: '1px solid rgba(22, 163, 74, 0.3)',
-              color: '#15803D',
+              background: 'rgba(16, 185, 129, 0.1)',
+              border: '1px solid rgba(16, 185, 129, 0.3)',
+              color: '#10B981',
               fontWeight: 700,
             }}
           >
@@ -80,12 +79,14 @@ export default function NewsletterSection() {
               style={{
                 flex: 1,
                 borderRadius: '8px',
-                border: '1px solid #CBD5E1',
-                background: '#FFFFFF',
-                color: '#0F172A',
+                border: '1px solid rgba(255, 255, 255, 0.18)',
+                background: 'rgba(18, 24, 36, 0.88)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                color: '#FFFFFF',
                 fontSize: '0.95rem',
                 outline: 'none',
-                boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+                boxShadow: '0 4px 14px rgba(0, 0, 0, 0.3)',
               }}
             />
             <button

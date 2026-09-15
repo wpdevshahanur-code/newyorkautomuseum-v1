@@ -128,7 +128,7 @@ export default function TextReveal({
                 display: 'inline-block',
                 willChange: 'transform, opacity',
                 ...(customColor ? { color: customColor } : {}),
-                ...(isDivider ? { color: customColor || '#DC2626', fontWeight: 300 } : {}),
+                ...(isDivider ? { color: customColor || '#E11D48', fontWeight: 300 } : {}),
               }}
             >
               {word}

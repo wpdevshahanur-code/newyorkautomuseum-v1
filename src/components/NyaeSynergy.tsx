@@ -9,8 +9,7 @@ export default function NyaeSynergy() {
       id="nyae-synergy"
       className="synergy-section"
       style={{
-        backgroundColor: '#FFFFFF',
-        borderBottom: '1px solid #E2E8F0',
+        backgroundColor: 'transparent',
         position: 'relative',
       }}
     >
@@ -18,10 +17,12 @@ export default function NyaeSynergy() {
         <div
           className="synergy-card"
           style={{
-            background: 'linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)',
-            border: '1px solid #E2E8F0',
+            background: 'rgba(18, 24, 36, 0.88)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            border: '1px solid rgba(255, 255, 255, 0.12)',
             borderRadius: '24px',
-            boxShadow: '0 8px 30px rgba(15, 23, 42, 0.04)',
+            boxShadow: '0 14px 40px rgba(0, 0, 0, 0.45)',
             alignItems: 'center',
           }}
         >
@@ -37,7 +38,7 @@ export default function NyaeSynergy() {
               style={{
                 fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)',
                 fontWeight: 900,
-                color: '#0F172A',
+                color: '#FFFFFF',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.2,
                 marginBottom: '16px',
@@ -48,7 +49,7 @@ export default function NyaeSynergy() {
               as="p"
               style={{
                 fontSize: '1.05rem',
-                color: '#475569',
+                color: '#94A3B8',
                 lineHeight: 1.7,
                 marginBottom: '28px',
               }}
@@ -86,7 +87,7 @@ export default function NyaeSynergy() {
             <div
               className="synergy-badge-card"
               style={{
-                background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                backgroundColor: 'rgba(11, 14, 20, 0.85)',
                 border: '1px solid rgba(255, 255, 255, 0.12)',
                 borderRadius: '20px',
                 display: 'flex',
@@ -120,10 +121,10 @@ export default function NyaeSynergy() {
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                 }}
               >
-                <span style={{ color: '#E63946', fontSize: '0.8rem' }}>●</span>
+                <span style={{ color: '#E11D48', fontSize: '0.8rem' }}>●</span>
                 <span
                   style={{
-                    color: '#CBD5E1',
+                    color: '#94A3B8',
                     fontSize: '0.78rem',
                     fontWeight: 700,
                     letterSpacing: '0.06em',

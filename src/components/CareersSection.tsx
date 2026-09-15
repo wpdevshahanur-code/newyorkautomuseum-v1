@@ -34,10 +34,10 @@ export default function CareersSection() {
   return (
     <section
       id="careers"
+      className="careers-section"
       style={{
         padding: '110px 0',
-        backgroundColor: '#F8FAFC',
-        borderBottom: '1px solid #E2E8F0',
+        backgroundColor: 'transparent',
         position: 'relative',
       }}
     >
@@ -55,7 +55,7 @@ export default function CareersSection() {
             Send all inquiries and applications directly to:{' '}
             <a
               href="mailto:hr@newyorkautomuseum.com"
-              style={{ color: '#DC2626', fontWeight: 800, textDecoration: 'underline' }}
+              style={{ color: '#E11D48', fontWeight: 800, textDecoration: 'underline' }}
             >
               hr@newyorkautomuseum.com
             </a>
@@ -79,15 +79,17 @@ export default function CareersSection() {
               borderRadius: '9999px',
               border:
                 selectedDept === 'all'
-                  ? '1px solid #DC2626'
-                  : '1px solid #CBD5E1',
-              backgroundColor: selectedDept === 'all' ? '#DC2626' : '#FFFFFF',
-              color: selectedDept === 'all' ? '#FFFFFF' : '#334155',
+                  ? '1px solid #E11D48'
+                  : '1px solid rgba(255, 255, 255, 0.12)',
+              backgroundColor: selectedDept === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
+              color: selectedDept === 'all' ? '#FFFFFF' : '#94A3B8',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
               fontSize: '0.85rem',
               fontWeight: 700,
               cursor: 'pointer',
               transition: 'all 0.2s ease',
-              boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
             }}
           >
             All Departments ({totalPositions})
@@ -101,16 +103,18 @@ export default function CareersSection() {
                 borderRadius: '9999px',
                 border:
                   selectedDept === dept.department
-                    ? '1px solid #DC2626'
-                    : '1px solid #CBD5E1',
+                    ? '1px solid #E11D48'
+                    : '1px solid rgba(255, 255, 255, 0.12)',
                 backgroundColor:
-                  selectedDept === dept.department ? '#DC2626' : '#FFFFFF',
-                color: selectedDept === dept.department ? '#FFFFFF' : '#334155',
+                  selectedDept === dept.department ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
+                color: selectedDept === dept.department ? '#FFFFFF' : '#94A3B8',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
                 fontSize: '0.85rem',
                 fontWeight: 700,
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
-                boxShadow: '0 2px 6px rgba(15, 23, 42, 0.04)',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
               }}
             >
               {dept.department} ({dept.jobs.length})
@@ -135,7 +139,7 @@ export default function CareersSection() {
                   style={{
                     width: '4px',
                     height: '24px',
-                    backgroundColor: '#DC2626',
+                    backgroundColor: '#E11D48',
                     borderRadius: '2px',
                   }}
                 />
@@ -144,7 +148,7 @@ export default function CareersSection() {
                   style={{
                     fontSize: '1.35rem',
                     fontWeight: 800,
-                    color: '#0F172A',
+                    color: '#FFFFFF',
                     letterSpacing: '-0.02em',
                   }}
                   text={dept.department}
@@ -153,8 +157,9 @@ export default function CareersSection() {
                   style={{
                     fontSize: '0.8rem',
                     fontWeight: 700,
-                    color: '#64748B',
-                    backgroundColor: '#E2E8F0',
+                    color: '#FFFFFF',
+                    backgroundColor: 'rgba(255, 255, 255, 0.14)',
+                    border: '1px solid rgba(255, 255, 255, 0.25)',
                     padding: '2px 8px',
                     borderRadius: '6px',
                   }}
@@ -179,12 +184,14 @@ export default function CareersSection() {
                       key={jobKey}
                       className="career-job-card"
                       style={{
-                        backgroundColor: '#FFFFFF',
-                        border: isJobOpen ? '1px solid #DC2626' : '1px solid #E2E8F0',
+                        backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                        border: isJobOpen ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.12)',
                         borderRadius: '14px',
                         boxShadow: isJobOpen
-                          ? '0 10px 30px rgba(220, 38, 38, 0.08)'
-                          : '0 2px 10px rgba(15, 23, 42, 0.03)',
+                          ? '0 12px 32px rgba(225, 29, 72, 0.2)'
+                          : '0 12px 36px rgba(0, 0, 0, 0.45)',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'space-between',
@@ -206,7 +213,7 @@ export default function CareersSection() {
                             style={{
                               fontSize: '1.15rem',
                               fontWeight: 800,
-                              color: '#0F172A',
+                              color: '#FFFFFF',
                               lineHeight: 1.3,
                             }}
                             text={job.title}
@@ -217,7 +224,7 @@ export default function CareersSection() {
                           as="p"
                           style={{
                             fontSize: '0.92rem',
-                            color: '#475569',
+                            color: '#94A3B8',
                             lineHeight: 1.7,
                             marginBottom: '16px',
                           }}
@@ -228,7 +235,7 @@ export default function CareersSection() {
                       <div
                         style={{
                           paddingTop: '16px',
-                          borderTop: '1px solid #F1F5F9',
+                          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'space-between',

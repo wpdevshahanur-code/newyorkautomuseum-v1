@@ -15,12 +15,20 @@ interface HeroSlide {
 
 const heroSlides: HeroSlide[] = [
   {
+    image: 'banner.jpg',
+    wing: 'Wheels & Rims Wing',
+    badge: 'Iconic Mercedes-Benz 300SL Gullwing',
+    headline: 'NEW YORK AUTO MUSEUM',
+    description: 'Permanent Exhibitions & Wings: Wheels & Rims Wing',
+    accentColor: '#E11D48',
+  },
+  {
     image: 'IMG_0000.jpg',
     wing: 'Art, Film and Television',
     badge: 'Iconic Concept Prototype',
     headline: 'Where Vision Meets Velocity',
     description: 'Futuristic turbine canopy concepts and legendary screen icons that redefined 20th-century popular culture.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_5097.jpg',
@@ -28,7 +36,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Championship Endurance',
     headline: 'The Golden Age of Speed',
     description: 'Pioneering Grand Prix machines, endurance titans, and historic racing liveries preserved in pristine mechanical glory.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_4959.jpg',
@@ -36,7 +44,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Detroit Power',
     headline: 'Raw Horsepower & American Steel',
     description: 'The golden decade of tire-smoking V8s, historic dragstrip icons, and bold American road presence.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_1514.jpg',
@@ -44,7 +52,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Preserved Cultural Icons',
     headline: 'Centuries of Human Ingenuity',
     description: 'From hand-hammered coachbuilt coachwork to the milestone industrial eras that put the modern world on wheels.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_1659.jpg',
@@ -52,7 +60,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Bespoke Craftsmanship',
     headline: 'The Art of Haute Automobilia',
     description: 'Rare one-off coachbuilt masterpieces sculpted by legendary design houses and master metalworkers.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_1756.jpg',
@@ -60,7 +68,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Authentic Preservation',
     headline: 'Resurrecting Rolling Landmarks',
     description: 'Master technicians preserving period authenticity, factory blueprints, and time-honored mechanical crafts.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_1815.jpg',
@@ -68,7 +76,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Sculptural Foundations',
     headline: 'Form, Function & Traction',
     description: 'Historic wire spokes, cast magnesium racing alloys, and cutting-edge forged carbon wheel innovations.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2065.jpg',
@@ -76,7 +84,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Precision Engineering',
     headline: 'The Anatomy of Motion',
     description: 'Unveiling complex internal combustion marvels, multi-valve valvetrains, and intricate transmission works.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2071.jpg',
@@ -84,7 +92,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Next-Gen Propulsion',
     headline: 'Designing Tomorrow Today',
     description: 'Aerodynamic architecture, sustainable high-performance powertrains, and cutting-edge concept engineering.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2267.jpg',
@@ -92,7 +100,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Pioneering Research',
     headline: 'Engineering Breakthroughs',
     description: 'Breakthrough patents, carbon architectures, telematics, and cross-industry innovations transforming global mobility.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2298.jpg',
@@ -100,7 +108,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Clean Horizons',
     headline: 'Electrified Velocity',
     description: 'Early 20th-century electric pioneers to revolutionary multi-megawatt solid-state hypercar architectures.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2327.jpg',
@@ -108,7 +116,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Milestone Eras',
     headline: 'Echoes of the Open Road',
     description: 'The machines that charted uncharted frontiers, conquered cross-continental highways, and inspired generations.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2587.jpg',
@@ -116,7 +124,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Cinematic Legends',
     headline: 'Screen Icons That Drove History',
     description: 'Famous hero vehicles, television chase legends, and unforgettable cinematic concept designs.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2728.jpg',
@@ -124,7 +132,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Paddock Legends',
     headline: 'Built for the Winner’s Circle',
     description: 'Trophies, timing sheets, and the unyielding machines that triumphed at Le Mans, Daytona, and Monza.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2882.jpg',
@@ -132,7 +140,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Trans-Am & Drag Classics',
     headline: 'Thunder in the Paddock',
     description: 'High-compression big blocks and homologation specials engineered to conquer the quarter-mile.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2895.jpg',
@@ -140,7 +148,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Peak Engineering',
     headline: 'The Outer Limits of Performance',
     description: 'Ultra-exclusive homologation icons, lightweight carbon-composite structures, and boundary-pushing engineering.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_2931.jpg',
@@ -148,7 +156,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Mechanical Artistry',
     headline: 'Purity of the Machine',
     description: 'Intricate carburetors, turbocharger manifolds, and hand-tuned mechanical harmony in motion.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_3069.jpg',
@@ -156,7 +164,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Sculpted Silhouette',
     headline: 'Lines Drawn Without Compromise',
     description: 'Bespoke hand-formed aluminum panels, teardrop fenders, and timeless automotive styling.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
   {
     image: 'IMG_3092.jpg',
@@ -164,7 +172,7 @@ const heroSlides: HeroSlide[] = [
     badge: 'Autonomous & Connected',
     headline: 'Pioneering the Next Century',
     description: 'Advanced sensor suites, carbon architectures, and the limitless horizon of 21st-century mobility.',
-    accentColor: '#22C55E',
+    accentColor: '#E11D48',
   },
 ];
 
@@ -240,6 +248,16 @@ export default function HeroSlideshow() {
 
   const activeSlideData = heroSlides[currentSlide];
 
+  const [introFaded, setIntroFaded] = useState(false);
+
+  useEffect(() => {
+    // Cinematic initial fade-in: starts dark and smoothly reveals the classic car
+    const timer = setTimeout(() => {
+      setIntroFaded(true);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section
       id="banner"
@@ -248,7 +266,7 @@ export default function HeroSlideshow() {
       onTouchEnd={handleTouchEnd}
       aria-label="New York Auto Museum Hero Carousel"
     >
-      {/* Background Slides with Ken Burns Smooth Zoom (All 19 Client Photos) */}
+      {/* Background Slides with Ken Burns Smooth Zoom */}
       <div className="hero-slides-layer">
         {heroSlides.map((slide, index) => {
           const isActive = currentSlide === index;
@@ -274,8 +292,11 @@ export default function HeroSlideshow() {
       {/* Cinematic Multi-Layer Gradients for Contrast & Theme Transition */}
       <div className="hero-gradient-overlay" />
 
-      {/* Cinematic Dark-to-Light Intro Fade-in Veil */}
-      <div className={`hero-intro-veil ${introFaded ? 'is-faded' : ''}`} aria-hidden="true" />
+      {/* Cinematic Intro Veil: starts in deep darkness and fades in smoothly (drops visitor into an experience) */}
+      <div
+        className={`hero-intro-veil ${introFaded ? 'is-faded' : ''}`}
+        aria-hidden="true"
+      />
 
       {/* Floating Top-Right Institutional Badge */}
       <div className="hero-top-badge" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -308,37 +329,23 @@ export default function HeroSlideshow() {
         </svg>
       </button>
 
-      {/* Hero Center Content Card */}
+      {/* Hero Center Content Card: Exact Original Signature Center Presentation */}
       <div className="container hero-content-wrapper">
-        {/* Dynamic Slide Badge */}
-        <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40` }}>
-          <span
-            className="hero-badge-accent-dot"
-            style={{ backgroundColor: activeSlideData.accentColor }}
-          />
-          <span className="hero-badge-text">{activeSlideData.badge}</span>
-        </div>
+        {/* Main Institutional Headline: Exact Original Bold Words */}
+        <h1 className="hero-main-title">
+          NEW YORK AUTO MUSEUM
+        </h1>
 
-        {/* Main Institutional Headline with Animated Architectural Frame Lines */}
-        <div className={`hero-headline-frame ${introFaded ? 'is-revealed' : ''}`}>
-          <TextReveal as="h1" className="hero-main-title" text="New York Auto Museum" />
-        </div>
-
-        {/* Dynamic Exhibition Wing & Tagline */}
-        <div className="hero-wing-showcase">
-          <span className="hero-wing-label">Exhibition Wing:</span>
+        {/* Original Dynamic Subtitle: Permanent Exhibitions & Wings */}
+        <div className="hero-original-subtext">
+          <span className="hero-original-label">Permanent Exhibitions &amp; Wings:</span>
           <span
-            className="hero-wing-name"
-            style={{ color: activeSlideData.accentColor }}
+            key={currentSlide}
+            className="hero-original-wing"
           >
             {activeSlideData.wing}
           </span>
         </div>
-
-        {/* Slide Description */}
-        <p key={currentSlide} className="hero-description">
-          {activeSlideData.description}
-        </p>
 
         {/* Action Buttons */}
         <div className="hero-actions">

@@ -21,10 +21,6 @@ export default function HomePage() {
         {/* Multi-Page Department Exploration Gateway */}
         <section
           className="gateway-section"
-          style={{
-            backgroundColor: '#FFFFFF',
-            borderBottom: '1px solid #E2E8F0',
-          }}
         >
           <div className="container">
             <div className="text-center" style={{ marginBottom: '56px' }}>
@@ -44,13 +40,15 @@ export default function HomePage() {
               <div
                 className="gateway-card"
                 style={{
-                  backgroundColor: '#F8FAFC',
-                  border: '1px solid #E2E8F0',
+                  backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
                   borderRadius: '16px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
+                  boxShadow: '0 14px 40px rgba(0, 0, 0, 0.45)',
                 }}
               >
                 <div>
@@ -58,19 +56,19 @@ export default function HomePage() {
                     style={{
                       fontSize: '0.75rem',
                       fontWeight: 800,
-                      color: '#DC2626',
+                      color: '#E11D48',
                       textTransform: 'uppercase',
                       letterSpacing: '0.1em',
                     }}
                   >
-                    10 Departments • 39 Leaders
+                    10 Departments • 24 Active Leaders
                   </span>
                   <TextReveal
                     as="h3"
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
-                      color: '#0F172A',
+                      color: '#FFFFFF',
                       marginTop: '8px',
                       marginBottom: '14px',
                     }}
@@ -78,7 +76,7 @@ export default function HomePage() {
                   />
                   <TextReveal
                     as="p"
-                    style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
+                    style={{ color: '#94A3B8', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
                     text="Led by Chairman Otto Ferdinand Wachs (former CEO of Autostadt) and seasoned global executives across OEM, motorsport, CGI storytelling, and legal strategy."
                   />
                 </div>
@@ -100,13 +98,15 @@ export default function HomePage() {
               <div
                 className="gateway-card"
                 style={{
-                  backgroundColor: '#F8FAFC',
-                  border: '1px solid #E2E8F0',
+                  backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
                   borderRadius: '16px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
+                  boxShadow: '0 14px 40px rgba(0, 0, 0, 0.45)',
                 }}
               >
                 <div>
@@ -126,7 +126,7 @@ export default function HomePage() {
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
-                      color: '#0F172A',
+                      color: '#FFFFFF',
                       marginTop: '8px',
                       marginBottom: '14px',
                     }}
@@ -134,7 +134,7 @@ export default function HomePage() {
                   />
                   <TextReveal
                     as="p"
-                    style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
+                    style={{ color: '#94A3B8', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
                     text="Detailed working scopes for all 12 permanent museum wings alongside 32 tax-deductible donor committees guiding governance and operations."
                   />
                 </div>
@@ -156,13 +156,15 @@ export default function HomePage() {
               <div
                 className="gateway-card"
                 style={{
-                  backgroundColor: '#F8FAFC',
-                  border: '1px solid #E2E8F0',
+                  backgroundColor: 'rgba(18, 24, 36, 0.88)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
                   borderRadius: '16px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  boxShadow: '0 4px 20px rgba(15, 23, 42, 0.04)',
+                  boxShadow: '0 14px 40px rgba(0, 0, 0, 0.45)',
                 }}
               >
                 <div>
@@ -170,7 +172,7 @@ export default function HomePage() {
                     style={{
                       fontSize: '0.75rem',
                       fontWeight: 800,
-                      color: '#0284C7',
+                      color: '#2563EB',
                       textTransform: 'uppercase',
                       letterSpacing: '0.1em',
                     }}
@@ -182,7 +184,7 @@ export default function HomePage() {
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
-                      color: '#0F172A',
+                      color: '#FFFFFF',
                       marginTop: '8px',
                       marginBottom: '14px',
                     }}
@@ -190,7 +192,7 @@ export default function HomePage() {
                   />
                   <TextReveal
                     as="p"
-                    style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
+                    style={{ color: '#94A3B8', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
                     text="Join the multidisciplinary team building one of the world's leading automotive landmarks. Curatorial, engineering, marketing, and leadership positions open."
                   />
                 </div>

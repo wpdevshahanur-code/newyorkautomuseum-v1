@@ -31,7 +31,7 @@ export default function PageHeader({
         color: '#FFFFFF',
         position: 'relative',
         overflow: 'hidden',
-        borderBottom: '1px solid #1E293B',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
       }}
     >
       {/* Background Image Layer with Vivid Visibility & Asymmetric Gradient Mask */}
@@ -79,7 +79,7 @@ export default function PageHeader({
           height: '560px',
           borderRadius: '50%',
           background:
-            'radial-gradient(circle, rgba(220, 38, 38, 0.18) 0%, rgba(15, 23, 42, 0) 70%)',
+            'radial-gradient(circle, rgba(225, 29, 72, 0.18) 0%, rgba(18, 24, 36, 0) 70%)',
           pointerEvents: 'none',
           zIndex: 1,
         }}
@@ -101,15 +101,15 @@ export default function PageHeader({
             Home
           </Link>
           <span>/</span>
-          <span style={{ color: '#DC2626', fontWeight: 600 }}>{breadcrumb}</span>
+          <span style={{ color: '#E11D48', fontWeight: 600 }}>{breadcrumb}</span>
         </div>
 
         <span
           className="section-tag"
           style={{
-            background: 'rgba(220, 38, 38, 0.2)',
-            borderColor: 'rgba(220, 38, 38, 0.4)',
-            color: '#F87171',
+            background: 'rgba(225, 29, 72, 0.12)',
+            borderColor: 'rgba(225, 29, 72, 0.3)',
+            color: '#E11D48',
             marginBottom: '14px',
           }}
         >
