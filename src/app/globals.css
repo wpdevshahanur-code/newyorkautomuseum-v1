@@ -788,7 +788,36 @@ div[role="dialog"] > div:first-child {
   text-align: center;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 24px 70px 24px;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 14px;
+  transition: border-color 0.4s ease;
+}
+
+.hero-badge-accent-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transition: background-color 0.4s ease;
+}
+
+.hero-badge-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #F1F5F9;
 }
 
 /* Hero Headline Expanding Frame Lines (Exact .com animation: top left->right, bottom right->left) */
@@ -830,38 +859,47 @@ div[role="dialog"] > div:first-child {
 }
 
 .hero-main-title {
-  font-size: clamp(2.4rem, 6.2vw, 5.2rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 950;
+  letter-spacing: -0.035em;
   line-height: 1.05;
   color: #FFFFFF;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.95);
+  margin-bottom: 0;
 }
 
-.hero-original-subtext {
-  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+.hero-main-title .gsap-reveal-word {
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.85);
+}
+
+.hero-wing-showcase {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 34px;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.95);
+  gap: 8px;
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
 }
 
-.hero-original-label {
-  color: #94A3B8;
-  font-weight: 500;
+.hero-wing-label {
+  color: #CBD5E1;
 }
 
-.hero-original-wing {
-  color: #FFFFFF;
-  font-weight: 800;
-  border-bottom: 2px solid #E11D48;
-  padding-bottom: 2px;
-  letter-spacing: 0.03em;
+.hero-wing-name {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  transition: color 0.4s ease;
+}
+
+.hero-description {
+  font-size: clamp(0.9rem, 1.3vw, 1.08rem);
+  line-height: 1.6;
+  color: #E2E8F0;
+  max-width: 680px;
+  margin: 0 auto 24px auto;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
 }
 
 .hero-actions {
