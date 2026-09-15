@@ -19,6 +19,18 @@ const partners: PartnerItem[] = [
     url: 'https://www.dnb.com/en-us/',
   },
   {
+    name: 'Google Ad Grants',
+    category: 'Grant Partner',
+    logo: '/images/google-ad-grants.png',
+    url: 'https://www.google.com/nonprofits/offerings/google-ad-grants/',
+  },
+  {
+    name: 'Salesforce Nonprofit Cloud',
+    category: 'Technology Partner',
+    logo: '/images/salesforce-nonprofit.png',
+    url: 'https://www.salesforce.com/ca/nonprofit/',
+  },
+  {
     name: 'National Association of Automobile Museums',
     category: 'Charter Member',
     logo: '/images/cropped_naam.png',
@@ -260,7 +272,7 @@ export default function Accreditations() {
               >
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-              5 Verified Institutional Partners
+              {partners.length} Verified Institutional Partners
             </span>
 
             <span className="controls-divider">•</span>
