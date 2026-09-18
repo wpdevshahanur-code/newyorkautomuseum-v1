@@ -1912,3 +1912,37 @@ div[role="dialog"] > div:first-child {
   width: auto;
   transition: opacity 0.2s ease;
 }
+
+/* Footer Social Media Buttons */
+.footer-social-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94A3B8;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.footer-social-btn:hover {
+  background: #E11D48 !important;
+  border-color: #E11D48 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.4);
+}
+
+.footer-social-btn svg {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.footer-social-btn:hover svg {
+  transform: scale(1.08);
+}
+
