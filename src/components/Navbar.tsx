@@ -52,12 +52,12 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/images/logo-white.png"
+            src="/images/logo-new.png"
             alt="New York Auto Museum"
-            width={210}
-            height={42}
+            width={120}
+            height={56}
             className="navbar-brand-logo"
-            style={{ objectFit: 'contain', height: '42px', width: 'auto' }}
+            style={{ objectFit: 'contain', height: '56px', width: 'auto' }}
             priority
           />
         </Link>
