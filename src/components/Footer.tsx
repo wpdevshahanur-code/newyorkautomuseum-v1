@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import TextReveal from './TextReveal';
@@ -18,7 +19,7 @@ const socialLinks = [
     name: 'Instagram',
     url: 'https://www.instagram.com/newyorkautomuseum/',
     icon: (
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg className="icon-instagram" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -108,6 +109,54 @@ const socialLinks = [
   },
 ];
 
+function SocialButton({ social }: { social: (typeof socialLinks)[0] }) {
+  const [hovered, setHovered] = useState(false);
+  const isInstagram = social.name === 'Instagram';
+
+  return (
+    <a
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="footer-social-btn"
+      title={social.name}
+      aria-label={social.name}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        width: '32px',
+        height: '32px',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: '8px',
+        backgroundColor: hovered ? '#E11D48' : 'rgba(255, 255, 255, 0.08)',
+        border: `1px solid ${hovered ? '#E11D48' : 'rgba(255, 255, 255, 0.12)'}`,
+        color: hovered ? '#FFFFFF' : '#94A3B8',
+        transform: hovered ? 'translateY(-2px)' : 'none',
+        boxShadow: hovered ? '0 4px 12px rgba(225, 29, 72, 0.4)' : 'none',
+        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+        textDecoration: 'none',
+        boxSizing: 'border-box',
+      }}
+    >
+      <span
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: hovered ? '#FFFFFF' : '#94A3B8',
+          fill: isInstagram ? 'none' : hovered ? '#FFFFFF' : 'currentColor',
+          stroke: isInstagram ? (hovered ? '#FFFFFF' : 'currentColor') : 'none',
+          transform: hovered ? 'scale(1.08)' : 'scale(1)',
+          transition: 'all 0.2s ease',
+        }}
+      >
+        {social.icon}
+      </span>
+    </a>
+  );
+}
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -383,17 +432,7 @@ export default function Footer() {
                 }}
               >
                 {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="footer-social-btn"
-                    title={social.name}
-                    aria-label={social.name}
-                  >
-                    {social.icon}
-                  </a>
+                  <SocialButton key={social.name} social={social} />
                 ))}
               </div>
             </div>

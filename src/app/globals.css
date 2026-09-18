@@ -1923,7 +1923,7 @@ div[role="dialog"] > div:first-child {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #94A3B8;
+  color: #94A3B8 !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   box-sizing: border-box;
@@ -1939,10 +1939,42 @@ div[role="dialog"] > div:first-child {
 
 .footer-social-btn svg {
   display: block;
-  transition: transform 0.2s ease;
+  color: #94A3B8;
+  fill: currentColor;
+  transition: transform 0.2s ease, color 0.2s ease, fill 0.2s ease, stroke 0.2s ease;
 }
 
 .footer-social-btn:hover svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
   transform: scale(1.08);
 }
+
+.footer-social-btn:hover svg * {
+  color: #FFFFFF !important;
+}
+
+.footer-social-btn:hover svg path {
+  fill: #FFFFFF !important;
+}
+
+/* Specific override for Instagram (stroke based icon) */
+.footer-social-btn svg.icon-instagram {
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+.footer-social-btn:hover svg.icon-instagram {
+  fill: none !important;
+  stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
+
+.footer-social-btn:hover svg.icon-instagram path,
+.footer-social-btn:hover svg.icon-instagram rect,
+.footer-social-btn:hover svg.icon-instagram line {
+  fill: none !important;
+  stroke: #FFFFFF !important;
+}
+
 
