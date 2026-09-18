@@ -189,7 +189,7 @@ export default function Footer() {
           {/* Column 1: Museum Identity & Sponsor */}
           <div>
             <Link href="/" style={{ display: 'inline-block', marginBottom: '18px' }}>
-              <div style={{ position: 'relative', width: '130px', height: '80px' }}>
+              <div style={{ position: 'relative', width: '180px', height: '115px' }}>
                 <Image
                   src="/images/logo-new.png"
                   alt="New York Auto Museum"

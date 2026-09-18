@@ -39,7 +39,7 @@ export default function Navbar() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          height: '80px',
+          height: '88px',
         }}
       >
         <Link
@@ -54,10 +54,10 @@ export default function Navbar() {
           <Image
             src="/images/logo-new.png"
             alt="New York Auto Museum"
-            width={120}
-            height={56}
+            width={160}
+            height={68}
             className="navbar-brand-logo"
-            style={{ objectFit: 'contain', height: '56px', width: 'auto' }}
+            style={{ objectFit: 'contain', height: '68px', width: 'auto' }}
             priority
           />
         </Link>

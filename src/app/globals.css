@@ -1902,13 +1902,13 @@ div[role="dialog"] > div:first-child {
   }
 
   .navbar-brand-logo {
-    height: 44px !important;
+    height: 52px !important;
     width: auto !important;
   }
 }
 
 .navbar-brand-logo {
-  height: 56px;
+  height: 68px;
   width: auto;
   transition: opacity 0.2s ease;
 }
