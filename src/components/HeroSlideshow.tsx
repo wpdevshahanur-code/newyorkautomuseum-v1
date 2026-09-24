@@ -310,14 +310,14 @@ export default function HeroSlideshow() {
         </div>
       </div>
 
-      {/* Bottom-Left Exhibit Plaque (Lets the car images take center stage!) */}
-      <div className="hero-bottom-left-wrapper">
+      {/* Bottom-Center Exhibit Plaque (Horizontally Centered at Bottom, 30% Smaller) */}
+      <div className="hero-bottom-center-wrapper">
         <div
-          className="hero-bottom-left-caption"
-          style={{ borderLeftColor: activeSlideData.accentColor }}
+          className="hero-bottom-center-caption"
+          style={{ borderColor: `${activeSlideData.accentColor}60` }}
         >
           {/* Dynamic Slide Badge */}
-          <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40`, marginBottom: '8px' }}>
+          <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40`, marginBottom: '6px' }}>
             <span
               className="hero-badge-accent-dot"
               style={{ backgroundColor: activeSlideData.accentColor }}
