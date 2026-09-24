@@ -26,7 +26,7 @@ const partners: PartnerItem[] = [
   },
   {
     name: 'Salesforce Nonprofit Cloud',
-    category: 'Technology Partner',
+    category: 'Grant Partner',
     logo: '/images/salesforce-nonprofit.png',
     url: 'https://www.salesforce.com/ca/nonprofit/',
   },
