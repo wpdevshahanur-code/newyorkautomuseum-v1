@@ -52,24 +52,12 @@ export default function HomePage() {
                 }}
               >
                 <div>
-                  <span
-                    style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 800,
-                      color: '#E11D48',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.1em',
-                    }}
-                  >
-                    10 Departments • 24 Active Leaders
-                  </span>
                   <TextReveal
                     as="h3"
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
                       color: '#FFFFFF',
-                      marginTop: '8px',
                       marginBottom: '14px',
                     }}
                     text="The Board &amp; Advisors"
@@ -110,24 +98,12 @@ export default function HomePage() {
                 }}
               >
                 <div>
-                  <span
-                    style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 800,
-                      color: '#D97706',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.1em',
-                    }}
-                  >
-                    12 Wings • 32 Donation Tiers
-                  </span>
                   <TextReveal
                     as="h3"
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
                       color: '#FFFFFF',
-                      marginTop: '8px',
                       marginBottom: '14px',
                     }}
                     text="Boards &amp; Committees"
@@ -168,24 +144,12 @@ export default function HomePage() {
                 }}
               >
                 <div>
-                  <span
-                    style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 800,
-                      color: '#2563EB',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.1em',
-                    }}
-                  >
-                    6 Departments • 29 Roles
-                  </span>
                   <TextReveal
                     as="h3"
                     style={{
                       fontSize: '1.6rem',
                       fontWeight: 800,
                       color: '#FFFFFF',
-                      marginTop: '8px',
                       marginBottom: '14px',
                     }}
                     text="Careers at NYAM"
