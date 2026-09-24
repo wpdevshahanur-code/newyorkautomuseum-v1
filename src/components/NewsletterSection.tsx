@@ -23,7 +23,7 @@ export default function NewsletterSection() {
       const formPayload = new URLSearchParams({ email: trimmedEmail });
       const postBody = new URLSearchParams({
         action: 'fluentform_submit',
-        form_id: '2',
+        form_id: '4',
         data: formPayload.toString(),
       });
 

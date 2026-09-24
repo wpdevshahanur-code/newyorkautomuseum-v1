@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 const PRIMARY_WP_ENDPOINT = 'https://admin.newyorkautoexperience.org/wp-admin/admin-ajax.php';
 const FALLBACK_WP_ENDPOINT = 'https://cms.newyorkautomuseum.com/wp-admin/admin-ajax.php';
-const FLUENT_FORM_ID = '2';
+const FLUENT_FORM_ID = '4';
 
 async function submitToEndpoint(endpoint: string, email: string) {
   const params = new URLSearchParams({
