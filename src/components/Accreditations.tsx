@@ -54,6 +54,18 @@ const partners: PartnerItem[] = [
     logo: '/images/cropped_aam.png',
     url: 'https://www.aam-us.org/',
   },
+  {
+    name: 'Automotive Press Association',
+    category: 'Member',
+    logo: '/images/automotive-press-association.png',
+    url: 'https://www.automotivepressassociation.net/',
+  },
+  {
+    name: 'International Motor Press Association',
+    category: 'Member',
+    logo: '/images/impa-logo.png',
+    url: 'https://www.impa.org/',
+  },
 ];
 
 export default function Accreditations() {
