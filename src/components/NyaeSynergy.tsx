@@ -34,7 +34,7 @@ export default function NyaeSynergy() {
 
             <TextReveal
               as="h2"
-              text="Check Out Our Nonprofit"
+              text="Grant Partner"
               style={{
                 fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)',
                 fontWeight: 900,
