@@ -159,23 +159,6 @@ export const advisorsData: AdvisorCategoryGroup[] = [
     ]
   },
   {
-    "category": "Volunteers",
-    "members": [
-      {
-        "name": "Lawrence Yee",
-        "position": "Web Developer",
-        "bio": "Lawrence is a experienced Frontend Developer with a background in architecture design. He takes pride in turning mock designs... into buildable code.",
-        "linkedin": "https://www.linkedin.com/in/lawrenceyee91/"
-      },
-      {
-        "name": "Pardhu Mattupalli",
-        "position": "Web Designer",
-        "bio": "Pardhu is a New York–based graduate student in Artificial Intelligence with a passion for building intelligent systems and creating seamless digital experiences. He has hands-on experience in machine learning, data analytics, predictive modeling, and computer vision, with projects ranging ...from ADAS-based automotive vision systems to medical image analysis and interactive dashboards. Alongside AI, he enjoys web development and UX/UI design, focusing on creating intuitive, responsive, and accessible digital platforms. Driven by curiosity and continuous learning, Pardhu aims to bridge AI, data, and design to develop innovative solutions that are both intelligent and user-friendly.",
-        "linkedin": "https://www.linkedin.com/in/pardhu--mattupalli/"
-      }
-    ]
-  },
-  {
     "category": "ADMINISTRATIVE SUPPORT",
     "members": [
       {
@@ -203,8 +186,51 @@ export const advisorsData: AdvisorCategoryGroup[] = [
         "linkedin": "https://www.linkedin.com/in/narendra-jungi-2905b4415/"
       }
     ]
+  },
+  {
+    "category": "Volunteers",
+    "members": [
+      {
+        "name": "Lawrence Yee",
+        "position": "Web Developer",
+        "bio": "Lawrence is a experienced Frontend Developer with a background in architecture design. He takes pride in turning mock designs... into buildable code.",
+        "linkedin": "https://www.linkedin.com/in/lawrenceyee91/"
+      },
+      {
+        "name": "Pardhu Mattupalli",
+        "position": "Web Designer",
+        "bio": "Pardhu is a New York–based graduate student in Artificial Intelligence with a passion for building intelligent systems and creating seamless digital experiences. He has hands-on experience in machine learning, data analytics, predictive modeling, and computer vision, with projects ranging ...from ADAS-based automotive vision systems to medical image analysis and interactive dashboards. Alongside AI, he enjoys web development and UX/UI design, focusing on creating intuitive, responsive, and accessible digital platforms. Driven by curiosity and continuous learning, Pardhu aims to bridge AI, data, and design to develop innovative solutions that are both intelligent and user-friendly.",
+        "linkedin": "https://www.linkedin.com/in/pardhu--mattupalli/"
+      }
+    ]
   }
 ];
+
+export const DEPARTMENT_ORDER = [
+  'Executive Leadership & Curatorial Strategy',
+  'OEM, Industry & Mobility Strategy',
+  'Art, Design & Digital Storytelling',
+  'Motorsport, Classic Cars & Collecting',
+  'Events, Experiences & Live Production',
+  'Design, Preservation & Institutional Development',
+  'Licensing, Media & Brand Strategy',
+  'Strategy, Technology & Security',
+  'ADMINISTRATIVE SUPPORT',
+  'Volunteers',
+];
+
+export function sortAdvisorCategories<T extends { category: string }>(categories: T[]): T[] {
+  const getRank = (categoryName: string): number => {
+    const norm = categoryName.trim().toLowerCase();
+    const idx = DEPARTMENT_ORDER.findIndex(
+      (dept) => dept.toLowerCase() === norm || norm.includes(dept.toLowerCase()) || dept.toLowerCase().includes(norm)
+    );
+    if (idx !== -1) return idx;
+    return DEPARTMENT_ORDER.length - 2.5;
+  };
+
+  return [...categories].sort((a, b) => getRank(a.category) - getRank(b.category));
+}
 
 export default advisorsData;
 

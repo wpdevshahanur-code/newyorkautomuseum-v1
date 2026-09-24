@@ -1,4 +1,4 @@
-import fallbackAdvisors from '@/data/advisors';
+import fallbackAdvisors, { sortAdvisorCategories } from '@/data/advisors';
 
 export interface AdvisorMember {
   name: string;
@@ -144,9 +144,11 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
       }
     });
 
-    return result.length > 0 ? result : (fallbackAdvisors as AdvisorCategoryGroup[]);
+    const sortedResult = sortAdvisorCategories(result);
+
+    return sortedResult.length > 0 ? sortedResult : sortAdvisorCategories(fallbackAdvisors as AdvisorCategoryGroup[]);
   } catch (error) {
     console.error('Failed to fetch advisors from WordPress, using fallback:', error);
-    return fallbackAdvisors as AdvisorCategoryGroup[];
+    return sortAdvisorCategories(fallbackAdvisors as AdvisorCategoryGroup[]);
   }
 }

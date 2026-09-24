@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import advisorsData from '@/data/advisors';
+import advisorsData, { sortAdvisorCategories } from '@/data/advisors';
 import TextReveal from './TextReveal';
 
 interface Member {
@@ -73,9 +73,10 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
     }
   }, [activeModalMember]);
 
-  const categories = initialCategories && initialCategories.length > 0
+  const rawCategories = initialCategories && initialCategories.length > 0
     ? initialCategories
     : (advisorsData as CategoryGroup[]);
+  const categories = sortAdvisorCategories(rawCategories);
 
   const toggleBio = (uniqueKey: string) => {
     setExpandedBioKey((prev) => (prev === uniqueKey ? null : uniqueKey));
