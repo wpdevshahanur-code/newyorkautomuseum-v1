@@ -277,12 +277,6 @@ export default function HeroSlideshow() {
       {/* Cinematic Dark-to-Light Intro Fade-in Veil */}
       <div className={`hero-intro-veil ${introFaded ? 'is-faded' : ''}`} aria-hidden="true" />
 
-      {/* Floating Top-Right Institutional Badge */}
-      <div className="hero-top-badge" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span className="hero-badge-dot" />
-        <span>Proposed New York City Landmark • 200,000+ Sq Ft</span>
-      </div>
-
       {/* Floating Side Navigation Arrows */}
       <button
         type="button"
@@ -308,7 +302,7 @@ export default function HeroSlideshow() {
         </svg>
       </button>
 
-      {/* Hero Center Content Card */}
+      {/* Hero Center Content: Focused Institutional Branding */}
       <div className="container hero-content-wrapper">
         {/* Dynamic Slide Badge */}
         <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40` }}>
@@ -323,22 +317,30 @@ export default function HeroSlideshow() {
         <div className={`hero-headline-frame ${introFaded ? 'is-revealed' : ''}`}>
           <TextReveal as="h1" className="hero-main-title" text="New York Auto Museum" />
         </div>
+      </div>
 
-        {/* Dynamic Exhibition Wing & Tagline */}
-        <div className="hero-wing-showcase">
-          <span className="hero-wing-label">Exhibition Wing:</span>
-          <span
-            className="hero-wing-name"
-            style={{ color: activeSlideData.accentColor }}
+      {/* Bottom-Left Exhibit Plaque (Lets the car images take center stage!) */}
+      <div className="hero-bottom-left-wrapper">
+        <div className="container">
+          <div
+            className="hero-bottom-left-caption"
+            style={{ borderLeftColor: activeSlideData.accentColor }}
           >
-            {activeSlideData.wing}
-          </span>
-        </div>
+            <div className="hero-wing-showcase">
+              <span className="hero-wing-label">Exhibition Wing:</span>
+              <span
+                className="hero-wing-name"
+                style={{ color: activeSlideData.accentColor }}
+              >
+                {activeSlideData.wing}
+              </span>
+            </div>
 
-        {/* Slide Description */}
-        <p key={currentSlide} className="hero-description">
-          {activeSlideData.description}
-        </p>
+            <p key={currentSlide} className="hero-description">
+              {activeSlideData.description}
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Modern Bottom Carousel Control Bar & Progress Track with All 19 Slides */}

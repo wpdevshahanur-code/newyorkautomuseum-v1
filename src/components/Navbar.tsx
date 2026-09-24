@@ -42,25 +42,32 @@ export default function Navbar() {
           height: '88px',
         }}
       >
-        <Link
-          href="/"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            textDecoration: 'none',
-          }}
-        >
-          <Image
-            src="/images/logo-new.png"
-            alt="New York Auto Museum"
-            width={160}
-            height={68}
-            className="navbar-brand-logo"
-            style={{ objectFit: 'contain', height: '68px', width: 'auto' }}
-            priority
-          />
-        </Link>
+        {/* Brand Logo & Institutional Landmark Tagline */}
+        <div className="navbar-brand-group">
+          <Link
+            href="/"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+            }}
+          >
+            <Image
+              src="/images/logo-new.png"
+              alt="New York Auto Museum"
+              width={160}
+              height={68}
+              className="navbar-brand-logo"
+              style={{ objectFit: 'contain', height: '68px', width: 'auto' }}
+              priority
+            />
+          </Link>
+
+          <div className="navbar-landmark-badge">
+            <span className="navbar-badge-dot" />
+            <span>Proposed New York City Landmark • 200,000+ Sq Ft</span>
+          </div>
+        </div>
 
         {/* Desktop Nav */}
         <nav
