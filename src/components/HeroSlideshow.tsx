@@ -280,7 +280,7 @@ export default function HeroSlideshow() {
       {/* Floating Top-Right Institutional Badge */}
       <div className="hero-top-badge" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <span className="hero-badge-dot" />
-        <span>Proposed Manhattan Landmark • 200,000+ Sq Ft</span>
+        <span>Proposed New York City Landmark • 200,000+ Sq Ft</span>
       </div>
 
       {/* Floating Side Navigation Arrows */}
