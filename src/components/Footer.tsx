@@ -176,18 +176,22 @@ export default function Footer() {
         paddingBottom: '40px',
       }}
     >
-      <div className="container">
+      <div className="footer-container">
         {/* Tier 1: 4-Column Structured Directory */}
         <div
+          className="footer-directory-row"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            flexWrap: 'wrap',
             gap: '40px',
             marginBottom: '60px',
+            width: '100%',
           }}
         >
           {/* Column 1: Museum Identity & Sponsor */}
-          <div>
+          <div style={{ flex: '1 1 300px', maxWidth: '340px' }}>
             <Link href="/" style={{ display: 'inline-block', marginBottom: '18px' }}>
               <div style={{ position: 'relative', width: '180px', height: '115px' }}>
                 <Image
@@ -260,7 +264,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Museum Directory */}
-          <div>
+          <div style={{ flex: '0 1 200px', minWidth: '180px' }}>
             <TextReveal
               as="h4"
               style={{
@@ -320,7 +324,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Executive Inquiries */}
-          <div>
+          <div style={{ flex: '0 1 280px', minWidth: '240px' }}>
             <TextReveal
               as="h4"
               style={{
@@ -375,7 +379,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Headquarters & Mail */}
-          <div>
+          <div style={{ flex: '1 1 320px', maxWidth: '360px', minWidth: '260px' }}>
             <TextReveal
               as="h4"
               style={{

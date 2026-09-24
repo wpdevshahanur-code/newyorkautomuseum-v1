@@ -381,6 +381,33 @@ footer a:hover {
   color: #E11D48 !important;
 }
 
+.footer-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 1024px) {
+  .footer-directory-row {
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 24px !important;
+  }
+  .footer-directory-row {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .footer-directory-row > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
 /* 10. Dialog Modal */
 div[role="dialog"] {
   background: rgba(18, 24, 36, 0.96) !important;
