@@ -43,6 +43,7 @@ export async function POST(request: Request) {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'Accept': 'application/json, text/javascript, */*; q=0.01',
         'X-Requested-With': 'XMLHttpRequest',
+        'Cookie': 'hc_js_gate=1',
       },
       body: params.toString(),
       cache: 'no-store',
