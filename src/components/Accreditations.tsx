@@ -220,6 +220,24 @@ export default function Accreditations() {
             className="accreditations-subtitle"
             text="Proudly accredited and affiliated with premier national museum alliances, historic automotive associations, and nonprofit foundations."
           />
+
+          <div className="accreditations-controls">
+            <span className="accreditations-count">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#10B981"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              {partners.length} Verified Institutional Partners
+            </span>
+          </div>
         </div>
       </div>
 
