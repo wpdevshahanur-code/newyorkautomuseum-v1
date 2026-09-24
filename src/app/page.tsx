@@ -157,7 +157,7 @@ export default function HomePage() {
                   <TextReveal
                     as="p"
                     style={{ color: '#94A3B8', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: '24px' }}
-                    text="Join the multidisciplinary team building one of the world's leading automotive landmarks. Curatorial, engineering, marketing, and leadership positions open."
+                    text="Join the team building one of the world's leading automotive landmarks. Open executive leadership opportunities."
                   />
                 </div>
                 <Link

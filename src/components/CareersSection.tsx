@@ -63,51 +63,27 @@ export default function CareersSection() {
         </div>
 
         {/* Department Filter Pills */}
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '8px',
-            justifyContent: 'center',
-            marginBottom: '48px',
-          }}
-        >
-          <button
-            onClick={() => setSelectedDept('all')}
+        {departments.length > 1 && (
+          <div
             style={{
-              padding: '9px 18px',
-              borderRadius: '9999px',
-              border:
-                selectedDept === 'all'
-                  ? '1px solid #E11D48'
-                  : '1px solid rgba(255, 255, 255, 0.12)',
-              backgroundColor: selectedDept === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
-              color: selectedDept === 'all' ? '#FFFFFF' : '#94A3B8',
-              backdropFilter: 'blur(12px)',
-              WebkitBackdropFilter: 'blur(12px)',
-              fontSize: '0.85rem',
-              fontWeight: 700,
-              cursor: 'pointer',
-              transition: 'all 0.2s ease',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '8px',
+              justifyContent: 'center',
+              marginBottom: '48px',
             }}
           >
-            All Departments ({totalPositions})
-          </button>
-          {departments.map((dept) => (
             <button
-              key={dept.department}
-              onClick={() => setSelectedDept(dept.department)}
+              onClick={() => setSelectedDept('all')}
               style={{
                 padding: '9px 18px',
                 borderRadius: '9999px',
                 border:
-                  selectedDept === dept.department
+                  selectedDept === 'all'
                     ? '1px solid #E11D48'
                     : '1px solid rgba(255, 255, 255, 0.12)',
-                backgroundColor:
-                  selectedDept === dept.department ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
-                color: selectedDept === dept.department ? '#FFFFFF' : '#94A3B8',
+                backgroundColor: selectedDept === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
+                color: selectedDept === 'all' ? '#FFFFFF' : '#94A3B8',
                 backdropFilter: 'blur(12px)',
                 WebkitBackdropFilter: 'blur(12px)',
                 fontSize: '0.85rem',
@@ -117,10 +93,36 @@ export default function CareersSection() {
                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
               }}
             >
-              {dept.department} ({dept.jobs.length})
+              All Departments ({totalPositions})
             </button>
-          ))}
-        </div>
+            {departments.map((dept) => (
+              <button
+                key={dept.department}
+                onClick={() => setSelectedDept(dept.department)}
+                style={{
+                  padding: '9px 18px',
+                  borderRadius: '9999px',
+                  border:
+                    selectedDept === dept.department
+                      ? '1px solid #E11D48'
+                      : '1px solid rgba(255, 255, 255, 0.12)',
+                  backgroundColor:
+                    selectedDept === dept.department ? '#E11D48' : 'rgba(18, 24, 36, 0.88)',
+                  color: selectedDept === dept.department ? '#FFFFFF' : '#94A3B8',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
+                }}
+              >
+                {dept.department} ({dept.jobs.length})
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Departments and Positions */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
