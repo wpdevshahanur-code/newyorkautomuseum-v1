@@ -22,7 +22,7 @@ export default function MuseumSpotlights() {
           <TextReveal
             as="p"
             className="section-subtitle"
-            text="An unprecedented landmark proposed for Manhattan, uniting automotive science, historical collections, and global OEM alliances."
+            text="An unprecedented landmark proposed for New York City, uniting automotive science, historical collections, and global OEM alliances."
           />
         </div>
 
@@ -34,7 +34,7 @@ export default function MuseumSpotlights() {
             <div className="spotlight-media" style={{ backgroundColor: '#0F172A' }}>
               <Image
                 src="/images/bigtire.JPG"
-                alt="The Museum - Proposed 200,000+ Sq Ft Manhattan Facility"
+                alt="The Museum - Proposed 200,000+ Sq Ft New York City Facility"
                 fill
                 style={{ objectFit: 'cover' }}
                 priority
@@ -57,7 +57,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                 }}
               >
-                <span style={{ color: '#E11D48' }}>●</span> Proposed Manhattan Landmark • Glass Floors
+                <span style={{ color: '#E11D48' }}>●</span> Proposed New York City Landmark • Glass Floors
               </div>
             </div>
 
@@ -111,7 +111,7 @@ export default function MuseumSpotlights() {
                   fontWeight: 500,
                   marginBottom: '12px',
                 }}
-                text="Our proposed 200,000+- square-foot Manhattan location is set to impress. With a planned rooftop patio and partially glass floors, NYAM visitors will get to see above and beneath many of the extravagant vehicles on display. Also another original exclusive world-first; allows visitors to sit in up to 100 vehicles at any given time."
+                text="Our proposed 200,000+- square-foot New York City location is set to impress. With a planned rooftop patio and partially glass floors, NYAM visitors will get to see above and beneath many of the extravagant vehicles on display. Also another original exclusive world-first; allows visitors to sit in up to 100 vehicles at any given time."
               />
 
               <TextReveal

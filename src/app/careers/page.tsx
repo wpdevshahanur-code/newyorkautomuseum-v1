@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Careers & Opportunities | New York Auto Museum',
-  description: 'Join the team building one of the worlds leading automotive attractions in Manhattan. 29 open positions across 6 departments.',
+  description: 'Join the team building one of the worlds leading automotive attractions in New York City. 29 open positions across 6 departments.',
 };
 
 export default function CareersPage() {

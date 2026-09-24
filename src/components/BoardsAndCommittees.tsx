@@ -42,7 +42,7 @@ export default function BoardsAndCommittees() {
           <TextReveal
             as="p"
             className="section-subtitle"
-            text="Curatorial development working groups and tax-deductible committee leadership opportunities guiding the Manhattan landmark."
+            text="Curatorial development working groups and tax-deductible committee leadership opportunities guiding the New York City landmark."
           />
         </div>
 

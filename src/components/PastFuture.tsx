@@ -206,7 +206,7 @@ export default function PastFuture() {
                   letterSpacing: '0.04em',
                 }}
               >
-                Manhattan Flagship Initiative
+                New York City Flagship Initiative
               </span>
             </div>
           </div>

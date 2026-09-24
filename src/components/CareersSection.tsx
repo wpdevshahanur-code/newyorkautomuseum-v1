@@ -250,7 +250,7 @@ export default function CareersSection() {
                             letterSpacing: '0.05em',
                           }}
                         >
-                          Manhattan, NY
+                          New York City, NY
                         </span>
                         <a
                           href={job.applyUrl}

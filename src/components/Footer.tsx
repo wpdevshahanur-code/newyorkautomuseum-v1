@@ -206,7 +206,7 @@ export default function Footer() {
                 color: '#94A3B8',
                 marginBottom: '24px',
               }}
-              text="Proposed 200,000+ sq ft Manhattan landmark uniting automotive science, historical heritage, and world-first interactive exhibition wings."
+              text="Proposed 200,000+ sq ft New York City landmark uniting automotive science, historical heritage, and world-first interactive exhibition wings."
             />
 
             {/* D&B Sponsor Plaque */}
@@ -405,7 +405,7 @@ export default function Footer() {
               </div>
               <div style={{ color: '#94A3B8' }}>767 Broadway #1671</div>
               <div style={{ color: '#64748B' }}>
-                New York, New York, Manhattan 10003 USA
+                New York City, NY 10003 USA
               </div>
             </div>
 
