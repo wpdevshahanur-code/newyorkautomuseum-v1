@@ -970,12 +970,11 @@ div[role="dialog"] > div:first-child {
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
 }
 
-/* Bottom-Left Exhibit Plaque (Moved from center to let cars shine!) */
+/* Bottom-Left Exhibit Plaque (Moved to far left corner to let cars shine!) */
 .hero-bottom-left-wrapper {
   position: absolute;
   bottom: 74px;
-  left: 0;
-  right: 0;
+  left: clamp(20px, 2.5vw, 36px);
   z-index: 12;
   pointer-events: none;
 }

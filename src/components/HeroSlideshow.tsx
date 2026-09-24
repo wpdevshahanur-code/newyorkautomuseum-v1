@@ -312,34 +312,32 @@ export default function HeroSlideshow() {
 
       {/* Bottom-Left Exhibit Plaque (Lets the car images take center stage!) */}
       <div className="hero-bottom-left-wrapper">
-        <div className="container">
-          <div
-            className="hero-bottom-left-caption"
-            style={{ borderLeftColor: activeSlideData.accentColor }}
-          >
-            {/* Dynamic Slide Badge */}
-            <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40`, marginBottom: '8px' }}>
-              <span
-                className="hero-badge-accent-dot"
-                style={{ backgroundColor: activeSlideData.accentColor }}
-              />
-              <span className="hero-badge-text">{activeSlideData.badge}</span>
-            </div>
-
-            <div className="hero-wing-showcase">
-              <span className="hero-wing-label">Exhibition Wing:</span>
-              <span
-                className="hero-wing-name"
-                style={{ color: activeSlideData.accentColor }}
-              >
-                {activeSlideData.wing}
-              </span>
-            </div>
-
-            <p key={currentSlide} className="hero-description">
-              {activeSlideData.description}
-            </p>
+        <div
+          className="hero-bottom-left-caption"
+          style={{ borderLeftColor: activeSlideData.accentColor }}
+        >
+          {/* Dynamic Slide Badge */}
+          <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40`, marginBottom: '8px' }}>
+            <span
+              className="hero-badge-accent-dot"
+              style={{ backgroundColor: activeSlideData.accentColor }}
+            />
+            <span className="hero-badge-text">{activeSlideData.badge}</span>
           </div>
+
+          <div className="hero-wing-showcase">
+            <span className="hero-wing-label">Exhibition Wing:</span>
+            <span
+              className="hero-wing-name"
+              style={{ color: activeSlideData.accentColor }}
+            >
+              {activeSlideData.wing}
+            </span>
+          </div>
+
+          <p key={currentSlide} className="hero-description">
+            {activeSlideData.description}
+          </p>
         </div>
       </div>
 
