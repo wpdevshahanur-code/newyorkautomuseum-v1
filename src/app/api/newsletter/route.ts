@@ -1,8 +1,16 @@
 import { NextResponse } from 'next/server';
 
-const WP_URL =
-  process.env.NEXT_PUBLIC_WORDPRESS_URL?.replace(/\/wp-json\/wp\/v2\/?$/, '') ||
-  'https://cms.newyorkautomuseum.com';
+function getWordPressOrigin(): string {
+  const envUrl = process.env.NEXT_PUBLIC_WORDPRESS_URL;
+  if (envUrl) {
+    try {
+      return new URL(envUrl).origin;
+    } catch {
+      // Fallback
+    }
+  }
+  return 'https://cms.newyorkautomuseum.com';
+}
 
 const FLUENT_FORM_ID = '2';
 
@@ -18,7 +26,8 @@ export async function POST(request: Request) {
       );
     }
 
-    const endpoint = `${WP_URL}/wp-admin/admin-ajax.php`;
+    const origin = getWordPressOrigin();
+    const endpoint = `${origin}/wp-admin/admin-ajax.php`;
 
     // Fluent Forms expects action=fluentform_submit, form_id, and data (URL-encoded query string)
     const params = new URLSearchParams({
@@ -31,13 +40,16 @@ export async function POST(request: Request) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json, text/javascript, */*; q=0.01',
+        'X-Requested-With': 'XMLHttpRequest',
       },
       body: params.toString(),
       cache: 'no-store',
     });
 
     if (!wpRes.ok) {
-      throw new Error(`WordPress returned status ${wpRes.status}`);
+      throw new Error(`WordPress returned status ${wpRes.status}: ${wpRes.statusText} at ${endpoint}`);
     }
 
     const data = await wpRes.json();
@@ -70,7 +82,10 @@ export async function POST(request: Request) {
   } catch (error: any) {
     console.error('Newsletter subscription error:', error);
     return NextResponse.json(
-      { success: false, message: 'An unexpected error occurred. Please try again later.' },
+      { 
+        success: false, 
+        message: error?.message || 'An unexpected error occurred. Please try again later.' 
+      },
       { status: 500 }
     );
   }
