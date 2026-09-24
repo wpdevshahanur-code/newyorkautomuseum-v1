@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 :root {
   --bg-main: #080A0F;
   --bg-surface: rgba(18, 24, 36, 0.88);
@@ -894,8 +896,8 @@ div[role="dialog"] > div:first-child {
 
 .hero-main-title {
   font-size: clamp(2.4rem, 5vw, 4.4rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-weight: 300;
+  letter-spacing: 0.01em;
   line-height: 1.08;
   color: #FFFFFF;
   margin-bottom: 0;
