@@ -304,15 +304,6 @@ export default function HeroSlideshow() {
 
       {/* Hero Center Content: Focused Institutional Branding */}
       <div className="container hero-content-wrapper">
-        {/* Dynamic Slide Badge */}
-        <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40` }}>
-          <span
-            className="hero-badge-accent-dot"
-            style={{ backgroundColor: activeSlideData.accentColor }}
-          />
-          <span className="hero-badge-text">{activeSlideData.badge}</span>
-        </div>
-
         {/* Main Institutional Headline with Animated Architectural Frame Lines */}
         <div className={`hero-headline-frame ${introFaded ? 'is-revealed' : ''}`}>
           <TextReveal as="h1" className="hero-main-title" text="New York Auto Museum" />
@@ -326,6 +317,15 @@ export default function HeroSlideshow() {
             className="hero-bottom-left-caption"
             style={{ borderLeftColor: activeSlideData.accentColor }}
           >
+            {/* Dynamic Slide Badge */}
+            <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40`, marginBottom: '8px' }}>
+              <span
+                className="hero-badge-accent-dot"
+                style={{ backgroundColor: activeSlideData.accentColor }}
+              />
+              <span className="hero-badge-text">{activeSlideData.badge}</span>
+            </div>
+
             <div className="hero-wing-showcase">
               <span className="hero-wing-label">Exhibition Wing:</span>
               <span
