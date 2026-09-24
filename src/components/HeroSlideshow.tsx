@@ -339,25 +339,6 @@ export default function HeroSlideshow() {
         <p key={currentSlide} className="hero-description">
           {activeSlideData.description}
         </p>
-
-        {/* Action Buttons */}
-        <div className="hero-actions">
-          <a href="#past-future" className="btn btn-primary hero-btn-main">
-            <span>Explore The Museum</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <polyline points="19 12 12 19 5 12" />
-            </svg>
-          </a>
-
-          <a href="#spotlights" className="btn hero-btn-glass">
-            <span>View 12 Exhibition Wings</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-        </div>
       </div>
 
       {/* Modern Bottom Carousel Control Bar & Progress Track with All 19 Slides */}

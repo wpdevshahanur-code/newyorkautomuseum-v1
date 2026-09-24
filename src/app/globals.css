@@ -1646,6 +1646,26 @@ div[role="dialog"] > div:first-child {
   padding: 44px;
 }
 
+.past-future-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .past-future-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .past-future-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 .gateway-section {
   padding: 100px 0;
 }

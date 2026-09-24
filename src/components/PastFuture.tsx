@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import TextReveal from './TextReveal';
 
 export default function PastFuture() {
@@ -77,9 +78,53 @@ export default function PastFuture() {
                 fontWeight: 600,
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
+                marginBottom: '28px',
               }}
               text="New York Auto Museum & World Motorsport Hall of Fame"
             />
+
+            {/* Action Buttons moved from Hero Banner */}
+            <div
+              className="past-future-actions"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '16px',
+                flexWrap: 'wrap',
+              }}
+            >
+              <Link
+                href="/about"
+                className="btn btn-primary hero-btn-main"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+              >
+                <span>Explore The Museum</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </Link>
+
+              <a
+                href="#spotlights"
+                className="btn hero-btn-glass"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+              >
+                <span>View 12 Exhibition Wings</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <polyline points="19 12 12 19 5 12" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Right Column: Editorial Card */}
