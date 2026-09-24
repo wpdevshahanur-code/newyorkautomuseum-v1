@@ -48,11 +48,13 @@ export async function POST(request: Request) {
       cache: 'no-store',
     });
 
-    if (!wpRes.ok) {
-      throw new Error(`WordPress returned status ${wpRes.status}: ${wpRes.statusText} at ${endpoint}`);
+    const rawText = await wpRes.text();
+    let data: any;
+    try {
+      data = JSON.parse(rawText);
+    } catch {
+      throw new Error(`WordPress returned HTML (${wpRes.status}) from ${endpoint}: ${rawText.slice(0, 300)}`);
     }
-
-    const data = await wpRes.json();
 
     if (data.success) {
       return NextResponse.json({
