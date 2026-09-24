@@ -27,7 +27,7 @@ export default function NewsletterSection() {
         data: formPayload.toString(),
       });
 
-      const wpRes = await fetch('https://cms.newyorkautomuseum.com/wp-admin/admin-ajax.php', {
+      const wpRes = await fetch('https://admin.newyorkautoexperience.org/wp-admin/admin-ajax.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
