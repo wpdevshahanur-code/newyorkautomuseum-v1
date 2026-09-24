@@ -324,7 +324,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Executive Inquiries */}
-          <div style={{ flex: '0 1 280px', minWidth: '240px' }}>
+          <div style={{ flex: '0 1 320px', minWidth: '300px' }}>
             <TextReveal
               as="h4"
               style={{
@@ -354,7 +354,7 @@ export default function Footer() {
                   textDecoration: 'none',
                   fontWeight: 700,
                   fontSize: '0.88rem',
-                  wordBreak: 'break-all',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 david.senater@newyorkautomuseum.com
