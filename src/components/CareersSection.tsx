@@ -171,13 +171,7 @@ export default function CareersSection() {
               </div>
 
               {/* Jobs Grid */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-                  gap: '18px',
-                }}
-              >
+              <div className="career-jobs-grid">
                 {dept.jobs.map((job, jIdx) => {
                   const jobKey = `${dept.department}-${jIdx}`;
                   const isJobOpen = openJobKey === jobKey;
@@ -190,7 +184,7 @@ export default function CareersSection() {
                         backdropFilter: 'blur(12px)',
                         WebkitBackdropFilter: 'blur(12px)',
                         border: isJobOpen ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.12)',
-                        borderRadius: '14px',
+                        borderRadius: '16px',
                         boxShadow: isJobOpen
                           ? '0 12px 32px rgba(225, 29, 72, 0.2)'
                           : '0 12px 36px rgba(0, 0, 0, 0.45)',
@@ -207,13 +201,13 @@ export default function CareersSection() {
                             alignItems: 'flex-start',
                             justifyContent: 'space-between',
                             gap: '10px',
-                            marginBottom: '10px',
+                            marginBottom: '12px',
                           }}
                         >
                           <TextReveal
                             as="h4"
                             style={{
-                              fontSize: '1.15rem',
+                              fontSize: '1.25rem',
                               fontWeight: 800,
                               color: '#FFFFFF',
                               lineHeight: 1.3,
@@ -225,10 +219,10 @@ export default function CareersSection() {
                         <TextReveal
                           as="p"
                           style={{
-                            fontSize: '0.92rem',
+                            fontSize: '0.98rem',
                             color: '#94A3B8',
-                            lineHeight: 1.7,
-                            marginBottom: '16px',
+                            lineHeight: 1.75,
+                            marginBottom: '20px',
                           }}
                           text={job.description}
                         />

@@ -1779,8 +1779,22 @@ div[role="dialog"] > div:first-child {
   padding: 0 24px 22px 56px;
 }
 
+.career-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 860px) {
+  .career-jobs-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
 .career-job-card {
-  padding: 24px;
+  padding: 28px;
 }
 
 .page-header-container {
