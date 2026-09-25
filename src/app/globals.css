@@ -856,7 +856,7 @@ div[role="dialog"] > div:first-child {
   text-align: center;
   max-width: 960px;
   margin: 0 auto;
-  transform: translateY(-12vh);
+  transform: translateY(-22vh);
   padding: 0 24px;
 }
 
@@ -1239,6 +1239,9 @@ div[role="dialog"] > div:first-child {
 }
 
 @media (max-width: 1024px) {
+  .hero-content-wrapper {
+    transform: translateY(-20vh);
+  }
   .hero-progress-label {
     display: none;
   }
@@ -1263,7 +1266,7 @@ div[role="dialog"] > div:first-child {
     min-height: 560px;
   }
   .hero-content-wrapper {
-    transform: translateY(-8vh);
+    transform: translateY(-14vh);
     padding: 16px 15px 0 15px;
   }
   .hero-badge-pill {
