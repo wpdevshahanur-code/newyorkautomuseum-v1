@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // output: 'export',
   async redirects() {
     return [
       {
