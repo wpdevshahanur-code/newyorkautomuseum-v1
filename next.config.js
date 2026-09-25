@@ -3,7 +3,20 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // output: 'export', // Can be enabled for pure static export to cPanel public_html if desired
+  async redirects() {
+    return [
+      {
+        source: '/webmail',
+        destination: 'https://webmail.newyorkautomuseum.com',
+        permanent: false,
+      },
+      {
+        source: '/cpanel',
+        destination: 'https://cpanel.newyorkautomuseum.com',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
