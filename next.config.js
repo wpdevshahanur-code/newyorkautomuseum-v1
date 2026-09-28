@@ -8,12 +8,12 @@ const nextConfig = {
     return [
       {
         source: '/webmail',
-        destination: 'https://webmail.newyorkautomuseum.com',
+        destination: 'https://premium10.web-hosting.com:2096',
         permanent: false,
       },
       {
         source: '/cpanel',
-        destination: 'https://cpanel.newyorkautomuseum.com',
+        destination: 'https://premium10.web-hosting.com:2083',
         permanent: false,
       },
     ];
