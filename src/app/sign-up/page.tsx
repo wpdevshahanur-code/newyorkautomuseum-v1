@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 export default function SignUpPage() {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'transparent' }}>
       <Navbar />
-      <main className="signup-page-wrapper" style={{ flex: 1 }}>
+      <main className="signup-page-wrapper" style={{ flex: 1, background: 'transparent' }}>
         <div className="container">
           {/* Hero Header */}
           <div className="signup-hero-header">
