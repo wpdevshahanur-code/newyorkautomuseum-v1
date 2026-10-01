@@ -254,7 +254,7 @@ export default function SignUpFunnel() {
               <div className="prompt-text-group">
                 <div className="prompt-number-badge">{prompts.q3 === true ? '✓' : '3'}</div>
                 <p className="prompt-question">
-                  If I participate, I agree to receive an official 501(c)(3) tax-deductible receipt?
+                  If I participate, I will receive an official 501(c)(3) tax-deductible receipt?
                 </p>
               </div>
               <div className="prompt-button-group">
