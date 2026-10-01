@@ -16,6 +16,16 @@ const nextConfig = {
         destination: 'https://premium10.web-hosting.com:2083',
         permanent: false,
       },
+      {
+        source: '/exhibits',
+        destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/donate',
+        destination: '/committees',
+        permanent: false,
+      },
     ];
   },
 };

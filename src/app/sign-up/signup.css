@@ -1,0 +1,450 @@
+/* ==========================================================================
+   Sign-Up / Committee Board Landing Page Styles
+   Strictly scoped to avoid modifying existing global styles
+   ========================================================================== */
+
+.signup-page-wrapper {
+  background-color: var(--color-bg-main, #0B0F19);
+  min-height: 100vh;
+  padding: 60px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-hero-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 48px;
+}
+
+.signup-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary, #E11D48);
+  border: 1px solid var(--color-primary, #E11D48);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(225, 29, 72, 0.4);
+}
+
+.signup-main-title {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.signup-main-title span {
+  color: var(--color-primary, #E11D48);
+}
+
+.signup-main-subtitle {
+  font-size: 1.05rem;
+  color: #E2E8F0;
+  line-height: 1.7;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* Trust Bar */
+.signup-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 16px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.signup-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #F8FAFC;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.signup-trust-item strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.signup-trust-item .trust-highlight {
+  color: #FCD34D;
+  font-weight: 700;
+}
+
+.signup-trust-item .trust-dim {
+  color: #E2E8F0;
+  font-weight: 500;
+}
+
+/* Funnel Container */
+.signup-funnel-card {
+  background: var(--color-bg-card, #111827);
+  border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 640px) {
+  .signup-funnel-card {
+    padding: 24px 18px;
+  }
+}
+
+/* Step Header */
+.funnel-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.funnel-step-indicator {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary, #E11D48);
+}
+
+.funnel-progress-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #CBD5E1;
+}
+
+.funnel-progress-badge.ready {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34D399;
+}
+
+/* Prompt Card */
+.prompt-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 16px;
+  transition: all 0.25s ease;
+}
+
+.prompt-card.agreed {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.prompt-card.declined {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.prompt-text-group {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.prompt-number-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.prompt-card.agreed .prompt-number-badge {
+  background: #10B981;
+  color: #FFFFFF;
+}
+
+.prompt-question {
+  color: #FFFFFF;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Toggle Buttons */
+.prompt-button-group {
+  display: flex;
+  gap: 12px;
+  padding-left: 42px;
+}
+
+@media (max-width: 480px) {
+  .prompt-button-group {
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+
+.prompt-choice-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: #CBD5E1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.prompt-choice-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.prompt-choice-btn.active-yes {
+  background: #10B981;
+  border-color: #10B981;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.prompt-choice-btn.active-no {
+  background: #EF4444;
+  border-color: #EF4444;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+}
+
+/* Ineligible Banner */
+.ineligible-notice {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 24px;
+  color: #FCA5A5;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.ineligible-notice a {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Success Banner on Pre-Qualification */
+.prequalified-notice {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 32px 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #6EE7B7;
+  font-size: 0.95rem;
+  font-weight: 600;
+  animation: slideUpFade 0.4s ease forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lead Capture Form */
+.signup-lead-form {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideUpFade 0.4s ease forwards;
+}
+
+.lead-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 640px) {
+  .lead-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-full-col {
+  grid-column: 1 / -1;
+}
+
+.lead-input-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-bottom: 8px;
+}
+
+.lead-input-field {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lead-input-field:focus {
+  border-color: #E11D48;
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lead-input-field option {
+  background: #111827;
+  color: #FFFFFF;
+}
+
+.lead-submit-btn {
+  width: 100%;
+  padding: 16px 24px;
+  background: #E11D48;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
+}
+
+.lead-submit-btn:hover {
+  background: #BE123C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.5);
+}
+
+.lead-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-disclaimer {
+  font-size: 0.78rem;
+  color: var(--color-text-dim, #64748B);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* Success Confirmation Screen */
+.application-success-card {
+  text-align: center;
+  padding: 40px 20px;
+  animation: slideUpFade 0.5s ease forwards;
+}
+
+.success-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10B981;
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Action Button Styles for Success Screen */
+.signup-page-wrapper .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.signup-page-wrapper .btn-primary {
+  background-color: var(--color-primary, #E11D48);
+  color: #FFFFFF;
+  border: 1px solid var(--color-primary, #E11D48);
+}
+
+.signup-page-wrapper .btn-primary:hover {
+  background-color: #BE123C;
+  border-color: #BE123C;
+}
+
+.signup-page-wrapper .btn-outline {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.signup-page-wrapper .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.signup-page-wrapper .btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
