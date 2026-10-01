@@ -30,17 +30,39 @@ export async function POST(request: Request) {
       );
     }
 
+    // Map boardTier to exact valid Fluent Form 5 options
+    let mappedTier = '$500 - Advisory Committee Board';
+    const tierStr = String(boardTier || '');
+    if (tierStr.includes('5,000')) {
+      mappedTier = '$5,000 - Executive Founding Board';
+    } else if (tierStr.includes('2,500')) {
+      mappedTier = '$2,500 - Leadership & Exhibits Council';
+    } else if (tierStr.includes('1,000')) {
+      mappedTier = '$1,000 - Steering & Education Committee';
+    } else {
+      mappedTier = '$500 - Advisory Committee Board';
+    }
+
+    const backgroundNotes = [
+      `Tier Selected: ${boardTier || '$1,500 - Advisory Committee Board'}`,
+      `Phone: ${phone}`,
+      background ? `Background / Bio: ${background}` : 'No additional bio provided',
+      'Qualified: All 4 Board Criteria Confirmed'
+    ].filter(Boolean).join('\n\n');
+
     // Prepare payload for WordPress Fluent Forms (Form ID: 5)
+    // Note: Form 5 schema uses input_text for Name and input_text_1 for Phone
     const formPayload = new URLSearchParams({
+      input_text: String(name).trim(),
       full_name: String(name).trim(),
       names: String(name).trim(),
-      input_text: String(name).trim(),
       email: String(email).trim(),
+      input_text_1: String(phone).trim(),
       phone: String(phone).trim(),
-      dropdown: String(boardTier || '$1,500 - Advisory Committee Board').trim(),
-      board_tier: String(boardTier || '$1,500 - Advisory Committee Board').trim(),
-      description: String(background || 'None provided').trim(),
-      background_notes: String(background || 'None provided').trim(),
+      dropdown: mappedTier,
+      board_tier: mappedTier,
+      description: backgroundNotes,
+      background_notes: backgroundNotes,
       criteria_1: 'Agreed (Build New York Auto Museum Experience Center)',
       criteria_2: 'Agreed (Tax-deductible $1,500 - $5,000 donation request)',
       criteria_3: 'Agreed (Receive official 501(c)(3) tax receipt)',
@@ -58,15 +80,16 @@ export async function POST(request: Request) {
       const wpResponse = await fetch(WP_ENDPOINT, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
           'Cookie': 'hc_js_gate=1',
+          'X-Requested-With': 'XMLHttpRequest',
         },
         body: postBody.toString(),
       });
 
       const rawText = await wpResponse.text();
-      console.log('Board Lead WP submission response:', rawText.substring(0, 150));
+      console.log('Board Lead WP submission response:', rawText.substring(0, 200));
     } catch (wpErr) {
       console.warn('WP Forwarding notice (non-fatal):', wpErr);
     }
