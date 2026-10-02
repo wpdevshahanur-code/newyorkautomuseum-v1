@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body>
         <div className="site-backdrop" aria-hidden="true" />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
