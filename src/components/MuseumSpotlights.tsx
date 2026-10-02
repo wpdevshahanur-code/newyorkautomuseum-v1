@@ -17,12 +17,12 @@ export default function MuseumSpotlights() {
       <div className="container">
         {/* Section Header */}
         <div style={{ marginBottom: '60px', textAlign: 'center' }}>
-          <span className="section-tag">Mission Statement</span>
-          <TextReveal as="h2" className="section-title" text="The Museum &amp; Partners" />
+          <span className="section-tag">Vision &amp; Purpose</span>
+          <TextReveal as="h2" className="section-title" text="Mission Statement" />
           <TextReveal
             as="p"
             className="section-subtitle"
-            style={{ maxWidth: '880px', fontSize: '1.08rem', lineHeight: 1.75 }}
+            style={{ maxWidth: '920px', fontSize: '1.15rem', lineHeight: 1.8, color: '#E2E8F0', marginTop: '16px' }}
             text="The New York Auto Museum celebrates the automobile as a driving force of human progress — honoring its past, engaging with its present, and imagining its future. Through immersive exhibits, world-class collections, and hands-on innovation, we connect visitors of every age to the story of personal mobility and the ingenuity that continues to reshape it."
           />
         </div>
