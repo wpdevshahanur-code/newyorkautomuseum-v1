@@ -51,131 +51,131 @@
   ],
   "donationCommittees": [
     {
-      "title": "1. Executive Committee — $5,000",
+      "title": "1. Executive Committee",
       "description": "The Executive Committee serves as the leadership arm for the Board of Directors, acting on behalf between full board meetings to ensure organizational continuity, compliance, and strategic oversight. Typically composed of the Board Chair, Vice Chair, Secretary, Treasurer, and, optionally, the Executive Director (non-voting), it addresses urgent matters that cannot wait for full board discussion. Responsibilities include monitoring implementation of board decisions, supporting adherence to grant requirements, overseeing high-level operational priorities, and ensuring fiduciary responsibilities are met. The committee documents its actions, communicates decisions to the full board, and ensures transparency and accountability in all decisions. By maintaining organizational focus, overseeing compliance, and supporting strategic initiatives, the Executive Committee ensures that the nonprofit remains aligned with its mission, fulfills its grant obligations, and operates with integrity, stability, and responsiveness."
     },
     {
-      "title": "2. Governance Committee — $1,500",
+      "title": "2. Governance Committee",
       "description": "The Governance Committee oversees the structure, practices, and effectiveness of the board, ensuring compliance with legal, ethical, and grant-related requirements. It reviews bylaws, board policies, and governance frameworks, recommending updates as needed to reflect best practices and funder expectations. This committee is responsible for recruiting, orienting, and training new board members and supporting ongoing development for current members. It also oversees board evaluations, leadership succession planning, and adherence to term limits. By promoting transparency, accountability, and fiduciary responsibility, the Governance Committee ensures the board functions efficiently and ethically. Its oversight protects the organization's credibility with funders, ensures compliance with reporting obligations, and strengthens the board's capacity to provide effective governance that aligns with the nonprofit's mission and long-term sustainability."
     },
     {
-      "title": "3. Finance Committee — $1,500",
+      "title": "3. Finance Committee",
       "description": "The Finance Committee monitors the organization's financial health, ensuring all operations, including grant-funded activities, are properly managed. It reviews and recommends budgets, evaluates financial statements, analyzes cash flow, and ensures that internal controls are in place to safeguard resources. The committee monitors compliance with donor and grant restrictions, recommends fiscal policies, and advises the board on financial planning, risk management, and investment strategies. Regular reporting to the board ensures transparency and supports informed decision-making. By ensuring sound financial oversight, the Finance Committee protects organizational assets, promotes sustainability, and ensures that all funds, particularly grant revenues, are used responsibly and in accordance with legal, regulatory, and funder requirements."
     },
     {
-      "title": "4. Audit Committee — $2,500",
+      "title": "4. Audit Committee",
       "description": "The Audit Committee provides independent oversight of the organization's financial reporting and compliance systems. It coordinates the selection of external auditors, reviews audit results, and ensures timely implementation of recommendations. This committee monitors internal controls, identifies risks, and ensures adherence to grant, legal, and regulatory obligations. By maintaining independence from daily financial operations, it strengthens accountability, promotes transparency, and safeguards the organization's credibility with stakeholders and funders. The committee also reviews risk management policies and ensures documentation is sufficient for compliance audits. Its work is essential for maintaining public trust, meeting grant compliance requirements, and providing assurance to the board that financial and operational processes are sound and reliable."
     },
     {
-      "title": "5. Fundraising Committee — $4,000",
+      "title": "5. Fundraising Committee",
       "description": "The Development Committee is responsible for overseeing fundraising, grant acquisition, and resource development to support mission fulfillment. It collaborates with staff to identify opportunities, cultivate donors, and maintain relationships with foundations, corporations, and individuals. The committee ensures that all fundraising activities comply with ethical standards, legal requirements, and grant-specific obligations. It monitors progress toward financial goals, assists with major gift strategies, and ensures accurate reporting of contributions. By supporting both revenue growth and compliance, the Development Committee enhances long-term organizational sustainability and ensures that resources are available to implement programs effectively while maintaining funder confidence."
     },
     {
-      "title": "6. Programs Committee — $3,000",
+      "title": "6. Programs Committee",
       "description": "The Programs Committee provides oversight of all programs and services to ensure alignment with the organization's mission, goals, and grant requirements. It reviews program design, implementation, outcomes, and impact measurement, ensuring evidence-based approaches and compliance with grant deliverables. The committee recommends improvements or expansions, monitors effectiveness through data and evaluation reports, and ensures that programs are accessible and responsive to community needs. By maintaining rigorous oversight, the Programs Committee ensures accountability to stakeholders, compliance with funding requirements, and that programmatic resources are used effectively to achieve measurable outcomes."
     },
     {
-      "title": "7. Community Committee — $500",
+      "title": "7. Community Committee",
       "description": "The Community Outreach Committee builds and strengthens relationships with the communities the nonprofit serves. It develops strategies for engagement, partnerships, and volunteer involvement, ensuring inclusivity and responsiveness to community needs. The committee monitors compliance with grant-mandated community outcomes and reporting obligations, ensuring transparency in engagement activities. By fostering trust and collaboration, the committee strengthens the organization's reputation, supports program participation, and ensures that community initiatives are aligned with both mission and funder expectations. Boroughs served: Brooklyn, Bronx, Queens, New York City, Long Island."
     },
     {
-      "title": "8. Advocacy & Policy Committee — $750",
+      "title": "8. Advocacy & Policy Committee",
       "description": "The Advocacy & Policy Committee leads initiatives related to policy, advocacy, and public awareness that further the nonprofit's mission while complying with legal and grant-related restrictions. It monitors relevant legislation, develops compliant advocacy strategies, and documents activities in accordance with nonprofit and funder requirements. The committee ensures ethical practices in lobbying or policy engagement, evaluates potential risks, and communicates with stakeholders to maintain credibility and compliance. Its oversight helps the organization influence systemic change responsibly while protecting eligibility for funding."
     },
     {
-      "title": "9. Human Resources Committee — $1,000",
+      "title": "9. Human Resources Committee",
       "description": "The Human Resources Committee oversees staffing policies, volunteer management, and organizational culture to ensure compliance with employment laws, ethical standards, and grant-related personnel requirements. It reviews compensation, benefits, performance evaluations, and succession planning, and ensures that staff and volunteers are supported, trained, and aligned with program goals. By monitoring workforce policies and practices, the committee ensures that personnel resources are effectively managed, legally compliant, and contribute to the achievement of programmatic and organizational objectives."
     },
     {
-      "title": "10. Risk Management Committee — $2,500",
+      "title": "10. Risk Management Committee",
       "description": "The Risk Management Committee identifies and evaluates potential operational, financial, reputational, and compliance risks, including those related to grants and regulatory requirements. It develops and monitors risk mitigation strategies, including insurance, policy enforcement, and contingency planning. The committee ensures that internal controls are robust, that risks are documented, and that leadership and staff are trained in risk awareness. Effective risk management safeguards the organization's assets, supports compliance, and ensures continuity of operations even in challenging circumstances."
     },
     {
-      "title": "11. Marketing & Communications — $3,500",
+      "title": "11. Marketing & Communications",
       "description": "The Marketing & Communications Committee ensures that all organizational messaging, branding, and public communication aligns with the nonprofit's mission, values, and grant compliance requirements. It develops strategies for digital, print, and media outreach, ensuring consistent, accurate, and transparent messaging to funders, stakeholders, and the public. The committee oversees social media, newsletters, press releases, and marketing campaigns, verifying that communications reflect program outcomes and meet documentation standards required for grants. By maintaining clear, compliant, and effective messaging, the committee enhances public awareness, donor confidence, and the organization's reputation, supporting both engagement and funding goals."
     },
     {
-      "title": "12. Public Relations Committee — $3,000",
+      "title": "12. Public Relations Committee",
       "description": "The Public Relations Committee manages the organization's external image, media relations, and reputation, with particular attention to compliance with grant reporting and funder expectations. It develops proactive communication strategies, responds to inquiries, and ensures transparency in public messaging. The committee works closely with staff and other committees to maintain consistency and accuracy in public communications. By mitigating risks to reputation and ensuring all statements reflect organizational integrity and compliance, this committee strengthens stakeholder trust and supports the nonprofit's credibility with funders and the community."
     },
     {
-      "title": "13. Diversity, Equity & Inclusion — $500",
+      "title": "13. Diversity, Equity & Inclusion",
       "description": "The Diversity, Equity & Inclusion (DEI) Committee promotes inclusive practices across governance, staffing, programs, and services, ensuring compliance with legal, ethical, and grant requirements. It reviews policies, advises on equitable practices, and develops training initiatives to foster an inclusive organizational culture. The committee monitors representation, accessibility, and inclusion in programs, volunteer opportunities, and partnerships. By ensuring DEI principles are integrated into operations, the committee strengthens accountability to funders, enhances program effectiveness, and supports a fair, respectful, and compliant organizational environment."
     },
     {
-      "title": "14. Volunteer Committee — $1,500",
+      "title": "14. Volunteer Committee",
       "description": "The Volunteer Committee recruits, trains, coordinates, and recognizes volunteers to expand organizational capacity while ensuring compliance with labor, safety, and grant guidelines. It develops clear role descriptions, orientation programs, and engagement strategies to ensure volunteers are effective, safe, and aligned with mission objectives. The committee monitors volunteer hours, activities, and reporting requirements necessary for grant documentation. By maintaining a robust volunteer program, the committee supports service delivery, program success, and compliance with funding obligations."
     },
     {
-      "title": "15. Nominating Committee — $5,000",
+      "title": "15. Nominating Committee",
       "description": "The Nominating Committee identifies, evaluates, and recommends qualified candidates for board and officer positions in alignment with governance policies, board skills needs, and diversity goals. It ensures transparent and ethical nomination processes and supports board succession planning. The committee's work ensures that the board maintains expertise, accountability, and compliance with bylaws and funder expectations. By providing qualified leadership, it strengthens governance, oversight, and the organization's credibility with stakeholders and funders."
     },
     {
-      "title": "16. Strategic Planning — $3,500",
+      "title": "16. Strategic Planning",
       "description": "The Strategic Planning Committee guides long-term visioning, goal setting, and organizational alignment with mission and grant priorities. It monitors progress toward strategic objectives, recommends adjustments, and ensures integration of program, financial, and operational plans. The committee ensures that strategic initiatives comply with regulatory and grant requirements, including reporting and performance measurement. By maintaining a forward-looking, compliant, and coordinated approach, it strengthens organizational effectiveness, sustainability, and funder confidence."
     },
     {
-      "title": "17. Legal & Compliance — $2,500",
+      "title": "17. Legal & Compliance",
       "description": "The Legal & Compliance Committee oversees adherence to laws, regulations, contracts, and grant requirements across all organizational activities. It reviews policies, provides guidance on legal issues, and ensures documentation meets compliance standards. The committee monitors internal controls and ensures ethical operations, risk mitigation, and timely reporting. By safeguarding legal and regulatory compliance, it protects the organization's credibility, reputation, and funding eligibility."
     },
     {
-      "title": "18. Ethics Committee — $4,000",
+      "title": "18. Ethics Committee",
       "description": "The Ethics Committee promotes integrity, accountability, and ethical conduct throughout the organization. It monitors conflict-of-interest policies, evaluates ethical concerns, and advises on decision-making processes to ensure compliance with legal and grant standards. The committee provides guidance to staff, volunteers, and board members on ethical dilemmas, ensuring transparency and protection of organizational integrity. By maintaining high ethical standards, it reinforces public trust and donor confidence."
     },
     {
-      "title": "19. CIO/CTO Technology — $1,500",
+      "title": "19. CIO/CTO Technology",
       "description": "The Technology Committee oversees IT systems, cybersecurity, data management, and technology strategy to ensure efficiency and compliance with funder and regulatory requirements. It evaluates technology needs, implements security measures, and monitors digital tools supporting program delivery and reporting. The committee ensures that technology investments align with organizational objectives and grant compliance, safeguarding data integrity and operational effectiveness."
     },
     {
-      "title": "20. AI & Data Committee — $2,500",
+      "title": "20. AI & Data Committee",
       "description": "The Data & Impact Committee collects, analyzes, and reports data to measure program effectiveness and grant outcomes. It ensures proper tracking of performance indicators, compliance with reporting requirements, and accurate documentation for funders. The committee evaluates trends, recommends improvements, and supports evidence-based decision-making. By providing transparent and rigorous analysis, it enhances accountability, demonstrates impact, and strengthens funder confidence."
     },
     {
-      "title": "21. Education & Training — $500",
+      "title": "21. Education & Training",
       "description": "The Education & Training Committee develops learning opportunities for staff, board members, volunteers, and beneficiaries, ensuring compliance with organizational, legal, and grant standards. It identifies training needs, oversees curriculum, and monitors effectiveness. By enhancing skills, knowledge, and capacity, the committee supports high-quality program delivery, compliance with grant mandates, and sustainable organizational development."
     },
     {
-      "title": "22. Research Committee — $2,500",
+      "title": "22. Research Committee",
       "description": "The Research Committee conducts studies, evaluations, and assessments to inform program design, strategy, and compliance with grant objectives. It ensures research methodologies are ethical, accurate, and documented for funders. The committee uses findings to recommend improvements, support advocacy, and measure program outcomes. By producing reliable evidence, it strengthens organizational accountability and strategic decision-making."
     },
     {
-      "title": "23. Partnerships — $5,000",
+      "title": "23. Partnerships",
       "description": "The Partnerships Committee develops strategic alliances with organizations, institutions, and businesses to enhance programs, outreach, and sustainability. It ensures that collaborations meet grant requirements, legal obligations, and mission alignment. The committee monitors partnership agreements, shared responsibilities, and reporting obligations. By cultivating strong, compliant partnerships, it expands resources, impact, and funder confidence."
     },
     {
-      "title": "24. Membership — $750",
+      "title": "24. Membership",
       "description": "The Membership Committee recruits, engages, and retains members while ensuring compliance with bylaws, reporting standards, and grant obligations. It develops membership benefits, communication strategies, and retention programs. By fostering an active and informed membership base, the committee enhances governance, accountability, and support for the organization's mission and funded programs."
     },
     {
-      "title": "25. Alumni & Stakeholder Relations — $1,500",
+      "title": "25. Alumni & Stakeholder Relations",
       "description": "This committee maintains relationships with former participants, beneficiaries, and stakeholders, ensuring engagement strategies meet grant and compliance requirements. It tracks alumni involvement, communications, and contributions to organizational initiatives. By fostering sustained relationships, it strengthens stakeholder loyalty, supports reporting obligations, and enhances credibility with funders."
     },
     {
-      "title": "26. Facilities & Operations — $1,000",
+      "title": "26. Facilities & Operations",
       "description": "The Facilities Committee oversees the management, maintenance, safety, and accessibility of organizational properties. It ensures compliance with building codes, grant-related infrastructure requirements, and occupational health regulations. The committee plans upgrades, manages vendor contracts, and monitors facilities use. By ensuring safe and compliant spaces, it supports program delivery, funder confidence, and operational continuity."
     },
     {
-      "title": "27. Sustainability — $1,500",
+      "title": "27. Sustainability",
       "description": "The Sustainability Committee promotes environmental responsibility, resource efficiency, and long-term operational sustainability. It ensures that organizational practices comply with grant conditions related to environmental standards. The committee evaluates energy use, waste management, and sustainable practices. By fostering responsible stewardship, it demonstrates accountability, enhances credibility, and aligns operations with funder expectations."
     },
     {
-      "title": "28. Crisis Response — $1,500",
+      "title": "28. Crisis Response",
       "description": "The Crisis Response Committee develops policies, plans, and procedures to manage emergencies or disruptions. It ensures continuity of operations, risk mitigation, and compliance with regulatory and grant reporting obligations during crises. The committee coordinates communication, safety, and resource allocation. By preparing for and managing crises effectively, it safeguards programs, assets, staff, and organizational reputation."
     },
     {
-      "title": "29. Special Projects — $2,500",
+      "title": "29. Special Projects",
       "description": "The Special Projects Committee oversees temporary, time-limited initiatives that fall outside the scope of standing committees. It ensures these projects align with organizational mission, strategic goals, and grant requirements. The committee monitors project implementation, outcomes, and reporting obligations. By providing focused oversight, it ensures accountability, compliance, and the successful completion of special initiatives."
     },
     {
-      "title": "30. International Committee — $2,500",
+      "title": "30. International Committee",
       "description": "The International Committee is a formal group composed of representatives from two or more countries who work together to address issues, make decisions, or coordinate actions on matters of shared global concern. Members of an international committee may be government officials, subject experts, diplomats, or organizational delegates. They meet regularly to discuss policies, exchange information, develop recommendations, and sometimes create binding regulations or resolutions. Decision-making processes vary and may include voting, consensus, or negotiation. International committees play a vital role in promoting cooperation, resolving conflicts, and fostering mutual understanding among nations. By providing a structured platform for dialogue and collaboration, they help manage global challenges that extend beyond national borders and require collective international action."
     },
     {
-      "title": "31. Social Media — $2,500",
+      "title": "31. Social Media",
       "description": "The Social Media Committee is a group of individuals responsible for planning, managing, and monitoring an organization's social media presence. The committee typically develops content strategies, schedules posts, and ensures that messages align with the organization's goals and values. Members may include marketing staff, communications officers, designers, and content creators. Their duties often involve creating engaging posts, responding to comments, analyzing performance metrics, and maintaining brand consistency across platforms such as Facebook, Instagram, and X. A social media committee also manages online reputation, addresses public feedback, and ensures ethical and responsible communication. By coordinating efforts, the committee helps strengthen audience engagement and build a positive digital presence."
     },
     {
-      "title": "32. Location Selection — $2,500",
+      "title": "32. Location Selection",
       "description": "The Location Selection Committee is a specialized group responsible for evaluating and choosing the most suitable site for the New York Auto Museum facility. This committee typically includes stakeholders such as project managers, financial analysts, urban planners, operations leaders, and community representatives. Their goal is to ensure the chosen location aligns with strategic objectives, budget constraints, accessibility needs, and long-term growth plans. The committee begins by identifying key criteria, such as cost, infrastructure, transportation access, labor availability, safety, environmental impact, and local regulations. Members gather data, conduct site visits, analyze demographic and economic trends, and assess potential risks. They may also consult with local authorities and real estate experts. After comparing shortlisted options, the committee discusses advantages and disadvantages before making a final recommendation. Transparency, data-driven decision-making, and collaboration are essential throughout the process. Ultimately, a well-functioning location selection committee helps organizations minimize risk, optimize resources, and position their projects for long-term success."
     }
   ]
