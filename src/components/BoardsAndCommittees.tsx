@@ -254,9 +254,7 @@ export default function BoardsAndCommittees() {
             {donations.map((item, idx) => {
               const isOpen = openDonationIdx === idx;
               
-              // Extract donation amount from title (e.g. "$5,000", "$1,500")
-              const priceMatch = item.title.match(/(\$[\d,]+)/);
-              const price = priceMatch ? priceMatch[1] : '';
+              // Strip any price amount from committee title
               const cleanTitleName = item.title.replace(/[—–-]?\s*\$[\d,]+/, '').trim();
 
               return (
@@ -314,21 +312,6 @@ export default function BoardsAndCommittees() {
                     </div>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexShrink: 0 }}>
-                      {price && (
-                        <span
-                          style={{
-                            fontSize: '0.85rem',
-                            fontWeight: 800,
-                            backgroundColor: 'rgba(217, 119, 6, 0.15)',
-                            color: '#F59E0B',
-                            padding: '4px 12px',
-                            borderRadius: '9999px',
-                            border: '1px solid rgba(217, 119, 6, 0.3)',
-                          }}
-                        >
-                          {price} Tier
-                        </span>
-                      )}
                       <span
                         style={{
                           color: isOpen ? '#F59E0B' : '#94A3B8',
