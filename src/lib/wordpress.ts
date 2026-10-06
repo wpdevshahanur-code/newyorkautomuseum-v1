@@ -138,6 +138,26 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
       });
     });
 
+    // Merge any advisors from local data (e.g. Al Emran) who are not yet present in WordPress
+    (fallbackAdvisors as AdvisorCategoryGroup[]).forEach((fallbackCat) => {
+      fallbackCat.members.forEach((fallbackMember) => {
+        const alreadyExists = Array.from(groupsMap.values()).some((members) =>
+          members.some((m) => m.name.toLowerCase().trim() === fallbackMember.name.toLowerCase().trim())
+        );
+        if (!alreadyExists) {
+          // Find matching category (case-insensitive) or use fallback category
+          let matchedKey = Array.from(groupsMap.keys()).find(
+            (k) => k.toLowerCase().trim() === fallbackCat.category.toLowerCase().trim()
+          );
+          if (!matchedKey) {
+            matchedKey = fallbackCat.category;
+            groupsMap.set(matchedKey, []);
+          }
+          groupsMap.get(matchedKey)!.push(fallbackMember);
+        }
+      });
+    });
+
     const result: AdvisorCategoryGroup[] = [];
     groupsMap.forEach((members, category) => {
       if (members.length > 0) {
