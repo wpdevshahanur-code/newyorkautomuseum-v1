@@ -241,9 +241,8 @@ export default function HeroSlideshow() {
   const activeSlideData = heroSlides[currentSlide];
 
   return (
-    <>
-      <section
-        id="banner"
+    <section
+      id="banner"
       className="hero-carousel-section"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -380,39 +379,5 @@ export default function HeroSlideshow() {
         </div>
       </div>
     </section>
-
-    {/* Dedicated Exhibit Information Strip — Positioned OUT of the image below carousel */}
-    <div className="hero-exhibit-info-strip" aria-label="Exhibit Details">
-      <div className="container hero-exhibit-strip-container">
-        <div
-          className="hero-exhibit-info-card"
-          style={{ borderColor: `${activeSlideData.accentColor}60` }}
-        >
-          {/* Dynamic Slide Badge */}
-          <div className="hero-badge-pill" style={{ borderColor: `${activeSlideData.accentColor}40`, marginBottom: '6px' }}>
-            <span
-              className="hero-badge-accent-dot"
-              style={{ backgroundColor: activeSlideData.accentColor }}
-            />
-            <span className="hero-badge-text">{activeSlideData.badge}</span>
-          </div>
-
-          <div className="hero-wing-showcase">
-            <span className="hero-wing-label">Exhibition Wing:</span>
-            <span
-              className="hero-wing-name"
-              style={{ color: activeSlideData.accentColor }}
-            >
-              {activeSlideData.wing}
-            </span>
-          </div>
-
-          <p key={currentSlide} className="hero-description">
-            {activeSlideData.description}
-          </p>
-        </div>
-      </div>
-    </div>
-    </>
   );
 }
