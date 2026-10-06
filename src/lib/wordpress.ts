@@ -42,6 +42,7 @@ const ACTIVE_ADVISOR_NAMES = [
   'Arvind Motivaras',
   'Vivek Malamdi',
   'Narendra Jungi',
+  'Al Emran',
 ];
 
 function decodeHtmlEntities(str: string): string {
