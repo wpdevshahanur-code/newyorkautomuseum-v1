@@ -189,7 +189,7 @@ export const advisorsData: AdvisorCategoryGroup[] = [
         "name": "Al Emran",
         "position": "Web Developer",
         "bio": "Al Emran is a dedicated web developer who believes that great digital experiences should feel simple, intuitive, and welcoming. With a genuine curiosity for how things work under the hood and a sharp eye for clean design, he oversees web development and digital platform support for the New York Auto Museum. Emran enjoys taking complex technical challenges and turning them into fast, reliable, and beautifully crafted web experiences. Whether he is refining interface details, ensuring seamless performance across devices, or helping the team bring creative concepts to life, he approaches every project with craftsmanship, care, and a commitment to continuous learning.",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/wpdevemran"
       }
     ]
   },
