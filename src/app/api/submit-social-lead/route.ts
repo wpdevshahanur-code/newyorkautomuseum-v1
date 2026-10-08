@@ -53,9 +53,12 @@ export async function POST(request: Request) {
       submission_type: 'Social Media Creator Agreement (/social)',
     });
 
+    // Dedicated Fluent Form ID for Social Media Creator Release (Defaults to 6)
+    const SOCIAL_FORM_ID = process.env.FLUENT_FORM_SOCIAL_ID || '6';
+
     const postBody = new URLSearchParams({
       action: 'fluentform_submit',
-      form_id: '5', // Routes into WordPress submissions
+      form_id: SOCIAL_FORM_ID,
       data: formPayload.toString(),
     });
 
