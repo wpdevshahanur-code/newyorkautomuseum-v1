@@ -13,13 +13,24 @@ export const metadata: Metadata = {
     description: 'Pre-qualify online to join the Committee Board and help build the premier 200,000+ sq ft New York City automotive landmark.',
     url: 'https://newyorkautomuseum.com/sign-up',
     siteName: 'New York Auto Museum',
+    locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://newyorkautomuseum.com/og-image.jpg',
+        secureUrl: 'https://newyorkautomuseum.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'The New York Auto Museum Committee Board',
+        alt: 'The New York Auto Museum Committee Board Logo',
+        type: 'image/jpeg',
+      },
+      {
+        url: 'https://newyorkautomuseum.com/og-image.png',
+        secureUrl: 'https://newyorkautomuseum.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'The New York Auto Museum Committee Board Logo',
+        type: 'image/png',
       },
     ],
   },
@@ -27,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Join Committee Board | The New York Auto Museum Experience Center',
     description: 'Pre-qualify online to join the Committee Board and help build the premier 200,000+ sq ft New York City automotive landmark.',
-    images: ['/og-image.png'],
+    images: ['https://newyorkautomuseum.com/og-image.jpg'],
   },
 };
 

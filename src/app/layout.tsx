@@ -20,10 +20,20 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://newyorkautomuseum.com/og-image.jpg',
+        secureUrl: 'https://newyorkautomuseum.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'The New York Auto Museum',
+        type: 'image/jpeg',
+      },
+      {
+        url: 'https://newyorkautomuseum.com/og-image.png',
+        secureUrl: 'https://newyorkautomuseum.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'The New York Auto Museum',
+        type: 'image/png',
       },
     ],
   },
@@ -31,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'New York Auto Museum | Premier New York City Automotive Landmark',
     description: 'A 200,000+ sq ft proposed New York City facility uniting automotive science, design, and history.',
-    images: ['/og-image.png'],
+    images: ['https://newyorkautomuseum.com/og-image.jpg'],
   },
 };
 
