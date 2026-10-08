@@ -34,6 +34,64 @@ export default function SocialReleaseForm() {
 
     setSubmitting(true);
 
+    const notes = [
+      `Social Platform: ${formData.platform || 'Instagram'}`,
+      `Handle: ${formData.socialHandle}`,
+      `Vehicle / Content Focus: ${formData.vehicleDetails || 'General Automotive Media'}`,
+      'Media Release Agreement: Confirmed (1-Paragraph Authorization Accepted)',
+      'Submission Source: /social (Creator & Community Showcase)'
+    ].join('\n\n');
+
+    // Tier 1: Direct Client-Side AJAX to WordPress Fluent Forms (Form ID 6)
+    try {
+      const formPayload = new URLSearchParams({
+        input_text: String(formData.name).trim(),
+        full_name: String(formData.name).trim(),
+        names: String(formData.name).trim(),
+        email: String(formData.email).trim(),
+        input_text_1: String(formData.phone).trim(),
+        phone: String(formData.phone).trim(),
+        dropdown: String(formData.platform || 'Instagram'),
+        platform: String(formData.platform || 'Instagram'),
+        input_text_2: String(formData.socialHandle).trim(),
+        social_handle: String(formData.socialHandle).trim(),
+        input_text_3: String(formData.vehicleDetails || '').trim(),
+        vehicle_details: String(formData.vehicleDetails || '').trim(),
+        description: notes,
+        background_notes: notes,
+        terms_agreed: 'Yes (Media Release Statement Accepted)',
+        checkbox: 'Yes (Media Release Statement Accepted)',
+        checkbox_1: 'Yes (Media Release Statement Accepted)',
+        submission_type: 'Social Media Creator Agreement (/social)',
+      });
+
+      const postBody = new URLSearchParams({
+        action: 'fluentform_submit',
+        form_id: '6',
+        data: formPayload.toString(),
+      });
+
+      const wpRes = await fetch('https://admin.newyorkautoexperience.org/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: postBody.toString(),
+      });
+
+      if (wpRes.ok) {
+        const wpData = await wpRes.json().catch(() => null);
+        if (wpData && wpData.success) {
+          setSubmitted(true);
+          return;
+        }
+      }
+    } catch {
+      // Tier 1 bypassed (CORS / Adblocker), proceed to Tier 2
+    }
+
+    // Tier 2: Next.js Server API Fallback
     try {
       const res = await fetch('/api/submit-social-lead', {
         method: 'POST',
@@ -41,12 +99,12 @@ export default function SocialReleaseForm() {
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => null);
 
-      if (res.ok && data.success) {
+      if (res.ok && data?.success) {
         setSubmitted(true);
       } else {
-        setErrorMessage(data.message || 'Submission could not be completed. Please try again.');
+        setErrorMessage(data?.message || 'Submission could not be completed. Please try again.');
       }
     } catch (err) {
       setErrorMessage('A network error occurred. Please check your connection and try again.');

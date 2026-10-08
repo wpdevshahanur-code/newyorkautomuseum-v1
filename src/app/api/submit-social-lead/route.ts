@@ -59,12 +59,9 @@ export async function POST(request: Request) {
       submission_type: 'Social Media Creator Agreement (/social)',
     });
 
-    // Dedicated Fluent Form ID for Social Media Creator Release (Defaults to 6)
-    const SOCIAL_FORM_ID = process.env.FLUENT_FORM_SOCIAL_ID || '6';
-
     const postBody = new URLSearchParams({
       action: 'fluentform_submit',
-      form_id: SOCIAL_FORM_ID,
+      form_id: '6',
       data: formPayload.toString(),
     });
 
@@ -73,7 +70,7 @@ export async function POST(request: Request) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/122.0.0.0',
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
           'Cookie': 'hc_js_gate=1',
           'X-Requested-With': 'XMLHttpRequest',
         },
