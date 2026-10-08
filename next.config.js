@@ -22,6 +22,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/signup',
+        destination: '/sign-up',
+        permanent: true,
+      },
+      {
         source: '/donate',
         destination: '/committees',
         permanent: false,

@@ -8,6 +8,27 @@ import './social.css';
 export const metadata: Metadata = {
   title: 'Creator & Vehicle Media Release | The New York Auto Museum',
   description: 'Authorise the New York Auto Museum Experience Center Inc. to feature, showcase, and credit your automotive social media content, builds, and photography across our official digital platforms.',
+  openGraph: {
+    title: 'Creator & Vehicle Media Release | The New York Auto Museum',
+    description: 'Authorise the New York Auto Museum to feature and credit your automotive builds and photography.',
+    url: 'https://newyorkautomuseum.com/social',
+    siteName: 'New York Auto Museum',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'New York Auto Museum Creator & Vehicle Media Release',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Creator & Vehicle Media Release | The New York Auto Museum',
+    description: 'Authorise the New York Auto Museum to feature and credit your automotive builds and photography.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function SocialPage() {

@@ -8,6 +8,27 @@ import './signup.css';
 export const metadata: Metadata = {
   title: 'Join Committee Board | The New York Auto Experience Inc.',
   description: 'Join the Committee Board to help build the New York Auto Museum Experience Center Inc. in New York City. Pre-qualify online for 501(c)(3) board leadership.',
+  openGraph: {
+    title: 'Join Committee Board | The New York Auto Museum Experience Center',
+    description: 'Pre-qualify online to join the Committee Board and help build the premier 200,000+ sq ft New York City automotive landmark.',
+    url: 'https://newyorkautomuseum.com/sign-up',
+    siteName: 'New York Auto Museum',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'The New York Auto Museum Committee Board',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Join Committee Board | The New York Auto Museum Experience Center',
+    description: 'Pre-qualify online to join the Committee Board and help build the premier 200,000+ sq ft New York City automotive landmark.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function SignUpPage() {
