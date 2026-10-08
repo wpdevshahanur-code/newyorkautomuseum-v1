@@ -65,11 +65,11 @@ export default function SocialReleaseForm() {
           </h3>
           <p style={{ color: '#CBD5E1', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: '600px', margin: '0 auto 28px' }}>
             Thank you, <strong style={{ color: '#FFFFFF' }}>{formData.name}</strong>. Your media release agreement for handle{' '}
-            <strong style={{ color: '#FDA4AF' }}>{formData.socialHandle}</strong> has been successfully recorded.
+            <strong style={{ color: '#FFFFFF' }}>{formData.socialHandle}</strong> has been successfully recorded.
           </p>
 
           <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '22px 24px', maxWidth: '560px', margin: '0 auto 32px', textAlign: 'left' }}>
-            <h4 style={{ color: '#FDA4AF', fontSize: '0.92rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '10px' }}>
+            <h4 style={{ color: '#FFFFFF', fontSize: '0.92rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '10px' }}>
               Next Steps:
             </h4>
             <ul style={{ color: '#E2E8F0', fontSize: '0.92rem', lineHeight: 1.7, paddingLeft: '20px', margin: 0 }}>

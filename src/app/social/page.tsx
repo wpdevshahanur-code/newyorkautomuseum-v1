@@ -31,7 +31,7 @@ export default function SocialPage() {
             {/* Trust Highlights */}
             <div className="social-trust-bar">
               <div className="social-trust-item">
-                <span><strong>Creator Attribution:</strong> <span className="trust-highlight">Full Handle &amp; Tag Credit</span></span>
+                <span><strong>Creator Attribution:</strong> Full Handle &amp; Tag Credit</span>
               </div>
               <div className="social-trust-item">
                 <span><strong>501(c)(3) Cultural Institution:</strong> <span>EIN 92-2822778</span></span>

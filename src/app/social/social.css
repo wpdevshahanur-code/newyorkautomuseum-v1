@@ -87,8 +87,8 @@
 }
 
 .social-trust-item .trust-highlight {
-  color: #FCD34D;
-  font-weight: 700;
+  color: #FFFFFF;
+  font-weight: 600;
 }
 
 /* Form Container */
@@ -187,7 +187,7 @@
   gap: 8px;
   font-size: 0.92rem;
   font-weight: 700;
-  color: #FDA4AF;
+  color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 10px;
