@@ -29,15 +29,30 @@ export async function POST(request: Request) {
       );
     }
 
+    let mappedPlatform = 'Instagram';
+    const platLower = String(platform || '').toLowerCase();
+    if (platLower.includes('tik')) {
+      mappedPlatform = 'TikTok';
+    } else if (platLower.includes('you') || platLower.includes('yt')) {
+      mappedPlatform = 'YouTube';
+    } else if (platLower.includes('face') || platLower.includes('fb')) {
+      mappedPlatform = 'Facebook';
+    } else if (platLower.includes('insta')) {
+      mappedPlatform = 'Instagram';
+    } else {
+      mappedPlatform = 'Other';
+    }
+
     const notes = [
-      `Social Platform: ${platform || 'Instagram'}`,
+      `Social Platform: ${platform || mappedPlatform}`,
       `Handle: ${socialHandle}`,
       `Vehicle / Content Focus: ${vehicleDetails || 'General Automotive Media'}`,
       'Media Release Agreement: Confirmed (1-Paragraph Authorization Accepted)',
       'Submission Source: /social (Creator & Community Showcase)'
     ].join('\n\n');
 
-    // Prepare payload for WordPress Fluent Forms
+    // Prepare payload for WordPress Fluent Forms (Form ID: 6)
+    // Avoid sending unconfigured checkbox fields which cause Fluent Forms HTTP 423 validation error
     const formPayload = new URLSearchParams({
       input_text: String(name).trim(),
       full_name: String(name).trim(),
@@ -45,17 +60,14 @@ export async function POST(request: Request) {
       email: String(email).trim(),
       input_text_1: String(phone).trim(),
       phone: String(phone).trim(),
-      dropdown: String(platform || 'Instagram'),
-      platform: String(platform || 'Instagram'),
+      dropdown: mappedPlatform,
+      platform: mappedPlatform,
       input_text_2: String(socialHandle).trim(),
       social_handle: String(socialHandle).trim(),
       input_text_3: String(vehicleDetails || '').trim(),
       vehicle_details: String(vehicleDetails || '').trim(),
       description: notes,
       background_notes: notes,
-      terms_agreed: 'Yes (Media Release Statement Accepted)',
-      checkbox: 'Yes (Media Release Statement Accepted)',
-      checkbox_1: 'Yes (Media Release Statement Accepted)',
       submission_type: 'Social Media Creator Agreement (/social)',
     });
 
@@ -78,7 +90,20 @@ export async function POST(request: Request) {
       });
 
       const rawText = await wpResponse.text();
-      console.log('Social Lead WP response:', rawText.substring(0, 180));
+      console.log('Social Lead WP response status:', wpResponse.status, rawText.substring(0, 200));
+
+      let wpSuccess = wpResponse.ok;
+      try {
+        const parsed = JSON.parse(rawText);
+        if (parsed.errors) {
+          console.error('Fluent Forms 6 validation errors:', parsed.errors);
+          wpSuccess = false;
+        }
+      } catch {}
+
+      if (!wpSuccess) {
+        console.warn('WP Forwarding notice for social lead (non-fatal):', rawText);
+      }
     } catch (wpErr) {
       console.warn('WP Forwarding notice for social lead (non-fatal):', wpErr);
     }
