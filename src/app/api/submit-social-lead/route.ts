@@ -43,13 +43,8 @@ export async function POST(request: Request) {
       mappedPlatform = 'Other';
     }
 
-    const notes = [
-      `Social Platform: ${platform || mappedPlatform}`,
-      `Handle: ${socialHandle}`,
-      `Vehicle / Content Focus: ${vehicleDetails || 'General Automotive Media'}`,
-      'Media Release Agreement: Confirmed (1-Paragraph Authorization Accepted)',
-      'Submission Source: /social (Creator & Community Showcase)'
-    ].join('\n\n');
+    const cleanVehicle = String(vehicleDetails || 'General Automotive Media').trim();
+    const cleanHandle = String(socialHandle || '').trim();
 
     // Prepare payload for WordPress Fluent Forms (Form ID: 6)
     // Avoid sending unconfigured checkbox fields which cause Fluent Forms HTTP 423 validation error
@@ -62,12 +57,12 @@ export async function POST(request: Request) {
       phone: String(phone).trim(),
       dropdown: mappedPlatform,
       platform: mappedPlatform,
-      input_text_2: String(socialHandle).trim(),
-      social_handle: String(socialHandle).trim(),
-      input_text_3: String(vehicleDetails || '').trim(),
-      vehicle_details: String(vehicleDetails || '').trim(),
-      description: notes,
-      background_notes: notes,
+      input_text_2: cleanHandle,
+      social_handle: cleanHandle,
+      input_text_3: cleanVehicle,
+      vehicle_details: cleanVehicle,
+      description: cleanVehicle,
+      background_notes: cleanVehicle,
       submission_type: 'Social Media Creator Agreement (/social)',
     });
 
