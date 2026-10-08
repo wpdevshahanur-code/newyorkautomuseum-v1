@@ -46,10 +46,16 @@ export async function POST(request: Request) {
       input_text_1: String(phone).trim(),
       phone: String(phone).trim(),
       dropdown: String(platform || 'Instagram'),
+      platform: String(platform || 'Instagram'),
+      input_text_2: String(socialHandle).trim(),
       social_handle: String(socialHandle).trim(),
+      input_text_3: String(vehicleDetails || '').trim(),
+      vehicle_details: String(vehicleDetails || '').trim(),
       description: notes,
       background_notes: notes,
       terms_agreed: 'Yes (Media Release Statement Accepted)',
+      checkbox: 'Yes (Media Release Statement Accepted)',
+      checkbox_1: 'Yes (Media Release Statement Accepted)',
       submission_type: 'Social Media Creator Agreement (/social)',
     });
 
