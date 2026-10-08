@@ -22,7 +22,7 @@ export default function SocialPage() {
               <span>📸</span> Creator &amp; Community Media Network
             </div>
             <h1 className="social-main-title">
-              Feature Your Content &amp; Builds on <span>The New York Auto Museum</span>
+              Feature Your Content &amp; Builds on The New York Auto Museum
             </h1>
             <p className="social-main-subtitle">
               We collaborate with automotive photographers, content creators, collectors, and builders to showcase the vibrant world of car culture. Complete this simple media release authorization to have your vehicles and content highlighted across our platforms with full creator attribution.
