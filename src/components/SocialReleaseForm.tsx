@@ -185,7 +185,7 @@ export default function SocialReleaseForm() {
           {/* Social Media Handle */}
           <div className="social-full-col">
             <label className="social-input-label">
-              Social Media Handle(s) or Profile URL <span className="req">*</span>
+              Please insert the handle you&apos;d like us to give recognition to on each one of your posts that we post <span className="req">*</span>
             </label>
             <input
               type="text"
