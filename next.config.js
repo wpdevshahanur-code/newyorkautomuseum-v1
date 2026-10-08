@@ -27,6 +27,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/socials',
+        destination: '/social',
+        permanent: true,
+      },
+      {
         source: '/donate',
         destination: '/committees',
         permanent: false,

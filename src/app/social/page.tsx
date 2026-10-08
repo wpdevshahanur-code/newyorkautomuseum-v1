@@ -11,15 +11,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Creator & Vehicle Media Release | The New York Auto Museum',
     description: 'Authorise the New York Auto Museum to feature and credit your automotive builds and photography.',
-    url: 'https://newyorkautomuseum.com/social',
+    url: 'https://www.newyorkautomuseum.com/social',
     siteName: 'New York Auto Museum',
+    locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://www.newyorkautomuseum.com/og-image.jpg',
+        secureUrl: 'https://www.newyorkautomuseum.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'New York Auto Museum Creator & Vehicle Media Release',
+        type: 'image/jpeg',
+      },
+      {
+        url: 'https://www.newyorkautomuseum.com/og-image.png',
+        secureUrl: 'https://www.newyorkautomuseum.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'New York Auto Museum Creator & Vehicle Media Release',
+        type: 'image/png',
       },
     ],
   },
@@ -27,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Creator & Vehicle Media Release | The New York Auto Museum',
     description: 'Authorise the New York Auto Museum to feature and credit your automotive builds and photography.',
-    images: ['/og-image.png'],
+    images: ['https://www.newyorkautomuseum.com/og-image.jpg'],
   },
 };
 
