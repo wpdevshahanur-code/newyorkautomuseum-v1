@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# OpenAI Crawlers (ChatGPT & Search)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google AI & Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.newyorkautomuseum.com/sitemap.xml

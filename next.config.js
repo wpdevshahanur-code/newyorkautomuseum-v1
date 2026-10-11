@@ -36,6 +36,36 @@ const nextConfig = {
         destination: '/committees',
         permanent: false,
       },
+      {
+        source: '/125609',
+        destination: '/bio',
+        permanent: true,
+      },
+      {
+        source: '/001',
+        destination: '/bio',
+        permanent: true,
+      },
+      {
+        source: '/002',
+        destination: '/bio',
+        permanent: true,
+      },
+      {
+        source: '/003',
+        destination: '/bio',
+        permanent: true,
+      },
+      {
+        source: '/david-senater',
+        destination: '/bio',
+        permanent: true,
+      },
+      {
+        source: '/davidsenater',
+        destination: '/bio',
+        permanent: true,
+      },
     ];
   },
 };
