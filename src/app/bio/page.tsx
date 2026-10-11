@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
+import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import BioClientView from './BioClientView';
 
@@ -120,13 +121,22 @@ export default function BioPage() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#07090E', color: '#F8FAFC' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#070B14', color: '#F8FAFC' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
       <main style={{ flex: 1 }}>
+        <PageHeader
+          breadcrumb="David Senater"
+          tag="Executive Leadership &bull; Museum Planner"
+          title="David Senater"
+          subtitle="Official biography, DeBeers Diamond International Award think tank heritage, corporate trade systems, and personal memoir."
+          bgImage="/images/slideshow/IMG_2071.jpg"
+          imagePosition="right 30%"
+          imageOpacity={0.70}
+        />
         <BioClientView />
       </main>
       <Footer />

@@ -205,17 +205,17 @@ export default function BioClientView() {
 
   return (
     <div style={{ position: 'relative', overflow: 'hidden', paddingBottom: '96px' }}>
-      {/* Background Decorative Ambient Glows */}
+      {/* Background Decorative Ambient Crimson Glows (Brand Alignment) */}
       <div
         aria-hidden="true"
         style={{
           position: 'absolute',
-          top: '-150px',
+          top: '-120px',
           left: '50%',
           transform: 'translateX(-50%)',
           width: '900px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(14, 165, 233, 0.08) 50%, transparent 80%)',
+          background: 'radial-gradient(circle, rgba(225, 29, 72, 0.16) 0%, rgba(37, 99, 235, 0.06) 50%, transparent 80%)',
           filter: 'blur(80px)',
           pointerEvents: 'none',
           zIndex: 0,
@@ -223,21 +223,13 @@ export default function BioClientView() {
       />
 
       <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '1160px', margin: '0 auto', padding: '0 24px' }}>
-        {/* Top Breadcrumb & Executive Header */}
+        {/* Top Executive Profile Card */}
         <div style={{ paddingTop: '40px', paddingBottom: '32px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 14px', borderRadius: '100px', backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', fontSize: '0.82rem', color: '#94A3B8', marginBottom: '24px' }}>
-            <Link href="/" style={{ color: '#94A3B8', textDecoration: 'none' }}>Home</Link>
-            <span>/</span>
-            <span style={{ color: '#E2E8F0' }}>Executive Leadership</span>
-            <span>/</span>
-            <span style={{ color: '#F59E0B', fontWeight: 600 }}>David Senater</span>
-          </div>
-
-          {/* Hero Profile Card */}
           <div
             style={{
               background: 'linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(11, 15, 24, 0.92) 100%)',
               backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
               border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: '24px',
               padding: '36px',
@@ -246,17 +238,17 @@ export default function BioClientView() {
           >
             <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
               <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
-                {/* Executive Avatar / Monogram */}
+                {/* Executive Avatar / Monogram with Signature Crimson Gradient */}
                 <div
                   style={{
                     width: '100px',
                     height: '100px',
                     borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #78350F 100%)',
+                    background: 'linear-gradient(135deg, #E11D48 0%, #BE123C 50%, #881337 100%)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    boxShadow: '0 0 35px rgba(245, 158, 11, 0.35)',
+                    boxShadow: '0 0 35px rgba(225, 29, 72, 0.45)',
                     border: '3px solid rgba(255, 255, 255, 0.2)',
                     flexShrink: 0,
                   }}
@@ -275,9 +267,9 @@ export default function BioClientView() {
                       style={{
                         padding: '4px 12px',
                         borderRadius: '100px',
-                        backgroundColor: 'rgba(245, 158, 11, 0.15)',
-                        border: '1px solid rgba(245, 158, 11, 0.4)',
-                        color: '#FBBF24',
+                        backgroundColor: 'rgba(225, 29, 72, 0.12)',
+                        border: '1px solid rgba(225, 29, 72, 0.35)',
+                        color: '#FB7185',
                         fontSize: '0.78rem',
                         fontWeight: 700,
                         letterSpacing: '0.05em',
@@ -288,7 +280,7 @@ export default function BioClientView() {
                     </span>
                   </div>
 
-                  <p style={{ fontSize: '1.2rem', color: '#CBD5E1', fontWeight: 500, margin: '0 0 10px 0', lineHeight: 1.4 }}>
+                  <p style={{ fontSize: '1.2rem', color: '#E2E8F0', fontWeight: 500, margin: '0 0 10px 0', lineHeight: 1.4 }}>
                     Executive Director of Development &bull; Museum Planner &bull; Trade Pioneer &bull; Environmentalist
                   </p>
 
@@ -337,12 +329,12 @@ export default function BioClientView() {
                     gap: '8px',
                     padding: '12px 22px',
                     borderRadius: '12px',
-                    background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
-                    color: '#000000',
+                    background: 'linear-gradient(135deg, #E11D48 0%, #BE123C 100%)',
+                    color: '#FFFFFF',
                     fontWeight: 700,
                     fontSize: '0.92rem',
                     textDecoration: 'none',
-                    boxShadow: '0 4px 16px rgba(245, 158, 11, 0.3)',
+                    boxShadow: '0 4px 16px rgba(225, 29, 72, 0.35)',
                     transition: 'transform 0.2s ease',
                   }}
                 >
@@ -407,7 +399,7 @@ export default function BioClientView() {
           </div>
         </div>
 
-        {/* Tab Switcher Navigation */}
+        {/* Tab Switcher Navigation with Signature Brand Colors */}
         <div
           style={{
             display: 'flex',
@@ -420,6 +412,7 @@ export default function BioClientView() {
             border: '1px solid rgba(255, 255, 255, 0.1)',
             marginBottom: '40px',
             backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
             flexWrap: 'wrap',
           }}
         >
@@ -431,8 +424,8 @@ export default function BioClientView() {
               padding: '14px 20px',
               borderRadius: '12px',
               border: 'none',
-              backgroundColor: activeTab === 'overview' ? '#F59E0B' : 'transparent',
-              color: activeTab === 'overview' ? '#000000' : '#94A3B8',
+              backgroundColor: activeTab === 'overview' ? '#E11D48' : 'transparent',
+              color: activeTab === 'overview' ? '#FFFFFF' : '#94A3B8',
               fontWeight: 700,
               fontSize: '0.96rem',
               cursor: 'pointer',
@@ -441,6 +434,7 @@ export default function BioClientView() {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '8px',
+              boxShadow: activeTab === 'overview' ? '0 4px 16px rgba(225, 29, 72, 0.4)' : 'none',
             }}
           >
             <span>📜</span> Executive Profile &amp; Legacy
@@ -454,8 +448,8 @@ export default function BioClientView() {
               padding: '14px 20px',
               borderRadius: '12px',
               border: 'none',
-              backgroundColor: activeTab === 'story' ? '#F59E0B' : 'transparent',
-              color: activeTab === 'story' ? '#000000' : '#94A3B8',
+              backgroundColor: activeTab === 'story' ? '#E11D48' : 'transparent',
+              color: activeTab === 'story' ? '#FFFFFF' : '#94A3B8',
               fontWeight: 700,
               fontSize: '0.96rem',
               cursor: 'pointer',
@@ -464,6 +458,7 @@ export default function BioClientView() {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '8px',
+              boxShadow: activeTab === 'story' ? '0 4px 16px rgba(225, 29, 72, 0.4)' : 'none',
             }}
           >
             <span>📖</span> The David Senater Story
@@ -477,8 +472,8 @@ export default function BioClientView() {
               padding: '14px 20px',
               borderRadius: '12px',
               border: 'none',
-              backgroundColor: activeTab === 'timeline' ? '#F59E0B' : 'transparent',
-              color: activeTab === 'timeline' ? '#000000' : '#94A3B8',
+              backgroundColor: activeTab === 'timeline' ? '#E11D48' : 'transparent',
+              color: activeTab === 'timeline' ? '#FFFFFF' : '#94A3B8',
               fontWeight: 700,
               fontSize: '0.96rem',
               cursor: 'pointer',
@@ -487,6 +482,7 @@ export default function BioClientView() {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '8px',
+              boxShadow: activeTab === 'timeline' ? '0 4px 16px rgba(225, 29, 72, 0.4)' : 'none',
             }}
           >
             <span>⏱️</span> Career Milestones (1987–Pres.)
@@ -513,14 +509,14 @@ export default function BioClientView() {
                 <div
                   key={i}
                   style={{
-                    background: 'rgba(18, 24, 38, 0.85)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    background: 'rgba(18, 24, 36, 0.88)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
                     borderRadius: '18px',
                     padding: '24px',
                     boxShadow: '0 8px 24px rgba(0, 0, 0, 0.35)',
                   }}
                 >
-                  <div style={{ fontSize: '1.9rem', fontWeight: 900, color: '#F59E0B', marginBottom: '6px' }}>{stat.number}</div>
+                  <div style={{ fontSize: '1.9rem', fontWeight: 900, color: '#E11D48', marginBottom: '6px' }}>{stat.number}</div>
                   <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '4px' }}>{stat.label}</div>
                   <div style={{ fontSize: '0.84rem', color: '#94A3B8' }}>{stat.desc}</div>
                 </div>
@@ -530,11 +526,11 @@ export default function BioClientView() {
             {/* Editorial Content Cards */}
             <div
               style={{
-                background: 'rgba(18, 24, 38, 0.85)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                background: 'rgba(18, 24, 36, 0.88)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
                 borderRadius: '24px',
                 padding: '40px',
-                boxShadow: '0 12px 36px rgba(0, 0, 0, 0.4)',
+                boxShadow: '0 12px 36px rgba(0, 0, 0, 0.45)',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '32px',
@@ -543,7 +539,7 @@ export default function BioClientView() {
               {/* Section 1 */}
               <div>
                 <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ color: '#F59E0B' }}>01.</span> DeBeers Heritage &amp; Fine Jewelry Lineage
+                  <span style={{ color: '#E11D48' }}>01.</span> DeBeers Heritage &amp; Fine Jewelry Lineage
                 </h2>
                 <div style={{ fontSize: '1.05rem', lineHeight: 1.8, color: '#CBD5E1', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <p>
@@ -563,7 +559,7 @@ export default function BioClientView() {
               {/* Section 2 */}
               <div>
                 <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ color: '#F59E0B' }}>02.</span> Enterprise Innovation &amp; Global Trade Systems
+                  <span style={{ color: '#E11D48' }}>02.</span> Enterprise Innovation &amp; Global Trade Systems
                 </h2>
                 <div style={{ fontSize: '1.05rem', lineHeight: 1.8, color: '#CBD5E1', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <p>
@@ -586,14 +582,14 @@ export default function BioClientView() {
               {/* Section 3 */}
               <div>
                 <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ color: '#F59E0B' }}>03.</span> Cultural Institutions &amp; New York Auto Museum Leadership
+                  <span style={{ color: '#E11D48' }}>03.</span> Cultural Institutions &amp; New York Auto Museum Leadership
                 </h2>
                 <div style={{ fontSize: '1.05rem', lineHeight: 1.8, color: '#CBD5E1', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <p>
-                    Mr. Senater is the creator and founder of <strong>WatchJewelryTV</strong>, a globally broadcast show focused on watchmaking and high-jewelry industry culture. In 1997, he established the <strong>Toronto Auto Museum (TAM / OAM)</strong> (<a href="https://www.torontoautomuseum.com" target="_blank" rel="noopener noreferrer" style={{ color: '#F59E0B', textDecoration: 'underline' }}>torontoautomuseum.com</a>) to advance heritage automotive preservation in Canada.
+                    Mr. Senater is the creator and founder of <strong>WatchJewelryTV</strong>, a globally broadcast show focused on watchmaking and high-jewelry industry culture. In 1997, he established the <strong>Toronto Auto Museum (TAM / OAM)</strong> (<a href="https://www.torontoautomuseum.com" target="_blank" rel="noopener noreferrer" style={{ color: '#FB7185', textDecoration: 'underline' }}>torontoautomuseum.com</a>) to advance heritage automotive preservation in Canada.
                   </p>
                   <p>
-                    Since 2017, David Senater has served as the <strong>Executive Director of Development at the New York Auto Museum Experience Center</strong> (<a href="https://www.newyorkautomuseum.com" style={{ color: '#F59E0B', textDecoration: 'underline' }}>NewYorkAutoMuseum.com</a>). In this role, he leads institutional planning, museum charter execution, executive advisory recruitment, and capital campaigns for the proposed 200,000+ square-foot facility dedicated to automotive science, design, and youth STEM education in New York City.
+                    Since 2017, David Senater has served as the <strong>Executive Director of Development at the New York Auto Museum Experience Center</strong> (<a href="https://www.newyorkautomuseum.com" style={{ color: '#FB7185', textDecoration: 'underline' }}>NewYorkAutoMuseum.com</a>). In this role, he leads institutional planning, museum charter execution, executive advisory recruitment, and capital campaigns for the proposed 200,000+ square-foot facility dedicated to automotive science, design, and youth STEM education in New York City.
                   </p>
                 </div>
               </div>
@@ -614,7 +610,7 @@ export default function BioClientView() {
           >
             {/* Story Header */}
             <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 40px auto' }}>
-              <span style={{ color: '#F59E0B', fontSize: '0.86rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              <span style={{ color: '#E11D48', fontSize: '0.86rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                 Personal Memoir &amp; Fortitude
               </span>
               <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.7rem)', fontWeight: 900, color: '#FFFFFF', margin: '8px 0 16px 0', letterSpacing: '-0.03em' }}>
@@ -625,20 +621,20 @@ export default function BioClientView() {
               </p>
             </div>
 
-            {/* Quote Banner */}
+            {/* Quote Banner with Crimson Accent */}
             <div
               style={{
-                backgroundColor: 'rgba(245, 158, 11, 0.08)',
-                borderLeft: '4px solid #F59E0B',
+                backgroundColor: 'rgba(225, 29, 72, 0.08)',
+                borderLeft: '4px solid #E11D48',
                 borderRadius: '0 16px 16px 0',
                 padding: '24px 30px',
                 marginBottom: '40px',
               }}
             >
-              <p style={{ fontSize: '1.2rem', fontStyle: 'italic', color: '#FEF3C7', margin: 0, lineHeight: 1.6 }}>
+              <p style={{ fontSize: '1.2rem', fontStyle: 'italic', color: '#FFE4E6', margin: 0, lineHeight: 1.6 }}>
                 &ldquo;It’s not how fast you drive, it’s how well you drive fast.&rdquo;
               </p>
-              <span style={{ display: 'block', marginTop: '8px', fontSize: '0.9rem', color: '#D97706', fontWeight: 600 }}>
+              <span style={{ display: 'block', marginTop: '8px', fontSize: '0.9rem', color: '#FB7185', fontWeight: 600 }}>
                 — Ferdinand Porsche
               </span>
             </div>
@@ -661,7 +657,7 @@ export default function BioClientView() {
               </p>
 
               <div>
-                <h3 style={{ fontSize: '1.35rem', color: '#FBBF24', fontWeight: 700, marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#FB7185', fontWeight: 700, marginBottom: '10px' }}>
                   The First Challenge &amp; 16 Surgeries
                 </h3>
                 <p>
@@ -676,7 +672,7 @@ export default function BioClientView() {
               </div>
 
               <div>
-                <h3 style={{ fontSize: '1.35rem', color: '#FBBF24', fontWeight: 700, marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#FB7185', fontWeight: 700, marginBottom: '10px' }}>
                   August 1, 1981: Tragedy and Survival
                 </h3>
                 <p>
@@ -691,7 +687,7 @@ export default function BioClientView() {
               </div>
 
               <div>
-                <h3 style={{ fontSize: '1.35rem', color: '#FBBF24', fontWeight: 700, marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#FB7185', fontWeight: 700, marginBottom: '10px' }}>
                   Facing Adversity in Special Education
                 </h3>
                 <p>
@@ -703,7 +699,7 @@ export default function BioClientView() {
               </div>
 
               <div>
-                <h3 style={{ fontSize: '1.35rem', color: '#FBBF24', fontWeight: 700, marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#FB7185', fontWeight: 700, marginBottom: '10px' }}>
                   Velocity, Motorsport, and The Near-Fatal Crash at 17
                 </h3>
                 <p>
@@ -715,7 +711,7 @@ export default function BioClientView() {
               </div>
 
               <div>
-                <h3 style={{ fontSize: '1.35rem', color: '#FBBF24', fontWeight: 700, marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#FB7185', fontWeight: 700, marginBottom: '10px' }}>
                   Sales Prodigy &amp; Worldwide Commerce
                 </h3>
                 <p>
@@ -730,7 +726,7 @@ export default function BioClientView() {
               </div>
 
               <div>
-                <h3 style={{ fontSize: '1.35rem', color: '#FBBF24', fontWeight: 700, marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#FB7185', fontWeight: 700, marginBottom: '10px' }}>
                   Medical Victory &amp; A Life of Purpose
                 </h3>
                 <p>
@@ -751,15 +747,15 @@ export default function BioClientView() {
         {activeTab === 'timeline' && (
           <div
             style={{
-              background: 'rgba(18, 24, 38, 0.85)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'rgba(18, 24, 38, 0.88)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: '24px',
               padding: '40px',
-              boxShadow: '0 12px 36px rgba(0, 0, 0, 0.4)',
+              boxShadow: '0 12px 36px rgba(0, 0, 0, 0.45)',
             }}
           >
             <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-              <span style={{ color: '#F59E0B', fontSize: '0.86rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              <span style={{ color: '#E11D48', fontSize: '0.86rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                 Chronological Record
               </span>
               <h2 style={{ fontSize: '2.2rem', fontWeight: 900, color: '#FFFFFF', margin: '8px 0 12px 0', letterSpacing: '-0.02em' }}>
@@ -773,17 +769,17 @@ export default function BioClientView() {
             {/* Vertical Timeline */}
             <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {timelineData.map((item, idx) => {
-                const getCategoryColor = (cat: TimelineItem['category']) => {
+                const getCategoryBadgeStyle = (cat: TimelineItem['category']) => {
                   switch (cat) {
-                    case 'Executive': return '#F59E0B';
-                    case 'Automotive': return '#EF4444';
-                    case 'Innovation': return '#38BDF8';
-                    case 'Public Service': return '#10B981';
-                    case 'Media & Arts': return '#A855F7';
+                    case 'Executive': return { color: '#E11D48', bg: 'rgba(225, 29, 72, 0.12)', border: 'rgba(225, 29, 72, 0.3)' };
+                    case 'Automotive': return { color: '#FB7185', bg: 'rgba(251, 113, 133, 0.12)', border: 'rgba(251, 113, 133, 0.3)' };
+                    case 'Innovation': return { color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.12)', border: 'rgba(56, 189, 248, 0.3)' };
+                    case 'Public Service': return { color: '#10B981', bg: 'rgba(16, 185, 129, 0.12)', border: 'rgba(16, 185, 129, 0.3)' };
+                    case 'Media & Arts': return { color: '#A855F7', bg: 'rgba(168, 85, 247, 0.12)', border: 'rgba(168, 85, 247, 0.3)' };
                   }
                 };
 
-                const catColor = getCategoryColor(item.category);
+                const badge = getCategoryBadgeStyle(item.category);
 
                 return (
                   <div
@@ -795,18 +791,18 @@ export default function BioClientView() {
                       padding: '20px',
                       borderRadius: '16px',
                       backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255, 255, 255, 0.07)',
+                      border: '1px solid rgba(255, 255, 255, 0.08)',
                     }}
                   >
-                    {/* Period Badge */}
+                    {/* Period Badge aligned with brand Crimson */}
                     <div
                       style={{
                         minWidth: '150px',
                         padding: '6px 14px',
                         borderRadius: '10px',
-                        backgroundColor: 'rgba(245, 158, 11, 0.12)',
-                        border: '1px solid rgba(245, 158, 11, 0.25)',
-                        color: '#FBBF24',
+                        backgroundColor: 'rgba(225, 29, 72, 0.12)',
+                        border: '1px solid rgba(225, 29, 72, 0.3)',
+                        color: '#FB7185',
                         fontWeight: 700,
                         fontSize: '0.88rem',
                         textAlign: 'center',
@@ -830,9 +826,9 @@ export default function BioClientView() {
                             letterSpacing: '0.05em',
                             padding: '2px 8px',
                             borderRadius: '6px',
-                            color: catColor,
-                            backgroundColor: `${catColor}18`,
-                            border: `1px solid ${catColor}35`,
+                            color: badge.color,
+                            backgroundColor: badge.bg,
+                            border: `1px solid ${badge.border}`,
                           }}
                         >
                           {item.category}
