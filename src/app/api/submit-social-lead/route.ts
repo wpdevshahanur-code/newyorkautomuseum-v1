@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { submitToSalesforce } from '@/lib/salesforce';
 
 const WP_ENDPOINT = 'https://admin.newyorkautoexperience.org/wp-admin/admin-ajax.php';
 
@@ -102,6 +103,27 @@ export async function POST(request: Request) {
     } catch (wpErr) {
       console.warn('WP Forwarding notice for social lead (non-fatal):', wpErr);
     }
+
+    // Forward Social Media Creator Lead to Salesforce Web-to-Lead
+    const nameParts = String(name).trim().split(/\s+/);
+    const firstName = nameParts[0] || 'Creator';
+    const lastName = nameParts.slice(1).join(' ') || 'Lead';
+    const socialNotes = [
+      `Platform: ${mappedPlatform}`,
+      `Handle: ${cleanHandle}`,
+      `Vehicle / Focus: ${cleanVehicle}`,
+      'Submission: Social Media Creator Agreement (/social)'
+    ].join('\n');
+
+    await submitToSalesforce({
+      firstName,
+      lastName,
+      email: String(email).trim(),
+      phone: String(phone).trim(),
+      company: `Social Creator (${mappedPlatform} @${cleanHandle})`,
+      leadSource: 'Web / Facebook Ads',
+      description: socialNotes,
+    });
 
     return NextResponse.json({
       success: true,

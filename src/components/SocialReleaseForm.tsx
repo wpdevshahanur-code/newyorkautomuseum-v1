@@ -46,6 +46,9 @@ export default function SocialReleaseForm() {
 
       if (res.ok && data?.success) {
         setSubmitted(true);
+        if (typeof window !== 'undefined') {
+          window.location.href = '/thank-you?source=social-creator';
+        }
       } else {
         setErrorMessage(data?.message || 'Submission could not be completed. Please try again.');
       }

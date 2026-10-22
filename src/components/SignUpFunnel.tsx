@@ -101,6 +101,9 @@ export default function SignUpFunnel() {
               lead_email: formData.email,
             });
           }
+
+          // Redirect to Thank You Page for Meta/Facebook Ads & Conversion Tracking
+          window.location.href = '/thank-you?source=board-signup';
         }
       } else {
         setErrorMessage(data.message || 'Submission could not be completed. Please try again.');

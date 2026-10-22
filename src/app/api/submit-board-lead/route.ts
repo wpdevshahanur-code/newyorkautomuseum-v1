@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { submitToSalesforce } from '@/lib/salesforce';
 
 const WP_ENDPOINT = 'https://admin.newyorkautoexperience.org/wp-admin/admin-ajax.php';
 
@@ -93,6 +94,21 @@ export async function POST(request: Request) {
     } catch (wpErr) {
       console.warn('WP Forwarding notice (non-fatal):', wpErr);
     }
+
+    // Forward Lead to Salesforce Web-to-Lead
+    const nameParts = String(name).trim().split(/\s+/);
+    const firstName = nameParts[0] || 'Applicant';
+    const lastName = nameParts.slice(1).join(' ') || 'Lead';
+
+    await submitToSalesforce({
+      firstName,
+      lastName,
+      email: String(email).trim(),
+      phone: String(phone).trim(),
+      company: `Committee Board Applicant (${mappedTier})`,
+      leadSource: 'Web / Facebook Ads',
+      description: backgroundNotes,
+    });
 
     // Always return success to the qualified applicant
     return NextResponse.json({
