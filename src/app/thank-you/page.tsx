@@ -37,9 +37,9 @@ export default function ThankYouPage() {
             maxWidth: '680px',
             width: '100%',
             background: 'linear-gradient(145deg, rgba(17, 24, 39, 0.92) 0%, rgba(10, 15, 29, 0.96) 100%)',
-            border: '1px solid rgba(212, 175, 55, 0.25)',
+            border: '1px solid rgba(225, 29, 72, 0.25)',
             borderRadius: '16px',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(212, 175, 55, 0.1)',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(225, 29, 72, 0.1)',
             padding: '48px 36px',
             textAlign: 'center',
             color: '#F8FAFC',
@@ -72,8 +72,8 @@ export default function ThankYouPage() {
               fontSize: '12px',
               letterSpacing: '2px',
               textTransform: 'uppercase',
-              color: '#D4AF37',
-              fontWeight: 600,
+              color: '#E11D48',
+              fontWeight: 700,
               marginBottom: '10px',
             }}
           >
@@ -118,7 +118,7 @@ export default function ThankYouPage() {
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-              <span style={{ color: '#D4AF37', fontSize: '18px' }}>ℹ️</span>
+              <span style={{ color: '#E11D48', fontSize: '18px' }}>ℹ️</span>
               <span style={{ fontSize: '13px', fontWeight: 600, color: '#E2E8F0', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                 What Happens Next
               </span>
@@ -133,37 +133,42 @@ export default function ThankYouPage() {
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link
               href="/"
+              className="btn btn-primary"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'linear-gradient(135deg, #D4AF37 0%, #AA8010 100%)',
-                color: '#0A0F1D',
+                background: '#E11D48',
+                backgroundColor: '#E11D48',
+                border: '1px solid #E11D48',
+                color: '#FFFFFF',
                 fontWeight: 700,
                 fontSize: '14px',
                 padding: '13px 26px',
                 borderRadius: '8px',
                 textDecoration: 'none',
-                boxShadow: '0 4px 15px rgba(212, 175, 55, 0.35)',
-                transition: 'transform 0.2s, box-shadow 0.2s',
+                boxShadow: '0 4px 15px rgba(225, 29, 72, 0.4)',
+                transition: 'all 0.2s ease',
               }}
             >
               ← Return to Homepage
             </Link>
             <Link
               href="/bio"
+              className="btn btn-secondary"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'rgba(255, 255, 255, 0.06)',
-                border: '1px solid rgba(255, 255, 255, 0.15)',
+                background: 'rgba(18, 24, 36, 0.88)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
                 color: '#F8FAFC',
                 fontWeight: 600,
                 fontSize: '14px',
                 padding: '13px 24px',
                 borderRadius: '8px',
                 textDecoration: 'none',
+                transition: 'all 0.2s ease',
               }}
             >
               Executive Bio & Leadership →
