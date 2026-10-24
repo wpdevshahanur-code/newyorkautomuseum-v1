@@ -1,51 +1,51 @@
 {
   "wingDevelopmentCommittees": [
     {
-      "title": "Body & Chassis",
+      "title": "Body & Chassis Committee",
       "description": "The Body & Chassis wing of the automotive museum explores the structural foundation and design evolution of the automobile. This section highlights how the body and chassis work together to create strength, safety, and performance. Early vehicles displayed in the exhibit feature separate ladder-frame chassis and handcrafted metal or wooden bodies, reflecting the craftsmanship of early automotive engineering. As visitors move through the gallery, they can see the transition to unibody construction, lightweight materials, and improved crash protection systems. Cutaway models and interactive displays reveal how suspension components, frames, and body structures support handling, stability, and passenger protection. The wing also examines the role of aerodynamics and modern materials such as aluminum and carbon fiber. Together, these exhibits show how body and chassis design have evolved to make vehicles stronger, safer, and more efficient."
     },
     {
-      "title": "Suspension",
+      "title": "Suspension Committee",
       "description": "The Suspension wing of the automotive museum focuses on the systems that connect a vehicle to the road and provide stability, comfort, and control. This exhibit traces the development of suspension technology from simple leaf springs used in early automobiles to today's advanced multi-link and adaptive suspension systems. Visitors can explore how engineers designed suspensions to absorb shocks, maintain tire contact with the road, and improve handling across different driving conditions. Interactive models demonstrate the movement of components such as springs, shock absorbers, control arms, and stabilizer bars. Historic examples show how suspension design evolved alongside faster and heavier vehicles, requiring better performance and safety. The wing also highlights modern innovations like air suspension and electronically controlled dampers, showing how technology continues to enhance ride quality and vehicle dynamics."
     },
     {
-      "title": "EV & Alternative Fuels",
+      "title": "EV & Alternative Fuels Committee",
       "description": "The EV & Alternative Fuels wing of the automotive museum explores the shift toward cleaner and more sustainable transportation. This exhibit traces the development of electric vehicles from early battery-powered cars of the late 19th century to today's advanced electric and hybrid technologies. Visitors can learn how improvements in battery design, electric motors, and charging infrastructure have made electric vehicles more practical and efficient. The wing also highlights alternative fuel innovations, including hydrogen fuel cells, biofuels, and compressed natural gas. Interactive displays explain how these technologies reduce emissions and help address environmental challenges associated with traditional gasoline engines. Concept vehicles and modern prototypes demonstrate how manufacturers are reimagining vehicle design for a low-carbon future. Together, the exhibits show how alternative energy sources are shaping the next chapter of automotive innovation."
     },
     {
-      "title": "Wheels & Rims",
+      "title": "Wheels & Rims Committee",
       "description": "The Wheels & Rims wing of the automotive museum explores the design, function, and evolution of one of the most essential parts of any vehicle. This exhibit shows how wheels and rims have developed from simple wooden wagon-style wheels to modern lightweight alloys and high-performance designs. Early displays highlight steel rims and narrow tires used on the first automobiles, while later examples demonstrate how materials such as aluminum and magnesium improved strength while reducing weight. Visitors can also learn how wheel size, rim design, and tire compatibility influence vehicle handling, traction, and braking performance. Interactive displays explain concepts such as bolt patterns, offset, and aerodynamic wheel designs. The exhibit also celebrates the artistic side of wheel design, showing how rims contribute to a vehicle's overall style and identity while still playing a critical role in safety and performance."
     },
     {
-      "title": "Engine & Transmission",
+      "title": "Engine & Transmission Committee",
       "description": "This wing explores the heart of the automobile: the engine and transmission. Visitors will see a collection of historical and modern engines, from the first steam engines to today's high-performance turbocharged and electric powertrains. The evolution of transmission systems, from manual to automatic and CVT, is highlighted, showing the progress in efficiency, power delivery, and driver experience. Exhibits may include cutaway models to showcase the inner workings, along with prototypes and rare engine designs. Interactive displays allow visitors to understand how engine technology has powered the growth of the automotive world."
     },
     {
-      "title": "Autonomous Driving",
+      "title": "Autonomous Driving Committee",
       "description": "The Autonomous Driving wing delves into the cutting-edge world of self-driving cars. Exhibits trace the history and innovation behind autonomous vehicle technology, from early research and experiments to the development of sophisticated AI systems and sensor technology. Visitors can experience virtual simulations of autonomous driving, highlighting the safety, convenience, and challenges of fully autonomous systems. Models of autonomous vehicles from various manufacturers are displayed alongside interactive displays explaining the integration of machine learning, cameras, and lidar in making driving safer and more efficient."
     },
     {
-      "title": "Motorsport & Racing",
+      "title": "Motorsport & Racing Committee",
       "description": "The Motorsport & Racing wing is a high-octane experience, showcasing the thrill of competitive automotive racing. Exhibits feature iconic race cars, from Formula 1 machines to classic Le Mans vehicles, illustrating the technological advancements and engineering innovations spurred by racing. The wing also delves into the history of motorsport, exploring the evolution of car design, safety features, and tire technology. Visitors can learn about legendary drivers, race teams, and historic races that have shaped the world of motorsports. Special exhibits may include VR experiences that let guests \"drive\" in iconic races."
     },
     {
-      "title": "Theatre/Stage",
+      "title": "Theatre/Stage Committee",
       "description": "The Theatre/Stage wing brings automotive storytelling to life, blending the world of cinema and the automobile. Here, visitors explore how cars have been portrayed in films and stage productions, from action-packed car chases to elegant car commercials. The wing features famous movie cars like the Batmobile, James Bond's Aston Martin, and the DeLorean from Back to the Future. Interactive exhibits include screenings of automotive-centric films and behind-the-scenes footage of car stunts. Visitors can also explore the role of automobiles in shaping character identities and the narrative structure of popular culture."
     },
     {
-      "title": "History of Automotive",
+      "title": "History of Automotive Committee",
       "description": "The History of Automotive wing takes visitors on a journey through time, from the invention of the first automobile to today's electric and hybrid vehicles. Exhibits include early carriages, steam-powered vehicles, and the groundbreaking models that changed the industry, such as Ford's Model T. This wing highlights the milestones in car design, mass production, and the rise of iconic automotive brands. Visitors will also see the cultural impact of automobiles, including their role in shaping cities, economies, and global trade. This wing provides a comprehensive timeline of how the car became central to modern life."
     },
     {
-      "title": "Future of Automotive",
+      "title": "Future of Automotive Committee",
       "description": "The Future of Automotive wing offers a glimpse into the next generation of transportation. Exhibits focus on cutting-edge technologies like electric vehicles (EVs), autonomous driving, alternative fuel sources, and smart car systems. Visitors can explore prototypes, concept cars, and digital simulations that envision the future of mobility, from self-driving cities to air mobility solutions. The wing also discusses sustainable transportation, including solar-powered cars and the role of AI in vehicle development. By showcasing the latest innovations and challenges, this wing provokes thought about how the automotive industry will evolve to meet future demands for efficiency, sustainability, and connectivity."
     },
     {
-      "title": "Restoration",
+      "title": "Restoration Committee",
       "description": "The Restoration wing celebrates the art and science of restoring vintage cars to their former glory. Exhibits include before-and-after displays of famous automotive restorations, demonstrating the skill and expertise required to bring old vehicles back to life. Visitors can learn about the tools, techniques, and research involved in the restoration process, including sourcing original parts, preserving historical accuracy, and modern updates. The wing also offers insight into the dedication of car enthusiasts and collectors who ensure that rare and classic vehicles are preserved for future generations. Special events may feature live restorations or workshops where experts share their craft."
     },
     {
-      "title": "Innovation & Technology",
+      "title": "Innovation & Technology Committee",
       "description": "The Innovation & Technology wing serves as the research, development, and breakthrough showcase of the automotive world. Tracing the evolution of revolutionary patents, advanced materials, and computer-integrated mobility, this wing bridges automotive engineering with aerospace, robotics, and digital computing. Exhibits feature breakthroughs in carbon-composite chassis architectures, next-generation sensor suites, telematics, artificial intelligence algorithms for connected vehicles, and sustainable manufacturing processes. Visitors can explore how cross-industry innovation continuously transforms how vehicles are conceived, engineered, and integrated into modern smart infrastructure."
     }
   ],
@@ -91,7 +91,7 @@
       "description": "The Risk Management Committee identifies and evaluates potential operational, financial, reputational, and compliance risks, including those related to grants and regulatory requirements. It develops and monitors risk mitigation strategies, including insurance, policy enforcement, and contingency planning. The committee ensures that internal controls are robust, that risks are documented, and that leadership and staff are trained in risk awareness. Effective risk management safeguards the organization's assets, supports compliance, and ensures continuity of operations even in challenging circumstances."
     },
     {
-      "title": "11. Marketing & Communications",
+      "title": "11. Marketing & Communications Committee",
       "description": "The Marketing & Communications Committee ensures that all organizational messaging, branding, and public communication aligns with the nonprofit's mission, values, and grant compliance requirements. It develops strategies for digital, print, and media outreach, ensuring consistent, accurate, and transparent messaging to funders, stakeholders, and the public. The committee oversees social media, newsletters, press releases, and marketing campaigns, verifying that communications reflect program outcomes and meet documentation standards required for grants. By maintaining clear, compliant, and effective messaging, the committee enhances public awareness, donor confidence, and the organization's reputation, supporting both engagement and funding goals."
     },
     {
@@ -99,7 +99,7 @@
       "description": "The Public Relations Committee manages the organization's external image, media relations, and reputation, with particular attention to compliance with grant reporting and funder expectations. It develops proactive communication strategies, responds to inquiries, and ensures transparency in public messaging. The committee works closely with staff and other committees to maintain consistency and accuracy in public communications. By mitigating risks to reputation and ensuring all statements reflect organizational integrity and compliance, this committee strengthens stakeholder trust and supports the nonprofit's credibility with funders and the community."
     },
     {
-      "title": "13. Diversity, Equity & Inclusion",
+      "title": "13. Diversity, Equity & Inclusion Committee",
       "description": "The Diversity, Equity & Inclusion (DEI) Committee promotes inclusive practices across governance, staffing, programs, and services, ensuring compliance with legal, ethical, and grant requirements. It reviews policies, advises on equitable practices, and develops training initiatives to foster an inclusive organizational culture. The committee monitors representation, accessibility, and inclusion in programs, volunteer opportunities, and partnerships. By ensuring DEI principles are integrated into operations, the committee strengthens accountability to funders, enhances program effectiveness, and supports a fair, respectful, and compliant organizational environment."
     },
     {
@@ -111,11 +111,11 @@
       "description": "The Nominating Committee identifies, evaluates, and recommends qualified candidates for board and officer positions in alignment with governance policies, board skills needs, and diversity goals. It ensures transparent and ethical nomination processes and supports board succession planning. The committee's work ensures that the board maintains expertise, accountability, and compliance with bylaws and funder expectations. By providing qualified leadership, it strengthens governance, oversight, and the organization's credibility with stakeholders and funders."
     },
     {
-      "title": "16. Strategic Planning",
+      "title": "16. Strategic Planning Committee",
       "description": "The Strategic Planning Committee guides long-term visioning, goal setting, and organizational alignment with mission and grant priorities. It monitors progress toward strategic objectives, recommends adjustments, and ensures integration of program, financial, and operational plans. The committee ensures that strategic initiatives comply with regulatory and grant requirements, including reporting and performance measurement. By maintaining a forward-looking, compliant, and coordinated approach, it strengthens organizational effectiveness, sustainability, and funder confidence."
     },
     {
-      "title": "17. Legal & Compliance",
+      "title": "17. Legal & Compliance Committee",
       "description": "The Legal & Compliance Committee oversees adherence to laws, regulations, contracts, and grant requirements across all organizational activities. It reviews policies, provides guidance on legal issues, and ensures documentation meets compliance standards. The committee monitors internal controls and ensures ethical operations, risk mitigation, and timely reporting. By safeguarding legal and regulatory compliance, it protects the organization's credibility, reputation, and funding eligibility."
     },
     {
@@ -123,7 +123,7 @@
       "description": "The Ethics Committee promotes integrity, accountability, and ethical conduct throughout the organization. It monitors conflict-of-interest policies, evaluates ethical concerns, and advises on decision-making processes to ensure compliance with legal and grant standards. The committee provides guidance to staff, volunteers, and board members on ethical dilemmas, ensuring transparency and protection of organizational integrity. By maintaining high ethical standards, it reinforces public trust and donor confidence."
     },
     {
-      "title": "19. CIO/CTO Technology",
+      "title": "19. CIO/CTO Technology Committee",
       "description": "The Technology Committee oversees IT systems, cybersecurity, data management, and technology strategy to ensure efficiency and compliance with funder and regulatory requirements. It evaluates technology needs, implements security measures, and monitors digital tools supporting program delivery and reporting. The committee ensures that technology investments align with organizational objectives and grant compliance, safeguarding data integrity and operational effectiveness."
     },
     {
@@ -131,7 +131,7 @@
       "description": "The Data & Impact Committee collects, analyzes, and reports data to measure program effectiveness and grant outcomes. It ensures proper tracking of performance indicators, compliance with reporting requirements, and accurate documentation for funders. The committee evaluates trends, recommends improvements, and supports evidence-based decision-making. By providing transparent and rigorous analysis, it enhances accountability, demonstrates impact, and strengthens funder confidence."
     },
     {
-      "title": "21. Education & Training",
+      "title": "21. Education & Training Committee",
       "description": "The Education & Training Committee develops learning opportunities for staff, board members, volunteers, and beneficiaries, ensuring compliance with organizational, legal, and grant standards. It identifies training needs, oversees curriculum, and monitors effectiveness. By enhancing skills, knowledge, and capacity, the committee supports high-quality program delivery, compliance with grant mandates, and sustainable organizational development."
     },
     {
@@ -139,31 +139,31 @@
       "description": "The Research Committee conducts studies, evaluations, and assessments to inform program design, strategy, and compliance with grant objectives. It ensures research methodologies are ethical, accurate, and documented for funders. The committee uses findings to recommend improvements, support advocacy, and measure program outcomes. By producing reliable evidence, it strengthens organizational accountability and strategic decision-making."
     },
     {
-      "title": "23. Partnerships",
+      "title": "23. Partnerships Committee",
       "description": "The Partnerships Committee develops strategic alliances with organizations, institutions, and businesses to enhance programs, outreach, and sustainability. It ensures that collaborations meet grant requirements, legal obligations, and mission alignment. The committee monitors partnership agreements, shared responsibilities, and reporting obligations. By cultivating strong, compliant partnerships, it expands resources, impact, and funder confidence."
     },
     {
-      "title": "24. Membership",
+      "title": "24. Membership Committee",
       "description": "The Membership Committee recruits, engages, and retains members while ensuring compliance with bylaws, reporting standards, and grant obligations. It develops membership benefits, communication strategies, and retention programs. By fostering an active and informed membership base, the committee enhances governance, accountability, and support for the organization's mission and funded programs."
     },
     {
-      "title": "25. Alumni & Stakeholder Relations",
+      "title": "25. Alumni & Stakeholder Relations Committee",
       "description": "This committee maintains relationships with former participants, beneficiaries, and stakeholders, ensuring engagement strategies meet grant and compliance requirements. It tracks alumni involvement, communications, and contributions to organizational initiatives. By fostering sustained relationships, it strengthens stakeholder loyalty, supports reporting obligations, and enhances credibility with funders."
     },
     {
-      "title": "26. Facilities & Operations",
+      "title": "26. Facilities & Operations Committee",
       "description": "The Facilities Committee oversees the management, maintenance, safety, and accessibility of organizational properties. It ensures compliance with building codes, grant-related infrastructure requirements, and occupational health regulations. The committee plans upgrades, manages vendor contracts, and monitors facilities use. By ensuring safe and compliant spaces, it supports program delivery, funder confidence, and operational continuity."
     },
     {
-      "title": "27. Sustainability",
+      "title": "27. Sustainability Committee",
       "description": "The Sustainability Committee promotes environmental responsibility, resource efficiency, and long-term operational sustainability. It ensures that organizational practices comply with grant conditions related to environmental standards. The committee evaluates energy use, waste management, and sustainable practices. By fostering responsible stewardship, it demonstrates accountability, enhances credibility, and aligns operations with funder expectations."
     },
     {
-      "title": "28. Crisis Response",
+      "title": "28. Crisis Response Committee",
       "description": "The Crisis Response Committee develops policies, plans, and procedures to manage emergencies or disruptions. It ensures continuity of operations, risk mitigation, and compliance with regulatory and grant reporting obligations during crises. The committee coordinates communication, safety, and resource allocation. By preparing for and managing crises effectively, it safeguards programs, assets, staff, and organizational reputation."
     },
     {
-      "title": "29. Special Projects",
+      "title": "29. Special Projects Committee",
       "description": "The Special Projects Committee oversees temporary, time-limited initiatives that fall outside the scope of standing committees. It ensures these projects align with organizational mission, strategic goals, and grant requirements. The committee monitors project implementation, outcomes, and reporting obligations. By providing focused oversight, it ensures accountability, compliance, and the successful completion of special initiatives."
     },
     {
@@ -171,11 +171,11 @@
       "description": "The International Committee is a formal group composed of representatives from two or more countries who work together to address issues, make decisions, or coordinate actions on matters of shared global concern. Members of an international committee may be government officials, subject experts, diplomats, or organizational delegates. They meet regularly to discuss policies, exchange information, develop recommendations, and sometimes create binding regulations or resolutions. Decision-making processes vary and may include voting, consensus, or negotiation. International committees play a vital role in promoting cooperation, resolving conflicts, and fostering mutual understanding among nations. By providing a structured platform for dialogue and collaboration, they help manage global challenges that extend beyond national borders and require collective international action."
     },
     {
-      "title": "31. Social Media",
+      "title": "31. Social Media Committee",
       "description": "The Social Media Committee is a group of individuals responsible for planning, managing, and monitoring an organization's social media presence. The committee typically develops content strategies, schedules posts, and ensures that messages align with the organization's goals and values. Members may include marketing staff, communications officers, designers, and content creators. Their duties often involve creating engaging posts, responding to comments, analyzing performance metrics, and maintaining brand consistency across platforms such as Facebook, Instagram, and X. A social media committee also manages online reputation, addresses public feedback, and ensures ethical and responsible communication. By coordinating efforts, the committee helps strengthen audience engagement and build a positive digital presence."
     },
     {
-      "title": "32. Location Selection",
+      "title": "32. Location Selection Committee",
       "description": "The Location Selection Committee is a specialized group responsible for evaluating and choosing the most suitable site for the New York Auto Museum facility. This committee typically includes stakeholders such as project managers, financial analysts, urban planners, operations leaders, and community representatives. Their goal is to ensure the chosen location aligns with strategic objectives, budget constraints, accessibility needs, and long-term growth plans. The committee begins by identifying key criteria, such as cost, infrastructure, transportation access, labor availability, safety, environmental impact, and local regulations. Members gather data, conduct site visits, analyze demographic and economic trends, and assess potential risks. They may also consult with local authorities and real estate experts. After comparing shortlisted options, the committee discusses advantages and disadvantages before making a final recommendation. Transparency, data-driven decision-making, and collaboration are essential throughout the process. Ultimately, a well-functioning location selection committee helps organizations minimize risk, optimize resources, and position their projects for long-term success."
     }
   ]

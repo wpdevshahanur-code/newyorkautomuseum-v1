@@ -154,7 +154,7 @@ export default function ThankYouPage() {
               ← Return to Homepage
             </Link>
             <Link
-              href="/bio"
+              href="/about"
               className="btn btn-secondary"
               style={{
                 display: 'inline-flex',
@@ -171,7 +171,7 @@ export default function ThankYouPage() {
                 transition: 'all 0.2s ease',
               }}
             >
-              Executive Bio & Leadership →
+              Explore The Museum →
             </Link>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
@@ -24,16 +25,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.newyorkautomuseum.com/bio',
   },
   robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    index: false,
+    follow: false,
   },
   openGraph: {
     title: 'David Senater | Executive Director & Museum Planner',
@@ -62,6 +55,8 @@ export const metadata: Metadata = {
 };
 
 export default function BioPage() {
+  notFound();
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
