@@ -240,7 +240,7 @@ export default function BoardAgreementClient() {
             <span>🏛️</span> Official Governance Onboarding Package
           </div>
           <h1 className="agreement-main-title">
-            Board &amp; Committee <span>Service Agreement</span>
+            Board &amp; Committee Service Agreement
           </h1>
           <p className="agreement-main-subtitle">
             Welcome Package, 34 Stewardship Standards, and Electronic Signature Portal for 

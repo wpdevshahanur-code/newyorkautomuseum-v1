@@ -42,10 +42,9 @@
 }
 
 .agreement-main-title span {
-  color: #E11D48;
-  background: linear-gradient(135deg, #FFFFFF 20%, #E11D48 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FFFFFF;
+  background: none;
+  -webkit-text-fill-color: #FFFFFF;
 }
 
 .agreement-main-subtitle {
