@@ -269,28 +269,28 @@ export default function BoardAgreementClient() {
               className={`agreement-tab-btn ${activeTab === 'welcome' ? 'active' : ''}`}
               onClick={() => setActiveTab('welcome')}
             >
-              <span>📋</span> Welcome &amp; Checklist
+              <span>📋</span> Checklist
             </button>
             <button
               type="button"
               className={`agreement-tab-btn ${activeTab === 'terms' ? 'active' : ''}`}
               onClick={() => setActiveTab('terms')}
             >
-              <span>⚖️</span> 34 Governance Standards
+              <span>⚖️</span> 34 Standards
             </button>
             <button
               type="button"
               className={`agreement-tab-btn ${activeTab === 'tiers' ? 'active' : ''}`}
               onClick={() => setActiveTab('tiers')}
             >
-              <span>🎖️</span> Board Tiers &amp; Roles
+              <span>🎖️</span> Board Tiers
             </button>
             <button
               type="button"
               className={`agreement-tab-btn ${activeTab === 'agreement' ? 'active' : ''}`}
               onClick={() => setActiveTab('agreement')}
             >
-              <span>📜</span> Service Agreement &amp; NDA
+              <span>📜</span> Agreement &amp; NDA
             </button>
             <button
               type="button"
@@ -298,7 +298,7 @@ export default function BoardAgreementClient() {
               onClick={() => setActiveTab('sign')}
               style={{ color: activeTab === 'sign' ? '#FFFFFF' : '#E11D48' }}
             >
-              <span>✍️</span> E-Signature Portal
+              <span>✍️</span> E-Signature
             </button>
           </div>
 
