@@ -17,14 +17,6 @@ interface CategoryGroup {
   members: Member[];
 }
 
-function getInitials(name: string): string {
-  const parts = name.replace(/^(Dr\.|Mr\.|Ms\.)\s+/i, '').trim().split(/\s+/);
-  if (parts.length >= 2) {
-    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
-  }
-  return (parts[0] ? parts[0].slice(0, 2) : 'NY').toUpperCase();
-}
-
 interface AdvisoryBoardProps {
   initialCategories?: CategoryGroup[];
 }
@@ -355,25 +347,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                               marginBottom: '14px',
                             }}
                           >
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: 0, flex: 1 }}>
-                              <div
-                                style={{
-                                  width: '46px',
-                                  height: '46px',
-                                  borderRadius: '10px',
-                                  background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
-                                  color: '#FFFFFF',
-                                  fontWeight: 800,
-                                  fontSize: '0.95rem',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  flexShrink: 0,
-                                  boxShadow: '0 2px 6px rgba(15, 23, 42, 0.15)',
-                                }}
-                              >
-                                {getInitials(member.name)}
-                              </div>
+                            <div style={{ minWidth: 0, flex: 1 }}>
                               <TextReveal
                                 as="h4"
                                 style={{
@@ -589,23 +563,6 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                         >
                           {/* Name & Title on a Wide Line */}
                           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '16px' }}>
-                            <div
-                              style={{
-                                width: '40px',
-                                height: '40px',
-                                borderRadius: '8px',
-                                background: '#0F172A',
-                                color: '#FFFFFF',
-                                fontWeight: 800,
-                                fontSize: '0.85rem',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                flexShrink: 0,
-                              }}
-                            >
-                              {getInitials(member.name)}
-                            </div>
                             <div>
                               <TextReveal
                                 as="h4"
@@ -767,26 +724,7 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                   boxSizing: 'border-box',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', minWidth: 0, flex: 1 }}>
-                  <div
-                    style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '10px',
-                      background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
-                      color: '#FFFFFF',
-                      fontWeight: 800,
-                      fontSize: '1rem',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
-                      boxShadow: '0 4px 10px rgba(15, 23, 42, 0.2)',
-                    }}
-                  >
-                    {getInitials(activeModalMember.member.name)}
-                  </div>
-                  <div style={{ minWidth: 0, flex: 1 }}>
+                <div style={{ minWidth: 0, flex: 1 }}>
                     <span
                       style={{
                         display: 'block',
@@ -815,7 +753,6 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
                     >
                       {activeModalMember.member.name}
                     </h3>
-                  </div>
                 </div>
 
                 <button
