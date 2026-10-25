@@ -27,6 +27,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/board-package',
+        destination: '/board-agreement',
+        permanent: false,
+      },
+      {
+        source: '/board-document',
+        destination: '/board-agreement',
+        permanent: false,
+      },
+      {
         source: '/socials',
         destination: '/social',
         permanent: true,
