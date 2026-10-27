@@ -14,6 +14,7 @@ export default function Navbar() {
     { label: 'The Museum', href: '/about' },
     { label: 'Board & Advisors', href: '/advisors' },
     { label: 'Committees', href: '/committees' },
+    { label: 'Governance', href: '/governance' },
     { label: 'Careers', href: '/careers' },
   ];
 

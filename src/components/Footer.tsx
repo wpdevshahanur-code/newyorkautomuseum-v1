@@ -304,6 +304,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/governance"
+                  style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}
+                >
+                  Governance &amp; Filings
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/careers"
                   style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}
                 >
