@@ -41,9 +41,9 @@ export default function Navbar() {
           justifyContent: 'space-between',
           height: '88px',
           width: '100%',
-          maxWidth: '1820px',
+          maxWidth: '1440px',
           margin: '0 auto',
-          padding: '0 clamp(20px, 2.5vw, 48px)',
+          padding: '0 28px',
         }}
       >
         {/* Brand Logo & Institutional Landmark Tagline */}
