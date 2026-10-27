@@ -96,6 +96,7 @@ export default function Navbar() {
                   transition: 'color 0.2s ease',
                   padding: '6px 0',
                   position: 'relative',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {link.label}
