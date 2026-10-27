@@ -355,8 +355,10 @@ export default function GovernanceClient() {
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ maxWidth: '960px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '12px', padding: '36px 40px' }}>
             <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(225, 29, 72, 0.15)', border: '1px solid rgba(225, 29, 72, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', flexShrink: 0 }}>
-                🛡️
+              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(225, 29, 72, 0.15)', border: '1px solid rgba(225, 29, 72, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E11D48" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
               </div>
               <div style={{ flex: 1, minWidth: '280px' }}>
                 <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '8px' }}>
@@ -367,7 +369,7 @@ export default function GovernanceClient() {
                 </p>
                 <ul style={{ color: '#CBD5E1', fontSize: '0.9rem', lineHeight: 1.7, paddingLeft: '20px' }}>
                   <li>
-                    <strong>New York State Department of State:</strong> Access the Division of Corporations portal at <a href="http://ecorp.dos.ny.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#38BDF8', textDecoration: 'underline' }}>ecorp.dos.ny.gov</a> to verify Authentication Numbers <strong>100007812489</strong> and <strong>100003026579</strong>.
+                    <strong>New York State Department of State:</strong> Access the Division of Corporations portal at <a href="http://ecorp.dos.ny.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#E11D48', textDecoration: 'underline', fontWeight: 600 }}>ecorp.dos.ny.gov</a> to verify Authentication Numbers <strong>100007812489</strong> and <strong>100003026579</strong>.
                   </li>
                   <li>
                     <strong>IRS Tax-Exempt Organization Search (TEOS):</strong> Verify our active 501(c)(3) tax-exempt status using Employer Identification Number (EIN) <strong>92-2822778</strong>.
