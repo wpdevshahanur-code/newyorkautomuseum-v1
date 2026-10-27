@@ -121,9 +121,9 @@ export default function GovernanceClient() {
   }, [selectedDoc]);
 
   return (
-    <div style={{ backgroundColor: '#080A0F', color: '#FFFFFF', minHeight: '100vh' }}>
+    <div style={{ background: 'transparent', color: '#FFFFFF', minHeight: '100vh', position: 'relative' }}>
       {/* 1. Hero Section */}
-      <section style={{ backgroundColor: 'rgba(11, 14, 20, 0.60)', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '70px 0 80px' }}>
+      <section style={{ backgroundColor: 'rgba(11, 14, 20, 0.50)', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '70px 0 80px', position: 'relative' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48', backgroundColor: 'rgba(225, 29, 72, 0.10)', padding: '6px 16px', borderRadius: '9999px', border: '1px solid rgba(225, 29, 72, 0.25)', marginBottom: '20px' }}>
@@ -141,25 +141,25 @@ export default function GovernanceClient() {
 
             {/* Quick Fiduciary Badges */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '14px', textAlign: 'left' }}>
-              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
+              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>New York State</div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>DOS ID: 6741276</div>
                 <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● Active &amp; Existing</div>
               </div>
 
-              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
+              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Federal Tax Status</div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>EIN: 92-2822778</div>
                 <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● 501(c)(3) Public Charity</div>
               </div>
 
-              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
+              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Contributions</div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>100% Tax-Deductible</div>
                 <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● IRC Section 170</div>
               </div>
 
-              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
+              <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Corporate Legal Counsel</div>
                 <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>Lippes Mathias LLP</div>
                 <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● Buffalo, NY &bull; NYC</div>
@@ -170,7 +170,7 @@ export default function GovernanceClient() {
       </section>
 
       {/* 2. Official Documents Grid */}
-      <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(255, 255, 255, 0.12)' }}>
+      <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', backgroundColor: 'transparent', position: 'relative' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 50px' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48' }}>
@@ -189,8 +189,10 @@ export default function GovernanceClient() {
               <div
                 key={doc.id}
                 style={{
-                  backgroundColor: 'rgba(18, 24, 36, 0.88)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  backgroundColor: 'rgba(18, 24, 36, 0.85)',
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
+                  border: '1px solid rgba(255, 255, 255, 0.14)',
                   borderRadius: '12px',
                   overflow: 'hidden',
                   display: 'flex',
@@ -353,7 +355,7 @@ export default function GovernanceClient() {
       {/* 3. Verification & Authenticity Notice */}
       <section style={{ padding: '60px 0', backgroundColor: 'rgba(11, 14, 20, 0.40)', borderBottom: '1px solid rgba(255, 255, 255, 0.12)' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
-          <div style={{ maxWidth: '960px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '12px', padding: '36px 40px' }}>
+          <div style={{ maxWidth: '960px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '12px', padding: '36px 40px' }}>
             <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
               <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(225, 29, 72, 0.15)', border: '1px solid rgba(225, 29, 72, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E11D48" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -387,7 +389,7 @@ export default function GovernanceClient() {
       {/* 4. Leadership & Board Onboarding CTA */}
       <section style={{ padding: '70px 0', textAlign: 'center' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '12px', padding: '45px 36px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '12px', padding: '45px 36px' }}>
             <span style={{ fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48' }}>
               Fiduciary Leadership
             </span>
