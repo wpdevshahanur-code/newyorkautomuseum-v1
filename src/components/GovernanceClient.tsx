@@ -95,7 +95,7 @@ const GOVERNANCE_DOCS: LegalDoc[] = [
       { label: 'Exempt Status', value: 'IRC Section 501(c)(3)' },
       { label: 'Public Charity Status', value: '509(a)(2) Public Charity' },
       { label: 'Federal EIN', value: '92-2822778' },
-      { label: 'Contribution Deductibility', value: '100% Tax-Deductible (IRC Sec. 170)' },
+      { label: 'Contribution Deductibility', value: 'Tax-Deductible (IRC Sec. 170)' },
       { label: 'Effective Exemption Date', value: 'February 24, 2023' },
       { label: 'IRS Letter Reference', value: 'Letter 947 (Rev. 2-2020)' },
     ],
@@ -161,7 +161,7 @@ export default function GovernanceClient() {
 
               <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Contributions</div>
-                <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>100% Tax-Deductible</div>
+                <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>Tax-Deductible</div>
                 <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● IRC Section 170</div>
               </div>
 
