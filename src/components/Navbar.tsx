@@ -41,7 +41,7 @@ export default function Navbar() {
           justifyContent: 'space-between',
           height: '88px',
           width: '100%',
-          maxWidth: '1440px',
+          maxWidth: '1520px',
           margin: '0 auto',
           padding: '0 28px',
         }}

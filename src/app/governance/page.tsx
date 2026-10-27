@@ -1,5 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import GovernanceClient from '@/components/GovernanceClient';
 
 export const metadata: Metadata = {
@@ -22,8 +24,12 @@ export const metadata: Metadata = {
 
 export default function GovernancePage() {
   return (
-    <main style={{ minHeight: '100vh', background: 'transparent' }}>
-      <GovernanceClient />
-    </main>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Navbar />
+      <main style={{ flex: 1, background: 'transparent' }}>
+        <GovernanceClient />
+      </main>
+      <Footer />
+    </div>
   );
 }

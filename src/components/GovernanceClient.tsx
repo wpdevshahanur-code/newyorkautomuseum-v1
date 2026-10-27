@@ -124,7 +124,7 @@ export default function GovernanceClient() {
     <div style={{ backgroundColor: '#080A0F', color: '#FFFFFF', minHeight: '100vh' }}>
       {/* 1. Hero Section */}
       <section style={{ backgroundColor: 'rgba(11, 14, 20, 0.60)', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '70px 0 80px' }}>
-        <div className="container">
+        <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48', backgroundColor: 'rgba(225, 29, 72, 0.10)', padding: '6px 16px', borderRadius: '9999px', border: '1px solid rgba(225, 29, 72, 0.25)', marginBottom: '20px' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#E11D48' }}></span>
@@ -144,25 +144,25 @@ export default function GovernanceClient() {
               <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>New York State</div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>DOS ID: 6741276</div>
-                <div style={{ fontSize: '0.75rem', color: '#10B981', marginTop: '2px', fontWeight: 600 }}>● Active &amp; Existing</div>
+                <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● Active &amp; Existing</div>
               </div>
 
               <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Federal Tax Status</div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>EIN: 92-2822778</div>
-                <div style={{ fontSize: '0.75rem', color: '#3B82F6', marginTop: '2px', fontWeight: 600 }}>● 501(c)(3) Public Charity</div>
+                <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● 501(c)(3) Public Charity</div>
               </div>
 
               <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Contributions</div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>100% Tax-Deductible</div>
-                <div style={{ fontSize: '0.75rem', color: '#F59E0B', marginTop: '2px', fontWeight: 600 }}>● IRC Section 170</div>
+                <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● IRC Section 170</div>
               </div>
 
               <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Corporate Legal Counsel</div>
                 <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>Lippes Mathias LLP</div>
-                <div style={{ fontSize: '0.75rem', color: '#94A3B8', marginTop: '2px' }}>Buffalo, NY &bull; NYC</div>
+                <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● Buffalo, NY &bull; NYC</div>
               </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function GovernanceClient() {
 
       {/* 2. Official Documents Grid */}
       <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(255, 255, 255, 0.12)' }}>
-        <div className="container">
+        <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 50px' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48' }}>
               Accreditation &bull; Public Record
@@ -213,9 +213,9 @@ export default function GovernanceClient() {
                     style={{
                       fontSize: '0.75rem',
                       fontWeight: 700,
-                      backgroundColor: doc.id === 'irs-501c3' ? 'rgba(59, 130, 246, 0.15)' : 'rgba(16, 185, 129, 0.15)',
-                      color: doc.id === 'irs-501c3' ? '#60A5FA' : '#34D399',
-                      border: `1px solid ${doc.id === 'irs-501c3' ? 'rgba(59, 130, 246, 0.3)' : 'rgba(16, 185, 129, 0.3)'}`,
+                      backgroundColor: 'rgba(225, 29, 72, 0.12)',
+                      color: '#FF4D6D',
+                      border: '1px solid rgba(225, 29, 72, 0.3)',
                       padding: '5px 12px',
                       borderRadius: '9999px',
                       whiteSpace: 'nowrap',
@@ -352,7 +352,7 @@ export default function GovernanceClient() {
 
       {/* 3. Verification & Authenticity Notice */}
       <section style={{ padding: '60px 0', backgroundColor: 'rgba(11, 14, 20, 0.40)', borderBottom: '1px solid rgba(255, 255, 255, 0.12)' }}>
-        <div className="container">
+        <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ maxWidth: '960px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '12px', padding: '36px 40px' }}>
             <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
               <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(225, 29, 72, 0.15)', border: '1px solid rgba(225, 29, 72, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', flexShrink: 0 }}>
@@ -384,7 +384,7 @@ export default function GovernanceClient() {
 
       {/* 4. Leadership & Board Onboarding CTA */}
       <section style={{ padding: '70px 0', textAlign: 'center' }}>
-        <div className="container">
+        <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.88)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '12px', padding: '45px 36px' }}>
             <span style={{ fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48' }}>
               Fiduciary Leadership
