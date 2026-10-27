@@ -35,12 +35,15 @@ export default function Navbar() {
       }}
     >
       <div
-        className="container"
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           height: '88px',
+          width: '100%',
+          maxWidth: '1820px',
+          margin: '0 auto',
+          padding: '0 clamp(20px, 2.5vw, 48px)',
         }}
       >
         {/* Brand Logo & Institutional Landmark Tagline */}
@@ -75,7 +78,7 @@ export default function Navbar() {
           style={{
             display: 'none',
             alignItems: 'center',
-            gap: '24px',
+            gap: 'clamp(14px, 1.5vw, 24px)',
           }}
           className="desktop-nav"
         >
