@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -103,6 +104,11 @@ const GOVERNANCE_DOCS: LegalDoc[] = [
 
 export default function GovernanceClient() {
   const [selectedDoc, setSelectedDoc] = useState<LegalDoc | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -437,20 +443,22 @@ export default function GovernanceClient() {
         </div>
       </section>
 
-      {/* 5. Document Lightbox Modal */}
-      {selectedDoc && (
+      {/* 5. Document Lightbox Modal with React Portal (above header) */}
+      {mounted && selectedDoc && createPortal(
         <div
           onClick={() => setSelectedDoc(null)}
           style={{
             position: 'fixed',
             inset: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.88)',
-            backdropFilter: 'blur(8px)',
-            zIndex: 9999,
+            backgroundColor: 'rgba(0, 0, 0, 0.92)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            zIndex: 9999999,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '20px',
+            padding: '24px',
+            boxSizing: 'border-box',
           }}
         >
           <div
@@ -458,14 +466,16 @@ export default function GovernanceClient() {
             style={{
               backgroundColor: '#0F172A',
               border: '1px solid rgba(255, 255, 255, 0.20)',
-              borderRadius: '12px',
-              maxWidth: '900px',
+              borderRadius: '14px',
+              maxWidth: '920px',
               width: '100%',
-              maxHeight: '92vh',
+              maxHeight: '90vh',
               display: 'flex',
               flexDirection: 'column',
               overflow: 'hidden',
-              boxShadow: '0 25px 60px rgba(0, 0, 0, 0.8)',
+              boxShadow: '0 30px 80px rgba(0, 0, 0, 0.9)',
+              position: 'relative',
+              zIndex: 10,
             }}
           >
             {/* Modal Header */}
@@ -540,7 +550,8 @@ export default function GovernanceClient() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
