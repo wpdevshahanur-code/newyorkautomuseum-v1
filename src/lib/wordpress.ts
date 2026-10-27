@@ -113,8 +113,11 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
       });
     }
 
-    advs.forEach((a: any) => {
-      const name = decodeHtmlEntities(a.title?.rendered || '').trim();
+        advs.forEach((a: any) => {
+      let name = decodeHtmlEntities(a.title?.rendered || '').trim();
+      // Remove any committee/role prefix mistakenly entered into the WordPress title (e.g. "CTO Committee David Selby" -> "David Selby")
+      name = name.replace(/^(CTO Committee|Board Member|Committee Member|Advisory Board)\s+/i, '').trim();
+
       const isWhitelisted = ACTIVE_ADVISOR_NAMES.some(
         (active) => name.toLowerCase().includes(active.toLowerCase()) || active.toLowerCase().includes(name.toLowerCase())
       );
@@ -132,6 +135,12 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
         groupsMap.set(groupName, []);
       }
 
+      // Prevent duplicate advisor in the group or across groups
+      const isDuplicate = Array.from(groupsMap.values()).some((members) =>
+        members.some((m) => m.name.toLowerCase().trim() === name.toLowerCase().trim())
+      );
+      if (isDuplicate) return;
+
       groupsMap.get(groupName)!.push({
         name,
         position: a.acf?.position || '',
@@ -143,8 +152,12 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
     // Merge any advisors from local data (e.g. Al Emran) who are not yet present in WordPress
     (fallbackAdvisors as AdvisorCategoryGroup[]).forEach((fallbackCat) => {
       fallbackCat.members.forEach((fallbackMember) => {
+        const cleanFallbackName = fallbackMember.name.replace(/^(CTO Committee|Board Member|Committee Member|Advisory Board)\s+/i, '').trim();
         const alreadyExists = Array.from(groupsMap.values()).some((members) =>
-          members.some((m) => m.name.toLowerCase().trim() === fallbackMember.name.toLowerCase().trim())
+          members.some((m) => {
+            const cleanMName = m.name.replace(/^(CTO Committee|Board Member|Committee Member|Advisory Board)\s+/i, '').trim();
+            return cleanMName.toLowerCase() === cleanFallbackName.toLowerCase();
+          })
         );
         if (!alreadyExists) {
           // Find matching category (case-insensitive) or use fallback category
@@ -155,7 +168,10 @@ export async function getAdvisors(): Promise<AdvisorCategoryGroup[]> {
             matchedKey = fallbackCat.category;
             groupsMap.set(matchedKey, []);
           }
-          groupsMap.get(matchedKey)!.push(fallbackMember);
+          groupsMap.get(matchedKey)!.push({
+            ...fallbackMember,
+            name: cleanFallbackName,
+          });
         }
       });
     });

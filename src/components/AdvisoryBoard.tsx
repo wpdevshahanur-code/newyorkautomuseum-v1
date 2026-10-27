@@ -68,7 +68,22 @@ export default function AdvisoryBoard({ initialCategories }: AdvisoryBoardProps 
   const rawCategories = initialCategories && initialCategories.length > 0
     ? initialCategories
     : (advisorsData as CategoryGroup[]);
-  const categories = sortAdvisorCategories(rawCategories);
+  const sortedCategories = sortAdvisorCategories(rawCategories);
+  const seenMemberNames = new Set<string>();
+  const categories = sortedCategories.map((cat) => {
+    const uniqueMembers = cat.members
+      .map((m) => ({
+        ...m,
+        name: m.name.replace(/^(CTO Committee|Board Member|Committee Member|Advisory Board)\s+/i, '').trim(),
+      }))
+      .filter((m) => {
+        const key = m.name.toLowerCase();
+        if (seenMemberNames.has(key)) return false;
+        seenMemberNames.add(key);
+        return true;
+      });
+    return { ...cat, members: uniqueMembers };
+  }).filter((cat) => cat.members.length > 0);
 
   const toggleBio = (uniqueKey: string) => {
     setExpandedBioKey((prev) => (prev === uniqueKey ? null : uniqueKey));
