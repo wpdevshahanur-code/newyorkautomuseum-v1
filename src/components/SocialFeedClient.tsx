@@ -36,7 +36,7 @@ export default function SocialFeedClient() {
       document.head.appendChild(linkPub);
     }
 
-    // 3. Initialize Curator with 36 posts per page for instant preloading
+    // 3. Initialize Curator with 100 posts per page to load ALL channels (IG, FB, YouTube) upfront
     const initCurator = () => {
       const win = window as any;
       if (win.Curator && typeof win.Curator.loadWidget === 'function') {
@@ -59,9 +59,9 @@ export default function SocialFeedClient() {
             template: 'widget-waterfall',
             colWidth: 260,
             colGutter: 0,
-            showLoadMore: true,
+            showLoadMore: false,
             continuousScroll: false,
-            postsPerPage: 36, // Preload 36 posts in one shot for maximum speed
+            postsPerPage: 100, // Load all 77 posts (Instagram + Facebook + YouTube) in one go
             animate: false,
             progressiveLoad: false,
             lazyLoad: false,
@@ -86,9 +86,11 @@ export default function SocialFeedClient() {
           feed: {
             id: '58afbcbe-757e-4204-818f-662d662b8cd3',
             apiEndpoint: 'https://api.curator.io',
-            postsPerPage: 36,
-            params: {},
-            limit: 75,
+            postsPerPage: 100,
+            params: {
+              limit: 100,
+            },
+            limit: 100,
           },
           popup: {
             template: 'popup',
@@ -140,7 +142,8 @@ export default function SocialFeedClient() {
           };
           const obs = new MutationObserver(checkReady);
           obs.observe(feedContainer, { childList: true, subtree: true });
-          setTimeout(checkReady, 800);
+          setTimeout(checkReady, 600);
+          setTimeout(checkReady, 1200);
           setTimeout(() => setIsLoading(false), 2500); // Safety timeout
         }
       }
@@ -164,9 +167,7 @@ export default function SocialFeedClient() {
     }
   }, []);
 
-  const handleTabChange = (tab: PlatformTab) => {
-    setActiveTab(tab);
-
+  const applyFilter = (tab: PlatformTab) => {
     const container = document.getElementById('curator-feed-default-feed-layout');
     if (!container) return;
 
@@ -174,9 +175,9 @@ export default function SocialFeedClient() {
     posts.forEach((p) => {
       const post = p as HTMLElement;
       const html = post.innerHTML.toLowerCase();
-      const isIg = html.includes('instagram.com') || html.includes('instagram') || html.includes('crt-icon-instagram');
-      const isYt = html.includes('youtube.com') || html.includes('youtu.be') || html.includes('youtube') || html.includes('crt-icon-youtube');
-      const isFb = html.includes('facebook.com') || html.includes('facebook') || html.includes('crt-icon-facebook');
+      const isIg = html.includes('instagram.com') || html.includes('instagram') || html.includes('crt-icon-instagram') || html.includes('cdninstagram');
+      const isYt = html.includes('youtube.com') || html.includes('youtu.be') || html.includes('ytimg.com') || html.includes('youtube') || html.includes('crt-icon-youtube') || html.includes('nycmuseum');
+      const isFb = html.includes('facebook.com') || html.includes('facebook') || html.includes('crt-icon-facebook') || html.includes('fbcdn');
 
       if (tab === 'all') {
         post.style.display = '';
@@ -196,6 +197,21 @@ export default function SocialFeedClient() {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
     }, 200);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 500);
+  };
+
+  // Re-run filter when tab changes or when posts finish loading
+  useEffect(() => {
+    if (!isLoading) {
+      applyFilter(activeTab);
+    }
+  }, [activeTab, isLoading]);
+
+  const handleTabChange = (tab: PlatformTab) => {
+    setActiveTab(tab);
+    applyFilter(tab);
   };
 
   return (
@@ -522,14 +538,15 @@ export default function SocialFeedClient() {
         .crt-post-username {
           color: #94A3B8 !important;
         }
-        .crt-load-more button,
-        .crt-btn {
-          background-color: #E11D48 !important;
-          color: #FFFFFF !important;
-          border: none !important;
-          font-weight: 700 !important;
-          border-radius: 6px !important;
-          padding: 10px 24px !important;
+
+        /* 3. Hide redundant load more button since all posts are preloaded */
+        .crt-load-more,
+        .crt-load-more-c {
+          display: none !important;
+          visibility: hidden !important;
+          height: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
         }
       `}</style>
     </div>
