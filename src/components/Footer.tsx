@@ -345,43 +345,18 @@ export default function Footer() {
               }}
               text="General Inquiries"
             />
-            <TextReveal
-              as="p"
-              style={{ color: '#94A3B8', lineHeight: 1.6, marginBottom: '14px' }}
-              text="For general inquiries, contact Museum's Executive Director:"
-            />
-            <div style={{ marginBottom: '14px' }}>
-              <div style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '1rem' }}>David Senater</div>
-              <div style={{ fontSize: '0.82rem', color: '#94A3B8' }}>Executive Director</div>
-            </div>
-            <p style={{ marginBottom: '10px' }}>
+            <p style={{ color: '#94A3B8', lineHeight: 1.65, fontSize: '0.92rem' }}>
+              For more information, please reach out to us by email at{' '}
               <a
-                href="mailto:david.senater@newyorkautomuseum.com"
+                href="mailto:info@newyorkautomuseum.com"
                 style={{
                   color: '#E11D48',
                   textDecoration: 'none',
                   fontWeight: 700,
-                  fontSize: '0.88rem',
                   whiteSpace: 'nowrap',
                 }}
               >
-                david.senater@newyorkautomuseum.com
-              </a>
-            </p>
-            <p style={{ marginTop: '4px' }}>
-              <a
-                href="tel:18778969269"
-                style={{
-                  color: '#FFFFFF',
-                  textDecoration: 'none',
-                  fontWeight: 800,
-                  fontSize: '0.95rem',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                }}
-              >
-                Toll Free: 1-877-896-9269
+                info@newyorkautomuseum.com
               </a>
             </p>
           </div>
