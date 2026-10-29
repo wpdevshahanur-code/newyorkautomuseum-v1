@@ -208,29 +208,13 @@ export default function GovernanceClient() {
                 }}
               >
                 {/* Header Strip */}
-                <div style={{ padding: '24px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.10)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
-                  <div>
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#94A3B8' }}>
-                      {doc.jurisdiction}
-                    </span>
-                    <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#FFFFFF', marginTop: '6px' }}>
-                      {doc.title}
-                    </h3>
-                  </div>
-                  <span
-                    style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 700,
-                      backgroundColor: 'rgba(225, 29, 72, 0.12)',
-                      color: '#FF4D6D',
-                      border: '1px solid rgba(225, 29, 72, 0.3)',
-                      padding: '5px 12px',
-                      borderRadius: '9999px',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {doc.badgeLabel}
+                <div style={{ padding: '24px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.10)' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#94A3B8' }}>
+                    {doc.jurisdiction}
                   </span>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#FFFFFF', marginTop: '6px' }}>
+                    {doc.title}
+                  </h3>
                 </div>
 
                 {/* Body Content */}
