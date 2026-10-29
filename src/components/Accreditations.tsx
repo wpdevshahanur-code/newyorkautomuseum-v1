@@ -20,31 +20,31 @@ const partners: PartnerItem[] = [
   },
   {
     name: 'Google Ad Grants',
-    category: 'Grant Partner',
+    category: 'Grant Recipient',
     logo: '/images/google-ad-grants.png',
     url: 'https://www.google.com/nonprofits/offerings/google-ad-grants/',
   },
   {
     name: 'Salesforce Nonprofit Cloud',
-    category: 'Grant Partner',
+    category: 'Grant Recipient',
     logo: '/images/salesforce-nonprofit.png',
     url: 'https://www.salesforce.com/ca/nonprofit/',
   },
   {
     name: 'National Association of Automobile Museums',
-    category: 'Charter Member',
+    category: 'Member',
     logo: '/images/cropped_naam.png',
     url: 'https://naammuseums.org/',
   },
   {
     name: 'Nonprofit New York',
-    category: 'Institutional Partner',
+    category: 'Member',
     logo: '/images/cropped_nonprofit.png',
     url: 'https://www.nonprofitnewyork.org/',
   },
   {
     name: 'Museum Association of New York',
-    category: 'State Alliance',
+    category: 'Member',
     logo: '/images/cropped_many.png',
     url: 'https://nysmuseums.org/',
   },
@@ -224,32 +224,16 @@ export default function Accreditations() {
           <TextReveal
             as="h2"
             className="accreditations-title"
-            text="Official Partners"
+            text="Memberships & Affiliations"
           />
 
           <TextReveal
             as="p"
             className="accreditations-subtitle"
-            text="Proudly accredited and affiliated with premier national museum alliances, historic automotive associations, and nonprofit foundations."
+            text="Proudly affiliated as an active member with leading museum alliances, historical automotive associations, and nonprofit organizations."
           />
 
-          <div className="accreditations-controls">
-            <span className="accreditations-count">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#10B981"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              {partners.length} Verified Institutional Partners
-            </span>
-          </div>
+          
         </div>
       </div>
 
