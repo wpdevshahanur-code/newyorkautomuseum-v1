@@ -50,7 +50,7 @@ const partners: PartnerItem[] = [
   },
   {
     name: 'American Alliance of Museums',
-    category: 'National Accreditation',
+    category: 'Member',
     logo: '/images/cropped_aam.png',
     url: 'https://www.aam-us.org/',
   },

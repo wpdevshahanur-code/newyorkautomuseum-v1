@@ -57,7 +57,7 @@ const GOVERNANCE_DOCS: LegalDoc[] = [
       { label: 'Transaction Number', value: '20230224000179-1731058' },
       { label: 'Duration / Dissolution', value: 'PERPETUAL' },
       { label: 'County Jurisdiction', value: 'Erie County, NY' },
-      { label: 'Legal Filer', value: 'Lippes Mathias LLP, Buffalo, NY' },
+      { label: 'Legal Filer', value: 'Lippes Mathias LLP, New York City Office' },
     ],
   },
   {
@@ -168,7 +168,7 @@ export default function GovernanceClient() {
               <div style={{ backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '8px', padding: '14px 18px' }}>
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Corporate Legal Counsel</div>
                 <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>Lippes Mathias LLP</div>
-                <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● Buffalo, NY &bull; NYC</div>
+                <div style={{ fontSize: '0.75rem', color: '#E11D48', marginTop: '2px', fontWeight: 600 }}>● New York City Practice</div>
               </div>
             </div>
           </div>
@@ -392,56 +392,7 @@ export default function GovernanceClient() {
         </div>
       </section>
 
-      {/* 4. Leadership & Board Onboarding CTA */}
-      <section style={{ padding: '70px 0', textAlign: 'center' }}>
-        <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: 'rgba(18, 24, 36, 0.85)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.14)', borderRadius: '12px', padding: '45px 36px' }}>
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48' }}>
-              Fiduciary Leadership
-            </span>
-            <h2 style={{ fontSize: '1.9rem', fontWeight: 800, color: '#FFFFFF', marginTop: '10px', marginBottom: '12px' }}>
-              Board of Directors &amp; Advisory Governance
-            </h2>
-            <p style={{ color: '#94A3B8', fontSize: '0.98rem', lineHeight: 1.6, marginBottom: '26px' }}>
-              Review the 34 Standards of Board Governance, Officer Fiduciary Guidelines, Committee charters, and execute digital leadership agreements online.
-            </p>
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link
-                href="/board-agreement"
-                style={{
-                  padding: '14px 28px',
-                  fontSize: '0.95rem',
-                  fontWeight: 600,
-                  backgroundColor: '#E11D48',
-                  color: '#FFFFFF',
-                  borderRadius: '6px',
-                  textDecoration: 'none',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                }}
-              >
-                Enter Board Agreement Portal &rarr;
-              </Link>
-              <Link
-                href="/about"
-                style={{
-                  padding: '14px 28px',
-                  fontSize: '0.95rem',
-                  fontWeight: 600,
-                  backgroundColor: 'rgba(25, 34, 51, 0.95)',
-                  color: '#FFFFFF',
-                  border: '1px solid rgba(255, 255, 255, 0.20)',
-                  borderRadius: '6px',
-                  textDecoration: 'none',
-                }}
-              >
-                About The Museum
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* 5. Document Lightbox Modal with React Portal (above header) */}
       {mounted && selectedDoc && createPortal(
