@@ -57,7 +57,7 @@ export default function SocialFeedClient() {
           },
           widget: {
             template: 'widget-waterfall',
-            colWidth: 260,
+            colWidth: 350, // 350px guarantees exactly 4 columns across all desktop monitors
             colGutter: 0,
             showLoadMore: false,
             continuousScroll: false,
@@ -65,8 +65,8 @@ export default function SocialFeedClient() {
             animate: false,
             progressiveLoad: false,
             lazyLoad: false,
-            verticalSpacing: 20,
-            horizontalSpacing: 20,
+            verticalSpacing: 24,
+            horizontalSpacing: 24,
             autoLoadNew: false,
             lazyLoadType: 'none',
             gridMobile: true,
@@ -218,8 +218,8 @@ export default function SocialFeedClient() {
     <div style={{ position: 'relative', width: '100%', minHeight: '100vh', backgroundColor: 'transparent' }}>
       {/* 1. Hero Header Section */}
       <section style={{ padding: '80px 0 40px', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', position: 'relative' }}>
-        <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: '1720px', margin: '0 auto', padding: '0 32px', width: '100%' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
             {/* Unified Single-Color Badge */}
             <div
               style={{
@@ -343,7 +343,7 @@ export default function SocialFeedClient() {
 
       {/* 2. Single Clean Tab Bar & Live Curator.io Feed Section */}
       <section style={{ padding: '50px 0 80px', position: 'relative' }}>
-        <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
+        <div style={{ maxWidth: '1720px', margin: '0 auto', padding: '0 32px', width: '100%' }}>
           {/* Main Clean Tab Bar */}
           <div
             style={{
@@ -439,11 +439,13 @@ export default function SocialFeedClient() {
               backdropFilter: 'blur(16px)',
               WebkitBackdropFilter: 'blur(16px)',
               border: '1px solid rgba(255, 255, 255, 0.14)',
-              borderRadius: '14px',
-              padding: '36px 28px',
+              borderRadius: '16px',
+              padding: '36px 32px',
               boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
               minHeight: '650px',
               position: 'relative',
+              width: '100%',
+              boxSizing: 'border-box',
             }}
           >
             {/* Loading Indicator while Curator fetches live posts */}
@@ -497,7 +499,7 @@ export default function SocialFeedClient() {
         </div>
       </section>
 
-      {/* Global Dark Theme & Redundant Filter Suppressor */}
+      {/* Global Dark Theme, 4-Column Grid & Uniform Card Alignment */}
       <style jsx global>{`
         @keyframes spin {
           to {
@@ -522,24 +524,7 @@ export default function SocialFeedClient() {
           padding: 0 !important;
         }
 
-        /* 2. Dark Theme Styling for Curator Widget */
-        .crt-feed-window,
-        .crt-post,
-        .crt-grid-post {
-          background-color: rgba(15, 23, 42, 0.90) !important;
-          border: 1px solid rgba(255, 255, 255, 0.12) !important;
-          border-radius: 8px !important;
-          color: #FFFFFF !important;
-        }
-        .crt-post-c {
-          color: #E2E8F0 !important;
-        }
-        .crt-post-date,
-        .crt-post-username {
-          color: #94A3B8 !important;
-        }
-
-        /* 3. Hide redundant load more button since all posts are preloaded */
+        /* 2. Hide redundant load more button since all posts are preloaded */
         .crt-load-more,
         .crt-load-more-c {
           display: none !important;
@@ -547,6 +532,140 @@ export default function SocialFeedClient() {
           height: 0 !important;
           margin: 0 !important;
           padding: 0 !important;
+        }
+
+        /* 3. GUARANTEE EXACT 4 COLUMNS ON DESKTOP */
+        @media (min-width: 1024px) {
+          .crt-feed > [class*="crt-col-"] {
+            width: 25% !important;
+            float: left !important;
+            box-sizing: border-box !important;
+          }
+          .crt-feed > .crt-col-4,
+          .crt-feed > .crt-col-5,
+          .crt-feed > .crt-col-6 {
+            display: none !important;
+          }
+        }
+
+        /* 4. UNIFORM CARD HEIGHT, WIDTH & MOTORSPORT DARK STYLING */
+        .crt-post {
+          box-sizing: border-box !important;
+          margin-bottom: 24px !important;
+        }
+
+        .crt-feed-window,
+        .crt-post,
+        .crt-grid-post {
+          color: #FFFFFF !important;
+        }
+
+        .crt-post .crt-post-c {
+          display: flex !important;
+          flex-direction: column !important;
+          height: 520px !important;
+          max-height: 520px !important;
+          min-height: 520px !important;
+          box-sizing: border-box !important;
+          overflow: hidden !important;
+          justify-content: space-between !important;
+          background-color: rgba(15, 23, 42, 0.90) !important;
+          border: 1px solid rgba(255, 255, 255, 0.12) !important;
+          border-radius: 10px !important;
+          transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+        }
+
+        .crt-post .crt-post-c:hover {
+          border-color: rgba(225, 29, 72, 0.5) !important;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
+          transform: translateY(-2px) !important;
+        }
+
+        /* Fixed Media Thumbnail Height with Cover Crop (Identical for Photos & Reels) */
+        .crt-post .crt-post-content-image {
+          height: 270px !important;
+          min-height: 270px !important;
+          max-height: 270px !important;
+          width: 100% !important;
+          overflow: hidden !important;
+          background-color: #080A0F !important;
+          position: relative !important;
+          flex-shrink: 0 !important;
+        }
+
+        .crt-post .crt-post-content-image img,
+        .crt-post .crt-post-content-image .crt-image-responsive {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+          object-position: center !important;
+          display: block !important;
+        }
+
+        /* Uniform Header (Social icon + Author + Date) */
+        .crt-post .crt-post-header {
+          padding: 12px 16px 8px !important;
+          margin: 0 !important;
+          flex-shrink: 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 10px !important;
+          text-align: left !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+        }
+
+        .crt-post .crt-post-header .crt-social-icon {
+          margin-bottom: 0 !important;
+          display: inline-flex !important;
+          align-items: center !important;
+        }
+
+        .crt-post-fullname,
+        .crt-post-username {
+          color: #94A3B8 !important;
+          font-size: 0.82rem !important;
+          font-weight: 600 !important;
+        }
+
+        /* Text Caption Box with Uniform Height & 3-Line Clamp */
+        .crt-post .crt-post-text {
+          padding: 10px 16px !important;
+          font-size: 0.86rem !important;
+          line-height: 1.45 !important;
+          height: 68px !important;
+          max-height: 68px !important;
+          overflow: hidden !important;
+          display: -webkit-box !important;
+          -webkit-line-clamp: 3 !important;
+          -webkit-box-orient: vertical !important;
+          text-overflow: ellipsis !important;
+          word-break: break-word !important;
+          flex-shrink: 0 !important;
+          color: #CBD5E1 !important;
+        }
+
+        /* Uniform Footer Stuck at Bottom */
+        .crt-post .crt-post-footer {
+          margin-top: auto !important;
+          padding: 10px 16px 14px !important;
+          border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          flex-shrink: 0 !important;
+        }
+
+        .crt-post-date {
+          color: #64748B !important;
+          font-size: 0.78rem !important;
+          font-weight: 500 !important;
+        }
+
+        /* Fallback for text-only posts */
+        .crt-post.crt-post-no-image .crt-post-text {
+          height: 340px !important;
+          max-height: 340px !important;
+          -webkit-line-clamp: 12 !important;
         }
       `}</style>
     </div>
