@@ -20,13 +20,13 @@ const partners: PartnerItem[] = [
   },
   {
     name: 'Google Ad Grants',
-    category: 'Grant Recipient',
+    category: 'Grant Partner',
     logo: '/images/google-ad-grants.png',
     url: 'https://www.google.com/nonprofits/offerings/google-ad-grants/',
   },
   {
     name: 'Salesforce Nonprofit Cloud',
-    category: 'Grant Recipient',
+    category: 'Grant Partner',
     logo: '/images/salesforce-nonprofit.png',
     url: 'https://www.salesforce.com/ca/nonprofit/',
   },
