@@ -7,9 +7,21 @@ type PlatformTab = 'all' | 'instagram' | 'youtube' | 'facebook';
 
 export default function SocialFeedClient() {
   const [activeTab, setActiveTab] = useState<PlatformTab>('all');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // 1. Load Curator Embed CSS files
+    // 1. Add Preconnect for speed optimization
+    const preconnects = ['https://cdn.curator.io', 'https://api.curator.io'];
+    preconnects.forEach((url) => {
+      if (!document.querySelector(`link[href="${url}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = url;
+        document.head.appendChild(link);
+      }
+    });
+
+    // 2. Load Curator Embed CSS files
     const cssId = 'curator-css-core';
     if (!document.getElementById(cssId)) {
       const linkCore = document.createElement('link');
@@ -24,7 +36,7 @@ export default function SocialFeedClient() {
       document.head.appendChild(linkPub);
     }
 
-    // 2. Initialize Curator with native filters & dark motorsport styling
+    // 3. Initialize Curator with 36 posts per page for instant preloading
     const initCurator = () => {
       const win = window as any;
       if (win.Curator && typeof win.Curator.loadWidget === 'function') {
@@ -49,7 +61,7 @@ export default function SocialFeedClient() {
             colGutter: 0,
             showLoadMore: true,
             continuousScroll: false,
-            postsPerPage: 24,
+            postsPerPage: 36, // Preload 36 posts in one shot for maximum speed
             animate: false,
             progressiveLoad: false,
             lazyLoad: false,
@@ -74,9 +86,9 @@ export default function SocialFeedClient() {
           feed: {
             id: '58afbcbe-757e-4204-818f-662d662b8cd3',
             apiEndpoint: 'https://api.curator.io',
-            postsPerPage: 24,
+            postsPerPage: 36,
             params: {},
-            limit: 50,
+            limit: 75,
           },
           popup: {
             template: 'popup',
@@ -86,13 +98,10 @@ export default function SocialFeedClient() {
           },
           filter: {
             template: 'filter',
-            showNetworks: true,
-            showSources: true,
-            showAll: true,
+            showNetworks: false, // Turn OFF Curator's duplicate inner network tabs
+            showSources: false,  // Turn OFF Curator's duplicate inner source tabs
+            showAll: false,
             default: 'all',
-            limitPosts: false,
-            limitPostNumber: 0,
-            period: '',
           },
           theme: 'sydney',
         };
@@ -120,10 +129,24 @@ export default function SocialFeedClient() {
         };
 
         win.Curator.loadWidget(config, colours, {});
+
+        // Observer to hide skeleton when posts are rendered
+        const feedContainer = document.getElementById('curator-feed-default-feed-layout');
+        if (feedContainer) {
+          const checkReady = () => {
+            if (feedContainer.querySelectorAll('.crt-post').length > 0) {
+              setIsLoading(false);
+            }
+          };
+          const obs = new MutationObserver(checkReady);
+          obs.observe(feedContainer, { childList: true, subtree: true });
+          setTimeout(checkReady, 800);
+          setTimeout(() => setIsLoading(false), 2500); // Safety timeout
+        }
       }
     };
 
-    // 3. Load Curator Embed Script
+    // 4. Load Curator Embed Script
     const scriptId = 'curator-core-js';
     let script = document.getElementById(scriptId) as HTMLScriptElement | null;
     if (!script) {
@@ -144,35 +167,35 @@ export default function SocialFeedClient() {
   const handleTabChange = (tab: PlatformTab) => {
     setActiveTab(tab);
 
-    // Trigger Curator's native filter button click
-    const filterContainer = document.querySelector('.crt-filter');
-    if (filterContainer) {
+    const container = document.getElementById('curator-feed-default-feed-layout');
+    if (!container) return;
+
+    const posts = container.querySelectorAll('.crt-post');
+    posts.forEach((p) => {
+      const post = p as HTMLElement;
+      const html = post.innerHTML.toLowerCase();
+      const isIg = html.includes('instagram.com') || html.includes('instagram') || html.includes('crt-icon-instagram');
+      const isYt = html.includes('youtube.com') || html.includes('youtu.be') || html.includes('youtube') || html.includes('crt-icon-youtube');
+      const isFb = html.includes('facebook.com') || html.includes('facebook') || html.includes('crt-icon-facebook');
+
       if (tab === 'all') {
-        const allBtn = filterContainer.querySelector('li:first-child a') as HTMLElement;
-        if (allBtn) allBtn.click();
-      } else {
-        const targetBtn = (
-          filterContainer.querySelector(`[class*="${tab}"] a`) ||
-          filterContainer.querySelector(`a[data-network="${tab}"]`)
-        ) as HTMLElement | null;
-
-        if (targetBtn) {
-          targetBtn.click();
-        } else {
-          // Fallback search by text content
-          const links = filterContainer.querySelectorAll('a');
-          links.forEach((a) => {
-            if (a.textContent?.toLowerCase().includes(tab)) {
-              (a as HTMLElement).click();
-            }
-          });
-        }
+        post.style.display = '';
+      } else if (tab === 'instagram') {
+        post.style.display = isIg ? '' : 'none';
+      } else if (tab === 'youtube') {
+        post.style.display = isYt ? '' : 'none';
+      } else if (tab === 'facebook') {
+        post.style.display = isFb ? '' : 'none';
       }
-    }
+    });
 
+    // Re-layout masonry smoothly
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
-    }, 100);
+    }, 40);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 200);
   };
 
   return (
@@ -302,10 +325,10 @@ export default function SocialFeedClient() {
         </div>
       </section>
 
-      {/* 2. Interactive Channel Tabs & Live Curator.io Feed Section */}
+      {/* 2. Single Clean Tab Bar & Live Curator.io Feed Section */}
       <section style={{ padding: '50px 0 80px', position: 'relative' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
-          {/* Top Platform Switcher Pills */}
+          {/* Main Clean Tab Bar */}
           <div
             style={{
               display: 'flex',
@@ -404,10 +427,46 @@ export default function SocialFeedClient() {
               padding: '36px 28px',
               boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
               minHeight: '650px',
+              position: 'relative',
             }}
           >
-            {/* Curator.io Native Feed Container */}
-            <div id="curator-feed-default-feed-layout" style={{ width: '100%', minHeight: '550px' }}>
+            {/* Loading Indicator while Curator fetches live posts */}
+            {isLoading && (
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '60px 0',
+                  gap: '14px',
+                }}
+              >
+                <div
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    border: '3px solid rgba(225, 29, 72, 0.2)',
+                    borderTopColor: '#E11D48',
+                    animation: 'spin 0.8s linear infinite',
+                  }}
+                />
+                <span style={{ color: '#94A3B8', fontSize: '0.9rem', fontWeight: 600 }}>
+                  Connecting to live feeds...
+                </span>
+              </div>
+            )}
+
+            {/* Curator.io Feed Container */}
+            <div
+              id="curator-feed-default-feed-layout"
+              style={{
+                width: '100%',
+                minHeight: '550px',
+                display: isLoading ? 'none' : 'block',
+              }}
+            >
               <a
                 href="https://curator.io"
                 target="_blank"
@@ -422,17 +481,36 @@ export default function SocialFeedClient() {
         </div>
       </section>
 
-      {/* Dark Theme Styling for Curator Widget & Native Filter */}
+      {/* Global Dark Theme & Redundant Filter Suppressor */}
       <style jsx global>{`
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
         #curator-feed-default-feed-layout {
           width: 100% !important;
         }
 
-        /* Dark Theme Styling for Curator Widget */
+        /* 1. COMPLETELY HIDE CURATOR'S DUPLICATE INNER FILTER BARS */
+        .crt-filter,
+        .crt-filter-sources,
+        .crt-filter-networks,
+        .crt-networks,
+        .crt-sources {
+          display: none !important;
+          visibility: hidden !important;
+          height: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        /* 2. Dark Theme Styling for Curator Widget */
         .crt-feed-window,
         .crt-post,
         .crt-grid-post {
-          background-color: rgba(15, 23, 42, 0.85) !important;
+          background-color: rgba(15, 23, 42, 0.90) !important;
           border: 1px solid rgba(255, 255, 255, 0.12) !important;
           border-radius: 8px !important;
           color: #FFFFFF !important;
@@ -452,47 +530,6 @@ export default function SocialFeedClient() {
           font-weight: 700 !important;
           border-radius: 6px !important;
           padding: 10px 24px !important;
-        }
-
-        /* Curator Native Filter Bar Alignment & Styling */
-        .crt-filter {
-          margin-bottom: 24px !important;
-          padding-bottom: 12px !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-        }
-        .crt-filter .crt-filter-sources ul,
-        .crt-filter .crt-filter-networks ul {
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          gap: 10px !important;
-          flex-wrap: wrap !important;
-          list-style: none !important;
-          padding: 0 !important;
-          margin: 0 !important;
-        }
-        .crt-filter .crt-filter-label {
-          display: none !important;
-        }
-        .crt-filter ul li a {
-          display: inline-flex !important;
-          align-items: center !important;
-          gap: 6px !important;
-          padding: 8px 16px !important;
-          background-color: rgba(255, 255, 255, 0.06) !important;
-          border: 1px solid rgba(255, 255, 255, 0.12) !important;
-          border-radius: 6px !important;
-          color: #94A3B8 !important;
-          font-size: 0.85rem !important;
-          font-weight: 600 !important;
-          text-decoration: none !important;
-          transition: all 0.2s ease !important;
-        }
-        .crt-filter ul li a:hover,
-        .crt-filter ul li.active a {
-          background-color: #E11D48 !important;
-          border-color: #E11D48 !important;
-          color: #FFFFFF !important;
         }
       `}</style>
     </div>
