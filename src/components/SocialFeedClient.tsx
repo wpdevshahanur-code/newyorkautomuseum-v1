@@ -3,10 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
+type PlatformTab = 'all' | 'instagram' | 'youtube' | 'facebook';
+
 export default function SocialFeedClient() {
+  const [activeTab, setActiveTab] = useState<PlatformTab>('all');
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
+    // 1. Load Curator script from Jay's Feed
     const scriptId = 'curator-feed-script';
     let script = document.getElementById(scriptId) as HTMLScriptElement | null;
 
@@ -21,7 +25,42 @@ export default function SocialFeedClient() {
     } else {
       setScriptLoaded(true);
     }
+
+    // 2. Tag Curator post elements with data attributes for instant tab filtering
+    const container = document.getElementById('curator-feed-default-feed-layout');
+    if (!container) return;
+
+    const tagPosts = () => {
+      const posts = container.querySelectorAll('.crt-post-c, .crt-grid-post, .crt-post, [class*="crt-post"]');
+      posts.forEach((post) => {
+        const html = post.innerHTML.toLowerCase();
+        if (post.querySelector('.crt-icon-instagram') || html.includes('instagram.com') || html.includes('crt-icon-instagram')) {
+          post.setAttribute('data-curator-network', 'instagram');
+        } else if (post.querySelector('.crt-icon-youtube') || html.includes('youtube.com') || html.includes('crt-icon-youtube')) {
+          post.setAttribute('data-curator-network', 'youtube');
+        } else if (post.querySelector('.crt-icon-facebook') || html.includes('facebook.com') || html.includes('crt-icon-facebook')) {
+          post.setAttribute('data-curator-network', 'facebook');
+        }
+      });
+    };
+
+    const observer = new MutationObserver(tagPosts);
+    observer.observe(container, { childList: true, subtree: true });
+    tagPosts();
+
+    return () => observer.disconnect();
   }, []);
+
+  const handleTabChange = (tab: PlatformTab) => {
+    setActiveTab(tab);
+    // Smoothly notify Curator to recalculate masonry grid positions
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 50);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 250);
+  };
 
   return (
     <div style={{ position: 'relative', width: '100%', minHeight: '100vh', backgroundColor: 'transparent' }}>
@@ -77,7 +116,7 @@ export default function SocialFeedClient() {
               Explore real-time automotive heritage highlights, behind-the-scenes exhibit developments, community builds, and official announcements across our active social channels.
             </p>
 
-            {/* Quick Channel Overview Badges (Single Color Accent: #E11D48) */}
+            {/* Quick Channel Overview Cards (Interactive: Clicking switches tab!) */}
             <div
               style={{
                 display: 'grid',
@@ -86,59 +125,164 @@ export default function SocialFeedClient() {
                 textAlign: 'left',
               }}
             >
-              <div
+              <button
+                type="button"
+                onClick={() => handleTabChange('instagram')}
                 style={{
-                  backgroundColor: 'rgba(18, 24, 36, 0.85)',
+                  backgroundColor: activeTab === 'instagram' ? 'rgba(225, 29, 72, 0.15)' : 'rgba(18, 24, 36, 0.85)',
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
-                  border: '1px solid rgba(255, 255, 255, 0.14)',
+                  border: activeTab === 'instagram' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.14)',
                   borderRadius: '8px',
                   padding: '16px 20px',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  transition: 'all 0.2s ease',
                 }}
               >
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Visual Showcase</div>
                 <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>Instagram</div>
                 <div style={{ fontSize: '0.78rem', color: '#E11D48', marginTop: '3px', fontWeight: 600 }}>● Photo Gallery &amp; Reels</div>
-              </div>
+              </button>
 
-              <div
+              <button
+                type="button"
+                onClick={() => handleTabChange('youtube')}
                 style={{
-                  backgroundColor: 'rgba(18, 24, 36, 0.85)',
+                  backgroundColor: activeTab === 'youtube' ? 'rgba(225, 29, 72, 0.15)' : 'rgba(18, 24, 36, 0.85)',
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
-                  border: '1px solid rgba(255, 255, 255, 0.14)',
+                  border: activeTab === 'youtube' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.14)',
                   borderRadius: '8px',
                   padding: '16px 20px',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  transition: 'all 0.2s ease',
                 }}
               >
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Video Channel</div>
                 <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>YouTube</div>
                 <div style={{ fontSize: '0.78rem', color: '#E11D48', marginTop: '3px', fontWeight: 600 }}>● Documentaries &amp; Shorts</div>
-              </div>
+              </button>
 
-              <div
+              <button
+                type="button"
+                onClick={() => handleTabChange('facebook')}
                 style={{
-                  backgroundColor: 'rgba(18, 24, 36, 0.85)',
+                  backgroundColor: activeTab === 'facebook' ? 'rgba(225, 29, 72, 0.15)' : 'rgba(18, 24, 36, 0.85)',
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
-                  border: '1px solid rgba(255, 255, 255, 0.14)',
+                  border: activeTab === 'facebook' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.14)',
                   borderRadius: '8px',
                   padding: '16px 20px',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  transition: 'all 0.2s ease',
                 }}
               >
                 <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94A3B8', letterSpacing: '0.05em' }}>Community News</div>
                 <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF', marginTop: '4px' }}>Facebook</div>
                 <div style={{ fontSize: '0.78rem', color: '#E11D48', marginTop: '3px', fontWeight: 600 }}>● Official Updates</div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Live Curator.io Feed Section with Translucent Backdrop */}
-      <section style={{ padding: '60px 0 80px', position: 'relative' }}>
+      {/* 2. Interactive Channel Tabs & Live Curator.io Feed Section */}
+      <section style={{ padding: '50px 0 80px', position: 'relative' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
+          {/* Navigation Filter Tabs */}
           <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              flexWrap: 'wrap',
+              marginBottom: '36px',
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => handleTabChange('all')}
+              style={{
+                padding: '12px 24px',
+                borderRadius: '8px',
+                fontSize: '0.92rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                border: activeTab === 'all' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.15)',
+                backgroundColor: activeTab === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.85)',
+                color: '#FFFFFF',
+                boxShadow: activeTab === 'all' ? '0 4px 18px rgba(225, 29, 72, 0.35)' : 'none',
+              }}
+            >
+              All Channels (Combined)
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleTabChange('instagram')}
+              style={{
+                padding: '12px 24px',
+                borderRadius: '8px',
+                fontSize: '0.92rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                border: activeTab === 'instagram' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.15)',
+                backgroundColor: activeTab === 'instagram' ? '#E11D48' : 'rgba(18, 24, 36, 0.85)',
+                color: '#FFFFFF',
+                boxShadow: activeTab === 'instagram' ? '0 4px 18px rgba(225, 29, 72, 0.35)' : 'none',
+              }}
+            >
+              Instagram Feed
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleTabChange('youtube')}
+              style={{
+                padding: '12px 24px',
+                borderRadius: '8px',
+                fontSize: '0.92rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                border: activeTab === 'youtube' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.15)',
+                backgroundColor: activeTab === 'youtube' ? '#E11D48' : 'rgba(18, 24, 36, 0.85)',
+                color: '#FFFFFF',
+                boxShadow: activeTab === 'youtube' ? '0 4px 18px rgba(225, 29, 72, 0.35)' : 'none',
+              }}
+            >
+              YouTube Videos &amp; Shorts
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleTabChange('facebook')}
+              style={{
+                padding: '12px 24px',
+                borderRadius: '8px',
+                fontSize: '0.92rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                border: activeTab === 'facebook' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.15)',
+                backgroundColor: activeTab === 'facebook' ? '#E11D48' : 'rgba(18, 24, 36, 0.85)',
+                color: '#FFFFFF',
+                boxShadow: activeTab === 'facebook' ? '0 4px 18px rgba(225, 29, 72, 0.35)' : 'none',
+              }}
+            >
+              Facebook Posts
+            </button>
+          </div>
+
+          {/* Feed Card Container with Dynamic Class for Active Tab */}
+          <div
+            className={`social-feed-container tab-filter-${activeTab}`}
             style={{
               backgroundColor: 'rgba(18, 24, 36, 0.85)',
               backdropFilter: 'blur(16px)',
@@ -166,11 +310,13 @@ export default function SocialFeedClient() {
         </div>
       </section>
 
-      {/* Custom Styles for Curator Dark Mode Integration */}
+      {/* Dynamic Tab Filter CSS Rules */}
       <style jsx global>{`
         #curator-feed-default-feed-layout {
           width: 100% !important;
         }
+
+        /* Dark Theme Styling for Curator Widget */
         .crt-feed-window,
         .crt-post,
         .crt-grid-post {
@@ -193,6 +339,25 @@ export default function SocialFeedClient() {
           border: none !important;
           font-weight: 700 !important;
           border-radius: 6px !important;
+        }
+
+        /* INSTANT TAB FILTERING (CSS Attribute & :has Rules) */
+        .tab-filter-instagram [data-curator-network]:not([data-curator-network="instagram"]),
+        .tab-filter-instagram .crt-post-c:not(:has(.crt-icon-instagram)),
+        .tab-filter-instagram .crt-grid-post:not(:has(.crt-icon-instagram)) {
+          display: none !important;
+        }
+
+        .tab-filter-youtube [data-curator-network]:not([data-curator-network="youtube"]),
+        .tab-filter-youtube .crt-post-c:not(:has(.crt-icon-youtube)),
+        .tab-filter-youtube .crt-grid-post:not(:has(.crt-icon-youtube)) {
+          display: none !important;
+        }
+
+        .tab-filter-facebook [data-curator-network]:not([data-curator-network="facebook"]),
+        .tab-filter-facebook .crt-post-c:not(:has(.crt-icon-facebook)),
+        .tab-filter-facebook .crt-grid-post:not(:has(.crt-icon-facebook)) {
+          display: none !important;
         }
       `}</style>
     </div>
