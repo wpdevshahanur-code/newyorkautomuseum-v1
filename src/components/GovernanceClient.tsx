@@ -209,10 +209,7 @@ export default function GovernanceClient() {
               >
                 {/* Header Strip */}
                 <div style={{ padding: '24px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.10)' }}>
-                  <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#94A3B8' }}>
-                    {doc.jurisdiction}
-                  </span>
-                  <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#FFFFFF', marginTop: '6px' }}>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: '#FFFFFF', margin: 0 }}>
                     {doc.title}
                   </h3>
                 </div>
