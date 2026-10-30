@@ -6,7 +6,7 @@ import Link from 'next/link';
 type PlatformTab = 'all' | 'instagram' | 'youtube' | 'facebook';
 
 export default function SocialFeedClient() {
-  const [activeTab, setActiveTab] = useState<PlatformTab>('all');
+  const [activeTab, setActiveTab] = useState<PlatformTab>('instagram');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -103,7 +103,7 @@ export default function SocialFeedClient() {
             showNetworks: true, // Enable native network filter so Curator repacks columns evenly
             showSources: false,
             showAll: true,
-            default: 'all',
+            default: 'all_2', // Default to Instagram (network 2) to eliminate Meta cross-post duplicates
           },
           theme: 'sydney',
         };
@@ -131,6 +131,11 @@ export default function SocialFeedClient() {
         };
 
         win.Curator.loadWidget(config, colours, {});
+
+        // Auto-filter to Instagram as soon as Curator finishes initial render
+        setTimeout(() => triggerNativeFilter('instagram'), 300);
+        setTimeout(() => triggerNativeFilter('instagram'), 800);
+        setTimeout(() => triggerNativeFilter('instagram'), 1800);
 
         // Observer to hide skeleton when posts are rendered
         const feedContainer = document.getElementById('curator-feed-default-feed-layout');
@@ -355,25 +360,6 @@ export default function SocialFeedClient() {
           >
             <button
               type="button"
-              onClick={() => handleTabChange('all')}
-              style={{
-                padding: '12px 24px',
-                borderRadius: '8px',
-                fontSize: '0.92rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                border: activeTab === 'all' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.15)',
-                backgroundColor: activeTab === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.85)',
-                color: '#FFFFFF',
-                boxShadow: activeTab === 'all' ? '0 4px 18px rgba(225, 29, 72, 0.35)' : 'none',
-              }}
-            >
-              All Channels (Combined)
-            </button>
-
-            <button
-              type="button"
               onClick={() => handleTabChange('instagram')}
               style={{
                 padding: '12px 24px',
@@ -427,6 +413,25 @@ export default function SocialFeedClient() {
               }}
             >
               Facebook Posts
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleTabChange('all')}
+              style={{
+                padding: '12px 24px',
+                borderRadius: '8px',
+                fontSize: '0.92rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                border: activeTab === 'all' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.15)',
+                backgroundColor: activeTab === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.85)',
+                color: '#FFFFFF',
+                boxShadow: activeTab === 'all' ? '0 4px 18px rgba(225, 29, 72, 0.35)' : 'none',
+              }}
+            >
+              All Channels (Combined)
             </button>
           </div>
 
