@@ -311,7 +311,8 @@ export default function HeroSlideshow() {
       </div>
 
       {/* Modern Bottom Carousel Control Bar & Progress Track with All 19 Slides */}
-      <div className="hero-bottom-control-deck">
+      {/* Temporarily hidden per client request until images are synced with wing titles */}
+      <div className="hero-bottom-control-deck" style={{ display: 'none' }}>
         <div className="container hero-deck-container">
           {/* Left: Slide Counter & Active Wing */}
           <div className="hero-deck-left">
