@@ -57,7 +57,7 @@ export default function SocialFeedClient() {
           },
           widget: {
             template: 'widget-waterfall',
-            colWidth: 350, // 350px guarantees exactly 4 columns across all desktop monitors
+            colWidth: 360, // 350px guarantees exactly 4 columns across all desktop monitors
             colGutter: 0,
             showLoadMore: false,
             continuousScroll: false,
@@ -100,9 +100,9 @@ export default function SocialFeedClient() {
           },
           filter: {
             template: 'filter',
-            showNetworks: false, // Turn OFF Curator's duplicate inner network tabs
-            showSources: false,  // Turn OFF Curator's duplicate inner source tabs
-            showAll: false,
+            showNetworks: true, // Enable native network filter so Curator repacks columns evenly
+            showSources: false,
+            showAll: true,
             default: 'all',
           },
           theme: 'sydney',
@@ -167,51 +167,49 @@ export default function SocialFeedClient() {
     }
   }, []);
 
-  const applyFilter = (tab: PlatformTab) => {
+  const triggerNativeFilter = (tab: PlatformTab) => {
     const container = document.getElementById('curator-feed-default-feed-layout');
-    if (!container) return;
+    if (!container) return false;
 
-    const posts = container.querySelectorAll('.crt-post');
-    posts.forEach((p) => {
-      const post = p as HTMLElement;
-      const html = post.innerHTML.toLowerCase();
-      const isIg = html.includes('instagram.com') || html.includes('instagram') || html.includes('crt-icon-instagram') || html.includes('cdninstagram');
-      const isYt = html.includes('youtube.com') || html.includes('youtu.be') || html.includes('ytimg.com') || html.includes('youtube') || html.includes('crt-icon-youtube') || html.includes('nycmuseum');
-      const isFb = html.includes('facebook.com') || html.includes('facebook') || html.includes('crt-icon-facebook') || html.includes('fbcdn');
-
-      if (tab === 'all') {
-        post.style.display = '';
-      } else if (tab === 'instagram') {
-        post.style.display = isIg ? '' : 'none';
-      } else if (tab === 'youtube') {
-        post.style.display = isYt ? '' : 'none';
-      } else if (tab === 'facebook') {
-        post.style.display = isFb ? '' : 'none';
+    let target: HTMLElement | null = null;
+    if (tab === 'all') {
+      const allLinks = container.querySelectorAll('.crt-networks a');
+      for (let i = 0; i < allLinks.length; i++) {
+        if (allLinks[i].textContent?.trim().toLowerCase() === 'all') {
+          target = allLinks[i] as HTMLElement;
+          break;
+        }
       }
-    });
-
-    // Re-layout masonry smoothly
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 40);
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 200);
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 500);
-  };
-
-  // Re-run filter when tab changes or when posts finish loading
-  useEffect(() => {
-    if (!isLoading) {
-      applyFilter(activeTab);
+      if (!target) {
+        target = container.querySelector('.crt-networks li:not(.crt-filter-label) a') as HTMLElement;
+      }
+    } else if (tab === 'instagram') {
+      target = container.querySelector('.crt-network-filter-instagram a') as HTMLElement;
+    } else if (tab === 'youtube') {
+      target = container.querySelector('.crt-network-filter-youtube a') as HTMLElement;
+    } else if (tab === 'facebook') {
+      target = container.querySelector('.crt-network-filter-facebook a') as HTMLElement;
     }
-  }, [activeTab, isLoading]);
+
+    if (target) {
+      target.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      target.click();
+      return true;
+    }
+    return false;
+  };
 
   const handleTabChange = (tab: PlatformTab) => {
     setActiveTab(tab);
-    applyFilter(tab);
+    if (!triggerNativeFilter(tab)) {
+      let attempts = 0;
+      const timer = setInterval(() => {
+        attempts++;
+        if (triggerNativeFilter(tab) || attempts > 25) {
+          clearInterval(timer);
+        }
+      }, 100);
+    }
   };
 
   return (
@@ -511,17 +509,22 @@ export default function SocialFeedClient() {
           width: 100% !important;
         }
 
-        /* 1. COMPLETELY HIDE CURATOR'S DUPLICATE INNER FILTER BARS */
-        .crt-filter,
-        .crt-filter-sources,
-        .crt-filter-networks,
-        .crt-networks,
-        .crt-sources {
-          display: none !important;
-          visibility: hidden !important;
+        /* 1. VISUALLY HIDE CURATOR'S DEFAULT INNER FILTER BARS (Keep clickable in DOM) */
+        .crt-filter {
+          position: absolute !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
           height: 0 !important;
+          overflow: hidden !important;
           margin: 0 !important;
           padding: 0 !important;
+          border: none !important;
+          clip: rect(0, 0, 0, 0) !important;
+        }
+
+        .crt-filter-sources,
+        .crt-sources {
+          display: none !important;
         }
 
         /* 2. Hide redundant load more button since all posts are preloaded */
@@ -535,16 +538,11 @@ export default function SocialFeedClient() {
         }
 
         /* 3. GUARANTEE EXACT 4 COLUMNS ON DESKTOP */
-        @media (min-width: 1024px) {
+        @media (min-width: 1400px) {
           .crt-feed > [class*="crt-col-"] {
             width: 25% !important;
             float: left !important;
             box-sizing: border-box !important;
-          }
-          .crt-feed > .crt-col-4,
-          .crt-feed > .crt-col-5,
-          .crt-feed > .crt-col-6 {
-            display: none !important;
           }
         }
 
