@@ -231,9 +231,9 @@ export default function SocialFeedClient() {
                 gap: '8px',
                 padding: '6px 16px',
                 borderRadius: '9999px',
-                backgroundColor: 'rgba(225, 29, 72, 0.12)',
-                border: '1px solid rgba(225, 29, 72, 0.40)',
-                color: '#E11D48',
+                backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                border: '1px solid rgba(56, 189, 248, 0.40)',
+                color: '#38BDF8',
                 fontSize: '0.82rem',
                 fontWeight: 700,
                 letterSpacing: '0.06em',
@@ -247,8 +247,8 @@ export default function SocialFeedClient() {
                   width: '8px',
                   height: '8px',
                   borderRadius: '50%',
-                  backgroundColor: '#E11D48',
-                  boxShadow: '0 0 10px #E11D48',
+                  backgroundColor: '#38BDF8',
+                  boxShadow: '0 0 10px #38BDF8',
                 }}
               />
               Live Media &bull; Social Hub

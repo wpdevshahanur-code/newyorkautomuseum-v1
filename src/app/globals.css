@@ -440,9 +440,9 @@ div[role="dialog"] > div:first-child {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #E11D48;
-  background: rgba(225, 29, 72, 0.12);
-  border: 1px solid rgba(225, 29, 72, 0.3);
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   padding: 6px 14px;
   border-radius: 9999px;
   margin-bottom: 16px;
@@ -783,8 +783,8 @@ div[role="dialog"] > div:first-child {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #E11D48;
-  box-shadow: 0 0 8px #E11D48;
+  background-color: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
   animation: badgeDotPulse 2s ease-in-out infinite;
 }
 

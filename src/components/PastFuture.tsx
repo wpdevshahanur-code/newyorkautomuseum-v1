@@ -195,7 +195,7 @@ export default function PastFuture() {
                   width: '8px',
                   height: '8px',
                   borderRadius: '50%',
-                  backgroundColor: '#E11D48',
+                  backgroundColor: '#38BDF8', boxShadow: '0 0 8px #38BDF8',
                 }}
               />
               <span

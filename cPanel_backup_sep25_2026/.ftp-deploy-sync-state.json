@@ -1,0 +1,653 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1781706289924,
+    "data": [
+        {
+            "type": "file",
+            "name": ".DS_Store",
+            "size": 6148,
+            "hash": "4f89d00be3c8f45fb9371bb3be727848b5dd197b150eb448481f1c9332a71bc8"
+        },
+        {
+            "type": "folder",
+            "name": "assets"
+        },
+        {
+            "type": "file",
+            "name": "boards-and-committees.html",
+            "size": 45721,
+            "hash": "3b8630fe65b14cbf2c855fb6cdf66281e194bd5d467890692a41da00d93761e9"
+        },
+        {
+            "type": "file",
+            "name": "careers.html",
+            "size": 32918,
+            "hash": "ff69f727cd9266603ae02b595279bf8d4d040153a6ce1561ac03575de75539bd"
+        },
+        {
+            "type": "folder",
+            "name": "css"
+        },
+        {
+            "type": "folder",
+            "name": "images"
+        },
+        {
+            "type": "file",
+            "name": "index.html",
+            "size": 177396,
+            "hash": "d0c9ee0cec63940072e8917983932ab68e20bcb9347c87a71f31e67329b64e98"
+        },
+        {
+            "type": "folder",
+            "name": "js"
+        },
+        {
+            "type": "folder",
+            "name": "assets/css"
+        },
+        {
+            "type": "folder",
+            "name": "assets/images"
+        },
+        {
+            "type": "folder",
+            "name": "assets/js"
+        },
+        {
+            "type": "folder",
+            "name": "assets/sass"
+        },
+        {
+            "type": "folder",
+            "name": "assets/webfonts"
+        },
+        {
+            "type": "file",
+            "name": "css/donate.css",
+            "size": 993,
+            "hash": "fa8e4fcd6f540e87a0872d427ee26bb3cface309cfac06854d5dfc761880b0ef"
+        },
+        {
+            "type": "file",
+            "name": "css/ie_8.css",
+            "size": 84,
+            "hash": "8370e1cfce7d20f0498426a1aa73a6ecb245bb2fef6a6c9c9b933f46948427a2"
+        },
+        {
+            "type": "file",
+            "name": "css/main.css",
+            "size": 72180,
+            "hash": "9f67dcff07e097ffb7551a1d131b012cf52c7eeb67dc9187f094f2576f861687"
+        },
+        {
+            "type": "file",
+            "name": "images/.DS_Store",
+            "size": 6148,
+            "hash": "bffb8233fdce0945cd4bdf5027d01029a38457b98108bfcde52f6085f271a5db"
+        },
+        {
+            "type": "file",
+            "name": "images/NYAE-logo.png",
+            "size": 34932,
+            "hash": "5b1dd19f6b412e7a21720143c4337c9b7e111ed1d9edee4ccfccf172d35b9b47"
+        },
+        {
+            "type": "file",
+            "name": "images/alliance-member-logo-full-color-RGB.webp",
+            "size": 23336,
+            "hash": "493f2a88c18bb55585d9ce0486c88b3a852992f464befceb631f1b2da243ee9e"
+        },
+        {
+            "type": "file",
+            "name": "images/banner.jpg",
+            "size": 664327,
+            "hash": "a1424eb81419ff41b1be5d4adca07ed89a44cafc21fd9abe2a829f8bcb6b07c1"
+        },
+        {
+            "type": "file",
+            "name": "images/bigtire.JPG",
+            "size": 275099,
+            "hash": "5864faca75a9e65c6c7e90c1078f7ecc0dc893ea4627fef959f1757a5fd4c3ac"
+        },
+        {
+            "type": "file",
+            "name": "images/block.gif",
+            "size": 8629,
+            "hash": "b6e05ff72a2d3863768f225ed7ebe74ba4cdd0c63b7ea8c1bdcd112cf8016f81"
+        },
+        {
+            "type": "file",
+            "name": "images/cushmanwakefield.png",
+            "size": 24599,
+            "hash": "81451924dd978a96cbc17155bcf4022c149e8867465801c3b109fd2b819a5395"
+        },
+        {
+            "type": "file",
+            "name": "images/footer.png",
+            "size": 86588,
+            "hash": "c6e6f1f6dfc96c2be1c459fda8b4d8b9f665ef29fa47939355687887fc37c983"
+        },
+        {
+            "type": "file",
+            "name": "images/museum_association_of_NY_logo.jpg",
+            "size": 177507,
+            "hash": "e2e4964382cb30aa3a8cc7c88005d067b8dd528908bc04c78082d4f1bb470507"
+        },
+        {
+            "type": "file",
+            "name": "images/nonprofit-newyork.jpg",
+            "size": 107931,
+            "hash": "d64d50cdb9500530bf8da07c65672a0de664ca4c6e799983c5d9281534f5320d"
+        },
+        {
+            "type": "file",
+            "name": "images/pic01.jpg",
+            "size": 896486,
+            "hash": "5e0835bfe10e7f3598283c66b7ffc8c74955e5555b6b20c91358f5e51e16e3ce"
+        },
+        {
+            "type": "file",
+            "name": "images/pic02.jpg",
+            "size": 95274,
+            "hash": "d60c89514715e46a97717d3a0739d211ef5afbc256a30865285349a559272bf8"
+        },
+        {
+            "type": "file",
+            "name": "images/pic03.jpg",
+            "size": 921935,
+            "hash": "3ab59bd0e312bd9442648c5073ee3d241cdd7218abf43ff2d970bf063933843d"
+        },
+        {
+            "type": "file",
+            "name": "images/pic04.jpg",
+            "size": 224359,
+            "hash": "867cc7e66431bcdfd8fa424c7dc64591cb47eb4e98f727684e85ebc2e94c4a7a"
+        },
+        {
+            "type": "file",
+            "name": "images/pic05.jpg",
+            "size": 662080,
+            "hash": "8a6412738d5feeef5c57a43815587047f7ce74e91534d16db1540753a3569974"
+        },
+        {
+            "type": "file",
+            "name": "images/racecar.JPG",
+            "size": 126694,
+            "hash": "d45dc7c33454ea1c4c0f0f08770d9667e6c59591acf5d79179d7c5a923f7e114"
+        },
+        {
+            "type": "folder",
+            "name": "images/slideshow"
+        },
+        {
+            "type": "file",
+            "name": "images/social-linkedin.svg",
+            "size": 952,
+            "hash": "5e1a96636fc86314153cf6445090b2a304655dd7a05f0cf4a728f5ef914c09a7"
+        },
+        {
+            "type": "file",
+            "name": "images/sponsor1.jpg",
+            "size": 7613,
+            "hash": "958131625d455b5bd8667da75e2d54077f83208fafdd6e901ecef9af024ffe72"
+        },
+        {
+            "type": "file",
+            "name": "images/world-motorsport.jpg",
+            "size": 119476,
+            "hash": "26b450db3f7df5b396f698e596fad488797acff8936063ca92144cd648be4fb6"
+        },
+        {
+            "type": "file",
+            "name": "js/.DS_Store",
+            "size": 6148,
+            "hash": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+        },
+        {
+            "type": "file",
+            "name": "js/pie.htc",
+            "size": 28280,
+            "hash": "7e7c35feacf71871eb72423dd701b0bb1a5e99a380ff8fb769adc6c4fde2904f"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/donate.css",
+            "size": 993,
+            "hash": "fa8e4fcd6f540e87a0872d427ee26bb3cface309cfac06854d5dfc761880b0ef"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/fontawesome-all.min.css",
+            "size": 55967,
+            "hash": "533143d96607d94d5d4292838e364aef656d3de58fe74368263776eab9c07542"
+        },
+        {
+            "type": "folder",
+            "name": "assets/css/images"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/main.css",
+            "size": 72180,
+            "hash": "9f67dcff07e097ffb7551a1d131b012cf52c7eeb67dc9187f094f2576f861687"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/noscript.css",
+            "size": 578,
+            "hash": "f6771965043974e733bd55ca68b02d7117962be9b5cac0e174f6bc20c93ea213"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/styles.css",
+            "size": 1474,
+            "hash": "885e5caee31a3042731f42e47ef02b80e756e9cefd3ee29a345508060f0411c0"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/bubble.gif",
+            "size": 1124,
+            "hash": "a69175a9b854413d46822dfecf9d004bf6cef6816c9b774f814fbc72c4cba7df"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/cpanel.gif",
+            "size": 1115,
+            "hash": "1a3b8fdc5ee86c2a0f9eedd89d0397a45863ce22d842ef6513dbfc7300675aa3"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/curve-bot.gif",
+            "size": 137,
+            "hash": "59a15028e9c90900f6de1a73e3d44964d1a3858b9b2e709073361cf24e275959"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/curve-top.gif",
+            "size": 137,
+            "hash": "b6c4d020d80df45715064eb7ab3c4a84cb5e6fa7c1489e8622070aea435dc17a"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/email.gif",
+            "size": 718,
+            "hash": "8313542c0d8ce2188f0561fd63c5cd2860bb5f0f4788e1a0d1ff3907c770e215"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/globe.gif",
+            "size": 1204,
+            "hash": "8edb807c4b085918bd01347a9706d5e1d9beeee7db57004ba692df0aba5cd4ce"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/messenger.gif",
+            "size": 1214,
+            "hash": "69fb83dcbed5b26ddb25e8c4ca6d38fcead9951c35b895dda88d13b38c376bc2"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/news.gif",
+            "size": 460,
+            "hash": "feb47c4515d2a2084376e927ceceeb85b067b81649585cc65ef99878a8c54619"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/support.gif",
+            "size": 670,
+            "hash": "4e8378ade6f71e47c280cd43bf5cc0c3dbd3ea7f90611adb6bd774b62d4814ab"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/tw.png",
+            "size": 4861,
+            "hash": "d1fd9022653a353b06ae8e5afd69e70b9a3e2dab582ad78e8e279564d41dba40"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/video.gif",
+            "size": 474,
+            "hash": "d85145627eb1be62ef64f4207976dc13da923b6817824c9722cd3fe935eb9762"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/breakpoints.min.js",
+            "size": 2438,
+            "hash": "6986954512ea7fc9ea45934177dfc8aca9ed69dd08976114b0eb39a3e58d201d"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/browser.min.js",
+            "size": 1850,
+            "hash": "63572a849a602527e0deeca58b30c53e3d43f07be21b4ba24b30832062da875c"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/jquery.min.js",
+            "size": 88145,
+            "hash": "0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/jquery.scrollex.min.js",
+            "size": 2256,
+            "hash": "acc48ffb07316007622f24af9f0bb81ad3cfcabe3531e3bcc7bbc6a6ce9c8096"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/jquery.scrolly.min.js",
+            "size": 830,
+            "hash": "08d27f460466e4b36d9eb2cfef27e442ca206f87d6cbb157f98c16704c999a2a"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/main.js",
+            "size": 1719,
+            "hash": "81f1576f9481dcf524ea40f4cded49db57618e9d2657dd116946c846edca48ee"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/rollover.js",
+            "size": 1156,
+            "hash": "76135131256c57653afed9ef8c42b4593ed99a654bc87f778a6b9974d73bc00c"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/util.js",
+            "size": 11847,
+            "hash": "b5424d77c6e517893b9adc5a6cf11428e58461ad9768ad056d918ff1d295c5f6"
+        },
+        {
+            "type": "folder",
+            "name": "assets/js/vendor"
+        },
+        {
+            "type": "folder",
+            "name": "assets/sass/libs"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/main.scss",
+            "size": 34253,
+            "hash": "49fe23e2b50ef1f343ed3886d42592c3d94f720cd3f344e54c7529aed5f64eb5"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/noscript.scss",
+            "size": 601,
+            "hash": "5d1e477ef1f8cbfed69c3c39ad23d2a18ae0c504771775841aa3fe6426a44b1f"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-brands-400.eot",
+            "size": 129352,
+            "hash": "931d173390b901b84b133796a2e42e54b82a4d60fc7f0baa23e05742af9793e8"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-brands-400.svg",
+            "size": 689922,
+            "hash": "85eee11562ca8330dd6e3e7b726309ab95110e062d72c759abc83f897b8ed074"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-brands-400.ttf",
+            "size": 129048,
+            "hash": "d7746d2966e30323266a9f7ea24be80940f7a0207a0b91dde1669f3b3bdecd33"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-brands-400.woff",
+            "size": 87352,
+            "hash": "ef7234f1e9d303d2e42a209c547c217b90afa49d60502d04f1b14c906efc02d1"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-brands-400.woff2",
+            "size": 74508,
+            "hash": "1f49b8706547682e2c5ed6642a2f2dcbd287da458314b967c60d774aa7edb473"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-regular-400.eot",
+            "size": 34388,
+            "hash": "da05e5ee7c75c965efb151a6e87ab5589b8023f246f698c1d14946414bc31c90"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-regular-400.svg",
+            "size": 144451,
+            "hash": "e14de0404bcbe28ac413bd4c992f552af250da30823e635ab9a7656e50e77bc8"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-regular-400.ttf",
+            "size": 34092,
+            "hash": "4e2fc1d3828b93e7e943c8017a542b0ad00f6333d28748658bb0697de23fd52e"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-regular-400.woff",
+            "size": 16804,
+            "hash": "684157e40f7ee2429707a23d5b77d2c71c5d23f26a9d82839275ff984d13053b"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-regular-400.woff2",
+            "size": 13580,
+            "hash": "6a16c04229bc2b4da226eb97e68d94f49ba6437b7b5e16c14a101b21a29384e9"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-solid-900.eot",
+            "size": 192116,
+            "hash": "d5342ae679d7064d475403ce5fe05d80f1a0abe5881f729ee0e3272a9c355f3b"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-solid-900.svg",
+            "size": 839388,
+            "hash": "4ee1b170ff51b7fda11acef551d1ef492c0ebc1aff8e5712d3e30fcbb835776d"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-solid-900.ttf",
+            "size": 191832,
+            "hash": "9313de7304bef452ff5ac93e0f9ca48c3971d2fbb502c3fa1e2c2ea1f91ad853"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-solid-900.woff",
+            "size": 98020,
+            "hash": "c1450cddfd98668e6e593e2d26f11b4c43faaccb5f033b0b50ea6f1ce7bf4b58"
+        },
+        {
+            "type": "file",
+            "name": "assets/webfonts/fa-solid-900.woff2",
+            "size": 75440,
+            "hash": "cd398be1a91817126cef10224738e624358edf6f08043abad7e60c1aaeccc8d0"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_0000.jpg",
+            "size": 664327,
+            "hash": "a1424eb81419ff41b1be5d4adca07ed89a44cafc21fd9abe2a829f8bcb6b07c1"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_1074.jpg",
+            "size": 290072,
+            "hash": "6db6d2ac586a9ebf2b8f62b245e5c527fdd16df5ead660d7cd3d70a483cbdbe9"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_1481.jpg",
+            "size": 551698,
+            "hash": "6e4345fa81ef908cc1580a3b9e2116631f21813cd8509cb446bf44d957844d2d"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_1514.jpg",
+            "size": 208541,
+            "hash": "c41315a5d6dd7dfbd251888cf6723e57c2af92b8993d820d5f1ef67c4b911813"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_1659.JPG",
+            "size": 58710,
+            "hash": "dedd604a7e4a81946d6d1876c5c41ee3aa40bf52c9d60403b67826387d2e3f95"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_1756.jpg",
+            "size": 115528,
+            "hash": "faa38b99a13e2fa53018656a79a0d1e516a945326947449ef101986278de324b"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_1815.jpg",
+            "size": 66816,
+            "hash": "ba005e2cbd762521b5f4ebd37101128b48fd6c461f762fdf5f3b1f918b35dce7"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2065.jpg",
+            "size": 244204,
+            "hash": "dd19a8e481d1650f21101b37300a2d16afb967b768120de61118b53b24321997"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2071.jpg",
+            "size": 871257,
+            "hash": "9117c76c5ad2a162a5f57f8fe825d31b36cfb47c89a36e418637bc0e86d426a6"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2267.jpg",
+            "size": 275305,
+            "hash": "e0bd4da5d38ff2a90882fc0f532aabe6da4a89f247e9fc3c2320468b0d032607"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2298.jpg",
+            "size": 133222,
+            "hash": "9b556cfe6109e2d72c4af8ddde1fab21f2c6a46fda0a6306842b86e8e9b4f88e"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2327.jpg",
+            "size": 128651,
+            "hash": "e47a1d37990c796589f78911428108cf8a547f0094a4342696fd890d469d3d6e"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2587.jpg",
+            "size": 140116,
+            "hash": "06da7e8c164efebe3b1a858cc016db6d2f64df2f5bf7cd5bb021b89ea1bea072"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2728.jpg",
+            "size": 435061,
+            "hash": "e56383d9d5b288af511ee73272acbbdd39817562a72db45163186fa5f3bc1ac7"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2882.jpg",
+            "size": 307410,
+            "hash": "b2c2502b699ce98a6b97f7e08a631da74927e5aa6af4cda85057481d99842c5a"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2895.jpg",
+            "size": 755515,
+            "hash": "96e9c079c9d574cf6c9c756cfeb663b36724f0b13606bd25d00db3f3293b22a5"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_2931.jpg",
+            "size": 164329,
+            "hash": "8e8709974a8afe61393080853718746b0995333578b575d625ead0b9ed57798f"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_3069.jpg",
+            "size": 98861,
+            "hash": "e99627369eeaff509f1d4627ccb8a0b93f5827f915efff8fb5a691b1859ec240"
+        },
+        {
+            "type": "file",
+            "name": "images/slideshow/IMG_3092.jpg",
+            "size": 147965,
+            "hash": "5a9b10467784aa5c8cea85e6283953b19c79343febdb9005d0c2ed9822a94990"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/images/arrow.svg",
+            "size": 401,
+            "hash": "c00d6a20e82456c029bfb39e97da8b5857d9d70d1dab2d89ebea1d5c7f0afd08"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/images/bars.svg",
+            "size": 396,
+            "hash": "13d2265891cb867ce6cf28a52d35903dc2ec32fc0c397cd549019c968c699338"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/images/close.svg",
+            "size": 357,
+            "hash": "519f4557b31789e9d9a8891d01b2c00d7a4b029b58aa31e464dfbb7e9000ebed"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/vendor/.DS_Store",
+            "size": 6148,
+            "hash": "f418aa1874d87cfea72df3832dbcc61013cd29a44ec6bc854060ea9a50a3731d"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/vendor/tweenmax.min.js",
+            "size": 115316,
+            "hash": "4ba1b9960f6bcc2d49080931ddd405a8fda579f905c7094d567d2b5823ae7970"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/libs/_breakpoints.scss",
+            "size": 4577,
+            "hash": "acda021bb809760083b40a54e76454bc58a56a2ec90965ea5a6820e2fb67f286"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/libs/_functions.scss",
+            "size": 1957,
+            "hash": "fc832d9ccc89117bb05beed1e5fb328e7f909845d2220a1060375142f51b7e5d"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/libs/_html-grid.scss",
+            "size": 2840,
+            "hash": "423fd36f530e34b329996d06b0db7c8543fc2034d0c12d479246fc0e498cc662"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/libs/_mixins.scss",
+            "size": 2218,
+            "hash": "63a02894ddc14717b0d58982ba6220f58bf20c3b9fdfc58f70a282168cb35c85"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/libs/_vars.scss",
+            "size": 2745,
+            "hash": "cd6225c9d1520f11c107a87072ec73367e771948553898758d3e5bf5c47de1a5"
+        },
+        {
+            "type": "file",
+            "name": "assets/sass/libs/_vendor.scss",
+            "size": 7355,
+            "hash": "f081f8ff029549e642a7ff5a615752e1e9032258b635abcef39f59e747d39d12"
+        }
+    ]
+}

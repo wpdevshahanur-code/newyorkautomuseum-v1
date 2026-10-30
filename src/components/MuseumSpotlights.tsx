@@ -58,7 +58,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                 }}
               >
-                <span style={{ color: '#E11D48' }}>●</span> Proposed New York City Landmark • Glass Floors
+                <span style={{ color: '#38BDF8' }}>●</span> Proposed New York City Landmark • Glass Floors
               </div>
             </div>
 
@@ -78,7 +78,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: '#E11D48',
+                  color: '#38BDF8',
                   textTransform: 'uppercase',
                   letterSpacing: '0.15em',
                   marginBottom: '12px',
@@ -178,7 +178,7 @@ export default function MuseumSpotlights() {
                   gap: '8px',
                   fontSize: '0.75rem',
                   fontWeight: 800,
-                  color: '#E11D48',
+                  color: '#38BDF8',
                   textTransform: 'uppercase',
                   letterSpacing: '0.12em',
                   marginBottom: '12px',
