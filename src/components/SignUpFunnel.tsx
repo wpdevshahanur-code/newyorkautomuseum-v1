@@ -450,10 +450,6 @@ export default function SignUpFunnel() {
                   </>
                 )}
               </button>
-
-              <p className="form-disclaimer">
-                🔒 Submissions are confidential. The New York Auto Experience Inc. is a recognized 501(c)(3) public charity (EIN: 922822778). Contributions are 100% tax-deductible to the extent allowed by law.
-              </p>
             </form>
           )}
         </>
