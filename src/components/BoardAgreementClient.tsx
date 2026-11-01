@@ -266,40 +266,12 @@ export default function BoardAgreementClient() {
           <div className="agreement-tabs-bar">
             <button
               type="button"
-              className={`agreement-tab-btn ${activeTab === 'welcome' ? 'active' : ''}`}
+              className={`agreement-tab-btn active`}
               onClick={() => setActiveTab('welcome')}
             >
-              <span>📋</span> Checklist
+              <span>📋</span> Welcome Package &amp; Checklist
             </button>
-            <button
-              type="button"
-              className={`agreement-tab-btn ${activeTab === 'terms' ? 'active' : ''}`}
-              onClick={() => setActiveTab('terms')}
-            >
-              <span>⚖️</span> 34 Standards
-            </button>
-            <button
-              type="button"
-              className={`agreement-tab-btn ${activeTab === 'tiers' ? 'active' : ''}`}
-              onClick={() => setActiveTab('tiers')}
-            >
-              <span>🎖️</span> Board Tiers
-            </button>
-            <button
-              type="button"
-              className={`agreement-tab-btn ${activeTab === 'agreement' ? 'active' : ''}`}
-              onClick={() => setActiveTab('agreement')}
-            >
-              <span>📜</span> Agreement &amp; NDA
-            </button>
-            <button
-              type="button"
-              className={`agreement-tab-btn ${activeTab === 'sign' ? 'active' : ''}`}
-              onClick={() => setActiveTab('sign')}
-              style={{ color: activeTab === 'sign' ? '#FFFFFF' : '#E11D48' }}
-            >
-              <span>✍️</span> E-Signature
-            </button>
+            {/* Short-term: Standards, Board Tiers, Agreement & NDA, and E-Signature kept for later per client request */}
           </div>
 
           {/* Body Content */}
@@ -406,15 +378,10 @@ export default function BoardAgreementClient() {
                       </div>
                     </div>
 
-                    <div style={{ textAlign: 'right' }}>
-                      <button
-                        type="button"
-                        onClick={() => setActiveTab('terms')}
-                        className="btn-execute-agreement"
-                        style={{ width: 'auto', padding: '12px 28px' }}
-                      >
-                        Review 34 Governance Standards &rarr;
-                      </button>
+                    <div style={{ textAlign: 'center', marginTop: '32px', padding: '20px', background: 'rgba(56, 189, 248, 0.08)', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.25)' }}>
+                      <p style={{ color: '#E2E8F0', fontSize: '0.95rem', margin: 0, fontWeight: 500 }}>
+                        Thank you for reviewing the Welcome Package Checklist. Our committee secretary will reach out directly with formal onboarding materials.
+                      </p>
                     </div>
                   </div>
                 )}

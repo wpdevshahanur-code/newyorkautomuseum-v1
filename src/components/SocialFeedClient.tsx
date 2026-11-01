@@ -102,7 +102,7 @@ export default function SocialFeedClient() {
             template: 'filter',
             showNetworks: true, // Enable native network filter so Curator repacks columns evenly
             showSources: false,
-            showAll: true,
+            showAll: false,
             default: 'all_2', // Default to Instagram (network 2) to eliminate Meta cross-post duplicates
           },
           theme: 'sydney',
@@ -415,24 +415,7 @@ export default function SocialFeedClient() {
               Facebook Posts
             </button>
 
-            <button
-              type="button"
-              onClick={() => handleTabChange('all')}
-              style={{
-                padding: '12px 24px',
-                borderRadius: '8px',
-                fontSize: '0.92rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                border: activeTab === 'all' ? '1px solid #E11D48' : '1px solid rgba(255, 255, 255, 0.15)',
-                backgroundColor: activeTab === 'all' ? '#E11D48' : 'rgba(18, 24, 36, 0.85)',
-                color: '#FFFFFF',
-                boxShadow: activeTab === 'all' ? '0 4px 18px rgba(225, 29, 72, 0.35)' : 'none',
-              }}
-            >
-              All Channels (Combined)
-            </button>
+
           </div>
 
           {/* Feed Card Container */}
