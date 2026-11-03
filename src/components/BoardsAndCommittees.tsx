@@ -80,7 +80,7 @@ export default function BoardsAndCommittees() {
               style={{
                 width: '6px',
                 height: '32px',
-                backgroundColor: '#E11D48',
+                backgroundColor: '#38BDF8',
                 borderRadius: '3px',
               }}
             />
@@ -131,9 +131,9 @@ export default function BoardsAndCommittees() {
                   padding: '24px',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(225, 29, 72, 0.8)';
+                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.55)';
                   e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 16px 36px rgba(225, 29, 72, 0.25)';
+                  e.currentTarget.style.boxShadow = '0 16px 36px rgba(56, 189, 248, 0.18)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
@@ -154,9 +154,9 @@ export default function BoardsAndCommittees() {
                       style={{
                         fontSize: '0.75rem',
                         fontWeight: 800,
-                        color: '#E11D48',
-                        backgroundColor: 'rgba(225, 29, 72, 0.12)',
-                        border: '1px solid rgba(225, 29, 72, 0.25)',
+                        color: '#38BDF8',
+                        backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                        border: '1px solid rgba(56, 189, 248, 0.28)',
                         padding: '3px 10px',
                         borderRadius: '9999px',
                         textTransform: 'uppercase',
@@ -186,7 +186,7 @@ export default function BoardsAndCommittees() {
                     style={{
                       background: 'transparent',
                       border: 'none',
-                      color: '#3B82F6',
+                      color: '#38BDF8',
                       fontSize: '0.88rem',
                       fontWeight: 700,
                       cursor: 'pointer',
@@ -220,7 +220,7 @@ export default function BoardsAndCommittees() {
               style={{
                 width: '6px',
                 height: '32px',
-                backgroundColor: '#D97706',
+                backgroundColor: '#38BDF8',
                 borderRadius: '3px',
               }}
             />
@@ -265,12 +265,12 @@ export default function BoardsAndCommittees() {
                     backgroundColor: isOpen ? 'rgba(25, 34, 51, 0.95)' : 'rgba(18, 24, 36, 0.88)',
                     backdropFilter: 'blur(12px)',
                     WebkitBackdropFilter: 'blur(12px)',
-                    border: isOpen ? '1px solid #D97706' : '1px solid rgba(255, 255, 255, 0.12)',
+                    border: isOpen ? '1px solid rgba(56, 189, 248, 0.5)' : '1px solid rgba(255, 255, 255, 0.12)',
                     borderRadius: '12px',
                     overflow: 'hidden',
                     transition: 'all 0.2s ease',
                     boxShadow: isOpen
-                      ? '0 8px 24px rgba(217, 119, 6, 0.15)'
+                      ? '0 8px 24px rgba(56, 189, 248, 0.15)'
                       : '0 8px 24px rgba(0, 0, 0, 0.35)',
                   }}
                 >
@@ -314,7 +314,7 @@ export default function BoardsAndCommittees() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexShrink: 0 }}>
                       <span
                         style={{
-                          color: isOpen ? '#F59E0B' : '#94A3B8',
+                          color: isOpen ? '#38BDF8' : '#94A3B8',
                           fontSize: '0.85rem',
                           transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
                           transition: 'transform 0.2s ease',
@@ -373,14 +373,14 @@ export default function BoardsAndCommittees() {
             style={{
               backgroundColor: '#0F172A',
               backgroundImage: 'linear-gradient(to bottom, #1E293B, #0F172A)',
-              border: '1px solid rgba(225, 29, 72, 0.4)',
+              border: '1px solid rgba(56, 189, 248, 0.35)',
               borderRadius: '16px',
               maxWidth: '680px',
               width: '100%',
               maxHeight: '85vh',
               display: 'flex',
               flexDirection: 'column',
-              boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(225, 29, 72, 0.25)',
+              boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(56, 189, 248, 0.18)',
               overflow: 'hidden',
             }}
           >
@@ -401,9 +401,9 @@ export default function BoardsAndCommittees() {
                     style={{
                       fontSize: '0.75rem',
                       fontWeight: 800,
-                      color: '#E11D48',
-                      backgroundColor: 'rgba(225, 29, 72, 0.15)',
-                      border: '1px solid rgba(225, 29, 72, 0.3)',
+                      color: '#38BDF8',
+                      backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                      border: '1px solid rgba(56, 189, 248, 0.3)',
                       padding: '3px 10px',
                       borderRadius: '9999px',
                       textTransform: 'uppercase',
@@ -449,7 +449,7 @@ export default function BoardsAndCommittees() {
                   transition: 'background-color 0.2s',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(225, 29, 72, 0.4)';
+                  e.currentTarget.style.backgroundColor = 'rgba(56, 189, 248, 0.25)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
@@ -493,8 +493,8 @@ export default function BoardsAndCommittees() {
                 style={{
                   padding: '8px 24px',
                   borderRadius: '8px',
-                  backgroundColor: '#E11D48',
-                  color: '#FFFFFF',
+                  backgroundColor: '#38BDF8',
+                  color: '#0F172A',
                   border: 'none',
                   fontSize: '0.88rem',
                   fontWeight: 700,
@@ -502,10 +502,10 @@ export default function BoardsAndCommittees() {
                   transition: 'background-color 0.2s ease',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#BE123C';
+                  e.currentTarget.style.backgroundColor = '#7DD3FC';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#E11D48';
+                  e.currentTarget.style.backgroundColor = '#38BDF8';
                 }}
               >
                 Close
