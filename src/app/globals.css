@@ -274,11 +274,14 @@ div[role="dialog"] p * {
 
 /* 5. Interactive Buttons & Triggers */
 .committee-stat-card button,
+.committee-stat-card button:hover,
+.committee-stat-card:hover button {
+  color: #FFFFFF !important;
+}
 .dept-overview-card button,
 .leader-profile-card button {
-  color: #2563EB !important; /* Solid High-Tech Royal Blue from .org */
+  color: #38BDF8 !important;
 }
-.committee-stat-card button:hover,
 .dept-overview-card button:hover,
 .leader-profile-card button:hover {
   color: #FFFFFF !important;
