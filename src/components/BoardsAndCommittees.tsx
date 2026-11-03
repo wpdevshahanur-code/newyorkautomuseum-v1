@@ -186,7 +186,7 @@ export default function BoardsAndCommittees() {
                     style={{
                       background: 'transparent',
                       border: 'none',
-                      color: '#38BDF8',
+                      color: '#FFFFFF',
                       fontSize: '0.88rem',
                       fontWeight: 700,
                       cursor: 'pointer',
