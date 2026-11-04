@@ -10,7 +10,7 @@ export default function MuseumSpotlights() {
       className="museum-spotlights-section"
       style={{
         backgroundColor: 'transparent',
-        padding: '110px 0 160px 0',
+        padding: '110px 0 35px 0',
         position: 'relative',
       }}
     >
@@ -289,7 +289,7 @@ export default function MuseumSpotlights() {
                   color: '#94A3B8',
                   fontWeight: 400,
                 }}
-                text="NYA is led by a seasoned board of advisors, directors, and executive management. Anticipated financial partners include major banks, OEMs, advertising agencies, publicity firms, investment funds, private equity firms, players in heavy industry, and entities from the broader private sector."
+                text="NYAM is led by a seasoned board of advisors, directors, and executive management. Anticipated financial partners include major banks, OEMs, advertising agencies, publicity firms, investment funds, private equity firms, players in heavy industry, and entities from the broader private sector."
               />
             </div>
           </div>

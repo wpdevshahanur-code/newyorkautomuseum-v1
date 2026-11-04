@@ -1740,7 +1740,7 @@ div[role="dialog"] > div:first-child {
 }
 
 .synergy-section {
-  padding: 90px 0;
+  padding: 35px 0 90px;
 }
 
 .synergy-card {
@@ -1868,7 +1868,7 @@ div[role="dialog"] > div:first-child {
   }
 
   .synergy-section {
-    padding: 50px 0;
+    padding: 25px 0 50px;
   }
 
   .synergy-card {
