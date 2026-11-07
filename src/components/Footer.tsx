@@ -359,6 +359,20 @@ export default function Footer() {
                 info@newyorkautomuseum.com
               </a>
             </p>
+            <p style={{ color: '#94A3B8', lineHeight: 1.65, fontSize: '0.92rem', marginTop: '10px' }}>
+              Toll-Free:{' '}
+              <a
+                href="tel:18774116926"
+                style={{
+                  color: '#FFFFFF',
+                  textDecoration: 'none',
+                  fontWeight: 700,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                1-877-411-NYAM (6926)
+              </a>
+            </p>
           </div>
 
           {/* Column 4: Headquarters & Mail */}
