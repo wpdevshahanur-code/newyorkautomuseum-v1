@@ -345,12 +345,12 @@ export default function Footer() {
               }}
               text="General Inquiries"
             />
-            <p style={{ color: '#94A3B8', lineHeight: 1.65, fontSize: '0.92rem' }}>
+            <p style={{ color: '#E2E8F0', lineHeight: 1.65, fontSize: '0.92rem' }}>
               For more information, please reach out to us by email at{' '}
               <a
                 href="mailto:info@newyorkautomuseum.com"
                 style={{
-                  color: '#E11D48',
+                  color: '#FB7185',
                   textDecoration: 'none',
                   fontWeight: 700,
                   whiteSpace: 'nowrap',
@@ -359,7 +359,7 @@ export default function Footer() {
                 info@newyorkautomuseum.com
               </a>
             </p>
-            <p style={{ color: '#94A3B8', lineHeight: 1.65, fontSize: '0.92rem', marginTop: '10px' }}>
+            <p style={{ color: '#E2E8F0', lineHeight: 1.65, fontSize: '0.92rem', marginTop: '10px' }}>
               Toll-Free:{' '}
               <a
                 href="tel:18774116926"

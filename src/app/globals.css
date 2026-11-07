@@ -365,25 +365,38 @@ footer,
 footer[style*="backgroundColor: #FFFFFF"],
 footer[style*="background-color: #FFFFFF"],
 footer[style*="background-color: rgb(255, 255, 255)"] {
-  background-color: rgba(11, 14, 20, 0.75) !important;
-  background: rgba(11, 14, 20, 0.75) !important;
+  background-color: rgba(9, 12, 18, 0.94) !important;
+  background: rgba(9, 12, 18, 0.94) !important;
   backdrop-filter: blur(24px) !important;
   -webkit-backdrop-filter: blur(24px) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
 }
 
 footer * {
-  color: #94A3B8 !important;
+  color: #E2E8F0 !important;
 }
 
 footer h4,
-footer h4 *,
-footer a {
+footer h4 * {
   color: #FFFFFF !important;
 }
 
+footer a {
+  color: #CBD5E1 !important;
+}
+
 footer a:hover {
-  color: #E11D48 !important;
+  color: #FFFFFF !important;
+}
+
+footer a[href^="mailto:"] {
+  color: #FB7185 !important;
+  font-weight: 700 !important;
+}
+
+footer a[href^="tel:"] {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
 }
 
 .footer-container {
