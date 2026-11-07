@@ -31,6 +31,12 @@ const partners: PartnerItem[] = [
     url: 'https://www.salesforce.com/ca/nonprofit/',
   },
   {
+    name: 'Meta Verified',
+    category: 'Verified',
+    logo: '/images/meta-verified.png',
+    url: 'https://www.facebook.com/profile.php?id=61585348961563',
+  },
+  {
     name: 'National Association of Automobile Museums',
     category: 'Member',
     logo: '/images/cropped_naam.png',
