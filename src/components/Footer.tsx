@@ -350,7 +350,7 @@ export default function Footer() {
               <a
                 href="mailto:info@newyorkautomuseum.com"
                 style={{
-                  color: '#FB7185',
+                  color: '#FFFFFF',
                   textDecoration: 'none',
                   fontWeight: 700,
                   whiteSpace: 'nowrap',
