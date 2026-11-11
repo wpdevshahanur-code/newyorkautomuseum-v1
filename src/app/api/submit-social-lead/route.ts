@@ -6,7 +6,7 @@ const WP_ENDPOINT = 'https://admin.newyorkautoexperience.org/wp-admin/admin-ajax
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, linkedinUrl, socialHandle, platform, vehicleDetails, agreed } = body;
+    const { name, email, phone, socialHandle, platform, vehicleDetails, agreed } = body;
 
     // Validation
     if (!name || !email || !phone || !socialHandle) {
@@ -46,10 +46,6 @@ export async function POST(request: Request) {
 
     const cleanVehicle = String(vehicleDetails || 'General Automotive Media').trim();
     const cleanHandle = String(socialHandle || '').trim();
-    const cleanLinkedin = String(linkedinUrl || '').trim();
-    const cleanNotesWithLinkedin = cleanLinkedin
-      ? `${cleanVehicle}\nLinkedIn Profile: ${cleanLinkedin}`
-      : cleanVehicle;
 
     // Prepare payload for WordPress Fluent Forms (Form ID: 6)
     // Avoid sending unconfigured checkbox fields which cause Fluent Forms HTTP 423 validation error
@@ -64,11 +60,10 @@ export async function POST(request: Request) {
       platform: mappedPlatform,
       input_text_2: cleanHandle,
       social_handle: cleanHandle,
-      linkedin_profile: cleanLinkedin || 'Not provided',
-      input_text_3: cleanNotesWithLinkedin,
+      input_text_3: cleanVehicle,
       vehicle_details: cleanVehicle,
-      description: cleanNotesWithLinkedin,
-      background_notes: cleanNotesWithLinkedin,
+      description: cleanVehicle,
+      background_notes: cleanVehicle,
       submission_type: 'Social Media Creator Agreement (/social)',
     });
 
@@ -116,7 +111,6 @@ export async function POST(request: Request) {
     const socialNotes = [
       `Platform: ${mappedPlatform}`,
       `Handle: ${cleanHandle}`,
-      `LinkedIn Profile: ${cleanLinkedin || 'Not provided'}`,
       `Vehicle / Focus: ${cleanVehicle}`,
       'Submission: Social Media Creator Agreement (/social)'
     ].join('\n');

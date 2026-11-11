@@ -8,7 +8,6 @@ export default function SocialReleaseForm() {
     name: '',
     email: '',
     phone: '',
-    linkedinUrl: '',
     socialHandle: '',
     platform: 'Instagram',
     vehicleDetails: '',
@@ -23,8 +22,8 @@ export default function SocialReleaseForm() {
     e.preventDefault();
     setErrorMessage(null);
 
-    if (!formData.name || !formData.email || !formData.phone || !formData.linkedinUrl.trim() || !formData.socialHandle) {
-      setErrorMessage('Please fill in your full name, email, phone number, LinkedIn profile, and primary social media handle.');
+    if (!formData.name || !formData.email || !formData.phone || !formData.socialHandle) {
+      setErrorMessage('Please fill in your full name, email, phone number, and primary social media handle.');
       return;
     }
 
@@ -185,21 +184,6 @@ export default function SocialReleaseForm() {
               <option value="Facebook">Facebook</option>
               <option value="Automotive Photographer / Other">Automotive Photographer / Other</option>
             </select>
-          </div>
-
-          {/* LinkedIn Profile */}
-          <div className="social-full-col">
-            <label className="social-input-label">
-              LinkedIn Profile URL <span className="req">*</span>
-            </label>
-            <input
-              type="text"
-              required
-              placeholder="https://www.linkedin.com/in/your-profile (or enter N/A)"
-              className="social-input-field"
-              value={formData.linkedinUrl}
-              onChange={(e) => setFormData({ ...formData, linkedinUrl: e.target.value })}
-            />
           </div>
 
           {/* Social Media Handle */}
