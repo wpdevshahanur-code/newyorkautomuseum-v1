@@ -71,6 +71,7 @@ export default function BoardAgreementClient() {
   const [companyName, setCompanyName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [linkedinUrl, setLinkedinUrl] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [stateZip, setStateZip] = useState('');
@@ -160,8 +161,8 @@ export default function BoardAgreementClient() {
     e.preventDefault();
     setErrorMessage(null);
 
-    if (!fullName || !email || !phone) {
-      setErrorMessage('Please fill in your legal full name, email, and phone number.');
+    if (!fullName || !email || !phone || !linkedinUrl.trim()) {
+      setErrorMessage('Please fill in your legal full name, email, phone number, and LinkedIn profile URL.');
       return;
     }
 
@@ -199,6 +200,7 @@ export default function BoardAgreementClient() {
           companyName,
           email,
           phone,
+          linkedinUrl: linkedinUrl.trim(),
           address: `${address}, ${city}, ${stateZip}`.trim(),
           boardTier: selectedTier,
           conflictNote,
@@ -659,6 +661,29 @@ export default function BoardAgreementClient() {
                             placeholder="e.g. (212) 555-0199"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
+                            style={{
+                              width: '100%',
+                              padding: '12px 16px',
+                              background: '#0B111E',
+                              border: '1px solid rgba(255, 255, 255, 0.15)',
+                              borderRadius: '8px',
+                              color: '#FFFFFF',
+                              fontSize: '0.95rem',
+                              boxSizing: 'border-box'
+                            }}
+                          />
+                        </div>
+
+                        <div>
+                          <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#CBD5E1', marginBottom: '6px' }}>
+                            LinkedIn Profile URL *
+                          </label>
+                          <input
+                            type="text"
+                            required
+                            placeholder="https://www.linkedin.com/in/your-profile (or N/A)"
+                            value={linkedinUrl}
+                            onChange={(e) => setLinkedinUrl(e.target.value)}
                             style={{
                               width: '100%',
                               padding: '12px 16px',

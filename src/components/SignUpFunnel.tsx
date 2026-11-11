@@ -1,9 +1,30 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { LeadSourceName, resolveLeadSource } from '@/lib/signupChannels';
 
-export default function SignUpFunnel() {
+interface SignUpFunnelProps {
+  leadSource?: LeadSourceName;
+}
+
+export default function SignUpFunnel({ leadSource }: SignUpFunnelProps) {
+  const [effectiveLeadSource, setEffectiveLeadSource] = useState<LeadSourceName>(leadSource || 'Website');
+
+  useEffect(() => {
+    if (leadSource) {
+      setEffectiveLeadSource(leadSource);
+      return;
+    }
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const paramSource = params.get('source') || params.get('utm_source') || params.get('channel');
+      if (paramSource) {
+        setEffectiveLeadSource(resolveLeadSource(paramSource));
+      }
+    }
+  }, [leadSource]);
+
   const [prompts, setPrompts] = useState<{
     q1: boolean | null;
     q2: boolean | null;
@@ -15,6 +36,8 @@ export default function SignUpFunnel() {
     q3: null,
     q4: null,
   });
+
+  const [linkedinUrl, setLinkedinUrl] = useState('');
 
   const [formData, setFormData] = useState({
     name: '',
@@ -45,7 +68,8 @@ export default function SignUpFunnel() {
     });
   };
 
-  const answeredCount = Object.values(prompts).filter((v) => v !== null).length;
+  const q5Done = linkedinUrl.trim().length > 0;
+  const answeredCount = Object.values(prompts).filter((v) => v !== null).length + (q5Done ? 1 : 0);
   const allAgreed = prompts.q1 === true && prompts.q2 === true && prompts.q3 === true && prompts.q4 === true;
   const hasDeclined = prompts.q1 === false || prompts.q2 === false || prompts.q3 === false || prompts.q4 === false;
 
@@ -55,6 +79,11 @@ export default function SignUpFunnel() {
 
     if (!allAgreed) {
       setErrorMessage('Please confirm all Committee Board qualification criteria first.');
+      return;
+    }
+
+    if (!linkedinUrl.trim()) {
+      setErrorMessage('Please insert your LinkedIn profile for Question #5 (or enter N/A).');
       return;
     }
 
@@ -75,6 +104,8 @@ export default function SignUpFunnel() {
           phone: formData.phone,
           boardTier: formData.boardTier,
           background: formData.background,
+          linkedinUrl: linkedinUrl.trim(),
+          leadSource: effectiveLeadSource,
           commitments: prompts,
         }),
       });
@@ -156,8 +187,8 @@ export default function SignUpFunnel() {
             <span className="funnel-step-indicator">
               Step 1: Committee Board Qualification Criteria
             </span>
-            <span className={`funnel-progress-badge ${allAgreed ? 'ready' : ''}`}>
-              {allAgreed ? '✓ 4 of 4 Confirmed' : `${answeredCount} of 4 Confirmed`}
+            <span className={`funnel-progress-badge ${allAgreed && q5Done ? 'ready' : ''}`}>
+              {allAgreed && q5Done ? '✓ 5 of 5 Completed' : `${answeredCount} of 5 Completed`}
             </span>
           </div>
 
@@ -333,12 +364,36 @@ export default function SignUpFunnel() {
             </div>
           )}
 
+          {/* Prompt 5: LinkedIn Profile (Only accessible if Q1-Q4 are 'Yes') */}
+          {allAgreed && (
+            <div
+              className={`prompt-card ${q5Done ? 'agreed' : ''}`}
+              style={{ animation: 'slideUpFade 0.35s ease', flexDirection: 'column', alignItems: 'stretch', gap: '14px' }}
+            >
+              <div className="prompt-text-group">
+                <div className="prompt-number-badge">{q5Done ? '✓' : '5'}</div>
+                <label htmlFor="signup-linkedin-input" className="prompt-question" style={{ cursor: 'pointer' }}>
+                  Please insert your LinkedIn profile <span style={{ color: '#E11D48' }}>*</span>
+                </label>
+              </div>
+              <input
+                id="signup-linkedin-input"
+                type="text"
+                required
+                placeholder="https://www.linkedin.com/in/your-profile (or enter N/A)"
+                className="lead-input-field"
+                value={linkedinUrl}
+                onChange={(e) => setLinkedinUrl(e.target.value)}
+              />
+            </div>
+          )}
+
           {/* Unlocked Message when all 4 are 'Yes' */}
           {allAgreed && (
             <div className="prequalified-notice">
               <span style={{ fontSize: '1.4rem' }}>🎉</span>
               <div>
-                <strong>Criteria Confirmed!</strong> Step 2 is now unlocked below. Please complete your contact profile to submit your board application.
+                <strong>Criteria Confirmed!</strong> Step 2 is now unlocked below. Please complete Question #5 and your contact profile to submit your board application.
               </div>
             </div>
           )}
@@ -424,11 +479,11 @@ export default function SignUpFunnel() {
 
                 <div className="form-full-col">
                   <label className="lead-input-label">
-                    Brief Professional Background or LinkedIn Profile (Optional)
+                    Brief Professional Background (Optional)
                   </label>
                   <textarea
                     rows={3}
-                    placeholder="Provide a brief note regarding your professional domain, company, or link to your LinkedIn profile..."
+                    placeholder="Provide a brief note regarding your professional domain, company, or areas of interest..."
                     className="lead-input-field"
                     style={{ resize: 'vertical' }}
                     value={formData.background}

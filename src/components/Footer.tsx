@@ -319,6 +319,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/volunteer"
+                  style={{ color: '#94A3B8', textDecoration: 'none', fontWeight: 500 }}
+                >
+                  Volunteer Program
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://newyorkautoexperience.org/"
                   target="_blank"

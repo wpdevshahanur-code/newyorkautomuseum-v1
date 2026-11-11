@@ -72,6 +72,18 @@ const partners: PartnerItem[] = [
     logo: '/images/impa-logo.png',
     url: 'https://www.impa.org/',
   },
+  {
+    name: 'New York City Tourism + Conventions',
+    category: 'Member',
+    logo: '/images/nyc-tourism.png',
+    url: 'https://www.nyctourism.com/',
+  },
+  {
+    name: "Keith Martin's Sports Car Market",
+    category: 'Member',
+    logo: '/images/sports-car-market.png',
+    url: 'https://www.sportscarmarket.com/',
+  },
 ];
 
 export default function Accreditations() {

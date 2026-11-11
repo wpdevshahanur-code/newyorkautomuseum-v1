@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import careersData from '@/data/careers.json';
 import TextReveal from './TextReveal';
 
@@ -60,6 +61,22 @@ export default function CareersSection() {
               hr@newyorkautomuseum.com
             </a>
           </p>
+          <div style={{ marginTop: '18px' }}>
+            <Link
+              href="/volunteer"
+              className="btn btn-primary btn-sm"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '10px 22px',
+                borderRadius: '9999px',
+                fontWeight: 700,
+              }}
+            >
+              Looking to Volunteer? Apply at /volunteer &rarr;
+            </Link>
+          </div>
         </div>
 
         {/* Department Filter Pills */}
