@@ -10,7 +10,6 @@ export async function POST(request: Request) {
       companyName,
       email,
       phone,
-      linkedinUrl,
       address,
       boardTier,
       conflictNote,
@@ -37,14 +36,12 @@ export async function POST(request: Request) {
     const lastName = nameParts.slice(1).join(' ') || 'Signatory';
 
     const certificateId = `NYAM-EXEC-${Date.now().toString(36).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
-    const cleanLinkedin = String(linkedinUrl || '').trim();
 
     const description = `[OFFICIAL BOARD AGREEMENT EXECUTED]
 Certificate ID: ${certificateId}
 Role/Tier: ${boardTier}
 Title/Position: ${titlePosition || 'Not Specified'}
 Company: ${companyName || 'Individual'}
-LinkedIn Profile: ${cleanLinkedin || 'Not Provided'}
 Mailing Address: ${address || 'Not Provided'}
 Conflict of Interest: ${conflictNote || 'N/A'}
 E-Signature Status: Verified & Recorded (${signature ? 'Digital Signature Attached' : 'Typed'})
