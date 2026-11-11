@@ -75,13 +75,13 @@ const partners: PartnerItem[] = [
   {
     name: 'New York City Tourism + Conventions',
     category: 'Member',
-    logo: '/images/nyc-tourism.png',
+    logo: '/images/nyc-tourism.jpg',
     url: 'https://www.nyctourism.com/',
   },
   {
     name: "Keith Martin's Sports Car Market",
     category: 'Member',
-    logo: '/images/sports-car-market.png',
+    logo: '/images/sports-car-market.jpg',
     url: 'https://www.sportscarmarket.com/',
   },
 ];
