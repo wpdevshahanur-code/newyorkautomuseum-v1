@@ -5,6 +5,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+function PhoneIcon({ size = 13 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#38BDF8"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      style={{ flexShrink: 0 }}
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -35,6 +54,7 @@ export default function Navbar() {
       }}
     >
       <div
+        className="navbar-inner"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -67,9 +87,23 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="navbar-landmark-badge">
-            <span className="navbar-badge-dot" />
-            <span>Proposed New York City Landmark • 200,000+ Sq Ft</span>
+          <div className="navbar-tagline-stack">
+            <div className="navbar-landmark-badge">
+              <span className="navbar-badge-dot" />
+              <span>Proposed New York City Landmark • 200,000+ Sq Ft</span>
+            </div>
+
+            <a
+              href="tel:18774116926"
+              className="navbar-phone-link"
+              aria-label="Call Toll-Free 1-877-411-6926"
+            >
+              <PhoneIcon size={13} />
+              <span className="navbar-phone-label">Toll-Free:</span>
+              <span className="navbar-phone-number">
+                1-877-411-NYAM <span className="navbar-phone-digits">(6926)</span>
+              </span>
+            </a>
           </div>
         </div>
 
@@ -198,7 +232,23 @@ export default function Navbar() {
               </Link>
             );
           })}
-          
+          <a
+            href="tel:18774116926"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: '#FFFFFF',
+              fontSize: '0.95rem',
+              fontWeight: 700,
+              textDecoration: 'none',
+              paddingTop: '4px',
+            }}
+          >
+            <PhoneIcon size={15} />
+            <span>Toll-Free: 1-877-411-NYAM (6926)</span>
+          </a>
         </div>
       )}
 

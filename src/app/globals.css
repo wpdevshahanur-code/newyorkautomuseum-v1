@@ -776,11 +776,18 @@ div[role="dialog"] > div:first-child {
   gap: 16px;
 }
 
+.navbar-tagline-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
 .navbar-landmark-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 5px 14px;
   border-radius: 9999px;
   background: rgba(18, 24, 36, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -793,6 +800,34 @@ div[role="dialog"] > div:first-child {
   color: #F1F5F9;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
   white-space: nowrap;
+}
+
+.navbar-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #F8FAFC;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-phone-link:hover {
+  color: #38BDF8;
+}
+
+.navbar-phone-label {
+  color: #CBD5E1;
+  font-weight: 600;
+}
+
+.navbar-phone-number {
+  color: inherit;
+  font-weight: 700;
 }
 
 .navbar-badge-dot {
@@ -820,11 +855,44 @@ div[role="dialog"] > div:first-child {
     font-size: 0.68rem;
     padding: 5px 10px;
   }
+
+  .navbar-phone-link {
+    font-size: 0.72rem;
+    padding: 2px 10px;
+  }
 }
 
 @media (max-width: 1040px) {
   .navbar-landmark-badge {
     display: none;
+  }
+
+  .navbar-phone-link {
+    padding: 5px 12px;
+    border-radius: 9999px;
+    background: rgba(18, 24, 36, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-inner {
+    padding: 0 16px !important;
+  }
+
+  .navbar-brand-group {
+    gap: 10px;
+  }
+
+  .navbar-phone-label,
+  .navbar-phone-digits {
+    display: none;
+  }
+
+  .navbar-phone-link {
+    padding: 4px 10px;
+    font-size: 0.7rem;
   }
 }
 
