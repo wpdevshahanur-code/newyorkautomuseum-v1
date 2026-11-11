@@ -311,7 +311,7 @@ div[role="dialog"] p * {
 .card-logo-container {
   background: #FFFFFF !important;
   border-radius: 12px !important;
-  padding: 8px 14px !important;
+  padding: 10px 14px !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -885,8 +885,7 @@ div[role="dialog"] > div:first-child {
     gap: 10px;
   }
 
-  .navbar-phone-label,
-  .navbar-phone-digits {
+  .navbar-phone-label {
     display: none;
   }
 
@@ -1562,8 +1561,8 @@ div[role="dialog"] > div:first-child {
 
 .marquee-card {
   flex-shrink: 0;
-  width: 380px;
-  height: 156px;
+  width: 296px;
+  height: 244px;
   background: rgba(18, 24, 36, 0.88) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
@@ -1572,7 +1571,7 @@ div[role="dialog"] > div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px 22px 14px 22px;
+  padding: 16px 18px 14px 18px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
@@ -1655,10 +1654,16 @@ div[role="dialog"] > div:first-child {
 .card-logo-container {
   position: relative;
   width: 100%;
-  height: 64px;
+  height: 156px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.card-logo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .card-logo-img {
@@ -1731,14 +1736,14 @@ div[role="dialog"] > div:first-child {
   }
   
   .marquee-card {
-    width: 290px;
-    height: 136px;
-    padding: 12px 15px 10px 15px;
+    width: 236px;
+    height: 204px;
+    padding: 14px 15px 12px 15px;
     border-radius: 16px;
   }
   
   .card-logo-container {
-    height: 52px;
+    height: 120px;
   }
   
   .accreditations-controls {

@@ -101,7 +101,7 @@ export default function Navbar() {
               <PhoneIcon size={13} />
               <span className="navbar-phone-label">Toll-Free:</span>
               <span className="navbar-phone-number">
-                1-877-411-NYAM <span className="navbar-phone-digits">(6926)</span>
+                1-877-411-NYAM
               </span>
             </a>
           </div>
@@ -247,7 +247,7 @@ export default function Navbar() {
             }}
           >
             <PhoneIcon size={15} />
-            <span>Toll-Free: 1-877-411-NYAM (6926)</span>
+            <span>Toll-Free: 1-877-411-NYAM</span>
           </a>
         </div>
       )}

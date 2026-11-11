@@ -69,7 +69,7 @@ export const advisorsData: AdvisorCategoryGroup[] = [
         "name": "John Marandola",
         "position": "Board of Advisors",
         "bio": "John is a cybersecurity and governance, risk, and compliance executive with over 18 years of security leadership experience across the payments and fintech sector. He has held senior security roles at Global Payments, Worldpay, FIS, and Oracle, protecting critical financial infrastructure in highly regulated environments. He is known for developing global teams, establishing enterprise security programs, and aligning cybersecurity strategy with business priorities and risk tolerance. Most recently, John served as Deputy CISO and HIPAA Security Officer at Worldpay, where he helped lead the company’s enterprise governance and risk program and its transition into Global Payments. Beyond his operating roles, John advises early-stage security companies through Mod Squad Capital and serves as a contributing editor for CyberRisk Alliance, helping to strengthen cybersecurity journalism. Married with two daughters, he enjoys tackling home improvement projects with his wife and is passionate about music, cars, and travel.",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/john-marandola"
       }
     ]
   },

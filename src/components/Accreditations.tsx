@@ -299,15 +299,17 @@ export default function Accreditations() {
                 </div>
 
                 <div className="card-logo-container">
-                  <Image
-                    src={item.logo}
-                    alt={item.name}
-                    fill
-                    style={{ objectFit: 'contain' }}
-                    className="card-logo-img"
-                    sizes="(max-width: 768px) 240px, 340px"
-                    draggable={false}
-                  />
+                  <div className="card-logo-inner">
+                    <Image
+                      src={item.logo}
+                      alt={item.name}
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      className="card-logo-img"
+                      sizes="(max-width: 768px) 220px, 280px"
+                      draggable={false}
+                    />
+                  </div>
                 </div>
 
                 <div className="card-footer-bar">
