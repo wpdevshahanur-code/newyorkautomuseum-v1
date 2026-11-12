@@ -11,24 +11,30 @@ export interface AdvisorCategoryGroup {
 }
 
 /**
- * 24 Active Board & Advisory Members
- * (Verified directly from live production server index.html Section #three)
+ * 28 Active Board & Advisory Members
+ * (Verified directly from live production server & leadership updates)
  */
 export const advisorsData: AdvisorCategoryGroup[] = [
   {
     "category": "Executive Leadership & Curatorial Strategy",
     "members": [
       {
-        "name": "Otto Ferdinand Wachs",
-        "position": "Chairman of Board of Advisors & Chief Curator",
-        "bio": "Otto F. Wachs C-level experience started at VW in 1990, during his career, he reported to 5 different global CEO's at Volkswagen AG in Germany. First as Head of Communications for the Chairmans Office and later as Chief Communication Officer for Volkswagen. Otto develop and created Autostadt, a leading communication platform for the Volkswagen Group. As the CEO of the Autostadt, Otto built, led and transformed the multi-brand park starting in 1999. Autostadt is the world largest automotive super destination museum with over 2+ million visitors a year. His high office profile corporate business experience in all aspects of communications and marketing; makes him to a top expert in creation of super destination Automotive Museums. Otto retired in 2018 as CEO to start his career as an independent automotive consultant and connoisseur. Before joining the New York Auto Museum in 2020 as Chairman of the Board of Advisors.",
-        "linkedin": "https://www.linkedin.com/in/otto-ferdinand-wachs-87b877150"
-      },
-      {
         "name": "Ray Battaglini",
         "position": "Board of Advisors",
         "bio": "Former Chamber Of Commerce CEO for 13 years. Appointed by the Secretary of Defence to New Mexico’s State Chair for ESGR - 6 years. Past State President of the Nevada Jaycees - JCI Senator 8261. Received the Rotaries Paul Harris Fellow Award 2 times. Served on several Boards and Commissions in State Government. I worked for the American Heart Association for 22 years as Deputy Executive Director, I live in NM 6 months and Kentucky the other 6 months. Served as Creator and First President of the National Corvette Museum. Inducted into the Corvette Hall of Fame in 2004. Spend over 37 years creating, fostering and advising the National Corvette Museum! The museum will celebrate its 30th years of operation in 2024! Own 2 Corvette a 1972 Stingray and C-7. Married to Belinda, we celebrated our 24th anniversary - we have 5 adult children",
         "linkedin": "http://linkedin.com/in/ray-battaglini-6bb7a438"
+      },
+      {
+        "name": "Neal Heffron",
+        "position": "Board Member",
+        "bio": "Neal is from Newton Massachusetts. He Graduated from Skidmore College 1986. Raced in BMWCCA Club Racing in 1995 and won the National Championship in 1996 in a stock M3. Then he raced in IMSA Ferrari Challenge in 1996 in the 348 class. Then moved onto the Motorola Cup and Grand-Am cup professional \"showroom stock\" endurance races.\n\nHe has run The ELI Group of Companies since 1998. The ELI Group of Companies worked with cutting edge Technology, selling mini-computers and parts from Digital Equipment, Sun Microsystems, HP and more. ELI Group of Companies became the largest used Digital and Sun reseller in the US.\n\nNeal joined the Board of Trustees at the Larz Anderson Museum in 1992, serving on the Executive Board and as its Treasurer. He furthermore founded the Tutto Italiano Car Show for the benefit of LAAM. It was at the time the largest all Italian car show in New England and raised over $500,000 in 10 years under Neal.\n\nNeal has been collecting and showing cars and art for decades. He is also into sports and raced in 5K Marathons and was a competitive cyclist. Currently he is focusing on tennis.",
+        "linkedin": ""
+      },
+      {
+        "name": "Otto Ferdinand Wachs",
+        "position": "Chairman of Board of Advisors & Chief Curator",
+        "bio": "Otto F. Wachs C-level experience started at VW in 1990, during his career, he reported to 5 different global CEO's at Volkswagen AG in Germany. First as Head of Communications for the Chairmans Office and later as Chief Communication Officer for Volkswagen. Otto develop and created Autostadt, a leading communication platform for the Volkswagen Group. As the CEO of the Autostadt, Otto built, led and transformed the multi-brand park starting in 1999. Autostadt is the world largest automotive super destination museum with over 2+ million visitors a year. His high office profile corporate business experience in all aspects of communications and marketing; makes him to a top expert in creation of super destination Automotive Museums. Otto retired in 2018 as CEO to start his career as an independent automotive consultant and connoisseur. Before joining the New York Auto Museum in 2020 as Chairman of the Board of Advisors.",
+        "linkedin": "https://www.linkedin.com/in/otto-ferdinand-wachs-87b877150"
       },
       {
         "name": "David Senater",
@@ -47,6 +53,12 @@ export const advisorsData: AdvisorCategoryGroup[] = [
         "position": "Board Member",
         "bio": "Ivan Francis is a passionate automotive enthusiast with a strong technical and engineering background in the automotive and mobility industries. He started his career as an engineer with both Ford and General Motors, and has recently been an executive with an automotive / mobility company (Vontier Corp NYSE:VNT), where he was the Enterprise Vice President of Lean Transformation, and the interim Chief Transformation Officer. ... Mr. Francis spent 6+ years as a strategy consultant and leader in A.T. Kearney’s Automotive Practice providing consulting services to OEM’s (DaimlerChrysler, Ford Brazil) and Tier 1 suppliers (Federal Mogul, Behr Automotive) for a variety of product design/development and strategy projects. Ivan also has museum experience, having providing pro-bono services as a strategy consultant to the Detroit Motown museum to increase their attendance. He has also been a volunteer at one of Detroit’s leading museums/tourist attractions. Ivan’s career also includes working at IMAX, a global leader in the design and delivery of immersive entertainment and tourism-based experiences. Mr. Francis enjoys driving – having owned a TT in the past, and he has completed driving programs at BMW’s driving school in Munich, Germany, and at Bridgestone’s Formula 2000 Racing Academy outside of Toronto, Canada. He has also been a multi-year volunteer at the Detroit Grand Prix Indy Car Racing series. Ivan has a Bachelor of Applied Science in Mechanical Engineering from the University of Toronto, where he graduated with the Wallace Chalmers award for excellence in product design, a Bachelor of Commerce specializing in Marketing from the University of Windsor, and an MBA from Michigan State University. Ivan has also completed graduate courses in Product Design, Engineering and Entrepreneurship at Stanford University. He holds a professional engineering (P.Eng.) designation from Professional Engineers Ontario (non- current), is a former member of the Society of Automotive Engineers and has been a volunteer with the Society of Automotive Analysts.",
         "linkedin": "https://www.linkedin.com/in/blake-greenstein-297b316"
+      },
+      {
+        "name": "Michael Seberger",
+        "position": "Board Member",
+        "bio": "Michael (\"Mike\") Seberger is a seasoned IT executive, project and program management leader, and strategic advisor with more than 25 years of experience delivering complex technology initiatives, transforming IT service operations, and driving business performance across Fortune 500 organizations and diverse industries. His background spans healthcare, manufacturing, consumer packaged goods, financial services, and IT professional services, with leadership roles at organizations including Leica Biosystems, DS Smith, Kellogg Company, and Insight Direct USA. Mike brings a broad combination of expertise in IT service delivery, infrastructure modernization, enterprise technology strategy, PMO leadership, vendor management, and financial operations. He has led geographically distributed teams, managed multimillion-dollar technology portfolios, and maintained accountability for significant operational budgets and P&L performance. Distinguished by an action-oriented leadership style and a strong focus on measurable outcomes, Mike excels at identifying opportunities, navigating organizational complexity, and translating business objectives into successful execution. His accomplishments include documenting more than $2.5 million in hard-cost savings at Leica Biosystems, delivering infrastructure project portfolios exceeding $10 million at Kellogg, and leading large-scale service delivery and technology programs across multiple industries. Equally comfortable engaging with executive stakeholders, managing technical teams, or resolving operational challenges, Mike combines strategic perspective with hands-on execution to deliver sustainable improvements in service quality, operational efficiency, and financial performance. He holds a Bachelor of Science degree from Quincy University, graduated with high honors (magna c. laude), and holds ITIL Foundation v4 certification and Project Management Professional (PMP Retired) credentials.",
+        "linkedin": ""
       },
       {
         "name": "David Selby",
@@ -237,7 +249,9 @@ export const DEPARTMENT_ORDER = [
   'Volunteers',
 ];
 
-export function sortAdvisorCategories<T extends { category: string }>(categories: T[]): T[] {
+export function sortAdvisorCategories<
+  T extends { category: string; members?: { name: string }[] }
+>(categories: T[]): T[] {
   const getRank = (categoryName: string): number => {
     const norm = categoryName.trim().toLowerCase();
     const idx = DEPARTMENT_ORDER.findIndex(
@@ -247,7 +261,32 @@ export function sortAdvisorCategories<T extends { category: string }>(categories
     return DEPARTMENT_ORDER.length - 2.5;
   };
 
-  return [...categories].sort((a, b) => getRank(a.category) - getRank(b.category));
+  const normalizeMemberName = (name: string): string =>
+    name
+      .replace(/^(CTO Committee|Board Member|Committee Member|Advisory Board)\s+/i, "")
+      .trim()
+      .toLowerCase();
+
+  return [...categories]
+    .sort((a, b) => getRank(a.category) - getRank(b.category))
+    .map((cat) => {
+      if (!cat.members || cat.members.length === 0) return cat;
+      const localGroup = advisorsData.find(
+        (g) => g.category.trim().toLowerCase() === cat.category.trim().toLowerCase()
+      );
+      if (!localGroup) return cat;
+
+      const memberOrder = new Map(
+        localGroup.members.map((m, idx) => [normalizeMemberName(m.name), idx])
+      );
+      const sortedMembers = [...cat.members].sort((a, b) => {
+        const rankA = memberOrder.get(normalizeMemberName(a.name)) ?? Number.MAX_SAFE_INTEGER;
+        const rankB = memberOrder.get(normalizeMemberName(b.name)) ?? Number.MAX_SAFE_INTEGER;
+        return rankA - rankB;
+      });
+
+      return { ...cat, members: sortedMembers };
+    });
 }
 
 export default advisorsData;

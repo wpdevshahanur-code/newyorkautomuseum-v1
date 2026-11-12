@@ -16,7 +16,7 @@ const WP_API_URL =
   process.env.NEXT_PUBLIC_WORDPRESS_URL ||
   'https://cms.newyorkautomuseum.com/wp-json/wp/v2';
 
-// Whitelist of 24 active Board & Advisory members (matching live server index.html)
+// Whitelist of active Board & Advisory members (matching live server index.html & curated additions)
 const ACTIVE_ADVISOR_NAMES = [
   'Otto Ferdinand Wachs',
   'Ray Battaglini',
@@ -45,6 +45,10 @@ const ACTIVE_ADVISOR_NAMES = [
   'Al Emran',
   'John Marandola',
   'John Merandola',
+  'Neal Heffron',
+  'Neil Heffron',
+  'Michael Seberger',
+  'Mike Seberger',
 ];
 
 function decodeHtmlEntities(str: string): string {
