@@ -410,11 +410,14 @@ export default function Footer() {
               }}
             >
               <div style={{ fontWeight: 800, color: '#FFFFFF', marginBottom: '6px' }}>
-                New York Auto Museum Experience Center Inc
+                New York Auto Museum Experience Center
               </div>
-              <div style={{ color: '#94A3B8' }}>767 Broadway #1671</div>
+              <div style={{ color: '#94A3B8' }}>767 Broadway Suite: 1671</div>
               <div style={{ color: '#64748B' }}>
-                New York City, NY 10003 USA
+                New York, New York
+              </div>
+              <div style={{ color: '#64748B' }}>
+                10003
               </div>
             </div>
 

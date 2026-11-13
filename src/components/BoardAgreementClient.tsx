@@ -481,7 +481,7 @@ export default function BoardAgreementClient() {
                         </div>
                         <div>
                           <span style={{ color: '#64748B', fontSize: '0.78rem', textTransform: 'uppercase' }}>Check by Mail:</span>
-                          <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.9rem' }}>767 Broadway #1671, New York, NY 10003</strong>
+                          <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.9rem' }}>767 Broadway Suite: 1671, New York, NY 10003</strong>
                         </div>
                         <div>
                           <span style={{ color: '#64748B', fontSize: '0.78rem', textTransform: 'uppercase' }}>Chase Bank Wire Desk:</span>
