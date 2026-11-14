@@ -92,7 +92,7 @@ export default function NewsletterSection() {
             color: '#FFFFFF',
             marginBottom: '12px',
           }}
-          text="Newsletter:"
+          text="Newsletter"
         />
         <TextReveal
           as="p"
@@ -101,7 +101,7 @@ export default function NewsletterSection() {
             fontSize: '1.05rem',
             marginBottom: '28px',
           }}
-          text="Sign up for our newsletter to stay update with latest news, updates and more."
+          text="Sign up for our newsletter to stay updated with latest news, updates and more."
         />
 
         {status === 'success' ? (

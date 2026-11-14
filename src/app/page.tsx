@@ -16,6 +16,7 @@ export default function HomePage() {
       <main style={{ flex: 1 }}>
         <HeroSlideshow />
         <PastFuture />
+        <NewsletterSection />
         <MuseumSpotlights />
 
         {/* Multi-Page Department Exploration Gateway */}
@@ -177,7 +178,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <NewsletterSection />
         <NyaeSynergy />
         <Accreditations />
       </main>
