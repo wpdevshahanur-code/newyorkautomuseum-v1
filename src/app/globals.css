@@ -1778,7 +1778,7 @@ div[role="dialog"] > div:first-child {
    Standardized Mobile Spacing & Responsive Card Components (15px Standard)
    ========================================================================== */
 .past-future-section {
-  padding: 120px 0;
+  padding: 80px 0 40px 0;
 }
 
 .past-future-grid {
@@ -1922,7 +1922,11 @@ div[role="dialog"] > div:first-child {
 /* Strictly Standardized 15px Mobile Padding for All Containers & Cards */
 @media (max-width: 768px) {
   .past-future-section {
-    padding: 56px 0;
+    padding: 44px 0 24px 0;
+  }
+
+  .museum-spotlights-section {
+    padding-top: 24px !important;
   }
 
   .past-future-grid {

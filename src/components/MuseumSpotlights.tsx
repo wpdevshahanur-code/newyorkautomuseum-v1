@@ -10,7 +10,7 @@ export default function MuseumSpotlights() {
       className="museum-spotlights-section"
       style={{
         backgroundColor: 'transparent',
-        padding: '110px 0 35px 0',
+        padding: '40px 0 35px 0',
         position: 'relative',
       }}
     >
