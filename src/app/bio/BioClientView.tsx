@@ -389,12 +389,6 @@ export default function BioClientView() {
                   Official LinkedIn Profile
                 </a>
               </div>
-
-              {/* Office Address Snippet */}
-              <div style={{ fontSize: '0.85rem', color: '#64748B', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <span>Executive Office:</span>
-                <span style={{ color: '#94A3B8' }}>717 Eglinton Ave West, Suite 104, Toronto, Ontario, Canada M5N 1C9</span>
-              </div>
             </div>
           </div>
         </div>

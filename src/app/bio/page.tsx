@@ -94,14 +94,6 @@ export default function BioPage() {
       },
     ],
     email: 'mailto:David.Senater@NewYorkAutoMuseum.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '717 Eglinton Ave West Suite 104',
-      addressLocality: 'Toronto',
-      addressRegion: 'Ontario',
-      postalCode: 'M5N1C9',
-      addressCountry: 'CA',
-    },
     sameAs: [
       'https://ca.linkedin.com/in/david-senater-08738632',
       'https://www.torontoautomuseum.com',
