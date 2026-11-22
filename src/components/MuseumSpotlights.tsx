@@ -27,116 +27,17 @@ export default function MuseumSpotlights() {
           />
         </div>
 
-        {/* All 3 Spotlights: Sticky Scroll-Stacking Deck Cards */}
+        {/* Spotlights: Sticky Scroll-Stacking Deck Cards */}
         <div className="stacking-cards-container">
-          {/* Card 1: The Museum */}
-          <div id="the-museum" className="spotlight-card stack-card-1">
-            {/* Image Side */}
-            <div className="spotlight-media" style={{ backgroundColor: '#0F172A' }}>
-              <Image
-                src="/images/bigtire.JPG"
-                alt="The Museum - Proposed 200,000+ Sq Ft New York City Facility"
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-              />
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: '24px',
-                  left: '24px',
-                  backgroundColor: 'rgba(18, 24, 36, 0.88)',
-                  backdropFilter: 'blur(12px)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  padding: '10px 18px',
-                  borderRadius: '8px',
-                  color: '#FFFFFF',
-                  fontSize: '0.85rem',
-                  fontWeight: 600,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                }}
-              >
-                <span style={{ color: '#38BDF8' }}>●</span> Proposed New York City Landmark • Glass Floors
-              </div>
-            </div>
-
-            {/* Content Side */}
-            <div
-              className="spotlight-content"
-              style={{
-                backgroundColor: 'rgba(18, 24, 36, 0.88)',
-                backdropFilter: 'blur(12px)',
-                WebkitBackdropFilter: 'blur(12px)',
-              }}
-            >
-              <div
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  fontSize: '0.75rem',
-                  fontWeight: 800,
-                  color: '#38BDF8',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.15em',
-                  marginBottom: '12px',
-                }}
-              >
-                Flagship Facility
-              </div>
-
-              <TextReveal
-                as="h3"
-                text="The Museum"
-                threshold="top 90%"
-                style={{
-                  fontSize: 'clamp(1.8rem, 2.6vw, 2.3rem)',
-                  fontWeight: 900,
-                  color: '#FFFFFF',
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.03em',
-                  marginBottom: '16px',
-                }}
-              />
-
-              <TextReveal
-                as="p"
-                threshold="top 90%"
-                delay={0.08}
-                style={{
-                  fontSize: '1rem',
-                  lineHeight: 1.7,
-                  color: '#94A3B8',
-                  fontWeight: 500,
-                  marginBottom: '12px',
-                }}
-                text="Our proposed 200,000+- square-foot New York City location is set to impress. With a planned rooftop patio and partially glass floors, NYAM visitors will get to see above and beneath many of the extravagant vehicles on display. Also another original exclusive world-first; allows visitors to sit in up to 100 vehicles at any given time."
-              />
-
-              <TextReveal
-                as="p"
-                threshold="top 90%"
-                delay={0.16}
-                style={{
-                  fontSize: '0.95rem',
-                  lineHeight: 1.6,
-                  color: '#94A3B8',
-                }}
-                text="The New York Auto Museum is developed to change the way you think about an automotive museum."
-              />
-            </div>
-          </div>
-
-          {/* Card 2: Partners */}
-          <div id="partners" className="spotlight-card stack-card-2">
+          {/* Card 1: Partners */}
+          <div id="partners" className="spotlight-card stack-card-1">
             {/* Image Side */}
             <div className="spotlight-media" style={{ backgroundColor: '#0F172A' }}>
               <Image
                 src="/images/racecar.JPG"
                 alt="Partnership Strategy - Vintage Racing Alliances"
                 fill
+                priority
                 style={{ objectFit: 'cover' }}
               />
               <div
@@ -215,8 +116,8 @@ export default function MuseumSpotlights() {
             </div>
           </div>
 
-          {/* Card 3: About Us */}
-          <div id="about" className="spotlight-card stack-card-3">
+          {/* Card 2: About Us */}
+          <div id="about" className="spotlight-card stack-card-2">
             {/* Image Side: Inset white branding plaque on obsidian backdrop */}
             <div
               className="spotlight-media"

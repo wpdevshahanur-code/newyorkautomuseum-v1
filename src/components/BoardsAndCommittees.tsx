@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import boardsData from '@/data/boards.json';
 import TextReveal from './TextReveal';
 
@@ -180,7 +181,17 @@ export default function BoardsAndCommittees() {
                   />
                 </div>
 
-                <div style={{ marginTop: '20px', paddingTop: '14px', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                <div
+                  style={{
+                    marginTop: '20px',
+                    paddingTop: '14px',
+                    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: '12px',
+                  }}
+                >
                   <button
                     type="button"
                     style={{
@@ -196,8 +207,23 @@ export default function BoardsAndCommittees() {
                       gap: '6px',
                     }}
                   >
-                    Explore Wing Scope &rarr;
+                    Explore Scope &rarr;
                   </button>
+
+                  <Link
+                    href={`/sign-up?wing=${encodeURIComponent(item.title)}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="btn btn-primary"
+                    style={{
+                      padding: '6px 14px',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      borderRadius: '6px',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Apply Now
+                  </Link>
                 </div>
               </div>
             ))}
@@ -334,10 +360,28 @@ export default function BoardsAndCommittees() {
                         fontSize: '0.94rem',
                         lineHeight: 1.75,
                         borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-                        padding: '16px 24px',
+                        padding: '18px 24px',
                       }}
                     >
-                      {item.description}
+                      <p style={{ margin: '0 0 16px 0' }}>{item.description}</p>
+                      <div>
+                        <Link
+                          href={`/sign-up?committee=${encodeURIComponent(cleanTitleName)}`}
+                          className="btn btn-primary"
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            fontSize: '0.85rem',
+                            fontWeight: 700,
+                            padding: '8px 18px',
+                            borderRadius: '8px',
+                            textDecoration: 'none',
+                          }}
+                        >
+                          <span>Apply Now &rarr;</span>
+                        </Link>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -483,33 +527,47 @@ export default function BoardsAndCommittees() {
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
+                gap: '12px',
+                flexWrap: 'wrap',
               }}
             >
               <span style={{ fontSize: '0.8rem', color: '#64748B' }}>
                 New York Auto Museum Curatorial Committee
               </span>
-              <button
-                onClick={() => setActiveModalWing(null)}
-                style={{
-                  padding: '8px 24px',
-                  borderRadius: '8px',
-                  backgroundColor: '#38BDF8',
-                  color: '#0F172A',
-                  border: 'none',
-                  fontSize: '0.88rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  transition: 'background-color 0.2s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#7DD3FC';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#38BDF8';
-                }}
-              >
-                Close
-              </button>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <button
+                  type="button"
+                  onClick={() => setActiveModalWing(null)}
+                  style={{
+                    padding: '8px 18px',
+                    borderRadius: '8px',
+                    backgroundColor: 'transparent',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    color: '#94A3B8',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                  }}
+                >
+                  Close
+                </button>
+                <Link
+                  href={`/sign-up?wing=${encodeURIComponent(activeModalWing.wing.title)}`}
+                  className="btn btn-primary"
+                  style={{
+                    padding: '8px 20px',
+                    borderRadius: '8px',
+                    fontSize: '0.85rem',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                  }}
+                >
+                  <span>Apply Now &rarr;</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -10,17 +10,21 @@ interface SignUpFunnelProps {
 
 export default function SignUpFunnel({ leadSource }: SignUpFunnelProps) {
   const [effectiveLeadSource, setEffectiveLeadSource] = useState<LeadSourceName>(leadSource || 'Website');
+  const [selectedCommittee, setSelectedCommittee] = useState<string>('');
 
   useEffect(() => {
     if (leadSource) {
       setEffectiveLeadSource(leadSource);
-      return;
     }
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const paramSource = params.get('source') || params.get('utm_source') || params.get('channel');
-      if (paramSource) {
+      if (paramSource && !leadSource) {
         setEffectiveLeadSource(resolveLeadSource(paramSource));
+      }
+      const paramCommittee = params.get('committee') || params.get('wing') || params.get('role');
+      if (paramCommittee) {
+        setSelectedCommittee(paramCommittee);
       }
     }
   }, [leadSource]);
@@ -103,7 +107,11 @@ export default function SignUpFunnel({ leadSource }: SignUpFunnelProps) {
           email: formData.email,
           phone: formData.phone,
           boardTier: formData.boardTier,
-          background: formData.background,
+          background: selectedCommittee
+            ? formData.background
+              ? `${formData.background} [Applying for: ${selectedCommittee}]`
+              : `Applying for: ${selectedCommittee}`
+            : formData.background,
           linkedinUrl: linkedinUrl.trim(),
           leadSource: effectiveLeadSource,
           commitments: prompts,
@@ -408,6 +416,27 @@ export default function SignUpFunnel({ leadSource }: SignUpFunnelProps) {
                 <h4 style={{ color: '#FFFFFF', fontSize: '1.25rem', marginTop: '6px', marginBottom: '4px' }}>
                   Official Board Candidate Details
                 </h4>
+                {selectedCommittee && (
+                  <div
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                      border: '1px solid rgba(56, 189, 248, 0.35)',
+                      padding: '4px 12px',
+                      borderRadius: '6px',
+                      color: '#38BDF8',
+                      fontSize: '0.85rem',
+                      fontWeight: 700,
+                      marginTop: '6px',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    <span>Selected Interest:</span>
+                    <span style={{ color: '#FFFFFF' }}>{selectedCommittee}</span>
+                  </div>
+                )}
                 <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem' }}>
                   Please ensure your email and phone number are accurate so our committee chair can reach you directly.
                 </p>
