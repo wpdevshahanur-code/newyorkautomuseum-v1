@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { submitToSalesforce } from '@/lib/salesforce';
 
 const PRIMARY_WP_ENDPOINT = 'https://admin.newyorkautoexperience.org/wp-admin/admin-ajax.php';
 const FALLBACK_WP_ENDPOINT = 'https://cms.newyorkautomuseum.com/wp-admin/admin-ajax.php';
@@ -43,6 +44,17 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    // Forward simultaneously to Salesforce Web-to-Lead CRM
+    submitToSalesforce({
+      firstName: 'Newsletter',
+      lastName: 'Subscriber',
+      email: email,
+      phone: '',
+      company: 'NYAM Newsletter Subscriber',
+      leadSource: 'Newsletter',
+      description: 'Subscribed to official New York Auto Museum newsletter via website form.',
+    }).catch((err) => console.warn('[Salesforce Newsletter] Forwarding error:', err));
 
     let data: any;
     try {

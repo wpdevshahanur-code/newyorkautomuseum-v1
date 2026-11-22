@@ -48,23 +48,12 @@ export default function BoardsAndCommittees() {
       id="boards"
       className="committees-section"
       style={{
-        padding: '110px 0',
+        padding: '64px 0 100px 0',
         backgroundColor: 'transparent',
         position: 'relative',
       }}
     >
       <div className="container">
-        {/* Section Header */}
-        <div className="text-center" style={{ marginBottom: '64px' }}>
-          <span className="section-tag">Governance &amp; Oversight</span>
-          <TextReveal as="h2" className="section-title" text="Boards &amp; Committees" />
-          <TextReveal
-            as="p"
-            className="section-subtitle"
-            text="Curatorial development working groups and tax-deductible committee leadership opportunities guiding the New York City landmark."
-          />
-        </div>
-
         {/* ============================================================ */}
         {/* SECTION A: Museum Wing Development Committees (Grid Cards) */}
         {/* ============================================================ */}

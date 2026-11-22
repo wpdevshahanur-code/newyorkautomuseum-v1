@@ -16,38 +16,7 @@ export default function NewsletterClientView() {
 
     const trimmedEmail = email.trim();
 
-    // 2-Tier Headless Submission Strategy to WordPress Fluent Forms
-    // Tier 1: Direct Headless AJAX to WordPress Fluent Forms
-    try {
-      const formPayload = new URLSearchParams({ email: trimmedEmail });
-      const postBody = new URLSearchParams({
-        action: 'fluentform_submit',
-        form_id: '4',
-        data: formPayload.toString(),
-      });
-
-      const wpRes = await fetch('https://admin.newyorkautoexperience.org/wp-admin/admin-ajax.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        },
-        body: postBody.toString(),
-      });
-
-      if (wpRes.ok) {
-        const wpData = await wpRes.json().catch(() => null);
-        if (wpData && wpData.success) {
-          setStatus('success');
-          setMessage(wpData.data?.result?.message || 'Thank you for signing up.');
-          setEmail('');
-          return;
-        }
-      }
-    } catch {
-      // Tier 1 bypassed (CORS / Adblock), falling back to Tier 2
-    }
-
-    // Tier 2: Next.js Server Route Fallback (/api/newsletter with hc_js_gate=1 cookie)
+    // Forward directly through /api/newsletter (submits to WordPress Fluent Forms & Salesforce CRM)
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
