@@ -35,6 +35,7 @@ export default function Navbar() {
     { label: 'Committees', href: '/committees' },
     { label: 'Governance', href: '/governance' },
     { label: 'Careers', href: '/careers' },
+    { label: 'Social Feed', href: '/social-feed' },
   ];
 
   return (
@@ -112,7 +113,7 @@ export default function Navbar() {
           style={{
             display: 'none',
             alignItems: 'center',
-            gap: 'clamp(14px, 1.5vw, 24px)',
+            gap: 'clamp(12px, 1.3vw, 22px)',
           }}
           className="desktop-nav"
         >

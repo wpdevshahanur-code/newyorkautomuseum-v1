@@ -862,7 +862,7 @@ div[role="dialog"] > div:first-child {
   }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1220px) {
   .navbar-landmark-badge {
     display: none;
   }
