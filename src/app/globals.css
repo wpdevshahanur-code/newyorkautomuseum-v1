@@ -2381,4 +2381,76 @@ div[role="dialog"] > div:first-child {
   }
 }
 
+/* ==========================================================================
+   SOCIAL FEED NOTICE PAGE (Curator Free Tier Limit Reached)
+   ========================================================================== */
+.social-notice-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 24px 88px;
+  background-color: rgba(11, 14, 20, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.social-notice-card {
+  width: 100%;
+  max-width: 860px;
+  background-color: rgba(18, 24, 36, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 3px solid #E11D48;
+  border-radius: 16px;
+  padding: 48px 42px 42px;
+  text-align: center;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.55);
+}
+
+.social-notice-channels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  text-align: left;
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.social-notice-channel-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background-color: rgba(11, 14, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-notice-channel-card:hover {
+  background-color: rgba(25, 34, 51, 0.95);
+  border-color: rgba(225, 29, 72, 0.55);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .social-notice-channels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .social-notice-section {
+    padding: 44px 16px 56px;
+  }
+
+  .social-notice-card {
+    padding: 34px 20px 28px;
+  }
+}
+
 
