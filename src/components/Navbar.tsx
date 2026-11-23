@@ -64,7 +64,7 @@ export default function Navbar() {
           width: '100%',
           maxWidth: '1520px',
           margin: '0 auto',
-          padding: '0 28px',
+          padding: '0 24px',
         }}
       >
         {/* Brand Logo & Institutional Landmark Tagline */}
@@ -113,7 +113,7 @@ export default function Navbar() {
           style={{
             display: 'none',
             alignItems: 'center',
-            gap: 'clamp(12px, 1.3vw, 22px)',
+            gap: 'clamp(10px, 1.1vw, 20px)',
           }}
           className="desktop-nav"
         >
@@ -126,7 +126,7 @@ export default function Navbar() {
                 style={{
                   color: isActive ? '#FFFFFF' : '#94A3B8',
                   textDecoration: 'none',
-                  fontSize: '0.9rem',
+                  fontSize: '0.86rem',
                   fontWeight: isActive ? 700 : 500,
                   transition: 'color 0.2s ease',
                   padding: '6px 0',
