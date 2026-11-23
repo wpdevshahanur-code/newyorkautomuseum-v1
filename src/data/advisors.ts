@@ -11,7 +11,7 @@ export interface AdvisorCategoryGroup {
 }
 
 /**
- * 28 Active Board & Advisory Members
+ * 27 Active Board & Advisory Members
  * (Verified directly from live production server & leadership updates)
  */
 export const advisorsData: AdvisorCategoryGroup[] = [
@@ -23,12 +23,6 @@ export const advisorsData: AdvisorCategoryGroup[] = [
         "position": "Board of Advisors",
         "bio": "Former Chamber Of Commerce CEO for 13 years. Appointed by the Secretary of Defence to New Mexico’s State Chair for ESGR - 6 years. Past State President of the Nevada Jaycees - JCI Senator 8261. Received the Rotaries Paul Harris Fellow Award 2 times. Served on several Boards and Commissions in State Government. I worked for the American Heart Association for 22 years as Deputy Executive Director, I live in NM 6 months and Kentucky the other 6 months. Served as Creator and First President of the National Corvette Museum. Inducted into the Corvette Hall of Fame in 2004. Spend over 37 years creating, fostering and advising the National Corvette Museum! The museum will celebrate its 30th years of operation in 2024! Own 2 Corvette a 1972 Stingray and C-7. Married to Belinda, we celebrated our 24th anniversary - we have 5 adult children",
         "linkedin": "http://linkedin.com/in/ray-battaglini-6bb7a438"
-      },
-      {
-        "name": "Neal Heffron",
-        "position": "Board Member",
-        "bio": "Grew up in Newton Massachusetts. Graduated from Skidmore College 1986. Raced in BMWCCA Club Racing in 1995 and won the National Championship in 1996 in a stock M3. Then raced in IMSA Ferrari Challenge in 1996 in the 348 class. Then moved onto the Motorola Cup and Grand-Am cup professional “showroon stock” endurance races.\n\nRan the ELI group of companies, since 1998. We were the trailing edge of technology, selling mini computers and parts from Digital equipment, Sun Microsystems, HP and more. We became the largest used Digital and Sun resellers in the US.\n\nJoined the board of trustees at the Larz Anderson Museum in 1992. Serving on the Exective Board and as Treasurer. Founded the Tutto Italiano Car show for the benifit of LAAM. It was at the time the largest all Italian car show in New England. Raised over $500,000 over the 10 years we ran it.\n\nHave been collecting and showing cars and art for decades. Also am into sports and raced in 5 ks , Marathons and was a competative cyclist. Currently I am focusing on tennis.",
-        "linkedin": "https://www.linkedin.com/in/neal-heffron-a037588/"
       },
       {
         "name": "Otto Ferdinand Wachs",

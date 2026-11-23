@@ -45,8 +45,6 @@ const ACTIVE_ADVISOR_NAMES = [
   'Al Emran',
   'John Marandola',
   'John Merandola',
-  'Neal Heffron',
-  'Neil Heffron',
   'Michael Seberger',
   'Mike Seberger',
 ];
