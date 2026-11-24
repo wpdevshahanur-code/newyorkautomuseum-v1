@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     }
 
     // Forward simultaneously to Salesforce Web-to-Lead CRM
-    submitToSalesforce({
+    await submitToSalesforce({
       firstName: 'Newsletter',
       lastName: 'Subscriber',
       email: email,

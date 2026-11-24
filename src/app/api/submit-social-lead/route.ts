@@ -121,7 +121,7 @@ export async function POST(request: Request) {
       email: String(email).trim(),
       phone: String(phone).trim(),
       company: `Social Creator (${mappedPlatform} @${cleanHandle})`,
-      leadSource: 'Web / Facebook Ads',
+      leadSource: 'Social Media Release',
       description: socialNotes,
     });
 
