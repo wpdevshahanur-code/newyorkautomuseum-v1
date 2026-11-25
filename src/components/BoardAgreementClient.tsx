@@ -40,7 +40,7 @@ const GOVERNANCE_STANDARDS = [
   "The President may retain relevant NYAE/NYAM legal advice or services as required without prior Board approval.",
   "David Senater is chartered to act as the nonprofit's Treasurer & President and is to receive a minimum of $600 weekly starting May 1st 2025 (per corporate bylaws).",
   "Parties agree to private arbitration outside the court system in the event of legal disagreements, governed by an impartial panel.",
-  "All financial donations to the 501(c)(3) nonprofit are irrevocable charitable gifts under IRS guidelines and 100% tax-deductible.",
+  "All financial donations to the 501(c)(3) nonprofit are irrevocable charitable gifts under IRS guidelines and tax-deductible to the fullest extent permitted by law.",
   "This document may be modified from time to time at the discretion of the President or Board of Directors.",
   "This contract agreement excludes separate Officer Employment Contracts governed by independent operational agreements.",
   "Participants are encouraged to bring corporate sponsors and strategic industry contacts to expand our public mission.",
