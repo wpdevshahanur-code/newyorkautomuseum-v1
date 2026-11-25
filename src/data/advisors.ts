@@ -151,12 +151,6 @@ export const advisorsData: AdvisorCategoryGroup[] = [
     "category": "Design, Preservation & Institutional Development",
     "members": [
       {
-        "name": "Dr David Langguth PhD IIDA",
-        "position": "Board of Advisors",
-        "bio": "Award winning designer/ educator and historic preservationist. PhD in Fine arts/design. Master's historic preservation.. Over 6000 student graduates from various colleges and universities in multi-state locations. Award winning designer for celebrities, sports figures, government officials. Lead historical preservationist on multiple projects throughout the mid-atlantic region. Director of Design at Thomasville and Colony House furniture. Former Naval aviator now owner of Secure Flight VIP flights, servicing VIP's, celebrities, International government officials and our own at the highest levels. Former officer in a large Pennsylvania based Antique Auto Club. Looking forward to enhancing the efforts of The New York Auto Museum and World Motorsports Hall of fame.",
-        "linkedin": "https://www.linkedin.com/in/david-langguth-3267542b"
-      },
-      {
         "name": "Gabriel Smith",
         "position": "Architect",
         "bio": "Gabriel Smith FAIA LEED AP, is a New York City based architect with experience in the US, UK, Europe and South America. Focused primarily on museums, he has led more than one million square feet of complex projects for cultural, education... , commercial and government clients to completion including Net Zero Carbon and LEED Platinum projects. He holds degrees in architecture from Harvard and Tulane and was elected to the American Institute of Architects College of Fellows for his contributions as a designer in 2015.",

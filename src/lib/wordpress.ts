@@ -33,7 +33,6 @@ const ACTIVE_ADVISOR_NAMES = [
   'James Barnard',
   'Christian Ginet',
   'Shawn Cuffie',
-  'Dr David Langguth PhD IIDA',
   'Gabriel Smith',
   'Russel A. Brown',
   'Lawrence Yee',
