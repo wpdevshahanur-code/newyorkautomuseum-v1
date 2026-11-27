@@ -129,7 +129,7 @@ export default function GovernanceClient() {
   return (
     <div style={{ background: 'transparent', color: '#FFFFFF', minHeight: '100vh', position: 'relative' }}>
       {/* 1. Hero Section */}
-      <section style={{ backgroundColor: 'rgba(11, 14, 20, 0.50)', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '70px 0 80px', position: 'relative' }}>
+      <section style={{ backgroundColor: 'rgba(11, 14, 20, 0.50)', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', padding: '70px 0 60px', position: 'relative' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
           <div style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48', backgroundColor: 'rgba(225, 29, 72, 0.10)', padding: '6px 16px', borderRadius: '9999px', border: '1px solid rgba(225, 29, 72, 0.25)', marginBottom: '20px' }}>
@@ -176,20 +176,8 @@ export default function GovernanceClient() {
       </section>
 
       {/* 2. Official Documents Grid */}
-      <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', backgroundColor: 'transparent', position: 'relative' }}>
+      <section style={{ padding: '56px 0 80px', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', backgroundColor: 'transparent', position: 'relative' }}>
         <div style={{ maxWidth: '1520px', margin: '0 auto', padding: '0 28px', width: '100%' }}>
-          <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 50px' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#E11D48' }}>
-              Accreditation &bull; Public Record
-            </span>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#FFFFFF', marginTop: '10px', marginBottom: '14px' }}>
-              State &amp; Federal Registration Documents
-            </h2>
-            <p style={{ color: '#94A3B8', fontSize: '1rem', lineHeight: 1.6 }}>
-              In accordance with our commitment to donor transparency and open governance, our full Certificate of Status, Incorporation Receipt, Certified Copy, and IRS 501(c)(3) determination letter are available for direct review and download below.
-            </p>
-          </div>
-
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(520px, 1fr))', gap: '30px' }}>
             {GOVERNANCE_DOCS.map((doc) => (
               <div
